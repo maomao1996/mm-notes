@@ -1,0 +1,27 @@
+{
+  "name": "mm-notes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Development related notes",
+  "scripts": {
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs",
+    "deploy": "gh-pages -d dist -m deploy",
+    "deploy:build": "npm run build && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maomao1996/mm-notes.git"
+  },
+  "author": "maomao1996",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maomao1996/mm-notes/issues"
+  },
+  "homepage": "https://github.com/maomao1996/mm-notes#readme",
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "gh-pages": "^2.1.1",
+    "vuepress": "^1.2.0"
+  }
+}
