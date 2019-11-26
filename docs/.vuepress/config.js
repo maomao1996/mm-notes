@@ -17,8 +17,13 @@ module.exports = {
       { text: "Blog", link: "http://www.mtnhao.com/" },
       { text: "在线音乐播放器", link: "http://music.mtnhao.com/" }
     ],
-    sidebarDepth: 3,
+    sidebarDepth: 2,
     sidebar: [
+      {
+        title: "Vue",
+        collapsable: true,
+        path: "/vue/"
+      },
       {
         title: "工具方法",
         collapsable: true,
@@ -28,9 +33,14 @@ module.exports = {
         title: "CSS",
         collapsable: true,
         children: ["css/", "css/skill"]
+      },
+      {
+        title: "Git",
+        collapsable: true,
+        path: "/git/"
       }
     ],
-    lastUpdated: "上次更新"
+    lastUpdated: "更新时间"
   },
   plugins: [
     [
