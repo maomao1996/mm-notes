@@ -17,7 +17,34 @@ yarn add -D gh-pages
 ```
 
 3. 运行 `deploy` 脚本
+
 ```sh
 yarn deploy
 # OR npm run deploy
+```
+
+## 删除 Git 中的所有提交历史记录
+
+::: tip 提示
+以 `master` 分支为例 
+:::
+
+```sh
+# 创建 orphan 分支
+git checkout --orphan new-branch
+
+# 添加需要上传文件
+git add .
+
+# 提交更改
+git commit -m "Initial"
+
+# 删除需要清空提交记录的分支
+git branch -D master
+
+# 将当前分支重命名为需要清空提交记录的分支名
+git branch -m master
+
+# 强制更新存储库
+git push -f origin master
 ```

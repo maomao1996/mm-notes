@@ -13,9 +13,9 @@ module.exports = {
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
     nav: [
-      { text: "Github", link: "https://github.com/maomao1996/mm-notes" },
+      { text: "在线音乐播放器", link: "http://music.mtnhao.com/" },
       { text: "Blog", link: "http://www.mtnhao.com/" },
-      { text: "在线音乐播放器", link: "http://music.mtnhao.com/" }
+      { text: "Github", link: "https://github.com/maomao1996/mm-notes" }
     ],
     sidebarDepth: 2,
     sidebar: [
@@ -25,14 +25,19 @@ module.exports = {
         path: "/vue/"
       },
       {
+        title: "CSS",
+        collapsable: true,
+        children: ["css/", "css/skill"]
+      },
+      {
         title: "工具方法",
         collapsable: true,
         children: ["utils/regexp"]
       },
       {
-        title: "CSS",
+        title: "Node 相关",
         collapsable: true,
-        children: ["css/", "css/skill"]
+        children: ["node/npm", "node/depend"]
       },
       {
         title: "Git",
