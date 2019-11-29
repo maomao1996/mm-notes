@@ -17,7 +17,6 @@ module.exports = {
       { text: "Blog", link: "http://www.mtnhao.com/" },
       { text: "Github", link: "https://github.com/maomao1996/mm-notes" }
     ],
-    sidebarDepth: 2,
     sidebar: [
       {
         title: "Vue",
@@ -32,7 +31,7 @@ module.exports = {
       {
         title: "工具方法",
         collapsable: true,
-        children: ["utils/regexp"]
+        children: ["utils/regexp", "utils/function"]
       },
       {
         title: "Node 相关",
