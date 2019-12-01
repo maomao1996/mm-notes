@@ -22,6 +22,7 @@
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.2.0",
     "gh-pages": "^2.1.1",
+    "gitalk": "^1.5.0",
     "vuepress": "^1.2.0"
   }
 }
