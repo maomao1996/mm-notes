@@ -26,7 +26,7 @@ module.exports = {
       {
         title: "CSS",
         collapsable: true,
-        children: ["css/", "css/skill"]
+        children: ["css/", "css/skill", "css/scss"]
       },
       {
         title: "工具方法",

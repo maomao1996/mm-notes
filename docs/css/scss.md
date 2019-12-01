@@ -1,0 +1,39 @@
+# 常用 SCSS 宏
+
+## 显示省略号
+
+```scss
+// 单行省略号
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行省略号
+@mixin ellipsis-multi($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+```
+
+## 滚动
+
+```scss
+@mixin scroll($type: "y") {
+  @if $type == "x" {
+    overflow-x: auto;
+    overflow-y: hidden;
+  } @else if $type == "y" {
+    overflow-x: hidden;
+    overflow-y: auto;
+  } @else {
+    overflow: auto;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+```
