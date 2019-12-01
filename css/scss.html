@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常用 SCSS 宏 | 茂茂的开发笔记</title>
+    <meta name="description" content="茂茂的开发笔记">
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8092fab2f2adfc7938ba5b8885aef5b4";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <link rel="icon" href="/mm-notes/favicon.ico">
+    
+    <link rel="preload" href="/mm-notes/assets/css/0.styles.e96d7fd0.css" as="style"><link rel="preload" href="/mm-notes/assets/js/app.172c2b9f.js" as="script"><link rel="preload" href="/mm-notes/assets/js/2.1adb9821.js" as="script"><link rel="preload" href="/mm-notes/assets/js/7.addf1278.js" as="script"><link rel="prefetch" href="/mm-notes/assets/js/10.f19644ae.js"><link rel="prefetch" href="/mm-notes/assets/js/11.8c863521.js"><link rel="prefetch" href="/mm-notes/assets/js/12.d6c77aa6.js"><link rel="prefetch" href="/mm-notes/assets/js/13.71330416.js"><link rel="prefetch" href="/mm-notes/assets/js/14.3bdcf160.js"><link rel="prefetch" href="/mm-notes/assets/js/15.81241ea0.js"><link rel="prefetch" href="/mm-notes/assets/js/3.c5c230c2.js"><link rel="prefetch" href="/mm-notes/assets/js/4.59116900.js"><link rel="prefetch" href="/mm-notes/assets/js/5.521c37a9.js"><link rel="prefetch" href="/mm-notes/assets/js/6.402af81e.js"><link rel="prefetch" href="/mm-notes/assets/js/8.e1396978.js"><link rel="prefetch" href="/mm-notes/assets/js/9.5429fbf7.js">
+    <link rel="stylesheet" href="/mm-notes/assets/css/0.styles.e96d7fd0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mm-notes/" class="home-link router-link-active"><!----> <span class="site-name">茂茂的开发笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://music.mtnhao.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线音乐播放器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="http://www.mtnhao.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Blog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/maomao1996/mm-notes" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="http://music.mtnhao.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线音乐播放器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="http://www.mtnhao.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Blog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/maomao1996/mm-notes" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mm-notes/vue/" class="sidebar-link">Vue</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CSS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mm-notes/css/" class="sidebar-link">CSS 语法相关</a></li><li><a href="/mm-notes/css/skill.html" class="sidebar-link">CSS 奇淫技巧</a></li><li><a href="/mm-notes/css/scss.html" class="active sidebar-link">常用 SCSS 宏</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mm-notes/css/scss.html#显示省略号" class="sidebar-link">显示省略号</a></li><li class="sidebar-sub-header"><a href="/mm-notes/css/scss.html#滚动" class="sidebar-link">滚动</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node 相关</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/mm-notes/git/" class="sidebar-link">Git</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="常用-scss-宏"><a href="#常用-scss-宏" class="header-anchor">#</a> 常用 SCSS 宏</h1> <h2 id="显示省略号"><a href="#显示省略号" class="header-anchor">#</a> 显示省略号</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 单行省略号</span>
+<span class="token keyword">@mixin</span> <span class="token function">ellipsis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 多行省略号</span>
+<span class="token keyword">@mixin</span> <span class="token function">ellipsis-multi</span><span class="token punctuation">(</span><span class="token variable">$line</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> -webkit-box<span class="token punctuation">;</span>
+  <span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span> <span class="token variable">$line</span><span class="token punctuation">;</span>
+  <span class="token comment">/* autoprefixer: ignore next */</span>
+  <span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span> vertical<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="滚动"><a href="#滚动" class="header-anchor">#</a> 滚动</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@mixin</span> <span class="token function">scroll</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$type</span></span><span class="token punctuation">:</span> <span class="token string">&quot;y&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">@if</span> <span class="token selector"><span class="token variable">$type</span> == &quot;x&quot; </span><span class="token punctuation">{</span>
+    <span class="token property">overflow-x</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">overflow-y</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">@else if</span> <span class="token selector"><span class="token variable">$type</span> == &quot;y&quot; </span><span class="token punctuation">{</span>
+    <span class="token property">overflow-x</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">overflow-y</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">@else</span> <span class="token punctuation">{</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token property">-webkit-overflow-scrolling</span><span class="token punctuation">:</span> touch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2019-12-1 23:41:55</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mm-notes/css/skill.html" class="prev">CSS 奇淫技巧</a></span> <span class="next"><a href="/mm-notes/utils/regexp.html">常用正则</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mm-notes/assets/js/app.172c2b9f.js" defer></script><script src="/mm-notes/assets/js/2.1adb9821.js" defer></script><script src="/mm-notes/assets/js/7.addf1278.js" defer></script>
+  </body>
+</html>
