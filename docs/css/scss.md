@@ -24,11 +24,11 @@
 ## 滚动
 
 ```scss
-@mixin scroll($type: "y") {
-  @if $type == "x" {
+@mixin scroll($type: 'y') {
+  @if $type == 'x' {
     overflow-x: auto;
     overflow-y: hidden;
-  } @else if $type == "y" {
+  } @else if $type == 'y' {
     overflow-x: hidden;
     overflow-y: auto;
   } @else {
