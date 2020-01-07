@@ -97,6 +97,7 @@ git branch -dr [remote/分支名]
 ```
 
 #### 6. 标签
+
 ```sh
 # 列出所有 tag
 git tag
@@ -127,6 +128,7 @@ git checkout -b [分支名] [tag]
 ```
 
 #### 7. 查看信息
+
 ```sh
 # 显示变更的文件
 git status
@@ -170,6 +172,7 @@ git reflog
 ```
 
 #### 8. 提交
+
 ```sh
 # 下载远程仓库的所有变动
 git fetch [remote]
@@ -197,6 +200,7 @@ git push [remote] --all
 ```
 
 #### 9. 撤销
+
 ```sh
 # 重置暂存区的指定文件，与上一次 commit 保持一致，但工作区不变
 git reset [文件路径]
@@ -247,7 +251,7 @@ yarn deploy
 ## 删除 Git 中的所有提交历史记录
 
 ::: tip 提示
-以 `master` 分支为例 
+以 `master` 分支为例
 :::
 
 ```sh
