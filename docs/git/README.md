@@ -1,4 +1,4 @@
-# Git 
+# Git
 
 ## 常用 Git 命令
 
@@ -31,7 +31,7 @@
 | git stash                               | 暂时将未提交的变化移除                     |
 | git stash pop                           | 取出未提交的变化                           |
 
-[查看完整版 Git 命令](/git/command)
+[查看完整版 Git 命令](command)
 
 ## 将代码提交到 github 的 gh-pages 分支
 
