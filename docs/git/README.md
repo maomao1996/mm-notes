@@ -25,13 +25,15 @@
 | git log                                 | 显示当前分支的版本历史                     |
 | git merge 分支名                        | 合并指定分支到当前分支                     |
 | git remote -v                           | 显示所有远程仓库                           |
-| git pull [remote] [branch]              | 取回远程仓库的变化，并与本地分支合并       |
-| git push [remote] [branch]              | 上传本地指定分支到远程仓库                 |
+| git pull [remote][branch]               | 取回远程仓库的变化，并与本地分支合并       |
+| git push [remote][branch]               | 上传本地指定分支到远程仓库                 |
 | git push [remote] --force               | 强行推送当前分支到远程仓库，即使有冲突     |
 | git stash                               | 暂时将未提交的变化移除                     |
 | git stash pop                           | 取出未提交的变化                           |
 
 [查看完整版 Git 命令](command)
+
+[git 命令大全 github](https://github.com/521xueweihan/git-tips)
 
 ## 将代码提交到 github 的 gh-pages 分支
 
