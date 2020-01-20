@@ -55,6 +55,11 @@ module.exports = {
         title: "Git",
         collapsable: true,
         path: "/git/"
+      },
+      {
+        title: "软件相关",
+        collapsable: true,
+        children: ["software/mac"]
       }
     ],
     lastUpdated: "上次更新"
