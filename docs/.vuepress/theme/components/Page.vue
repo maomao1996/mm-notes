@@ -20,7 +20,6 @@ import Gitalk from 'gitalk'
 
 export default {
   components: { PageEdit, PageNav },
-
   props: ['sidebarItems'],
   mounted() {
     this.init(location.pathname)
@@ -62,7 +61,7 @@ export default {
 
 #gitalk-container {
   padding: 0 2.25rem;
-  max-width: 740px;
+  max-width: $contentWidth;
   margin: 0 auto;
 }
 </style>
