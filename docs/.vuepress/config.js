@@ -56,7 +56,7 @@ module.exports = {
       {
         title: '软件相关',
         collapsable: true,
-        children: ['software/mac']
+        children: ['software/mac', 'software/browser']
       }
     ],
     lastUpdated: '上次更新'
