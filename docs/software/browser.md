@@ -31,3 +31,5 @@
   - [AC-baidu](https://greasyfork.org/zh-CN/scripts/14178)重定向优化百度搜狗谷歌搜索、去广告
 
   - [解除B站区域限制](https://greasyfork.org/zh-CN/scripts/25718)实现解除B站区域限制，只对HTML5播放器生效
+
+  - [access-link](https://greasyfork.org/zh-CN/scripts/395970)为知乎、微信拦截页面增加跳转按钮（支持3秒后自动跳转）
