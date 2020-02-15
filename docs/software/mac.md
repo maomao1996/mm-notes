@@ -10,7 +10,14 @@
 安装
 
 ```sh
+# 安装小助手
 curl -o- -L https://raw.githubusercontent.com/lmk123/oh-my-wechat/master/install.sh | bash -s
+
+# 更新小助手
+omw
+
+# 微信在自动更新后会删除小助手，可运行以下命令恢复
+omw -n
 ```
 
 [软件地址](https://github.com/MustangYM/WeChatExtension-ForMac)
