@@ -16,6 +16,13 @@ npm config get registry
 # yarn config get registry
 ```
 
+## 查看全局安装过的包
+
+```sh
+npm list -g --depth 0
+# yarn global list --depth=0
+```
+
 ## 脚本命令相关
 
 执行顺序：并行执行 `&`，继发执行 `&&`
