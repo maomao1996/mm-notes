@@ -28,3 +28,12 @@
 4. 视频/音频格式支持非常全面
 
 [软件官网](http://potplayer.daum.net/?lang=zh_CN)
+
+## 压缩/解压神器 bandizip
+
+1. 界面简洁、清新
+2. 集 压缩/解压/浏览/编辑 为一体
+3. 支持处理乱码
+4. 支持通过对文件完整性的检查来判断压缩包是否受损
+
+[软件官网](http://www.bandisoft.com/bandizip/)
