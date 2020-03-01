@@ -8,6 +8,8 @@
 
 - [过滤广告 为 Youtube™](https://chrome.google.com/webstore/detail/adblock-for-youtube/cmedhionkhpnakcndndgjdbohmhepckk)移除 Youtube 中的视频广告。
 
+- [哔哩哔哩助手](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)哔哩哔哩弹幕网辅助扩展，拥有视频区和直播区的人性化功能
+
 - [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)冻结暂时用不到的标签页，以释放系统资源
 
 - [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh)全文翻译
@@ -15,6 +17,8 @@
 ## 开发常用
 
 - [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)JSON 格式化
+
+- [WEB 前端助手(FeHelper)](https://chrome.google.com/webstore/detail/fehelperjson/pkgccpejnmalmdinmhkkfafefagiiiad)包括字符串编解码、图片 base64 编码、代码压缩、美化、JSON 格式化、正则表达式、时间转换工具、二维码生成器、编码规范检测、页面性能检测、栅格检测、JS 运行效率分析
 
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)网站性能测评工具
 
@@ -47,3 +51,5 @@
   - [解除 B 站区域限制](https://greasyfork.org/zh-CN/scripts/25718)实现解除 B 站区域限制，只对 HTML5 播放器生效
 
   - [access-link](https://greasyfork.org/zh-CN/scripts/395970)为知乎、微信拦截页面增加跳转按钮（支持 3 秒后自动跳转）
+
+  - [imooc-tools](https://greasyfork.org/zh-CN/scripts/396378)慕课网问答区快速查看问答详情、自动播放下一节视频
