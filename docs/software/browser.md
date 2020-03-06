@@ -1,6 +1,18 @@
-# 浏览器插件
+# 浏览器扩展
+
+## 扩展商店
+
+- [Chrome 网上应用店](https://chrome.google.com/webstore/category/extensions)
+
+- [Chrome 插件扩展下载网 (免翻墙)](https://www.extfans.com/)
 
 ## 体验优化
+
+- 自定义你的新标签页
+
+  - [Infinity 新标签页 (Pro)](https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh)功能强大，更符合用户习惯
+
+  - [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca)设计更加简洁
 
 - [二维码生成器](https://chrome.google.com/webstore/detail/quick-qr-code-generator/afpbjjgbdimpioenaedcjgkaigggcdpp/related)为当前网页链接或任意内容生成二维码
 
@@ -14,13 +26,23 @@
 
 - [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh)全文翻译
 
+- [划词翻译](https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)划词翻译
+
 ## 开发常用
 
-- [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)JSON 格式化
+- [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)用于调试 Vue.js 应用程序
+
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)用于调试 React 应用程序
+
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)用于调试应用程序 Redux 状态更改
+
+- [掘金](https://chrome.google.com/webstore/detail/%E6%8E%98%E9%87%91/lecdifefmmfjnjjinhaennhdlmcaeeeb)在新标签页展示聚合内容，包含前端、Android、iOS、后端、产品、设计六大频道，每个频道内都有一到多个内容源
 
 - [WEB 前端助手(FeHelper)](https://chrome.google.com/webstore/detail/fehelperjson/pkgccpejnmalmdinmhkkfafefagiiiad)包括字符串编解码、图片 base64 编码、代码压缩、美化、JSON 格式化、正则表达式、时间转换工具、二维码生成器、编码规范检测、页面性能检测、栅格检测、JS 运行效率分析
 
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)网站性能测评工具
+
+- [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)JSON 格式化
 
 ## GitHub 相关
 
