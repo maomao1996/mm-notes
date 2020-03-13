@@ -1,5 +1,11 @@
-# mm-notes
+# 前端物语
 
-## 记录自己与开发相关的笔记
-
-包含 Vue、React、Webpack、Node、JS 常用方法、CSS
+- 前端常用知识
+  - Vue
+  - React
+  - Node
+  - JS 常用方法
+  - CSS
+- 踩坑记录
+- 软件推荐
+- ...(还在想)
