@@ -1,13 +1,13 @@
 module.exports = {
   base: '/mm-notes/',
   dest: './dist',
-  title: '茂茂的开发笔记',
-  description: '茂茂的开发笔记',
+  title: '前端物语',
+  description: '前端常用知识、踩坑记录、软件推荐等',
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: '茂茂的开发笔记',
-      description: '茂茂的开发笔记'
+      title: '前端物语',
+      description: '前端常用知识、踩坑记录、软件推荐等'
     }
   },
   head: [

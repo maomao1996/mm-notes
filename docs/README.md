@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: mm-notes
-tagline: 记录自己与开发相关的笔记
+heroText: 前端物语
+tagline: 前端常用知识、踩坑记录、软件推荐等
 actionText: 立即查看 →
 actionLink: /utils/regexp
 features:
