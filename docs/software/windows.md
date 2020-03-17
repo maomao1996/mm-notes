@@ -37,3 +37,15 @@
 4. 支持通过对文件完整性的检查来判断压缩包是否受损
 
 [软件官网](http://www.bandisoft.com/bandizip/)
+
+## 音量管理神器 EarTrumpet
+
+1. 基于 Microsoft Store 托管的 UWP 应用程序，可自动更新，性能影响小
+2. 默认播放设备管理
+3. 支持明 / 暗模式和所有强调色
+4. 支持快捷键设置
+5. 在播放设备之间移动应用
+
+
+[Github](https://github.com/File-New-Project/EarTrumpet)
+[Microsoft Store](https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp)
