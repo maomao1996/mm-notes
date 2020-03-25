@@ -28,6 +28,8 @@
 
 - [划词翻译](https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)划词翻译
 
+- [谷歌访问助手破解版](https://github.com/haotian-wang/google-access-helper) 神器，可以解决 chrome 扩展无法自动更新的问题，同时可以访问谷歌 google 搜索，gmail 邮箱，google+ 等谷歌服务。
+
 ## 开发常用
 
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)用于调试 Vue.js 应用程序
