@@ -7,6 +7,16 @@
   - 黑色主题
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
 
+- `Shades of Purple`
+
+  - 紫色主题（来自彤姐的推荐：没有什么比骚更重要）
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)
+
+- `Dracula Official`
+
+  - 黑色主题
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+
 - `VSCode Great Icons`
 
   - 文件图标美化
@@ -30,14 +40,14 @@
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
 
 - `Vetur`
-  - vue 文件语法高亮、片段整理、错误检查、格式化
+  - `Vue` 文件语法高亮、片段整理、错误检查、格式化
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
 ## CSS 相关
 
 - `Easy LESS`
 
-  - 保存时自动将 LESS 自动编译为 CSS
+  - 保存时自动将 `less` 自动编译为 `css`
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=mrcrowl.easy-less)
 
 - `language-stylus`
@@ -46,13 +56,13 @@
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus)
 
 - `px to rem`
-  - px 和 rem 互相转换
+  - `px` 和 `rem` 互相转换
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=sainoba.px-to-rem)
 
 ## 微信小程序相关
 
 - `minapp`
-  - 微信小程序标签、属性的智能补全（同时支持原生小程序、mpvue 和 wepy 框架，并提供 snippets）
+  - 微信小程序标签、属性的智能补全（同时支持原生小程序、`mpvue` 和 `wepy` 框架，并提供 snippets）
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode)
 
 ## Markdown 相关
@@ -69,7 +79,7 @@
 ## Git 相关
 
 - `GitLens — Git supercharged`
-  - 增强构建在 Visual Studio Code 中的 Git 功能
+  - 增强构建在 VS Code 中的 Git 功能
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 ## 格式化相关
@@ -109,7 +119,7 @@
 
 - `Import Cost`
 
-  - 在编辑器中显示导入/需要包的大小
+  - 在编辑器中显示导入/需要包的大小（PS：小内存用户不建议使用，说的就是你这个用 8G 的）
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
 
 - `Image preview`
@@ -151,7 +161,6 @@
 ```json
 // 将设置放入此文件中以覆盖默认设置
 {
-  // "files.autoSave": "onFocusChange",
   "files.autoSave": "off",
   "files.autoSaveDelay": 1500,
   "editor.tabSize": 2,
