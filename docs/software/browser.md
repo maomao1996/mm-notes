@@ -8,6 +8,8 @@
 
 ## 体验优化
 
+- [谷歌访问助手破解版](https://github.com/haotian-wang/google-access-helper) 神器，可以解决 chrome 扩展无法自动更新的问题，同时可以访问谷歌 google 搜索，gmail 邮箱，google+ 等谷歌服务。
+
 - 自定义你的新标签页
 
   - [Infinity 新标签页 (Pro)](https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh)功能强大，更符合用户习惯
@@ -28,7 +30,7 @@
 
 - [划词翻译](https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)划词翻译
 
-- [谷歌访问助手破解版](https://github.com/haotian-wang/google-access-helper) 神器，可以解决 chrome 扩展无法自动更新的问题，同时可以访问谷歌 google 搜索，gmail 邮箱，google+ 等谷歌服务。
+- [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)视频倍速播放，支持使用快捷键加快，减慢，推进和回放任何 HTML5 视频
 
 ## 开发常用
 
