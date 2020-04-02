@@ -30,32 +30,26 @@ module.exports = {
     sidebar: [
       {
         title: 'Vue',
-        collapsable: true,
         path: '/vue/'
       },
       {
         title: 'CSS',
-        collapsable: true,
         children: ['css/', 'css/skill', 'css/scss']
       },
       {
         title: '工具方法',
-        collapsable: true,
         children: ['utils/regexp', 'utils/function']
       },
       {
         title: 'Node 相关',
-        collapsable: true,
         children: ['node/npm', 'node/depend']
       },
       {
         title: 'Git',
-        collapsable: true,
         path: '/git/'
       },
       {
         title: '软件相关',
-        collapsable: true,
         children: ['software/mac', 'software/windows', 'software/browser', 'software/vscode']
       }
     ],
