@@ -46,6 +46,5 @@
 4. 支持快捷键设置
 5. 在播放设备之间移动应用
 
-
 [Github](https://github.com/File-New-Project/EarTrumpet)
 [Microsoft Store](https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp)

@@ -7,7 +7,18 @@
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs",
     "deploy": "gh-pages -d dist -m deploy",
-    "deploy:build": "npm run build && npm run deploy"
+    "deploy:build": "npm run build && npm run deploy",
+    "lint": "prettier --write '**/*.{js,scss,md,json}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,scss,md,json}": [
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -25,6 +36,9 @@
     "@vuepress/plugin-pwa": "^1.4.0",
     "gh-pages": "^2.2.0",
     "gitalk": "^1.6.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.3",
+    "prettier": "^2.0.4",
     "vuepress": "^1.4.0"
   }
 }

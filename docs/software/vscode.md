@@ -187,7 +187,14 @@
     "extensions": ["js", ".vue"]
   },
   "eslint.format.enable": true,
-  "eslint.validate": ["vue", "html", "javascript", "javascriptreact", "jsx", "typescript"],
+  "eslint.validate": [
+    "vue",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "jsx",
+    "typescript"
+  ],
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.printWidth": 100,
