@@ -11,7 +11,7 @@ export default {
   methods: {
     onChildMounted() {}
   }
-};
+}
 </script>
 ```
 
@@ -23,14 +23,11 @@ export default {
 <template>
   <div class="container" @click="handleClick"></div>
 </template>
-
 <script>
 import { debounce } from 'lodash-es'
 export default {
   methods: {
-    handleClick: debounce(function() {
-
-    }, 500)
+    handleClick: debounce(function () {}, 500)
   }
 }
 </script>

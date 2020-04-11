@@ -22,7 +22,7 @@ function getIdCardInfo(idCard, separator = '/') {
   // 提取 idCard 中的字符
   const idSubstr = (s, e) => idCard.substr(s, e)
   // 拼接日期
-  const splice = d => d.join(separator)
+  const splice = (d) => d.join(separator)
   // 获取出生年月日 性别（0 女 1 男）
   let birthday, gender
   if (idCard.length === 18) {
