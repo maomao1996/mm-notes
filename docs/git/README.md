@@ -83,3 +83,60 @@ git branch -m master
 # 强制更新存储库
 git push -f origin master
 ```
+
+## 使用 GitHub Actions 自动部署
+
+[GitHub Actions](https://github.com/features/actions) 是 GitHub 的持续集成服务
+
+### 配置 Secrets
+
+> Action 需要有操作仓库的权限
+
+GitHub 官方的帮助文档：[创建用于命令行的个人访问令牌](https://help.github.com/cn/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+
+打开需要配置 Actions 的仓库，进入 `Settings/Secrets` 页面，配置 `ACCESS_TOKEN` 变量，储存内容为刚刚创建的个人访问令牌
+
+### 编写 `workflow` 文件
+
+1. 点击仓库的 `Actions` 按钮
+2. 点击 `Set up a workflow yourself` 按钮
+3. 复制如下内容
+
+```yml
+name: GitHub Actions Build and Deploy
+
+# 触发条件: push 到 master 分支后
+on:
+  push:
+    branches:
+      - master
+
+# 任务
+jobs:
+  build-and-deploy:
+    # 服务器环境：最新版 ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      # 打包静态文件
+      - name: Build
+        run: npm install && npm run build
+
+      # 部署
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          # GitHub 密钥
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # GitHub Pages 读取的分支
+          BRANCH: gh-pages
+          # 静态文件所在目录
+          FOLDER: dist
+```
+
+详细教程可以参考阮一峰老师的[GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
