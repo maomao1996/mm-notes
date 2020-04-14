@@ -2,10 +2,13 @@
 
 ## 提取身份证信息
 
-- #### 参数：
+- #### 参数
+
   - **idCard:** 身份证号码
   - **separator:** 出生年月日的分割字符，默认为 `/`
-- #### 返回值：
+
+- #### 返回值
+
   - **age:** 年龄（实岁）
   - **birthday:** 出生年月日
   - **gender:** 性别（0 女 1 男）
@@ -73,4 +76,7 @@ const isChrome = /chrome\/\d+/.test(UA) && !isEdge
 
 // 微信
 const isWeChat = /micromessenger/.test(UA)
+
+// 移动端
+const isMobile = 'ontouchstart' in window
 ```

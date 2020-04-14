@@ -16,6 +16,8 @@
 
   - [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca)设计更加简洁
 
+  - [MONKNOW 新标签页 - 个性化面板](https://www.monknow.com/zh-CN)支持网站网址 URL 分组管理，数据实时云同步，黑暗深色夜间主题模式。
+
 - [二维码生成器](https://chrome.google.com/webstore/detail/quick-qr-code-generator/afpbjjgbdimpioenaedcjgkaigggcdpp/)为当前网页链接或任意内容生成二维码
 
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)广告拦截工具
