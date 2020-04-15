@@ -80,3 +80,29 @@ const isWeChat = /micromessenger/.test(UA)
 // 移动端
 const isMobile = 'ontouchstart' in window
 ```
+
+## 微信 api promise 化
+
+```js
+function promisify(fn) {
+  return function (options) {
+    return new Promise((resolve, reject) => {
+      fn(
+        Object.assign({}, options, {
+          success: resolve,
+          fail: reject
+        })
+      )
+    })
+  }
+}
+
+// 例 获取系统信息
+promisify(wx.getSystemInfo)
+  .then((res) => {
+    console.log('success', res)
+  })
+  .catch((err) => {
+    console.log('fail', err)
+  })
+```
