@@ -28,9 +28,13 @@
 
 - [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)冻结暂时用不到的标签页，以释放系统资源
 
+- [OneTab](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)点击 OneTab 可将标签页转换成一个列表以释放系统资源，当您需要再次访问这些标签页时，可以单独或全部恢复它们。
+
 - [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh)全文翻译
 
 - [划词翻译](https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)划词翻译
+
+- [沙拉查词](https://chrome.google.com/webstore/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D-%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/cdonnmffkdaoajfknoeeecmchibpmkmg)Saladict 沙拉查词是一款专业划词翻译扩展，为交叉阅读而生。大量权威词典涵盖中英日韩法德西语，支持复杂的划词操作、网页翻译、生词本与 PDF 浏览。
 
 - [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)视频倍速播放，支持使用快捷键加快，减慢，推进和回放任何 HTML5 视频
 
@@ -81,3 +85,7 @@
   - [access-link](https://greasyfork.org/zh-CN/scripts/395970)为知乎、微信拦截页面增加跳转按钮（支持 3 秒后自动跳转）
 
   - [imooc-tools](https://greasyfork.org/zh-CN/scripts/396378)慕课网问答区快速查看问答详情、自动播放下一节视频
+
+## 其他工具
+
+- [微信读书自动阅读器](https://github.com/DoooReyn/WxRead-WebAutoReader)全自动刷阅读时长，轻轻松松冲顶霸榜，您的微读挂机好帮手
