@@ -44,6 +44,10 @@ module.exports = {
         children: ['utils/regexp', 'utils/function']
       },
       {
+        title: '疑难杂症',
+        children: ['issue/h5','issue/pc']
+      },
+      {
         title: 'Node 相关',
         children: ['node/npm', 'node/depend']
       },
