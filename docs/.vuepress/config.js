@@ -61,7 +61,8 @@ module.exports = {
           'software/mac',
           'software/windows',
           'software/browser',
-          'software/vscode'
+          'software/vscode',
+          'software/webstorm'
         ]
       }
     ],
