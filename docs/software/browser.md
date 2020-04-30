@@ -38,6 +38,8 @@
 
 - [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)视频倍速播放，支持使用快捷键加快，减慢，推进和回放任何 HTML5 视频
 
+- [medium-unlimited](https://github.com/manojVivek/medium-unlimited) 免费读取 `medium.com` 文章
+
 ## 开发常用
 
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)用于调试 Vue.js 应用程序
@@ -65,6 +67,8 @@
 - [File Icon for GitHub and GitLab](https://chrome.google.com/webstore/detail/file-icon-for-github-and/ficfmibkjjnpogdcfhfokmihanoldbfe)文件 icon 美化
 
 - [Github Hovercard](https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk) GitHub 的悬浮卡，可快速浏览量用户/仓库/问题/提交信息
+
+- [Enhanced GitHub](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd)显示仓库大小、每个文件的大小、下载链接和复制文件内容的选项
 
 ## 油猴
 
