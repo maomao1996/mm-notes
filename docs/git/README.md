@@ -35,6 +35,21 @@
 
 [git 命令大全 github](https://github.com/521xueweihan/git-tips)
 
+## commit 常用 type
+
+| type        | 含义                                   |
+| :---------- | :------------------------------------- |
+| feat        | 新功能                                 |
+| fix         | 修复 bug                               |
+| improvement | 对当前功能的改进                       |
+| docs        | 修改文档                               |
+| style       | 代码格式修改                           |
+| refactor    | 重构（即不是新增功能，也不是修复 bug） |
+| perf        | 更改代码以提高性能                     |
+| test        | 增加测试                               |
+| build       | 构建过程或辅助工具的变动               |
+| revert      | 恢复上一次提交                         |
+
 ## 将代码提交到 github 的 gh-pages 分支
 
 1. 安装 `gh-pages`
