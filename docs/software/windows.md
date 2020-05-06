@@ -8,7 +8,9 @@
 
 [软件官网](https://www.voidtools.com/zh-cn/)
 
-## 效率神器 Wox
+## 效率神器
+
+### Wox
 
 1. 可以搜索安装的程序，支持中文拼音模糊搜索
 2. 搜索浏览器书签
@@ -19,6 +21,16 @@
 
 [Github](https://github.com/Wox-launcher/Wox)
 [软件官网](https://wox.one/)
+
+### uTools（颜值更高）
+
+1. 强大的插件化
+2. 多功能输入框，支持文本、截图、图片、文件、文件夹
+3. 自动识别 / 粘贴
+4. 全局快捷键
+5. 云端数据同步
+
+[软件官网](https://u.tools/)
 
 ## 视频播放神器 PotPlayer
 
