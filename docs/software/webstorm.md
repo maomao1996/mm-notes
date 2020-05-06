@@ -6,7 +6,7 @@
 
 ## 汉化
 
-- 方案一 
+- 方案一
   - 进入 `文件 - 设置 - Plugins - Marketplace`
   - 搜索 `Chinese ​(Simplified)​ Language Pack EAP` 下载安装
 - 方案二
@@ -17,7 +17,7 @@
     - 进入 `帮助 - 关于`
     - 找到 `Build #WS-` 后面的数字
   - 打开 [Chinese ​(Simplified)​ Language Pack EAP](https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack-eap)
-  - 点击 `Versions` 选择对应编辑器再搜索对应版本下载
+  - 点击 `Versions` 选择对应编辑器再搜索对应版本下载（当找不到一样的版本时，可以看列表的第二栏版本范围，找包含你编辑器的版本下载就行）
   - 通过磁盘安装刚下载的文件
 
 ![磁盘安装](../.vuepress/alias/images/instasll.jpg)
