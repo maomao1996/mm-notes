@@ -23,6 +23,20 @@ npm list -g --depth 0
 # yarn global list --depth=0
 ```
 
+## 查看全局安装的模块位置
+
+```sh
+npm root -g
+# yarn global dir
+```
+
+## 清除全局缓存
+
+```sh
+npm cache clean -f
+# yarn cache clean
+```
+
 ## 脚本命令相关
 
 执行顺序：并行执行 `&`，继发执行 `&&`
