@@ -96,8 +96,13 @@
 ## 调试相关
 
 - `Debugger for Chrome`
+
   - 在 Chrome 浏览器或任何其他支持 Chrome Debugger 协议的目标中调试 JavaScript 代码
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+
+- `Live Server`
+  - 启动具有实时重新加载功能的本地开发服务，以处理静态和动态页面
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ## 其他
 
