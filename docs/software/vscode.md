@@ -161,6 +161,23 @@
   - 使用 GitHub Gist 在多台机器上同步设置，代码片段，主题，文件图标，启动，键绑定，工作区和扩展。
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 
+## webpack 项目识别 alias
+
+1. 在项目根目录新建 `jsconfig.json` 或 `tsconfig.json`
+2. 添加以下代码，其中 `paths` 字段的值要与你项目配置的 `alias` 一致
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
+}
+```
+
 ## 推荐配置
 
 ```json
