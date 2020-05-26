@@ -42,7 +42,7 @@
 2. 点击 `+` 选择 `Prettier`
 3. 将 `File type` 修改为你需要的文件类型，通用可选 `Any`
 
-## webpack 项目识别引入别名
+## webpack 项目识别 alias
 
 1. 进入 `文件 - 设置 - 框架和语言 - JavaScript - Webpack`
 2. 将 webpack 配置文件地址修改为对应地址
