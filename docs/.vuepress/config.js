@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         title: '疑难杂症',
-        children: ['issue/h5','issue/pc']
+        children: ['issue/h5', 'issue/pc']
       },
       {
         title: 'Node 相关',

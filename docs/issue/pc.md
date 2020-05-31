@@ -20,7 +20,7 @@
 
 ```css
 目标元素 {
-  transform: perspective(1px)
+  transform: perspective(1px);
 }
 ```
 
