@@ -89,6 +89,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 [Github](https://github.com/ohmyzsh/ohmyzsh)
 
+## Gas Mask
+
+Hosts 管理工具
+
+1. 便捷修改 Hosts
+2. 可配置快捷方案
+
+[Github](https://github.com/2ndalpha/gasmask)
+
 ## Mac 微信的功能拓展
 
 1. 消息防撤回
@@ -110,3 +119,15 @@ omw -n
 ```
 
 [软件地址](https://github.com/MustangYM/WeChatExtension-ForMac)
+
+## IINA
+
+视频播放器
+
+1. 界面简洁、美观，契合 macOS 设计风格
+2. 功能强大，设置以播放体验为中心
+3. 支持鼠标和触控板手势
+4. 在线字幕、缩略图预览、画中画等
+
+[Github](https://github.com/iina/iina)
+[软件官网](https://iina.io/)
