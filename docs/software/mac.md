@@ -131,3 +131,13 @@ omw -n
 
 [Github](https://github.com/iina/iina)
 [软件官网](https://iina.io/)
+
+## eZip
+
+专为 macOS 而设计的压缩软件
+
+1. 界面简洁、美观，完美兼容 Mojave
+2. 支持超过 20 种压缩格式
+3. 批量文件加密
+
+[软件官网](https://ezip.awehunt.com/)
