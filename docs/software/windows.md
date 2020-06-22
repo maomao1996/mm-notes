@@ -60,3 +60,12 @@
 
 [Github](https://github.com/File-New-Project/EarTrumpet)
 [Microsoft Store](https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp)
+
+## 系统优化工具 Dism++
+
+1. 基于 Windows 系统原生功能 Dism 开发的增强工具
+2. 体积小，解压即用，方便快捷
+3. 集成空间清理、系统管理/优化、热备份还原等功能于一体
+
+[Github](https://github.com/Chuyu-Team/Dism-Multi-language)
+[软件官网](http://www.chuyu.me/zh-Hans/index.html)
