@@ -110,6 +110,8 @@ Hosts 管理工具
 ```sh
 # 安装小助手
 curl -o- -L https://raw.githubusercontent.com/lmk123/oh-my-wechat/master/install.sh | bash -s
+# OR 推荐
+curl -o- -L https://omw.limingkai.cn/install.sh | bash -s
 
 # 更新小助手
 omw
