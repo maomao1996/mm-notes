@@ -69,3 +69,9 @@
 
 [Github](https://github.com/Chuyu-Team/Dism-Multi-language)
 [软件官网](http://www.chuyu.me/zh-Hans/index.html)
+
+## 看图神器 Honeyview
+
+1. 支持众多图片格式，如 PSD 文件预览
+2. 对图像格式进行批量转换和调整
+3. 可以显示包括 GPS 信息在内的 JPEG 格式的 EXIF 信息
