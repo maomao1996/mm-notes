@@ -45,11 +45,7 @@ source ~/.zshrc
 
 [软件官网](https://brew.sh/index_zh-cn)
 
-## Terminal
-
-使用 iTerm2 + oh-my-zsh
-
-### iTerm2
+## iTerm2
 
 Mac 上最好用的终端
 
@@ -73,21 +69,6 @@ chsh -s /bin/zsh
 ```
 
 [软件官网](https://www.iterm2.com)
-
-### oh-my-zsh
-
-用于自定义 zsh 的配置
-
-1. 主题配置
-2. 插件安装
-
-安装
-
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-[Github](https://github.com/ohmyzsh/ohmyzsh)
 
 ## Gas Mask
 

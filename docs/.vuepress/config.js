@@ -62,7 +62,8 @@ module.exports = {
           'software/windows',
           'software/browser',
           'software/vscode',
-          'software/webstorm'
+          'software/webstorm',
+          'software/zsh'
         ]
       }
     ],
