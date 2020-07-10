@@ -27,8 +27,15 @@ module.exports = {
   themeConfig: {
     repo: 'maomao1996/mm-notes/',
     nav: [
-      { text: '在线音乐播放器', link: 'http://music.mtnhao.com/' },
-      { text: 'Blog', link: 'http://www.fe-mm.com/' }
+      {
+        text: '在线音乐播放器',
+        ariaLabel: 'Language Menu',
+        items: [
+          { text: 'PC 端', link: 'https://music.fe-mm.com' },
+          { text: '移动端', link: 'https://reactmusic.fe-mm.com' }
+        ]
+      },
+      { text: 'Blog', link: 'https://www.fe-mm.com' }
     ],
     sidebar: [
       {
