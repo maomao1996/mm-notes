@@ -28,7 +28,7 @@ module.exports = {
     repo: 'maomao1996/mm-notes/',
     nav: [
       { text: '在线音乐播放器', link: 'http://music.mtnhao.com/' },
-      { text: 'Blog', link: 'http://www.mtnhao.com/' }
+      { text: 'Blog', link: 'http://www.fe-mm.com/' }
     ],
     sidebar: [
       {
