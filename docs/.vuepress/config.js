@@ -29,9 +29,8 @@ module.exports = {
     nav: [
       {
         text: '在线音乐播放器',
-        ariaLabel: 'Language Menu',
         items: [
-          { text: 'PC 端', link: 'https://music.fe-mm.com' },
+          { text: 'PC 端', link: 'https://netease-music.fe-mm.com' },
           { text: '移动端', link: 'https://reactmusic.fe-mm.com' }
         ]
       },
