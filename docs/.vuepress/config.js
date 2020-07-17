@@ -55,7 +55,7 @@ module.exports = {
       },
       {
         title: 'Node 相关',
-        children: ['node/npm', 'node/depend']
+        children: ['node/npm', 'node/toolkit']
       },
       {
         title: 'Git',
