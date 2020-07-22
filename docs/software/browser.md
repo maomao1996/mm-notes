@@ -8,8 +8,6 @@
 
 ## 体验优化
 
-- [谷歌访问助手破解版](https://github.com/haotian-wang/google-access-helper) 神器，可以解决 chrome 扩展无法自动更新的问题，同时可以访问谷歌 google 搜索，gmail 邮箱，google+ 等谷歌服务。
-
 - 自定义你的新标签页
 
   - [Infinity 新标签页 (Pro)](https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh)功能强大，更符合用户习惯
