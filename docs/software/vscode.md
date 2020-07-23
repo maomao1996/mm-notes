@@ -271,7 +271,8 @@
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
-    "*.wxs": "javascript"
+    "*.wxs": "javascript",
+    "*.vue": "vue"
   },
   "minapp-vscode.disableAutoConfig": true,
   "gitlens.advanced.messages": {
