@@ -1,5 +1,7 @@
+const base = process.env.BUILD_ENV ? process.env.BUILD_ENV : '/mm-notes/'
+
 module.exports = {
-  base: '/mm-notes/',
+  base,
   dest: './dist',
   title: '前端物语',
   description: '前端常用知识、踩坑记录、软件推荐等',
