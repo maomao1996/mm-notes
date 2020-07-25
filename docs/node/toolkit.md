@@ -6,23 +6,26 @@
 
 node 版本管理工具
 
-#### 安装和设置
+安装前，需要将已安装的 `nodejs` 进行卸载
+
+#### 安装和设置 - Windows
 
 [Windows 下载地址](https://github.com/coreybutler/nvm-windows/releases)
 
 ```sh
-# Mac
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-# OR
-curl -o- https://gitee.com/mirrors/nvm/raw/v0.35.3/install.sh | bash
-
-
 # 设置 node 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 
 # 设置 npm 镜像
 nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+```
 
+#### 安装和设置 - Mac
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+# OR
+curl -o- https://gitee.com/mirrors/nvm/raw/v0.35.3/install.sh | bash
 ```
 
 #### 常用命令
