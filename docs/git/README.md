@@ -1,5 +1,15 @@
 # Git
 
+[官网](https://git-scm.com/)
+
+[Github](https://github.com/git/git)
+
+[Windows 版 Github](https://github.com/git-for-windows/git)
+
+[Windows 版下载镜像站](https://npm.taobao.org/mirrors/git-for-windows/)
+
+[下载技巧 - 使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
+
 ## 常用 Git 命令
 
 ::: tip 提示
