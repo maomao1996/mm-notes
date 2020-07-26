@@ -9,3 +9,14 @@
 - 踩坑记录
 - 软件推荐
 - ...(还在想)
+
+## 访问地址
+
+### vercel
+
+- <https://notes.fe-mm.com>
+- <https://mm-notes.vercel.app>
+
+### Github
+
+- <https://maomao1996.github.io/mm-notes>
