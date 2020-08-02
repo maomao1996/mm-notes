@@ -43,6 +43,7 @@ source ~/.zshrc
 
 切换镜像详细可查看[阿里云 Homebrew 镜像](https://developer.aliyun.com/mirror/homebrew?spm=a2c6h.13651102.0.0.e40a1b11ZkPX9D)
 
+[Github](https://github.com/Homebrew)
 [软件官网](https://brew.sh/index_zh-cn)
 
 ## iTerm2
@@ -68,6 +69,7 @@ cat /etc/passwd | grep sh
 chsh -s /bin/zsh
 ```
 
+[Github](https://github.com/gnachman/iTerm2)
 [软件官网](https://www.iterm2.com)
 
 ## Gas Mask
@@ -101,7 +103,7 @@ omw
 omw -n
 ```
 
-[软件地址](https://github.com/MustangYM/WeChatExtension-ForMac)
+[Github](https://github.com/MustangYM/WeChatExtension-ForMac)
 
 ## IINA
 

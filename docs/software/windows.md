@@ -39,7 +39,7 @@
 3. 纯粹的本地播放器
 4. 视频/音频格式支持非常全面
 
-[软件官网](http://potplayer.daum.net/?lang=zh_CN)
+[软件官网](https://potplayer.daum.net/?lang=zh_CN)
 
 ## 压缩/解压神器 bandizip
 
@@ -48,7 +48,7 @@
 3. 支持处理乱码
 4. 支持通过对文件完整性的检查来判断压缩包是否受损
 
-[软件官网](http://www.bandisoft.com/bandizip/)
+[软件官网](https://www.bandisoft.com/bandizip/)
 
 ## 音量管理神器 EarTrumpet
 
@@ -68,10 +68,20 @@
 3. 集成空间清理、系统管理/优化、热备份还原等功能于一体
 
 [Github](https://github.com/Chuyu-Team/Dism-Multi-language)
-[软件官网](http://www.chuyu.me/zh-Hans/index.html)
+[软件官网](https://www.chuyu.me/zh-Hans/index.html)
 
 ## 看图神器 Honeyview
 
 1. 支持众多图片格式，如 PSD 文件预览
 2. 对图像格式进行批量转换和调整
 3. 可以显示包括 GPS 信息在内的 JPEG 格式的 EXIF 信息
+
+[软件官网](https://www.bandisoft.com/honeyview)
+
+## 隐私优化 WPD
+
+1. 隐私管理
+2. 预装应用卸载
+3. 绿色免费、支持中文
+
+[软件官网](https://wpd.app)
