@@ -28,6 +28,11 @@
   - [Atom Material Icons](https://plugins.jetbrains.com/plugin/10044-atom-material-icons/) 图标美化
   - [Atom OneDark Theme](https://plugins.jetbrains.com/plugin/12178-atom-onedark-theme) Atom OneDark 主题
   - [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)Material Design 主题
+  - [One Dark theme](https://plugins.jetbrains.com/plugin/index?xmlId=com.markskelton.one-dark-theme)黑色主题
+- 配色方案
+  - [bluloco 方案](https://github.com/uloco/webstorm-bluloco-scheme)
+    - [Dark 下载](https://cdn.jsdelivr.net/gh/uloco/webstorm-bluloco-scheme/Bluloco%20Dark.icls)
+    - [Light 下载](https://cdn.jsdelivr.net/gh/uloco/webstorm-bluloco-scheme/Bluloco%20Light.icls)
 - 自定义背景图
   - 进入 `文件 - 设置 - 外观和行为 - Appearance`
   - 点击 `BACKGROUND IMAGE`
