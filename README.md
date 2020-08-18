@@ -15,7 +15,7 @@
 ### vercel
 
 - <https://notes.fe-mm.com>
-- <https://mm-notes.vercel.app>
+- <https://mm-notes.fe-mm.vercel.app>
 
 ### Github
 
