@@ -85,3 +85,10 @@
 3. 绿色免费、支持中文
 
 [软件官网](https://wpd.app)
+
+## 防撤回补丁
+
+1. 支持微信/QQ/TIM 防撤回
+2. 支持微信多开
+
+[Github](https://github.com/huiyadanli/RevokeMsgPatcher)
