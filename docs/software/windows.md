@@ -1,8 +1,18 @@
 # Windows 平台
 
+## 终端神器 Cmder
+
+1. 便携，解压即可用
+2. 支持子窗口
+3. 自带 `git`、`ls` 等命令
+4. 自定义配置项
+
+[Github](https://github.com/cmderdev/cmder)
+[软件官网](https://cmder.net/)
+
 ## 搜索神器 Everything
 
-1. `Windows` 平台最快的文件搜索软件
+1. Windows 平台最快的文件搜索软件
 2. 支持整词、路经匹配搜索
 3. 支持正则表达式搜索
 
@@ -14,7 +24,7 @@
 
 1. 可以搜索安装的程序，支持中文拼音模糊搜索
 2. 搜索浏览器书签
-3. 可以调用 `Everything` 进行快速全局搜索
+3. 可以调用 Everything 进行快速全局搜索
 4. 网页搜索功能
 5. 支持插件扩展
 6. 支持自定义主题
@@ -61,6 +71,14 @@
 [Github](https://github.com/File-New-Project/EarTrumpet)
 [Microsoft Store](https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp)
 
+## 看图神器 Honeyview
+
+1. 支持众多图片格式，如 PSD 文件预览
+2. 对图像格式进行批量转换和调整
+3. 可以显示包括 GPS 信息在内的 JPEG 格式的 EXIF 信息
+
+[软件官网](https://www.bandisoft.com/honeyview)
+
 ## 系统优化工具 Dism++
 
 1. 基于 Windows 系统原生功能 Dism 开发的增强工具
@@ -69,14 +87,6 @@
 
 [Github](https://github.com/Chuyu-Team/Dism-Multi-language)
 [软件官网](https://www.chuyu.me/zh-Hans/index.html)
-
-## 看图神器 Honeyview
-
-1. 支持众多图片格式，如 PSD 文件预览
-2. 对图像格式进行批量转换和调整
-3. 可以显示包括 GPS 信息在内的 JPEG 格式的 EXIF 信息
-
-[软件官网](https://www.bandisoft.com/honeyview)
 
 ## 隐私优化 WPD
 
