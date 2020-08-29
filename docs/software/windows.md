@@ -111,3 +111,13 @@
 2. 支持微信多开
 
 [Github](https://github.com/huiyadanli/RevokeMsgPatcher)
+
+## 任务栏透明 TranslucentTB
+
+1. 支持亚克力、模糊、透明、主题色、不透明效果
+2. 支持自定义颜色
+3. 只支持 Windows 10
+
+[Github](https://github.com/TranslucentTB/TranslucentTB)
+[Microsoft Store](https://www.microsoft.com/zh-cn/p/translucenttb/9pf4kz2vn4w9)
+[Microsoft Store 汉化版](https://www.microsoft.com/zh-cn/p/translucenttb-%E6%B1%89%E5%8C%96-by-tpxxn/9n5w18jc9bg2)
