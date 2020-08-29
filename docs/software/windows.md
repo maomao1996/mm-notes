@@ -79,6 +79,15 @@
 
 [软件官网](https://www.bandisoft.com/honeyview)
 
+## 壁纸神器 Wallpaper Engine
+
+1. 内存占用低
+2. 支持视频、网页、2D、3D、GIF 等类型壁纸
+3. 强大的创意工坊拥有海量壁纸可供选择
+
+[Steam 商店地址](https://store.steampowered.com/app/431960/Wallpaper_Engine/)
+[创意工坊](https://steamcommunity.com/app/431960/workshop/)
+
 ## 系统优化工具 Dism++
 
 1. 基于 Windows 系统原生功能 Dism 开发的增强工具
