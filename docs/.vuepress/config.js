@@ -66,6 +66,7 @@ module.exports = {
       {
         title: '软件相关',
         children: [
+          'software/cross-platform',
           'software/mac',
           'software/windows',
           'software/browser',
