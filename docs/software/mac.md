@@ -125,4 +125,12 @@ omw -n
 2. 支持超过 20 种压缩格式
 3. 批量文件加密
 
-[软件官网](https://ezip.awehunt.com/)
+[软件官网](https://ezip.awehunt.com)
+
+## 腾讯柠檬清理
+
+1. 界面简洁清新
+2. 支持垃圾清理、文件查重、软件卸载
+3. 支持微信、QQ、XCode、Sketch 深度扫描清理
+
+[软件官网](https://lemon.qq.com)
