@@ -74,6 +74,10 @@ module.exports = {
           'software/webstorm',
           'software/zsh'
         ]
+      },
+      {
+        title: '在线工具',
+        children: ['online-tools/bookmark-scripts']
       }
     ],
     lastUpdated: '上次更新'
