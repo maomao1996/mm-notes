@@ -72,6 +72,16 @@ chsh -s /bin/zsh
 [Github](https://github.com/gnachman/iTerm2)
 [软件官网](https://www.iterm2.com)
 
+## 效率神器 Alfred
+
+1. 定位文件、打开文件
+2. 打开网址、书签、App
+3. 自定义搜索
+4. 查看剪贴板历史
+5. 计算器、查词典、运行 `shell` 命令
+
+[软件官网](https://www.alfredapp.com)
+
 ## Gas Mask
 
 Hosts 管理工具
