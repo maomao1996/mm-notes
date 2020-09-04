@@ -11,3 +11,15 @@ javascript: void (function () {
 ```
 
 <a href="javascript:void(function(){document.scrollingElement.scrollIntoView({behavior:'smooth'})})()">回到顶部</a>
+
+## 显示密码
+
+```js
+javascript: void (function () {
+  document.querySelectorAll('input[type=password]').forEach(function (dom) {
+    dom.setAttribute('type', 'text')
+  })
+})()
+```
+
+<a href="javascript:void(function(){document.querySelectorAll('input[type=password]').forEach(function(dom){dom.setAttribute('type','text')})})()">显示密码</a>
