@@ -144,3 +144,13 @@ omw -n
 3. 支持微信、QQ、XCode、Sketch 深度扫描清理
 
 [软件官网](https://lemon.qq.com)
+
+## 截图神器 IShot
+
+1. 区域截图、窗口截图、多窗口截图、延时截图、长截图、滚动截图
+2. 快速标注(矩形、圆形、横线、箭头、画笔、马赛克、文字标记、序号标签、局部高亮)
+3. 支持截图导圆角、阴影调节
+4. 贴图、取色
+
+[软件官网](https://www.better365.cn/ishot.html)
+[App Store](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E5%BD%95%E5%B1%8F-2020%E5%85%A8%E6%96%B0%E9%AB%98%E5%BA%A6/id1485844094)
