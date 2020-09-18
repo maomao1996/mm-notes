@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "cf6c4664370d2814b35082999e78ba39"
+    "revision": "07812789aacf0f524497f5f321c55334"
   },
   {
     "url": "assets/css/0.styles.045a0977.css",
@@ -78,8 +78,8 @@ self.__precacheManifest = [
     "revision": "4d700dcf9a65d476031634f327c17946"
   },
   {
-    "url": "assets/js/19.a8530917.js",
-    "revision": "30dbdd3757b57728af568b5b4423d9ea"
+    "url": "assets/js/19.a3b558ee.js",
+    "revision": "04f1aeba56f558874c8dd436ea5524c0"
   },
   {
     "url": "assets/js/2.0d6dbd6d.js",
@@ -150,92 +150,92 @@ self.__precacheManifest = [
     "revision": "532f84fa650160f9e43cc27e96f5651c"
   },
   {
-    "url": "assets/js/app.826afac1.js",
-    "revision": "dedd8deb2f757a051780d14a6510e0ac"
+    "url": "assets/js/app.b93887ab.js",
+    "revision": "51c81f82ab198c7fe1ac1dd464507cfc"
   },
   {
     "url": "css/index.html",
-    "revision": "69347c8f867d7d35389d5e22a1971973"
+    "revision": "c61a5b86bceeb3c36e7d25f4511b92cd"
   },
   {
     "url": "css/scss.html",
-    "revision": "4bc1c3fc7b9d2446644e5edd356f7492"
+    "revision": "e85bbec79a89c77d59f49b7809173ff8"
   },
   {
     "url": "css/skill.html",
-    "revision": "ccdbe12e8df08c5ec38edaa7804be43f"
+    "revision": "7bcb49662402191b476d9b3aa45770a9"
   },
   {
     "url": "git/command.html",
-    "revision": "083fd6a19a507e0491a8cdffbc9e5d93"
+    "revision": "adbbf4750a5668cc5b5533c8b722f031"
   },
   {
     "url": "git/index.html",
-    "revision": "482b68d55811b33d9888b9a0ae602cc3"
+    "revision": "920e125d3dec9ea73413d05a3092aca7"
   },
   {
     "url": "index.html",
-    "revision": "696ed9f348607aaaa111fbd9e9839c33"
+    "revision": "599b93917061ad1332604668649d47bc"
   },
   {
     "url": "issue/h5.html",
-    "revision": "79af09fa09ac0ad6502ec138908c79f6"
+    "revision": "8370ff87b8537963b2554910130c3073"
   },
   {
     "url": "issue/pc.html",
-    "revision": "f1a02482924953b5e47078beb3b9b16b"
+    "revision": "f191373125f001fbf5e88bb318b76da4"
   },
   {
     "url": "node/npm.html",
-    "revision": "61287747d9f93ec2b0ae31541170f1f5"
+    "revision": "90bcaf285bfa3206a647f4af1cb3bec9"
   },
   {
     "url": "node/toolkit.html",
-    "revision": "9aa66a659eb93faafe4203a7da6edb6c"
+    "revision": "025a1c50a7e171dfeb94d33a587eb70d"
   },
   {
     "url": "online-tools/bookmark-scripts.html",
-    "revision": "b8a52dba23cd9e310624d59b4962d8e8"
+    "revision": "48b434d8ce3ccdb393abed2db7c1aa46"
   },
   {
     "url": "software/browser.html",
-    "revision": "fbfef373383171124f1230e742fabcb4"
+    "revision": "9fbbadfc468642a4282743fa320c992a"
   },
   {
     "url": "software/cross-platform.html",
-    "revision": "eb86a3336dd9274726726043f8c780c9"
+    "revision": "d24e24ec3b0798c660238a0b3d95502d"
   },
   {
     "url": "software/mac.html",
-    "revision": "45d43f9fa7af1617d53a942938a6df5e"
+    "revision": "85d3dfae0b829b8693cc5b4cbdfc8323"
   },
   {
     "url": "software/vscode.html",
-    "revision": "aa4182c6cbf8e666b5c640df00dbc7b0"
+    "revision": "c6065e2f81713031c41ce625d8360d52"
   },
   {
     "url": "software/webstorm.html",
-    "revision": "40801f97f0bbcaab2d2f6d118c260685"
+    "revision": "fad4dc712a18b8ce559f693dee094c99"
   },
   {
     "url": "software/windows.html",
-    "revision": "e9b0464ae64327de6463cc1769ea8b54"
+    "revision": "090729174f2b7a43608fdf90ba953d03"
   },
   {
     "url": "software/zsh.html",
-    "revision": "84b3b8bf0198f431825b7ce9194a6389"
+    "revision": "1ef8b39b15c0bd03e7b9eb63f34ed506"
   },
   {
     "url": "utils/function.html",
-    "revision": "7075637499d9b9873797e068bfc7b041"
+    "revision": "5c0a3a0484e4980722a724a6a0dd8b10"
   },
   {
     "url": "utils/regexp.html",
-    "revision": "47d34ee148b972719fb7f0dff1e8e1b2"
+    "revision": "5a45ecd8a3a556990f3fed80d2207d03"
   },
   {
     "url": "vue/index.html",
-    "revision": "184e38da70d025357263b0fc0a207362"
+    "revision": "97f8bf2e9c3dcc279fc80dfd653d960f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
