@@ -88,7 +88,7 @@
 
   - [imooc-tools](https://greasyfork.org/zh-CN/scripts/396378)慕课网问答区快速查看问答详情、自动播放下一节视频
 
-  - [115 转存助手](https://greasyfork.org/zh-CN/scripts/386724)115 网盘重要资源的备份复制转移
+  - [115 转存助手](https://greasyfork.org/zh-CN/scripts/411407)115 网盘重要资源的备份复制转移
 
 ## 其他工具
 
