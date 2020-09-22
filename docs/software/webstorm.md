@@ -36,6 +36,8 @@
 - 自定义背景图
   - 进入 `文件 - 设置 - 外观和行为 - Appearance`
   - 点击 `BACKGROUND IMAGE`
+- 其他
+  - [.env files support](https://plugins.jetbrains.com/plugin/9525--env-files-support) .env 文件键值字符串高亮
 
 ## 插件市场
 
