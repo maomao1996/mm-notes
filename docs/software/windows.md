@@ -109,3 +109,14 @@
 [Github](https://github.com/TranslucentTB/TranslucentTB)
 [Microsoft Store](https://www.microsoft.com/zh-cn/p/translucenttb/9pf4kz2vn4w9)
 [Microsoft Store 汉化版](https://www.microsoft.com/zh-cn/p/translucenttb-%E6%B1%89%E5%8C%96-by-tpxxn/9n5w18jc9bg2)
+
+## 查重神器 Duplicate Cleaner
+
+1. 快速查找重复文件、支持多目录
+2. 灵活的搜索设置
+3. 在详细列表中查看所有文件信息
+4. 删除重复文件至回收站
+5. 移动重复文件到新位置
+
+[软件官网](https://www.duplicatecleaner.com)
+[绿色汉化版](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1224420)
