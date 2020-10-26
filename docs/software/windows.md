@@ -120,3 +120,10 @@
 
 [软件官网](https://www.duplicatecleaner.com)
 [绿色汉化版](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1224420)
+
+## 电子书格式转换器 NeatConverter
+
+1. 完全免费，简单易用
+2. 支持 ePub、Azw3、Mobi、Doc、PDF、TXT 文件的互转
+
+[软件官网](https://www.neat-reader.cn/downloads/converter)
