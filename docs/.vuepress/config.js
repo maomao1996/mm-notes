@@ -40,20 +40,20 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: 'Vue',
-        path: '/vue/'
-      },
-      {
-        title: 'CSS',
-        children: ['css/', 'css/skill', 'css/scss']
+        title: '在线工具',
+        children: ['online-tools/', 'online-tools/bookmark-scripts']
       },
       {
         title: '工具方法',
         children: ['utils/regexp', 'utils/function']
       },
       {
-        title: '疑难杂症',
-        children: ['issue/h5', 'issue/pc']
+        title: 'Vue',
+        path: '/vue/'
+      },
+      {
+        title: 'CSS',
+        children: ['css/', 'css/skill', 'css/scss']
       },
       {
         title: 'Node 相关',
@@ -76,8 +76,8 @@ module.exports = {
         ]
       },
       {
-        title: '在线工具',
-        children: ['online-tools/bookmark-scripts']
+        title: '疑难杂症',
+        children: ['issue/h5', 'issue/pc']
       }
     ],
     lastUpdated: '上次更新'
