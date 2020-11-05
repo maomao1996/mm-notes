@@ -37,3 +37,16 @@
   -webkit-overflow-scrolling: touch;
 }
 ```
+
+## 垂直居中
+
+```scss
+@mixin flex-center($direction: 'row') {
+  display: flex;
+  @if $direction != 'row' {
+    flex-direction: $direction;
+  }
+  justify-content: center;
+  align-items: center;
+}
+```
