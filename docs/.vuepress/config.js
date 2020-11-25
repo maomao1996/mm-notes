@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         title: '工具方法',
-        children: ['utils/regexp', 'utils/function']
+        children: ['utils/regexp', 'utils/function', 'utils/library']
       },
       {
         title: 'Vue',
