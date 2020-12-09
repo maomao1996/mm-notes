@@ -33,6 +33,12 @@
 
 - [driver.js](https://github.com/kamranahmedse/driver.js) 用户引导动画库
 
+## Webpack
+
+- [webpack-chain](https://github.com/neutrinojs/webpack-chain)使用链式 API 来生成和简化 webpack 的配置的修改
+- [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin)统计 webpack 在各阶段的构建速度
+- [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)通过可视化分析 webpack 打包文件的大小
+
 ## CLI 相关
 
 - [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) 交互式命令行工具
