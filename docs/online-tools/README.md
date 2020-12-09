@@ -14,6 +14,11 @@ sidebarDepth: 2
 - [CodeSandbox](https://codesandbox.io)
 - [Codepen](https://codepen.io)
 
+### 正则
+
+- [regexgen](https://npm.runkit.com/regexgen)生成与一组字符串匹配的正则表达式
+- [any-rule](https://any86.github.io/any-rule)正则大全
+
 ### 代码编译
 
 - [ast 生成器](https://astexplorer.net)
