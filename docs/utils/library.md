@@ -25,6 +25,14 @@
 
 - [localForage](https://github.com/localForage/localForage)一个快速、简单的 JavaScript 存储库([中文文档](https://localforage.docschina.org/))
 
+## 滚动处理
+
+- [better-scroll](https://github.com/ustbhuangyi/better-scroll)重点解决移动端（已支持 PC）各种滚动场景需求的插件
+
+## 事件处理
+
+- [hotkeys-js](https://github.com/jaywcjlove/hotkeys)用于捕获键盘输入和输入的组合键
+
 ## 富文本
 
 - [braft-editor](https://github.com/margox/braft-editor) React 富文本编辑器
