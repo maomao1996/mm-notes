@@ -5,6 +5,8 @@
 ## 工具库
 
 - [lodash](https://github.com/lodash/lodash)是一个一致性、模块化、高性能的JavaScript 实用工具库
+- [ramda](https://github.com/ramda/ramda)专为函数式编程而设计的工具库
+- [qs](https://github.com/ljharb/qs)带有一些附加安全性的请求参数 parse 和 stringify 库
 
 ## 时间处理
 
