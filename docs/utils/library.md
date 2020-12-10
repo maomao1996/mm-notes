@@ -4,18 +4,17 @@
 
 ## 工具库
 
-- [lodash](https://github.com/lodash/lodash)
+- [lodash](https://github.com/lodash/lodash)是一个一致性、模块化、高性能的JavaScript 实用工具库
 
 ## 时间处理
 
-- [moment](https://github.com/moment/moment)
-- [dayjs](https://github.com/iamkun/dayjs)
-- [date-fns](https://github.com/date-fns/date-fns)
-- [fecha](https://github.com/taylorhakes/fecha)
+- [moment](https://github.com/moment/moment)JavaScript 日期处理类库
+- [dayjs](https://github.com/iamkun/dayjs)一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样
+- [date-fns](https://github.com/date-fns/date-fns)轻量级的 JavaScript 日期库，纯函数实现支持模块化
 
 ## 请求处理
 
-- [axios](https://github.com/axios/axios)
+- [axios](https://github.com/axios/axios)是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中
 
 ## 精度处理
 
