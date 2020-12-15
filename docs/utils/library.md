@@ -34,6 +34,12 @@
 
 - [hotkeys-js](https://github.com/jaywcjlove/hotkeys)用于捕获键盘输入和输入的组合键
 
+## 文件处理
+
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js)保存/下载文件(受 blob 的大小和内存限制)
+- [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js)保存/下载文件(不受 blob 的大小和内存限制)
+- [sheetjs](https://github.com/SheetJS/sheetjs)用于 Excel 的读取和导出
+
 ## 富文本
 
 - [braft-editor](https://github.com/margox/braft-editor) React 富文本编辑器
