@@ -161,6 +161,10 @@
   - .env 文件键值字符串高亮
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=Nixon.env-cmd-file-syntax)
 
+- `Code Spell Checker`
+  - 代码拼写检查
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
 ## webpack 项目识别 alias
 
 1. 在项目根目录新建 `jsconfig.json` 或 `tsconfig.json`
