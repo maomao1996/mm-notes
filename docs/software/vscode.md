@@ -157,11 +157,6 @@
   - 增加对 `.editorconfig` 的支持
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-- `Settings Sync`
-
-  - 使用 GitHub Gist 在多台机器上同步设置，代码片段，主题，文件图标，启动，键绑定，工作区和扩展。
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
-
 - `env-cmd-file-syntax`
   - .env 文件键值字符串高亮
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=Nixon.env-cmd-file-syntax)
