@@ -16,6 +16,10 @@ sidebarDepth: 2
 
 ### 正则
 
+- 正则可视化工具
+  - [regulex](https://jex.im/regulex)
+  - [regexper](https://regexper.com)
+- [regex101](https://regex101.com)在线正则测试工具
 - [regexgen](https://npm.runkit.com/regexgen)生成与一组字符串匹配的正则表达式
 - [any-rule](https://any86.github.io/any-rule)正则大全
 
