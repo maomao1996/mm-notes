@@ -219,13 +219,15 @@
     "javascript",
     "javascriptreact",
     "jsx",
-    "typescript"
+    "typescript",
+    "typescriptreact"
   ],
   "prettier.semi": false,
+  // 是否使用单引号
   "prettier.singleQuote": true,
   "prettier.printWidth": 100,
   "prettier.packageManager": "yarn",
-  "prettier.spaceBeforeFunctionParen": true,
+  "prettier.trailingComma": "none",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -235,11 +237,14 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // 参考线
   "workbench.colorTheme": "Bluloco Dark",
+  // 编辑器配置
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.enablePreview": false,
   "emmet.triggerExpansionOnTab": true,
@@ -264,7 +269,9 @@
       "singleQuote": false // Prefer double quotes over single quotes
     },
     "prettier": {
+      // 是否添加分号
       "semi": false,
+      // 是否使用单引号
       "singleQuote": true,
       "eslintIntegration": true,
       "parser": "babylon"
@@ -278,6 +285,7 @@
     "*.wxs": "javascript",
     "*.vue": "vue"
   },
+  // 微信小程序
   "minapp-vscode.disableAutoConfig": true,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
@@ -305,6 +313,19 @@
   "less.compile": {
     "outExt": "wxss"
   },
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdownlint.config": {
+    "MD001": false,
+    "MD024": false,
+    "MD033": false
+  },
+  "scm.defaultViewMode": "tree",
+  "settingsSync.ignoredSettings": [
+    "window.zoomLevel",
+  ],
+  "cSpell.ignoreWords": [
+    "antd",
+    "ahooks"
+  ]
 }
 ```
