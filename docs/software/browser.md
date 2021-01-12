@@ -28,7 +28,7 @@
 
 - [OneTab](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)点击 OneTab 可将标签页转换成一个列表以释放系统资源，当您需要再次访问这些标签页时，可以单独或全部恢复它们。
 
-- [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh)全文翻译
+- [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh)全文翻译(中英对照)
 
 - [划词翻译](https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)划词翻译
 
