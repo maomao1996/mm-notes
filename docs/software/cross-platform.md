@@ -21,3 +21,14 @@
 
 [Github](https://github.com/agalwood/Motrix)
 [软件官网](https://motrix.app/zh-CN)
+
+## SwitchHosts
+
+Hosts 管理工具
+
+1. Hosts 文件语法高亮
+2. 快速切换 Hosts
+3. 在线 Hosts 方案
+4. 系统托盘图标快速切换
+
+[Github](https://github.com/oldj/SwitchHosts)

@@ -82,15 +82,6 @@ chsh -s /bin/zsh
 
 [软件官网](https://www.alfredapp.com)
 
-## Gas Mask
-
-Hosts 管理工具
-
-1. 便捷修改 Hosts
-2. 可配置快捷方案
-
-[Github](https://github.com/2ndalpha/gasmask)
-
 ## Mac 微信的功能拓展
 
 1. 消息防撤回
