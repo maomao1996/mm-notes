@@ -163,3 +163,5 @@ jobs:
 ```
 
 详细教程可以参考阮一峰老师的[GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+
+[GitHub Actions 中文文档](https://docs.github.com/cn/actions/reference)
