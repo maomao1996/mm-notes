@@ -17,10 +17,10 @@
   - 黑色主题
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
 
-- `VSCode Great Icons`
+- `Material Icon Theme`
 
   - 文件图标美化
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans)
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
 - `background`
   - 自定义背景
