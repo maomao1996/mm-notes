@@ -14,7 +14,6 @@
     <div class="adsbygoogle-box">
       <ins
         class="adsbygoogle"
-        style="display: block; text-align: center"
         data-ad-layout="in-article"
         data-ad-format="fluid"
         data-ad-client="ca-pub-6846038091720568"
@@ -82,6 +81,7 @@ export default {
   box-sizing: border-box;
   padding: 0.5rem 2.5rem;
   max-width: $contentWidth;
+  text-align: center;
   .adsbygoogle {
     width: 100%;
   }
