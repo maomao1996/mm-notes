@@ -10,6 +10,17 @@
     <slot name="bottom" />
 
     <div id="gitalk-container"></div>
+
+    <div class="adsbygoogle-box">
+      <ins
+        class="adsbygoogle"
+        style="display: block; text-align: center"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-6846038091720568"
+        data-ad-slot="1554369026"
+      ></ins>
+    </div>
   </main>
 </template>
 
@@ -64,5 +75,24 @@ export default {
   padding: 0 2.25rem;
   max-width: $contentWidth;
   margin: 0 auto;
+}
+
+.adsbygoogle-box {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0.5rem 2.5rem;
+  max-width: $contentWidth;
+  .adsbygoogle {
+    width: 100%;
+  }
+}
+
+@media (max-width: 419px) {
+  #gitalk-container {
+    padding: 0 1.5rem;
+  }
+  .adsbygoogle-box {
+    padding: 0.5rem 1.5rem 0;
+  }
 }
 </style>
