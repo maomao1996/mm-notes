@@ -10,10 +10,14 @@
       (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?8092fab2f2adfc7938ba5b8885aef5b4";
-        var s = document.getElementsByTagName("script")[0]; 
+        var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
     </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
     {{{ userHeadTags }}}
     {{{ pageMeta }}}
     {{{ renderResourceHints() }}}
@@ -22,5 +26,8 @@
   <body>
     <!--vue-ssr-outlet-->
     {{{ renderScripts() }}}
+    <script>
+      ;(adsbygoogle = window.adsbygoogle || []).push({})
+    </script>
   </body>
 </html>
