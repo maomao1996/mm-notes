@@ -9,17 +9,15 @@
 
     <slot name="bottom" />
 
-    <div id="gitalk-container"></div>
-
     <div class="adsbygoogle-box">
-      <ins
-        class="adsbygoogle"
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
+      <InArticleAdsense
         data-ad-client="ca-pub-6846038091720568"
         data-ad-slot="1554369026"
-      ></ins>
+      >
+      </InArticleAdsense>
     </div>
+
+    <div id="gitalk-container"></div>
   </main>
 </template>
 
@@ -82,9 +80,6 @@ export default {
   padding: 0.5rem 2.5rem;
   max-width: $contentWidth;
   text-align: center;
-  .adsbygoogle {
-    width: 100%;
-  }
 }
 
 @media (max-width: 419px) {

@@ -8292,6 +8292,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
+vue-google-adsense@^1.9.2:
+  version "1.9.2"
+  resolved "https://registry.npm.taobao.org/vue-google-adsense/download/vue-google-adsense-1.9.2.tgz#4f1725af8a551f504ba5bb362b8197449a5570d3"
+  integrity sha1-Txclr4pVH1BLpbs2K4GXRJpVcNM=
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -8312,6 +8317,11 @@ vue-router@^3.4.5:
   version "3.4.9"
   resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-3.4.9.tgz?cache=0&sync_timestamp=1605950420075&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-3.4.9.tgz#c016f42030ae2932f14e4748b39a1d9a0e250e66"
   integrity sha1-wBb0IDCuKTLxTkdIs5odmg4lDmY=
+
+vue-script2@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npm.taobao.org/vue-script2/download/vue-script2-2.1.0.tgz#8e480dc6052c8cdf2aa0ec112efc80f31ddc3522"
+  integrity sha1-jkgNxgUsjN8qoOwRLvyA8x3cNSI=
 
 vue-server-renderer@^2.6.10:
   version "2.6.12"
