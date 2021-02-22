@@ -39,6 +39,7 @@
 - [FileSaver.js](https://github.com/eligrey/FileSaver.js)保存/下载文件(受 blob 的大小和内存限制)
 - [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js)保存/下载文件(不受 blob 的大小和内存限制)
 - [sheetjs](https://github.com/SheetJS/sheetjs)用于 Excel 的读取和导出
+- [node-fs-extra](https://github.com/jprichardson/node-fs-extra) [Node fs 模块](http://nodejs.cn/api/fs.html#fs_file_system)的增强（如 promise 的支持）
 
 ## 富文本
 
