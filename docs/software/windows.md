@@ -127,3 +127,36 @@
 2. 支持 ePub、Azw3、Mobi、Doc、PDF、TXT 文件的互转
 
 [软件官网](https://www.neat-reader.cn/downloads/converter)
+
+## 系统增强工具 PowerToys
+
+- [Color Picker](https://aka.ms/PowerToysOverview_ColorPicker) 颜色选择器
+  - 默认启动快捷键: `Win` + `Shift` + `C`
+
+- [FancyZones](https://aka.ms/PowerToysOverview_FancyZones) 窗口管理器
+  - 自定义窗口布局
+  - 默认启动快捷键: `Win` + `~`
+
+- [File Explorer Add-ons](https://aka.ms/PowerToysOverview_FileExplorerAddOns)文件资源管理器
+  - 快速预览 SVG 和 Markdown 文件
+
+- [Image Resizer](https://aka.ms/PowerToysOverview_ImageResizer)图像大小调整器
+  - 修改图片大小、旋转方向、图片格式
+  - 支持批量修改
+
+- [Keyboard Manager](https://aka.ms/PowerToysOverview_KeyboardManager)键盘管理器
+  - 修改键位映射
+
+- [PowerRename](https://aka.ms/PowerToysOverview_PowerRename)批量重命名工具
+  - 添加文件名前缀、后缀
+  - 支持搜索、替换、正则表达式匹配
+  - 排除指定的文件、文件夹
+  - 预览重命名结果
+
+- [PowerToys Run](https://aka.ms/PowerToysOverview_PowerToysRun)快速启动程序
+  - 搜索应用程序、文件夹或文件
+  - 使用计算器执行简单计算
+  - 默认启动快捷键: `Alt` + `Space`
+
+[Github](https://github.com/microsoft/PowerToys)
+[安装文档](https://docs.microsoft.com/zh-cn/windows/powertoys/install)
