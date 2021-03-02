@@ -23,9 +23,9 @@ nvm npm_mirror https://npm.taobao.org/mirrors/npm/
 #### 安装和设置 - Mac
 
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # OR
-curl -o- https://gitee.com/mirrors/nvm/raw/v0.35.3/install.sh | bash
+curl -o- https://gitee.com/mirrors/nvm/raw/v0.37.2/install.sh | bash
 ```
 
 #### 常用命令
