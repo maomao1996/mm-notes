@@ -146,7 +146,7 @@ omw -n
 [软件官网](https://www.better365.cn/ishot.html)
 [App Store](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E5%BD%95%E5%B1%8F-2020%E5%85%A8%E6%96%B0%E9%AB%98%E5%BA%A6/id1485844094)
 
-## 超级右键-iRightMouse
+## 超级右键 iRightMouse
 
 1. 多种格式的右键新建文件
 2. 快速移动文件
@@ -155,3 +155,13 @@ omw -n
 
 [软件官网](https://www.better365.cn/irightmouse.html)
 [App Store](https://apps.apple.com/cn/app/irightmouse-%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE/id1497428978)
+
+## 翻译软件 Bob
+
+1. 支持划词、截图、输入翻译
+2. 支持翻译多开
+3. 自动识别语种
+4. 可自定义插件
+
+[Github](https://github.com/ripperhe/Bob)
+[软件官网](https://ripperhe.gitee.io/bob)
