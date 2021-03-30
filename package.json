@@ -32,9 +32,9 @@
   },
   "homepage": "https://github.com/maomao1996/mm-notes#readme",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.7.1",
-    "@vuepress/plugin-google-analytics": "^1.7.1",
-    "@vuepress/plugin-pwa": "^1.7.1",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "@vuepress/plugin-pwa": "^1.8.2",
     "cross-env": "^7.0.2",
     "gh-pages": "^2.2.0",
     "gitalk": "^1.7.0",
@@ -43,6 +43,6 @@
     "prettier": "^2.2.0",
     "vue-google-adsense": "^1.9.2",
     "vue-script2": "^2.1.0",
-    "vuepress": "^1.7.1"
+    "vuepress": "^1.8.2"
   }
 }
