@@ -42,4 +42,8 @@ sidebarDepth: 2
 
 ### 代码生成
 
-- [https://webcode.tools](https://webcode.tools)Web 代码生成工具(CSS、HTML、meta 信息、JSON 等)
+- [webcode.tools](https://webcode.tools)Web 代码生成工具(CSS、HTML、meta 信息、JSON 等)
+
+#### SVG 相关
+
+- [Get Waves](https://getwaves.io) SVG 波浪生成器
