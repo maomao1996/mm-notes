@@ -32,3 +32,14 @@ Hosts 管理工具
 4. 系统托盘图标快速切换
 
 [Github](https://github.com/oldj/SwitchHosts)
+
+## QtScrcpy
+
+通过 USB 或 TCP/IP 连接 Android 设备，并进行显示和控制
+
+1. 不需要 root 权限
+2. 最多支持 16 个安卓设备同时连接
+3. 支持自定义按键映射
+4. 可同时控制所有连接设备
+
+[Github](https://github.com/barry-ran/QtScrcpy)
