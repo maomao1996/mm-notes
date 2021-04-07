@@ -38,6 +38,7 @@
 4. 视频/音频格式支持非常全面
 
 [软件官网](https://potplayer.daum.net/?lang=zh_CN)
+[最新版直链下载](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
 
 ## 压缩/解压神器 bandizip
 
@@ -45,6 +46,8 @@
 2. 集 压缩/解压/浏览/编辑 为一体
 3. 支持处理乱码
 4. 支持通过对文件完整性的检查来判断压缩包是否受损
+
+- 最新版存在广告，需要无广告的可下载 [6.x 版本](https://cn.bandisoft.com/bandizip/old/6/)
 
 [软件官网](https://www.bandisoft.com/bandizip/)
 
