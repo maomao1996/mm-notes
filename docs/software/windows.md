@@ -163,3 +163,12 @@
 
 [Github](https://github.com/microsoft/PowerToys)
 [安装文档](https://docs.microsoft.com/zh-cn/windows/powertoys/install)
+
+## 网速监控悬浮窗 TrafficMonitor
+
+1. 显示当前实现网络传输速率、CPU和内存占用率
+2. 支持嵌入到任务栏显示
+3. 支持更换皮肤和自定义皮肤
+4. 历史流量统计
+
+[Github](https://github.com/zhongyang219/TrafficMonitor)
