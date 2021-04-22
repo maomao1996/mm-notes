@@ -24,7 +24,7 @@
 
 - [哔哩哔哩助手](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)哔哩哔哩弹幕网辅助扩展，拥有视频区和直播区的人性化功能
 
-- [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)冻结暂时用不到的标签页，以释放系统资源
+- [The Marvellous Suspender](https://chrome.google.com/webstore/detail/the-marvellous-suspender/noogafoofpebimajpfpamcfhoaifemoa)冻结暂时用不到的标签页，以释放系统资源
 
 - [OneTab](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)点击 OneTab 可将标签页转换成一个列表以释放系统资源，当您需要再次访问这些标签页时，可以单独或全部恢复它们。
 
