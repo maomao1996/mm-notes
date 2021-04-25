@@ -58,28 +58,6 @@
 | chore    | 其他类型的提交                         |
 | revert   | 恢复上一次提交                         |
 
-## 将代码提交到 github 的 gh-pages 分支
-
-1. 安装 `gh-pages`
-
-```sh
-yarn add -D gh-pages
-# OR npm install -D gh-pages
-```
-
-2. 在 `package.json` 中添加如下脚本
-
-```json
-"deploy": "gh-pages -d dist -m deploy",
-"deploy:build": "npm run build && npm run deploy"
-```
-
-3. 运行 `deploy` 脚本
-
-```sh
-yarn deploy
-# OR npm run deploy
-```
 
 ## 删除 Git 中的所有提交历史记录
 
@@ -105,6 +83,47 @@ git branch -m master
 
 # 强制更新存储库
 git push -f origin master
+```
+
+## 同步 github fork 项目上游更新
+
+```sh
+# 1. 添加上游仓库
+git remote add upstream https://github.com/项目地址
+
+# 2. 拉取上游变动
+git fetch upstream
+
+# 3. 合并(以 master 位置为例)
+git rebase upstream/master
+# OR
+git merge upstream/master
+
+# 4. 更新远程 fork 仓库分支(以 master 位置为例)
+git push origin master
+```
+
+## 将代码提交到 github 的 gh-pages 分支
+
+1. 安装 `gh-pages`
+
+```sh
+yarn add -D gh-pages
+# OR npm install -D gh-pages
+```
+
+2. 在 `package.json` 中添加如下脚本
+
+```json
+"deploy": "gh-pages -d dist -m deploy",
+"deploy:build": "npm run build && npm run deploy"
+```
+
+3. 运行 `deploy` 脚本
+
+```sh
+yarn deploy
+# OR npm run deploy
 ```
 
 ## 使用 GitHub Actions 自动部署
