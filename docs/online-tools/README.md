@@ -44,6 +44,16 @@ sidebarDepth: 2
 
 - [webcode.tools](https://webcode.tools)Web 代码生成工具(CSS、HTML、meta 信息、JSON 等)
 
+#### CSS 相关
+
+- [CSS Grid Generator](https://cssgrid-generator.netlify.app)grid 布局
+- [FANCY-BORDER-RADIUS](https://9elements.github.io/fancy-border-radius)border-radius 圆角
+- [CSS Shadows Generator](https://shadows.brumm.af)box-shadow 阴影
+- [Cubic-Bezier](https://cubic-bezier.com)贝塞尔曲线
+- [Easing Gradients](https://larsenwork.com/easing-gradients)渐变
+- [Clippy — CSS clip-path maker](https://bennettfeely.com/clippy)clip-path
+- [Neumorphism/Soft UI generator](https://neumorphism.io) `border-radius / background / box-shadow`
+
 #### SVG 相关
 
 - [Get Waves](https://getwaves.io) SVG 波浪生成器
