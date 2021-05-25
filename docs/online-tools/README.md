@@ -57,3 +57,12 @@ sidebarDepth: 2
 #### SVG 相关
 
 - [Get Waves](https://getwaves.io) SVG 波浪生成器
+
+## 图片处理
+
+- [remove.bg](https://www.remove.bg) 去除图像背景
+
+### 图片压缩
+
+- [docsmall](https://tinypng.com)
+- [TinyPNG](https://docsmall.com)
