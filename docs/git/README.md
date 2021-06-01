@@ -2,6 +2,7 @@
 
 - [官网](https://git-scm.com/)
 - [Git 学习教程](https://learngitbranching.js.org/?locale=zh_CN)
+- [Git 入门指南](https://docs.github.com/cn/github/getting-started-with-github/getting-started-with-git)
 - [Github](https://github.com/git/git)
 - [Windows 版 Github](https://github.com/git-for-windows/git)
 - [Windows 版下载镜像站](https://npm.taobao.org/mirrors/git-for-windows/)
@@ -57,7 +58,6 @@
 | ci       | 修改项目持续集成流程                   |
 | chore    | 其他类型的提交                         |
 | revert   | 恢复上一次提交                         |
-
 
 ## 删除 Git 中的所有提交历史记录
 
