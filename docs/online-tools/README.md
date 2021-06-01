@@ -33,6 +33,12 @@ sidebarDepth: 2
 - [Babel](https://www.babeljs.cn/repl)
 - [TypeScript](https://www.typescriptlang.org/play)
 
+#### Vue
+
+- [Vue Template Explorer](https://template-explorer.vuejs.org/)
+- [Vue 3 Template Explorer](https://vue-next-template-explorer.netlify.app/)
+- [Vue SFC Playground](https://sfc.vuejs.org/)
+
 #### CSS 预处理器
 
 - [Scss](https://www.dute.org/sass-to-css)
