@@ -71,7 +71,7 @@ nrm ls
 nrm use cnp
 ```
 
-[Gihub](https://github.com/Pana/nrm)
+[Github](https://github.com/Pana/nrm)
 
 ## nodemon
 
@@ -87,7 +87,7 @@ npm install --save-dev nodemon
 nodemon [入口文件]
 ```
 
-[Gihub](https://github.com/remy/nodemon)
+[Github](https://github.com/remy/nodemon)
 
 ## npm-check-updates
 
@@ -104,4 +104,38 @@ ncu
 ncu -u
 ```
 
-[Gihub](https://github.com/tjunnone/npm-check-updates)
+[Github](https://github.com/tjunnone/npm-check-updates)
+
+## yalc
+
+npm 包调试工具，可配合 `nodemon` 做自动化
+
+> 在本地将 npm 包模拟发布，将发布后的资源存放在全局，再通过 `yalc` 命令将包添加至对应项目中
+
+```sh
+# 安装
+npm i yalc -g
+#OR
+yarn global add yalc
+
+# 发布
+yalc publish
+# OR 快速更新所有依赖
+yalc push
+
+# 添加依赖
+yalc add [my-package]
+
+# 链接
+yalc link
+
+# 更新依赖
+yalc update
+
+# 移除依赖
+yalc remove [my-package]
+# 移除所有依赖并还原
+yalc remove --all
+```
+
+[Github](https://github.com/wclr/yalc)
