@@ -218,9 +218,37 @@ git reset --keep [commit id]
 # 新建一个 commit，用来撤销指定 commit 后者的所有变化都将被前者抵消，并且应用到当前分支
 git revert [commit id]
 
-# 暂时将未提交的变化移除，稍后再移入
+# 暂存操作
+# 只暂存被追踪的文件
 git stash
+# 暂存所有文件并添加说明
+git stash [save '说明信息'] [-u]
+# 查看 stash 列表
+git stash list
+# 取出最近一次的 stash
+git stash apply
+# 取出 stash 列表里对应数字的暂存
+git stash apply 数字
+# 取出并删除最近一次的 stash
 git stash pop
+# 清空所有 stash
+git stash clear
+```
+
+## 10. 日志
+
+```sh
+# 查看提交过的完整日志
+git log
+
+# 查看精简日志（精简版本号和提交信息）
+git log --oneline
+
+# 查看精简日志（完整版本号和提交信息）
+git log --pretty=oneline
+
+# 查看所有分支的所有操作记录（包括被删除的 commit 记录和 reset 操作）
+git reflog
 ```
 
 [参考地址：阮一峰 -- 常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
