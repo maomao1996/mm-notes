@@ -29,7 +29,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew install autojump
 
 # OR
-git clone git://github.com/joelthelion/autojump.git
+git clone --depth=1 git://github.com/joelthelion/autojump.git
 
 cd autojump
 
@@ -52,7 +52,7 @@ cd autojump
 
 ```sh
 # clone
-git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
 # 在 ~/.zshrc 中配置(在 plugins 的最后面加上 fast-syntax-highlighting)
 plugins=(其他插件 fast-syntax-highlighting)
@@ -71,7 +71,7 @@ source ~/.zshrc
 
 ```sh
 # clone
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone --depth=1 git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 # 在 ~/.zshrc 中配置
 plugins=(其他插件 zsh-syntax-highlighting)
@@ -81,3 +81,35 @@ source ~/.zshrc
 ```
 
 [Github](https://github.com/zsh-users/zsh-autosuggestions)
+
+## zsh 主题
+
+### powerlevel10k
+
+安装
+
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# 在 ~/.zshrc 中配置
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# 使配置生效
+source ~/.zshrc
+```
+
+配置
+
+> 使用 `iTerm2` 可自动安装所需字体
+
+```sh
+p10k configure
+```
+
+更新
+
+```sh
+git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
+```
+
+[Github](https://github.com/romkatv/powerlevel10k)
