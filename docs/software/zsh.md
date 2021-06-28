@@ -44,7 +44,7 @@ cd autojump
 
 [Github](https://github.com/rupa/z)
 
-### zsh-syntax-highlighting
+### fast-syntax-highlighting
 
 终端语法高亮显示
 
@@ -52,16 +52,16 @@ cd autojump
 
 ```sh
 # clone
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
-# 在 ~/.zshrc 中配置(在 plugins 的最后面加上 zsh-syntax-highlighting )
-plugins=(其他插件 zsh-syntax-highlighting)
+# 在 ~/.zshrc 中配置(在 plugins 的最后面加上 fast-syntax-highlighting)
+plugins=(其他插件 fast-syntax-highlighting)
 
 # 使配置生效
 source ~/.zshrc
 ```
 
-[Github](https://github.com/zsh-users/zsh-syntax-highlighting)
+[Github](https://github.com/zdharma/fast-syntax-highlighting)
 
 ### zsh-autosuggestions
 
