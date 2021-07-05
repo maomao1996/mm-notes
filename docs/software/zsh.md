@@ -42,6 +42,14 @@ cd autojump
 
 和 `autojump` 功能一致，是 `oh-my-zsh` 内置插件
 
+```sh
+# 在 ~/.zshrc 中配置
+plugins=(其他插件 z)
+
+# 使配置生效
+source ~/.zshrc
+```
+
 [Github](https://github.com/rupa/z)
 
 ### fast-syntax-highlighting
@@ -104,6 +112,12 @@ source ~/.zshrc
 
 ```sh
 p10k configure
+```
+
+修复 `vscode` 终端图标乱码，修改 `terminal.integrated.fontFamily` 为 `"MesloLGS NF"`
+
+```json
+"terminal.integrated.fontFamily": "MesloLGS NF",
 ```
 
 更新
