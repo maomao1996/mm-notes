@@ -4,7 +4,7 @@
 
 ## 工具库
 
-- [lodash](https://github.com/lodash/lodash)是一个一致性、模块化、高性能的JavaScript 实用工具库
+- [lodash](https://github.com/lodash/lodash)是一个一致性、模块化、高性能的 JavaScript 实用工具库
 - [ramda](https://github.com/ramda/ramda)专为函数式编程而设计的工具库
 - [qs](https://github.com/ljharb/qs)带有一些附加安全性的请求参数 parse 和 stringify 库
 
@@ -21,6 +21,7 @@
 ## 精度处理
 
 - [big.js](https://github.com/MikeMcl/big.js)用于任意精度的十进制算术运算
+- [number-precision](https://github.com/nefe/number-precision)超小型
 
 ## 本地存储
 
@@ -59,10 +60,14 @@
 
 - [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) 交互式命令行工具
 - [enquirer](https://github.com/enquirer/enquirer) 交互式命令行工具（更好看）
-- [chalk](https://github.com/chalk/chalk) 修改控制台内容输出的样式
 - [shelljs](https://github.com/shelljs/shelljs) 调用系统命令
 - [commander.js](https://github.com/tj/commander.js) 编写指令和处理命令行
 - [yargs](https://github.com/yargs/yargs) 命令行参数解析
+
+### 命令行输出美化
+
+- [chalk](https://github.com/chalk/chalk) 修改控制台内容输出的样式
+- [ora](https://github.com/sindresorhus/ora) 命令行 `loading` 效果
 
 ## 文档
 
