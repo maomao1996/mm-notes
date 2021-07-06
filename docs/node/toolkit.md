@@ -97,11 +97,25 @@ nodemon [入口文件]
 # 安装
 npm install -g npm-check-updates
 
-# 检查依赖包版本
+# 检查所有依赖包版本
 ncu
+# 检查指定包版本
+ncu axios
 
-# 升级依赖包版本
+# 直接升级所有依赖包版本
 ncu -u
+# 升级指定包版本
+ncu -u axios
+
+# 询问升级依赖包版本
+ncu -i
+# 升级指定包版本
+ncu -i axios
+
+# 指定版本范围
+ncu --target minor
+# OR
+ncu --target patch
 ```
 
 [Github](https://github.com/tjunnone/npm-check-updates)
