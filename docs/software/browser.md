@@ -4,6 +4,8 @@
 
 - [Chrome 网上应用店](https://chrome.google.com/webstore/category/extensions)
 
+- [CrxDL - Chrome浏览器扩展插件CRX下载网](https://crxdl.com/) 更新及时，可下载历史版本
+
 - [Chrome 插件扩展下载网 (免翻墙)](https://www.extfans.com/)
 
 ## 体验优化
