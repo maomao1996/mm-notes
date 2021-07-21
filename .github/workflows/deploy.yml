@@ -24,7 +24,7 @@ jobs:
 
       # 打包静态文件
       - name: Build
-        run: npm install && npm run build
+        run: npm install && npm run build:github
 
       # 部署
       - name: Deploy

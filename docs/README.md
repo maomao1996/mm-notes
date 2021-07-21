@@ -1,12 +1,20 @@
 ---
 home: true
-heroText: 前端物语
-tagline: 前端常用知识、踩坑记录、软件推荐等
-actionText: 立即查看 →
-actionLink: /online-tools/
+title: 前端物语
+heroImage: /logo.png
+actions:
+  - text: 在线工具
+    link: /online-tools/
+    type: primary
+  - text: 软件推荐
+    link: /software/cross-platform.html
+    type: secondary
 features:
-  - title: Node 相关
-  - title: Vue / React 相关
-  - title: Css 相关
+  - title: 前端常用知识
+    details: vue react node css 等
+  - title: 踩坑记录
+    details: 各种兼容问题
+  - title: 软件推荐
+    details: 记录好用的软件、浏览器扩展、编辑器插件等
 footer: MIT Licensed | Copyright © 2019-present maomao1996
 ---
