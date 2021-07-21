@@ -4,20 +4,15 @@
   "private": true,
   "description": "Development related notes",
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp",
+    "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "build:vercel": "cross-env BUILD_ENV=/ vuepress build docs",
-    "deploy": "gh-pages -d dist -m deploy",
-    "deploy:build": "npm run build && npm run deploy",
-    "lint": "prettier --write **/*.{js,scss,md,json}"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "build:github": "cross-env BUILD_ENV=/mm-notes/ npm run build",
+    "lint": "prettier --write **/*.{js,ts,scss,md,json}",
+    "lint:lint-staged": "lint-staged",
+    "postinstall": "husky install"
   },
   "lint-staged": {
-    "*.{js,scss,md,json}": [
+    "*.{js,ts,scss,md,json}": [
       "prettier --write"
     ]
   },
@@ -25,24 +20,21 @@
     "type": "git",
     "url": "git+https://github.com/maomao1996/mm-notes.git"
   },
-  "author": "maomao1996",
+  "author": "maomao1996 <1714487678@qq.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/maomao1996/mm-notes/issues"
   },
   "homepage": "https://github.com/maomao1996/mm-notes#readme",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.8.2",
-    "@vuepress/plugin-google-analytics": "^1.8.2",
-    "@vuepress/plugin-pwa": "^1.8.2",
-    "cross-env": "^7.0.2",
-    "gh-pages": "^2.2.0",
-    "gitalk": "^1.7.0",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
-    "prettier": "^2.2.0",
-    "vue-google-adsense": "^1.9.2",
-    "vue-script2": "^2.1.0",
-    "vuepress": "^1.8.2"
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.22",
+    "@vuepress/plugin-pwa-popup": "^2.0.0-beta.22",
+    "@vuepress/plugin-search": "^2.0.0-beta.22",
+    "cross-env": "^7.0.3",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "prettier": "^2.3.2",
+    "vue-scriptx": "^0.2.5",
+    "vuepress": "^2.0.0-beta.22"
   }
 }
