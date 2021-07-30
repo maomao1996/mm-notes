@@ -87,6 +87,10 @@ export default defineUserConfig<DefaultThemeOptions>({
         ]
       },
       {
+        text: 'Git',
+        link: '/git/README.md'
+      },
+      {
         text: '软件相关',
         children: [
           '/software/cross-platform.md',
