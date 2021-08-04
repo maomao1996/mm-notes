@@ -10,6 +10,7 @@ const base = process.env.BUILD_ENV ? process.env.BUILD_ENV : '/'
 export default defineUserConfig<DefaultThemeOptions>({
   base,
   dest: './dist',
+  bundler: isProduction ? '@vuepress/webpack' : '@vuepress/vite',
   lang: 'zh-CN',
   title: '前端物语',
   description: '前端常用知识、踩坑记录、软件推荐等',
