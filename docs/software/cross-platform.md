@@ -43,3 +43,17 @@ Hosts 管理工具
 4. 可同时控制所有连接设备
 
 [Github](https://github.com/barry-ran/QtScrcpy)
+
+## 图床工具 PicGo
+
+一个用于快速上传图片并获取图片 URL 链接的工具
+
+1. 支持 GitHub、七牛云、腾讯云、又拍云、阿里云 OSS、SM.MS V2、Imgur
+2. 支持拖拽图片上传
+3. 支持快捷键上传剪贴板里第一张图片
+4. 支持右键图片文件通过菜单上传
+5. 支持自定义复制到剪贴板的链接格式、
+6. 丰富的[插件系统](https://github.com/PicGo/Awesome-PicGo)
+
+[Github](https://github.com/Molunerfinn/PicGo)
+[软件官网](https://molunerfinn.com/PicGo/)
