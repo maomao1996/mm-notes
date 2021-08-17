@@ -1,6 +1,6 @@
 ---
 home: true
-title: 前端物语
+title: 茂茂物语
 heroImage: /logo.png
 actions:
   - text: 在线工具
