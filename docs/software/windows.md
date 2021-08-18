@@ -134,23 +134,29 @@
 ## 系统增强工具 PowerToys
 
 - [Color Picker](https://aka.ms/PowerToysOverview_ColorPicker) 颜色选择器
+
   - 默认启动快捷键: `Win` + `Shift` + `C`
 
 - [FancyZones](https://aka.ms/PowerToysOverview_FancyZones) 窗口管理器
+
   - 自定义窗口布局
   - 默认启动快捷键: `Win` + `~`
 
 - [File Explorer Add-ons](https://aka.ms/PowerToysOverview_FileExplorerAddOns)文件资源管理器
+
   - 快速预览 SVG 和 Markdown 文件
 
 - [Image Resizer](https://aka.ms/PowerToysOverview_ImageResizer)图像大小调整器
+
   - 修改图片大小、旋转方向、图片格式
   - 支持批量修改
 
 - [Keyboard Manager](https://aka.ms/PowerToysOverview_KeyboardManager)键盘管理器
+
   - 修改键位映射
 
 - [PowerRename](https://aka.ms/PowerToysOverview_PowerRename)批量重命名工具
+
   - 添加文件名前缀、后缀
   - 支持搜索、替换、正则表达式匹配
   - 排除指定的文件、文件夹
@@ -166,9 +172,18 @@
 
 ## 网速监控悬浮窗 TrafficMonitor
 
-1. 显示当前实现网络传输速率、CPU和内存占用率
+1. 显示当前实现网络传输速率、CPU 和内存占用率
 2. 支持嵌入到任务栏显示
 3. 支持更换皮肤和自定义皮肤
 4. 历史流量统计
 
 [Github](https://github.com/zhongyang219/TrafficMonitor)
+
+## GIF 录制神器 ScreenToGif
+
+1. 支持屏幕、摄像头、画板录制
+2. 可对 Gif 进行压缩、裁剪、涂鸦、模糊、添加字幕、添加水印、添加进度条等操作
+3. 免费无广告支持免安装使用
+
+[Github](https://github.com/NickeManarin/ScreenToGif)
+[软件官网](https://www.screentogif.com/)
