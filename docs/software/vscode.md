@@ -17,6 +17,11 @@
   - 黑色主题
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
 
+- `Bluloco Dark`
+
+  - 黑色主题
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=uloco.theme-bluloco-dark)
+
 - `Material Icon Theme`
 
   - 文件图标美化
@@ -82,7 +87,7 @@
   - 增强构建在 VS Code 中的 Git 功能
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
-## 格式化相关
+## 格式和代码检查相关
 
 - `ESLint`
 
@@ -90,8 +95,14 @@
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 - `Prettier - Code formatter`
+
   - 代码格式化
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+- `Code Spell Checker`
+
+  - 代码拼写检查
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
 ## 调试相关
 
@@ -103,6 +114,18 @@
 - `Live Server`
   - 启动具有实时重新加载功能的本地开发服务，以处理静态和动态页面
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+## 语法支持
+
+- `EditorConfig for VS Code`
+
+  - 增加对 `.editorconfig` 的支持
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+
+- `env-cmd-file-syntax`
+
+  - .env 文件键值字符串高亮
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=Nixon.env-cmd-file-syntax)
 
 ## 其他
 
@@ -152,19 +175,6 @@
   - 为匹配的括号着色
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 
-- `EditorConfig for VS Code`
-
-  - 增加对 `.editorconfig` 的支持
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-
-- `env-cmd-file-syntax`
-  - .env 文件键值字符串高亮
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=Nixon.env-cmd-file-syntax)
-
-- `Code Spell Checker`
-  - 代码拼写检查
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-
 ## webpack 项目识别 alias
 
 1. 在项目根目录新建 `jsconfig.json` 或 `tsconfig.json`
@@ -187,6 +197,7 @@
 ```json
 // 将设置放入此文件中以覆盖默认设置
 {
+  // 保存格式化
   "files.autoSave": "off",
   "files.autoSaveDelay": 1500,
   "editor.tabSize": 2,
@@ -210,7 +221,7 @@
   },
   // eslint 配置
   "eslint.options": {
-    "extensions": ["js", ".vue"]
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
   },
   "eslint.format.enable": true,
   "eslint.validate": [
@@ -222,11 +233,11 @@
     "typescript",
     "typescriptreact"
   ],
+  // 是否每行末尾添加分号
   "prettier.semi": false,
   // 是否使用单引号
   "prettier.singleQuote": true,
   "prettier.printWidth": 100,
-  "prettier.packageManager": "yarn",
   "prettier.trailingComma": "none",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -243,10 +254,26 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "workbench.colorTheme": "Bluloco Dark",
   // 编辑器配置
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.enablePreview": false,
+  "workbench.tree.indent": 14,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "vue-html": "html",
@@ -278,7 +305,6 @@
     }
   },
   "javascript.implicitProjectConfig.experimentalDecorators": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -287,9 +313,7 @@
   },
   // 微信小程序
   "minapp-vscode.disableAutoConfig": true,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
+  // 标签高亮
   "highlight-matching-tag.styles": {
     "opening": {
       "left": {
@@ -310,22 +334,62 @@
       }
     }
   },
+  "git.ignoreMissingGitWarning": true,
+  "explorer.confirmDelete": false,
   "less.compile": {
     "outExt": "wxss"
   },
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "markdownlint.config": {
     "MD001": false,
     "MD024": false,
     "MD033": false
   },
   "scm.defaultViewMode": "tree",
-  "settingsSync.ignoredSettings": [
-    "window.zoomLevel",
-  ],
+  "settingsSync.ignoredSettings": ["window.zoomLevel"],
   "cSpell.ignoreWords": [
     "antd",
-    "ahooks"
+    "ahooks",
+    "noreferrer",
+    "vuex",
+    "vuepress",
+    "vite",
+    "tailwindcss"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "graphql",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "pug",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml",
+    "vue"
   ]
 }
 ```
