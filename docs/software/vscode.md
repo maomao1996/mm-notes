@@ -269,6 +269,13 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // 有注释的 json
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "workbench.colorTheme": "Bluloco Dark",
   // 编辑器配置
   "workbench.iconTheme": "material-icon-theme",
