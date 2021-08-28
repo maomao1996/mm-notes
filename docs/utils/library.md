@@ -60,7 +60,8 @@
 
 - [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) 交互式命令行工具
 - [enquirer](https://github.com/enquirer/enquirer) 交互式命令行工具（更好看）
-- [shelljs](https://github.com/shelljs/shelljs) 调用系统命令
+- [shelljs](https://github.com/shelljs/shelljs) 是 `Unix Shell` 在 `Node.js API` 层的轻量级实现，可以很方便的调用系统命令
+- [execa](https://github.com/sindresorhus/execa) [Node child_process 模块](http://nodejs.cn/api/child_process.html)的增强（如 promise 的支持、移除输出中最后的换行符等）
 - [commander.js](https://github.com/tj/commander.js) 编写指令和处理命令行
 - [yargs](https://github.com/yargs/yargs) 命令行参数解析
 
