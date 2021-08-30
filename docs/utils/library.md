@@ -41,6 +41,11 @@
 - [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js)保存/下载文件(不受 blob 的大小和内存限制)
 - [sheetjs](https://github.com/SheetJS/sheetjs)用于 Excel 的读取和导出
 - [node-fs-extra](https://github.com/jprichardson/node-fs-extra) [Node fs 模块](http://nodejs.cn/api/fs.html#fs_file_system)的增强（如 promise 的支持）
+- [rimraf](https://github.com/isaacs/rimraf)用于删除文件和文件夹，类似 `rm -rf`
+
+## 版本号处理
+
+- [semver](https://github.com/npm/node-semver)语义化版本解析器
 
 ## 富文本
 
