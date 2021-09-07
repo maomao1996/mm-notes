@@ -69,6 +69,7 @@
 - [execa](https://github.com/sindresorhus/execa) [Node child_process 模块](http://nodejs.cn/api/child_process.html)的增强（如 promise 的支持、移除输出中最后的换行符等）
 - [commander.js](https://github.com/tj/commander.js) 编写指令和处理命令行
 - [yargs](https://github.com/yargs/yargs) 命令行参数解析
+- [plop](https://github.com/plopjs/plop) 轻量级的项目搭建生成工具
 
 ### 命令行输出美化
 
