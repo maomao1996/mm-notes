@@ -57,3 +57,18 @@ Hosts 管理工具
 
 [Github](https://github.com/Molunerfinn/PicGo)
 [软件官网](https://molunerfinn.com/PicGo/)
+
+## Sourcetree
+
+1. 界面简洁、美观
+2. 简化 Git 日常操作，对新人友好易上手
+3. 支持 Git 工作流，规范开发流程
+4. 支持 Git 和 Mercurial 两种 VCS
+5. 支持自定义脚本执行
+
+### 性能优化设置
+
+1. 打开 `设置 => Diff`
+2. 在 `忽略文件模式` 中添加 `package-lock.json, yarn.lock`
+
+[软件官网](https://www.sourcetreeapp.com/)
