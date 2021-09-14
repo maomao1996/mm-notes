@@ -19,6 +19,7 @@ sidebarDepth: 2
 - 正则可视化工具
   - [regulex](https://jex.im/regulex)
   - [regexper](https://regexper.com)
+  - [正则可视化](https://wangwl.net/r/vr)
 - [regex101](https://regex101.com)在线正则测试工具
 - [regexgen](https://npm.runkit.com/regexgen)生成与一组字符串匹配的正则表达式
 - [any-rule](https://any86.github.io/any-rule)正则大全
@@ -43,8 +44,9 @@ sidebarDepth: 2
 
 - [Scss](https://www.dute.org/sass-to-css)
 - [Less](https://www.dute.org/less-to-css)
-- [Stylus](https://stylus-lang.com/try.html)
-- [Stylus 中文站点](https://stylus.bootcss.com/try.html)
+- Stylus
+  - [英文官网](https://stylus-lang.com/try.html)
+  - [中文站点](https://stylus.bootcss.com/try.html)
 
 ### 代码生成
 
