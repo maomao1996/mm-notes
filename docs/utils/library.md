@@ -23,6 +23,10 @@
 - [big.js](https://github.com/MikeMcl/big.js)用于任意精度的十进制算术运算
 - [number-precision](https://github.com/nefe/number-precision)超小型
 
+## 字符串处理
+
+- [change-case](https://github.com/blakeembrey/change-case) 快速转换字符串格式，支持 `camelCase`, `PascalCase`, `Capital Case`, `snake_case`, `param-case`, `CONSTANT_CASE` 等
+
 ## 本地存储
 
 - [localForage](https://github.com/localForage/localForage)一个快速、简单的 JavaScript 存储库([中文文档](https://localforage.docschina.org/))
