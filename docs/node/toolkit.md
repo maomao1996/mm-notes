@@ -1,6 +1,6 @@
 # 常用工具包
 
-> 只介绍安装方法和常用命令，具体可点击 github 查看详情
+> 只介绍安装方法和常用命令，具体可点击其 github 查看详情
 
 ## nvm
 
@@ -26,6 +26,14 @@ nvm npm_mirror https://npm.taobao.org/mirrors/npm/
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # OR
 curl -o- https://gitee.com/mirrors/nvm/raw/v0.37.2/install.sh | bash
+
+# 在 ~/.zshrc 中配置
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# 使配置生效
+source ~/.zshrc
 ```
 
 #### 常用命令
