@@ -82,7 +82,7 @@ source ~/.zshrc
 git clone --depth=1 git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 # 在 ~/.zshrc 中配置
-plugins=(其他插件 zsh-syntax-highlighting)
+plugins=(其他插件 zsh-autosuggestions)
 
 # 使配置生效
 source ~/.zshrc
