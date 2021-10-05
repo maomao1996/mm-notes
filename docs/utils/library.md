@@ -58,6 +58,8 @@
 ## 用户体验
 
 - [driver.js](https://github.com/kamranahmedse/driver.js) 用户引导动画库
+- [clipboard.js](https://github.com/zenorocha/clipboard.js) 复制到剪贴板
+- [screenfull.js](https://github.com/sindresorhus/screenfull.js) 将页面或任何元素全屏显示
 
 ## Webpack
 
