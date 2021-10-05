@@ -77,6 +77,9 @@ nrm ls
 
 # 切换 registry
 nrm use cnp
+
+# 添加自定义 registry
+ nrm add [别名] [registry 地址]
 ```
 
 [Github](https://github.com/Pana/nrm)
