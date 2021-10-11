@@ -51,6 +51,11 @@
 
 - [semver](https://github.com/npm/node-semver)语义化版本解析器
 
+## 数据校验
+
+- [validator.js](https://github.com/validatorjs/validator.js) 字符串验证
+- [async-validator](https://github.com/yiminghe/async-validator) 异步表单验证
+
 ## 富文本
 
 - [braft-editor](https://github.com/margox/braft-editor) React 富文本编辑器
