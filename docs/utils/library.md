@@ -81,6 +81,7 @@
 - [commander.js](https://github.com/tj/commander.js) 编写指令和处理命令行
 - [yargs](https://github.com/yargs/yargs) 命令行参数解析
 - [plop](https://github.com/plopjs/plop) 轻量级的项目搭建生成工具
+- [dotenv](https://github.com/motdotla/dotenv) 从 `.env` 文件加载环境变量到 `process.env`
 
 ### 命令行输出美化
 
@@ -91,4 +92,4 @@
 
 - [VuePress](https://github.com/vuejs/vuepress) Vue 驱动的静态网站生成器
 - [dumi](https://github.com/umijs/dumi) 基于 Umi 为组件开发场景而生的文档工具
-- [GitBook](https://www.gitbook.com)
+- [Docusaurus](https://github.com/facebook/docusaurus) 基于 React 的静态网站生成器
