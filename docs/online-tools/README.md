@@ -75,6 +75,17 @@ sidebarDepth: 2
 - [docsmall](https://tinypng.com)
 - [TinyPNG](https://docsmall.com)
 
+### 图片生成
+
+- [Shields.io](https://shields.io/) 绘制小徽章
+
+- 生成 Github 仓库 Star 增长图
+
+  - [Star Charts](https://starchart.cc/) 数据更详细
+  - [Star history](https://star-history.t9t.io/) 手绘风格
+
+- [Notion 风格头像制作](https://notion-avatar.vercel.app/zh)
+
 ## 作图工具
 
 - [ProcessOn](https://www.processon.com/) 免费在线流程图思维导图
