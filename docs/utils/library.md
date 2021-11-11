@@ -39,6 +39,10 @@
 
 - [hotkeys-js](https://github.com/jaywcjlove/hotkeys)用于捕获键盘输入和输入的组合键
 
+## 图片处理
+
+- [html2canvas](https://github.com/niklasvh/html2canvas) 页面截图
+
 ## 文件处理
 
 - [FileSaver.js](https://github.com/eligrey/FileSaver.js)保存/下载文件(受 blob 的大小和内存限制)
