@@ -5,9 +5,9 @@
 设置淘宝镜像
 
 ```sh
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com
 # yarn
-yarn config set registry https://registry.npm.taobao.org
+yarn config set registry https://registry.npmmirror.com
 ```
 
 查看镜像源地址
