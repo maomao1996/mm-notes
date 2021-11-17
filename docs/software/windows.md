@@ -187,3 +187,9 @@
 
 [Github](https://github.com/NickeManarin/ScreenToGif)
 [软件官网](https://www.screentogif.com/)
+
+## 按键精灵 KeymouseGo
+
+录制鼠标键盘操作进行自动化操作
+
+[Github](https://github.com/taojy123/KeymouseGo)
