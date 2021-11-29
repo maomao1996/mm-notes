@@ -3,10 +3,9 @@
 - [官网](https://git-scm.com/)
 - [Git 学习教程](https://learngitbranching.js.org/?locale=zh_CN)
 - [Git 入门指南](https://docs.github.com/cn/github/getting-started-with-github/getting-started-with-git)
-- [Github](https://github.com/git/git)
-- [Windows 版 Github](https://github.com/git-for-windows/git)
-- [Windows 版下载镜像站](https://npm.taobao.org/mirrors/git-for-windows/)
-- [下载技巧 - 使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
+- 下载相关
+  - [Windows 版下载镜像](https://npmmirror.com/mirrors/git-for-windows/)
+  - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
 
 ## 常用 Git 命令
 
