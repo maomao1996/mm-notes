@@ -14,10 +14,10 @@ node 版本管理工具
 
 ```sh
 # 设置 node 镜像
-nvm node_mirror https://npm.taobao.org/mirrors/node/
+nvm node_mirror https://npmmirror.com/mirrors/node/
 
 # 设置 npm 镜像
-nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+nvm npm_mirror https://npmmirror.com/mirrors/npm/
 ```
 
 #### 安装和设置 - Mac
@@ -62,7 +62,7 @@ nvm use 版本号
 
 [Github - Windows](https://github.com/coreybutler/nvm-windows)
 
-[node 版本目录](https://npm.taobao.org/mirrors/node/)
+[node 版本目录](https://npmmirror.com/mirrors/node/)
 
 ## nrm
 
