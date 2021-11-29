@@ -31,6 +31,23 @@
   - 自定义背景
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=shalldie.background)
 
+## HTML 相关
+
+- `Auto Close Tag`
+
+  - 自动添加 HTML / XML 关闭标签
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+
+- `Auto Rename Tag`
+
+  - 自动重命名配对的 HTML / XML 标签
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+- `Highlight Matching Tag`
+
+  - Tag 高亮匹配标记
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
+
 ## React 相关
 
 - `ES7 React/Redux/GraphQL/React-Native snippets`
@@ -64,22 +81,27 @@
   - `px` 和 `rem` 互相转换
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=sainoba.px-to-rem)
 
-## 微信小程序相关
+## AI 代码提示和生成
 
-- `minapp`
-  - 微信小程序标签、属性的智能补全（同时支持原生小程序、`mpvue` 和 `wepy` 框架，并提供 snippets）
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode)
+- `GitHub Copilot`
+
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+
+- `Tabnine`
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)
 
 ## Markdown 相关
 
-- `Markdown All in One`
-
-  - 为 Markdown 增加键盘快捷键，目录，自动预览等）
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-
 - `markdownlint`
+
   - Markdown / CommonMark 标记和样式检查
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+
+- `Markdown Preview Enhanced`
+
+  - 为 Markdown 增加大纲、导出 PDF PNG JPEG HTML、自定义预览样式
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+  - [官网](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
 
 ## Git 相关
 
@@ -122,22 +144,12 @@
   - 增加对 `.editorconfig` 的支持
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-- `env-cmd-file-syntax`
+- `ENV`
 
-  - .env 文件键值字符串高亮
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=Nixon.env-cmd-file-syntax)
+  - .env 文件键值字符串高亮和格式化
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=IronGeek.vscode-env)
 
-## 其他
-
-- `Auto Close Tag`
-
-  - 自动添加 HTML / XML 关闭标签
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-
-- `Auto Rename Tag`
-
-  - 自动重命名配对的 HTML / XML 标签
-  - [插件地址](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+## 开发体验提升
 
 - `Auto Import`
 
@@ -175,6 +187,18 @@
   - 为匹配的括号着色
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 
+## 微信小程序相关
+
+- `minapp`
+  - 微信小程序标签、属性的智能补全（同时支持原生小程序、`mpvue` 和 `wepy` 框架，并提供 snippets）
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode)
+
+## 其他
+
+- `韭菜盒子`
+  - 看股票、基金实时数据
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=giscafer.leek-fund)
+
 ## webpack 项目识别 alias
 
 1. 在项目根目录新建 `jsconfig.json` 或 `tsconfig.json`
@@ -197,9 +221,7 @@
 ```json
 // 将设置放入此文件中以覆盖默认设置
 {
-  // 保存格式化
-  "files.autoSave": "off",
-  "files.autoSaveDelay": 1500,
+  /** 编辑器相关配置 */
   "editor.tabSize": 2,
   // 关闭快速预览
   "editor.minimap.enabled": true,
@@ -212,6 +234,7 @@
   },
   // bug控制缩进不关tabSize修改无用
   "editor.detectIndentation": false,
+  "editor.inlineSuggest.enabled": true,
   // 保存格式化
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -219,11 +242,16 @@
     "source.fixAll": true,
     "source.fixAll.eslint": true
   },
-  // eslint 配置
+  /** 工作台配置 */
+  "workbench.colorTheme": "Bluloco Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.enablePreview": false,
+  "workbench.tree.indent": 14,
+  /** eslint 配置 */
+  "eslint.format.enable": true,
   "eslint.options": {
     "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
   },
-  "eslint.format.enable": true,
   "eslint.validate": [
     "vue",
     "html",
@@ -233,12 +261,7 @@
     "typescript",
     "typescriptreact"
   ],
-  // 是否每行末尾添加分号
-  "prettier.semi": false,
-  // 是否使用单引号
-  "prettier.singleQuote": true,
-  "prettier.printWidth": 100,
-  "prettier.trailingComma": "none",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -276,25 +299,40 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "workbench.colorTheme": "Bluloco Dark",
-  // 编辑器配置
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.enablePreview": false,
-  "workbench.tree.indent": 14,
+  // 文件配置
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
     "wxml": "html"
   },
-  // 搜索配置
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.vue": "vue"
+  },
+  /** 文件搜索配置 */
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
     "**/dist": true
   },
-  "gitlens.keymap": "alternate",
+  "scm.defaultViewMode": "tree",
+  "settingsSync.ignoredSettings": ["window.zoomLevel"],
+  "git.ignoreMissingGitWarning": true,
+  /** 资源管理器配置 */
+  "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  /*** 第三方扩展配置 ***/
+  /** prettier 配置 */
+  // 是否每行末尾添加分号
+  "prettier.semi": false,
+  // 是否使用单引号
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "none",
+  /** vetur 配置 */
   "vetur.format.defaultFormatter.html": "prettyhtml",
   "vetur.format.defaultFormatter.js": "prettier-eslint",
   "vetur.format.defaultFormatterOptions": {
@@ -311,15 +349,8 @@
       "parser": "babylon"
     }
   },
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
-  "files.associations": {
-    "*.cjson": "jsonc",
-    "*.wxss": "css",
-    "*.wxs": "javascript",
-    "*.vue": "vue"
-  },
-  // 微信小程序
-  "minapp-vscode.disableAutoConfig": true,
+  "gitlens.keymap": "alternate",
+  "tabnine.experimentalAutoImports": true,
   // 标签高亮
   "highlight-matching-tag.styles": {
     "opening": {
@@ -341,18 +372,19 @@
       }
     }
   },
-  "git.ignoreMissingGitWarning": true,
-  "explorer.confirmDelete": false,
-  "less.compile": {
-    "outExt": "wxss"
-  },
+  /** markdown 配置 */
+  "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
   "markdownlint.config": {
     "MD001": false,
     "MD024": false,
     "MD033": false
   },
-  "scm.defaultViewMode": "tree",
-  "settingsSync.ignoredSettings": ["window.zoomLevel"],
+  // 微信小程序
+  "minapp-vscode.disableAutoConfig": true,
+  "less.compile": {
+    "outExt": "wxss"
+  },
   "cSpell.ignoreWords": [
     "antd",
     "ahooks",
