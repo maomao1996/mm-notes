@@ -193,3 +193,15 @@
 录制鼠标键盘操作进行自动化操作
 
 [Github](https://github.com/taojy123/KeymouseGo)
+
+## 截图神器 Snipaste
+
+1. 免费、无广告
+2. 自动检测界面元素区域、像素级的鼠标移动控制、截图范围控制、截图历史记录回放
+3. 标注(矩形、椭圆、线条、箭头、铅笔、马克笔、文字、马赛克、高斯模糊等)
+4. 支持剪贴板中的图像、纯文本、HTML 文本、颜色信息、图像文件转化成图片
+5. 贴图、取色
+6. 支持自定义设置
+
+[软件官网](https://zh.snipaste.com/)
+[使用文档](https://docs.snipaste.com/zh-cn/getting-started)
