@@ -82,29 +82,26 @@ chsh -s /bin/zsh
 
 [软件官网](https://www.alfredapp.com)
 
-## Mac 微信的功能拓展
+## Mac 微信功能拓展
 
 1. 消息防撤回
 2. 免认证登录与多开
-3. 退群监控
-4. 屏蔽更新
+3. 消息处理增强(表情导出、二维码识别等)
 
 安装
 
 ```sh
-# 安装小助手
-curl -o- -L https://raw.githubusercontent.com/lmk123/oh-my-wechat/master/install.sh | bash -s
-# OR 国内用户推荐
-curl -o- -L https://omw.limingkai.cn/install.sh | bash -s
+# 安装 WeChatTweak-CLI
+brew install sunnyyoung/repo/wechattweak-cli
 
-# 更新小助手
-omw
+# 安装 Tweak
+sudo wechattweak-cli --install
 
-# 微信在自动更新后会删除小助手，可运行以下命令恢复
-omw -n
+# 卸载
+sudo wechattweak-cli --uninstall
 ```
 
-[Github](https://github.com/MustangYM/WeChatExtension-ForMac)
+[Github](https://github.com/Sunnyyoung/WeChatTweak-macOS)
 
 ## IINA
 
