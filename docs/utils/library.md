@@ -86,6 +86,7 @@
 - [yargs](https://github.com/yargs/yargs) 命令行参数解析
 - [plop](https://github.com/plopjs/plop) 轻量级的项目搭建生成工具
 - [dotenv](https://github.com/motdotla/dotenv) 从 `.env` 文件加载环境变量到 `process.env`
+- [simple-git](https://github.com/steveukx/git-js) 在 `node` 中执行 `git` 命令
 
 ### 命令行输出美化
 
