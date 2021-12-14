@@ -43,6 +43,10 @@ source ~/.zshrc
 
 切换镜像详细可查看[阿里云 Homebrew 镜像](https://developer.aliyun.com/mirror/homebrew?spm=a2c6h.13651102.0.0.e40a1b11ZkPX9D)
 
+- 其他教程
+  - [Homebrew 国内安装脚本](https://gitee.com/cunkai/HomebrewCN)
+  - [Homebrew 安装教程](https://github.com/ineo6/homebrew-install)
+
 [Github](https://github.com/Homebrew)
 [软件官网](https://brew.sh/index_zh-cn)
 
