@@ -8,6 +8,7 @@ sidebarDepth: 2
 
 - [Can I use](https://caniuse.com) 兼容性查询
 - [carbon](https://carbon.now.sh) 代码图片生成
+- [npm trends](https://www.npmtrends.com/) 比较 NPM 包下载情况
 
 ### 沙箱
 
@@ -68,7 +69,10 @@ sidebarDepth: 2
 
 ## 图片处理
 
-- [remove.bg](https://www.remove.bg) 去除图像背景
+### 图片底色去除
+
+- [remove.bg](https://www.remove.bg)
+- [BgRemover](https://www.aigei.com/bgremover)
 
 ### 图片压缩
 
