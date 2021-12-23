@@ -52,10 +52,10 @@ nvm install 版本号
 nvm uninstall 版本号
 
 # 查看已安装的 node 版本
-nvm list
+nvm ls
 
 # 切换到指定的 node 版本
-nvm use 版本号
+nvm use [版本号]
 ```
 
 [Github - Mac](https://github.com/nvm-sh/nvm)
@@ -76,7 +76,7 @@ npm install -g nrm
 nrm ls
 
 # 切换 registry
-nrm use cnp
+nrm use yarn
 
 # 添加自定义 registry
  nrm add [别名] [registry 地址]
