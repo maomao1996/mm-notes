@@ -310,7 +310,9 @@
     "*.cjson": "jsonc",
     "*.wxss": "css",
     "*.wxs": "javascript",
-    "*.vue": "vue"
+    "*.vue": "vue",
+    "*.env.development": "env",
+    "*.env.production": "env"
   },
   /** 文件搜索配置 */
   "search.exclude": {
@@ -386,13 +388,22 @@
     "outExt": "wxss"
   },
   "cSpell.ignoreWords": [
-    "antd",
-    "ahooks",
+    /** 原生属性 */
     "noreferrer",
+    /** 库相关 */
+    "browserslist",
+    "yalc",
     "vuex",
     "vuepress",
     "vite",
-    "tailwindcss"
+    "tailwindcss",
+    "antd",
+    "ahooks",
+    "weui",
+    "miniprogram",
+    "weapp",
+    "wechat",
+    "wxml"
   ],
   "cSpell.enabledLanguageIds": [
     "asciidoc",
