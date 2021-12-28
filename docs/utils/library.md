@@ -21,11 +21,12 @@
 ## 精度处理
 
 - [big.js](https://github.com/MikeMcl/big.js)用于任意精度的十进制算术运算
-- [number-precision](https://github.com/nefe/number-precision)超小型
+- [number-precision](https://github.com/nefe/number-precision)超小型精确四则运算
 
 ## 字符串处理
 
 - [change-case](https://github.com/blakeembrey/change-case) 快速转换字符串格式，支持 `camelCase`, `PascalCase`, `Capital Case`, `snake_case`, `param-case`, `CONSTANT_CASE` 等
+- [emoji-regex](https://github.com/mathiasbynens/emoji-regex) 匹配 emoji 的正则表达式
 
 ## 本地存储
 
@@ -78,7 +79,7 @@
 
 ## CLI 相关
 
-- [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) 交互式命令行工具
+- [inquirer](https://github.com/SBoudrias/Inquirer.js) 交互式命令行工具
 - [enquirer](https://github.com/enquirer/enquirer) 交互式命令行工具（更好看）
 - [shelljs](https://github.com/shelljs/shelljs) 是 `Unix Shell` 在 `Node.js API` 层的轻量级实现，可以很方便的调用系统命令
 - [execa](https://github.com/sindresorhus/execa) [Node child_process 模块](http://nodejs.cn/api/child_process.html)的增强（如 promise 的支持、移除输出中最后的换行符等）
