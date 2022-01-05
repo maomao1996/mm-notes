@@ -60,7 +60,7 @@ source ~/.zshrc
 
 ```sh
 # clone
-git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+git clone --depth=1 https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
 # 在 ~/.zshrc 中配置(在 plugins 的最后面加上 fast-syntax-highlighting)
 plugins=(其他插件 fast-syntax-highlighting)
@@ -69,7 +69,7 @@ plugins=(其他插件 fast-syntax-highlighting)
 source ~/.zshrc
 ```
 
-[Github](https://github.com/zdharma/fast-syntax-highlighting)
+[Github](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
 ### zsh-autosuggestions
 
