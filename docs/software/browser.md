@@ -4,7 +4,7 @@
 
 - [Chrome 网上应用店](https://chrome.google.com/webstore/category/extensions)
 
-- [CrxDL - Chrome浏览器扩展插件CRX下载网](https://crxdl.com/) 更新及时，可下载历史版本
+- [CrxDL - Chrome 浏览器扩展插件 CRX 下载网](https://crxdl.com/) 更新及时，可下载历史版本
 
 - [Chrome 插件扩展下载网 (免翻墙)](https://www.extfans.com/)
 
@@ -80,17 +80,13 @@
 
 - 脚本推荐
 
-  - [百度网盘直链下载助手](https://www.baiduyun.wiki/install.html)获取百度网盘文件真实下载地址
-
   - [AC-baidu](https://greasyfork.org/zh-CN/scripts/14178)重定向优化百度搜狗谷歌搜索、去广告
 
   - [解除 B 站区域限制](https://greasyfork.org/zh-CN/scripts/25718)实现解除 B 站区域限制，只对 HTML5 播放器生效
 
-  - [access-link](https://greasyfork.org/zh-CN/scripts/395970)为知乎、微信拦截页面增加跳转按钮（支持 3 秒后自动跳转）
-
   - [imooc-tools](https://greasyfork.org/zh-CN/scripts/396378)慕课网问答区快速查看问答详情、自动播放下一节视频
 
-  - [115 转存助手](https://greasyfork.org/zh-CN/scripts/411407)115 网盘重要资源的备份复制转移
+  - [115 转存助手 ui 优化版](https://gist.github.com/Nerver4Ever/953447c9ecd330ffc0861d4cbb839369)115 网盘重要资源的备份复制转移
 
 ## 其他工具
 
