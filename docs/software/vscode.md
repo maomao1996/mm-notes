@@ -311,8 +311,7 @@
     "*.wxss": "css",
     "*.wxs": "javascript",
     "*.vue": "vue",
-    "*.env.development": "env",
-    "*.env.production": "env"
+    "*.env.*": "env"
   },
   /** 文件搜索配置 */
   "search.exclude": {
