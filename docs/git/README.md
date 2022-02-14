@@ -7,6 +7,22 @@
   - [Windows 版下载镜像](https://npmmirror.com/mirrors/git-for-windows/)
   - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
 
+## commit 常用 type
+
+| type     | 含义                                   |
+| :------- | :------------------------------------- |
+| feat     | 新功能                                 |
+| fix      | 修复 bug                               |
+| docs     | 修改文档                               |
+| style    | 代码格式修改                           |
+| refactor | 重构（即不是新增功能，也不是修复 bug） |
+| perf     | 更改代码以提高性能                     |
+| test     | 增加测试                               |
+| build    | 构建过程或辅助工具的变动               |
+| ci       | 修改项目持续集成流程                   |
+| chore    | 其他类型的提交                         |
+| revert   | 恢复上一次提交                         |
+
 ## 常用 Git 命令
 
 ::: tip 提示
@@ -114,22 +130,6 @@ git reset --hard HEAD~1 # git reset --hard commit_id
 [三年 Git 使用心得 & 常见问题整理](https://juejin.cn/post/6844904191203213326)
 
 [git 命令大全 github](https://github.com/521xueweihan/git-tips)
-
-## commit 常用 type
-
-| type     | 含义                                   |
-| :------- | :------------------------------------- |
-| feat     | 新功能                                 |
-| fix      | 修复 bug                               |
-| docs     | 修改文档                               |
-| style    | 代码格式修改                           |
-| refactor | 重构（即不是新增功能，也不是修复 bug） |
-| perf     | 更改代码以提高性能                     |
-| test     | 增加测试                               |
-| build    | 构建过程或辅助工具的变动               |
-| ci       | 修改项目持续集成流程                   |
-| chore    | 其他类型的提交                         |
-| revert   | 恢复上一次提交                         |
 
 ## 删除 Git 中的所有提交历史记录
 
