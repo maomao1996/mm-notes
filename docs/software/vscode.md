@@ -189,7 +189,7 @@
 
 ## 微信小程序相关
 
-- `minapp`
+- `WXML - Language Service`
   - 微信小程序标签、属性的智能补全（同时支持原生小程序、`mpvue` 和 `wepy` 框架，并提供 snippets）
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode)
 
@@ -261,6 +261,7 @@
     "typescript",
     "typescriptreact"
   ],
+  // 如需要开发微信小程序，需要注释这段代码，不然会和 minapp-vscode 插件冲突
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -298,6 +299,9 @@
   // 有注释的 json
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[wxml]": {
+    "editor.defaultFormatter": "qiu8310.minapp-vscode"
   },
   // 文件配置
   "emmet.triggerExpansionOnTab": true,
