@@ -27,7 +27,13 @@ sidebarDepth: 2
 ### 是否是邮箱号
 
 ```js
-;/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+
+/**
+ * 参考 MDN
+ * https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/email#basic_validation
+ */
+/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
 ### 是否是 QQ 号
