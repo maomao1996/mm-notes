@@ -166,3 +166,11 @@ sudo wechattweak-cli --uninstall
 
 [Github](https://github.com/ripperhe/Bob)
 [软件官网](https://ripperhe.gitee.io/bob)
+
+## 菜单栏图标管理 Hidden Bar
+
+1. 简单易用、支持全局快捷键
+2. 免费开源、支持中文
+
+[Github](https://github.com/dwarvesf/hidden)
+[App Store](https://apps.apple.com/cn/app/hidden-bar/id1452453066)
