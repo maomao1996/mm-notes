@@ -79,6 +79,7 @@
 
 ## CLI 相关
 
+- [zx](https://github.com/google/zx) 用 `JavaScript` 或 `TypeScript` 编写简单的命令行脚本
 - [inquirer](https://github.com/SBoudrias/Inquirer.js) 交互式命令行工具
 - [enquirer](https://github.com/enquirer/enquirer) 交互式命令行工具（更好看）
 - [shelljs](https://github.com/shelljs/shelljs) 是 `Unix Shell` 在 `Node.js API` 层的轻量级实现，可以很方便的调用系统命令
