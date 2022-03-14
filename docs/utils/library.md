@@ -28,6 +28,11 @@
 - [change-case](https://github.com/blakeembrey/change-case) 快速转换字符串格式，支持 `camelCase`, `PascalCase`, `Capital Case`, `snake_case`, `param-case`, `CONSTANT_CASE` 等
 - [emoji-regex](https://github.com/mathiasbynens/emoji-regex) 匹配 emoji 的正则表达式
 
+## 动画
+
+- [typed.js](https://github.com/mattboldt/typed.js) 动态打字效果
+- [tween.js](https://github.com/tweenjs/tween.js) 补间动画引擎
+
 ## 本地存储
 
 - [localForage](https://github.com/localForage/localForage)一个快速、简单的 JavaScript 存储库([中文文档](https://localforage.docschina.org/))
