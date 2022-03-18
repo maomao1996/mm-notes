@@ -126,6 +126,11 @@
   - 代码拼写检查
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
+- `Error Lens`
+
+  - 突出显示代码错误和警告
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+
 ## 调试相关
 
 - `Debugger for Chrome`
@@ -222,6 +227,9 @@
 // 将设置放入此文件中以覆盖默认设置
 {
   /** 编辑器相关配置 */
+  "editor.fontSize": 13.5,
+  "editor.fontFamily": "Input Mono, Fira Code, monospace",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
   "editor.tabSize": 2,
   // 关闭快速预览
   "editor.minimap.enabled": true,
@@ -235,32 +243,37 @@
   // bug控制缩进不关tabSize修改无用
   "editor.detectIndentation": false,
   "editor.inlineSuggest.enabled": true,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "boundary",
+  "editor.glyphMargin": true,
+  "editor.accessibilitySupport": "off",
   // 保存格式化
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    // "source.organizeImports": true,
     "source.fixAll": true,
     "source.fixAll.eslint": true
+    // "source.organizeImports": true,
   },
   /** 工作台配置 */
   "workbench.colorTheme": "Bluloco Dark",
   "workbench.iconTheme": "material-icon-theme",
+  // 新开标签页查看文件而不是覆盖当前标签页
   "workbench.editor.enablePreview": false,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
   "workbench.tree.indent": 14,
-  /** eslint 配置 */
-  "eslint.format.enable": true,
-  "eslint.options": {
-    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
-  },
-  "eslint.validate": [
-    "vue",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "jsx",
-    "typescript",
-    "typescriptreact"
-  ],
+  "workbench.list.smoothScrolling": true,
+  "workbench.activityBar.visible": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.fontAliasing": "antialiased",
+  /** 终端配置 */
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.cursorStyle": "line",
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": true,
   // 如需要开发微信小程序，需要注释这段代码，不然会和 minapp-vscode 插件冲突
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
@@ -290,9 +303,6 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -304,12 +314,6 @@
     "editor.defaultFormatter": "qiu8310.minapp-vscode"
   },
   // 文件配置
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "javascript": "javascriptreact",
-    "wxml": "html"
-  },
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -317,19 +321,55 @@
     "*.vue": "vue",
     "*.env.*": "env"
   },
+  "files.exclude": {
+    "**/.idea": true
+  },
+  "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": true,
   /** 文件搜索配置 */
   "search.exclude": {
+    // 配置文件
+    "**/.vscode": true,
+    "**/.git": true,
+    "**/.github": true,
+    // 依赖文件
     "**/node_modules": true,
     "**/bower_components": true,
-    "**/dist": true
+    "**/miniprogram_npm": true,
+    // lock 文件
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true,
+    // 打包文件
+    "**/dist": true,
+    "**/.umi": true
   },
   "scm.defaultViewMode": "tree",
-  "settingsSync.ignoredSettings": ["window.zoomLevel"],
+  /** git 相关 */
   "git.ignoreMissingGitWarning": true,
+  "git.autofetch": true,
+  "git.untrackedChanges": "separate",
   /** 资源管理器配置 */
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   /*** 第三方扩展配置 ***/
+  /** eslint 配置 https://github.com/antfu/eslint-config */
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
   /** prettier 配置 */
   // 是否每行末尾添加分号
   "prettier.semi": false,
@@ -337,6 +377,36 @@
   "prettier.singleQuote": true,
   "prettier.printWidth": 100,
   "prettier.trailingComma": "none",
+  /** errorLens 配置 */
+  "errorLens.enabledDiagnosticLevels": ["warning", "error"],
+  "errorLens.excludeBySource": ["cSpell", "Grammarly", "eslint"],
+  /** Code Spell Checker 配置 */
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en,en-US",
+  "cSpell.ignoreWords": [
+    /** 库相关 */
+    "yalc",
+    "vetur",
+    "vuex",
+    "vuepress",
+    "vite",
+    "antd",
+    "ahooks",
+    "weui",
+    "weapp",
+    "wxml",
+    "craco",
+    /** 常用简写 */
+    "btns"
+  ],
+  /** emmet 配置 */
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "wxml": "html"
+  },
   /** vetur 配置 */
   "vetur.format.defaultFormatter.html": "prettyhtml",
   "vetur.format.defaultFormatter.js": "prettier-eslint",
@@ -378,6 +448,10 @@
     }
   },
   /** markdown 配置 */
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": true
+  },
   "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
   "markdown-preview-enhanced.previewTheme": "one-dark.css",
   "markdownlint.config": {
@@ -385,64 +459,7 @@
     "MD024": false,
     "MD033": false
   },
-  // 微信小程序
-  "minapp-vscode.disableAutoConfig": true,
-  "less.compile": {
-    "outExt": "wxss"
-  },
-  "cSpell.ignoreWords": [
-    /** 原生属性 */
-    "noreferrer",
-    /** 库相关 */
-    "browserslist",
-    "yalc",
-    "vuex",
-    "vuepress",
-    "vite",
-    "tailwindcss",
-    "antd",
-    "ahooks",
-    "weui",
-    "miniprogram",
-    "weapp",
-    "wechat",
-    "wxml"
-  ],
-  "cSpell.enabledLanguageIds": [
-    "asciidoc",
-    "c",
-    "cpp",
-    "csharp",
-    "css",
-    "git-commit",
-    "go",
-    "graphql",
-    "handlebars",
-    "haskell",
-    "html",
-    "jade",
-    "java",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "jsonc",
-    "latex",
-    "less",
-    "markdown",
-    "php",
-    "plaintext",
-    "python",
-    "pug",
-    "restructuredtext",
-    "rust",
-    "scala",
-    "scss",
-    "text",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-    "yml",
-    "vue"
-  ]
+  /** 微信小程序配置 */
+  "minapp-vscode.disableAutoConfig": true
 }
 ```
