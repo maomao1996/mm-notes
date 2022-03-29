@@ -3,6 +3,7 @@
 - [官网](https://git-scm.com/)
 - [Git 学习教程](https://learngitbranching.js.org/?locale=zh_CN)
 - [Git 入门指南](https://docs.github.com/cn/github/getting-started-with-github/getting-started-with-git)
+- [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
 - 下载相关
   - [Windows 版下载镜像](https://npmmirror.com/mirrors/git-for-windows/)
   - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
