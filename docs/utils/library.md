@@ -72,8 +72,12 @@
 
 ## 用户体验
 
-- [driver.js](https://github.com/kamranahmedse/driver.js) 用户引导动画库
-- [clipboard.js](https://github.com/zenorocha/clipboard.js) 复制到剪贴板
+- 用户引导动画
+  - [intro.js](https://github.com/usablica/intro.js)
+  - [driver.js](https://github.com/kamranahmedse/driver.js)
+- 复制到剪贴板
+  - [clipboard.js](https://github.com/zenorocha/clipboard.js)
+  - [copy-to-clipboard](https://github.com/sudodoki/copy-to-clipboard)
 - [screenfull.js](https://github.com/sindresorhus/screenfull.js) 将页面或任何元素全屏显示
 
 ## Webpack
