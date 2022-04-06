@@ -1,5 +1,7 @@
 # 浏览器扩展
 
+- [Chrome 插件开发全攻略](https://github.com/sxei/chrome-plugin-demo)
+
 ## 扩展商店
 
 - [Chrome 网上应用店](https://chrome.google.com/webstore/category/extensions)
@@ -91,3 +93,9 @@
 ## 其他工具
 
 - [微信读书自动阅读器](https://github.com/DoooReyn/WxRead-WebAutoReader)全自动刷阅读时长，轻轻松松冲顶霸榜，您的微读挂机好帮手
+
+## 技巧
+
+### 打开不安全网页
+
+在当前页面任意地方点击，直接输入 `thisisunsafe` 后回车就能访问
