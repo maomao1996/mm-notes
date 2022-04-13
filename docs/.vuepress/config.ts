@@ -206,6 +206,13 @@ export default defineUserConfig<DefaultThemeOptions>({
           }
         }
       }
+    ],
+    [
+      '@vuepress/plugin-shiki',
+      {
+        // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+        theme: 'dark-plus'
+      }
     ]
   ]
 })
