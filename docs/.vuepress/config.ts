@@ -40,6 +40,11 @@ export default defineUserConfig<DefaultThemeOptions>({
     logo: '/logo.png',
     navbar: [
       {
+        text: '前端内卷不归路',
+        activeMatch: '^/interview',
+        link: '/interview/base/types.md'
+      },
+      {
         text: '在线工具',
         children: [
           {
@@ -119,6 +124,12 @@ export default defineUserConfig<DefaultThemeOptions>({
       }
     ],
     sidebar: {
+      '/interview/': [
+        {
+          text: 'JavaScript 基础知识',
+          children: ['/interview/base/types.md']
+        }
+      ],
       '/online-tools/': [
         {
           text: '在线工具',
