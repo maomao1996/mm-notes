@@ -83,3 +83,85 @@ new String(str).length
 - 了解更多请点击 [JS 中的栈内存和堆内存](https://github.com/chenqf/frontEndBlog/issues/9)
 
 :::
+
+## 类型判断
+
+常见的五种判断方式
+
+- **`typeof`**
+- **`instanceof`**
+- **`constructor`**
+- **`Array.isArray()`**
+- **`Object.prototype.toString`**
+
+### typeof
+
+- 除 **`null`** 外的基本类型都能准确判断
+
+@[code{1-7} js{2}](./code/typeof.js)
+
+::: tip 为什么 typeof null === 'object'
+在 `JavaScript` 最初的实现中，`JavaScript` 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 `0`。由于 `null` 代表的是空指针（大多数平台下值为 `0x00`），因此`null` 的类型标签是 `0`，`typeof null` 也因此返回 `"object"` —— [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)
+:::
+
+- 除 **`function`** 外的引用类型均返回 `object`
+
+@[code{9-} js{3}](./code/typeof.js)
+
+### instanceof
+
+[`instanceof`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 用于检测构造函数的 `prototype` 属性是否存在于实例对象的原型链上
+
+@[code](./code/instanceof.js)
+
+::: tip instanceof 总结
+
+- `instanceof` 不能判断基本类型，对于引用类型只能判断原型链上的从属关系
+- `instanceof` 并不完全可靠，因为构造函数的 `prototype` 属性可能会被修改
+  - 修改原型的方法
+    - 使用 `ES6` 提供的 [`Reflect.setPrototypeOf()`](https://es6.ruanyifeng.com/?search=%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B&x=0&y=0#docs/reflect#Reflect-setPrototypeOfobj-newProto) 方法
+    - 借助于非标准的 `__proto__` 伪属性
+
+:::
+
+### constructor
+
+实例对象可以通过 [`constructor`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性去访问它的构造函数
+
+@[code](./code/constructor.js)
+
+::: tip constructor 总结
+
+- `constructor` 可以判断除 `undefined` 和 `null` 外的所有基本类型和引用类型(`undefined` 和 `null` 不存在构造函数)
+- `constructor` 并不完全可靠，因为构造函数的 `prototype` 属性可能会被修改，从而造成 `constructor` 属性指向不准确
+
+:::
+
+### Array.isArray()
+
+[`Array.isArray()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray) 用于判断一个值是否是数组 (`Array`)
+
+@[code](./code/isArray.js)
+
+### Object.prototype.toString
+
+- 每个对象都有一个 [`toString()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法，当该对象被表示为一个文本值时，或者一个对象以预期的字符串方式引用时自动调用，默认情况下 `toString()` 方法被每个 `Object` 对象继承。如果此方法在自定义对象中未被覆盖 `toString()` 返回 `"[object type]"` 其中 `type` 是对象的类型
+- 为了每个对象都能通过 `Object.prototype.toString()` 来检测，需要以 `Function.prototype.call()` 或者 `Function.prototype.apply()` 的形式来调用
+
+@[code](./code/toString.js)
+
+`toString` 方法的在 [`ECMAScript 5`](https://es5.github.io/#x15.2.4.2) 下的大致执行过程
+
+1. 如果 `this` 是 `undefined` 返回 `[object Undefined]`
+2. 如果 `this` 是 `null` 返回 `[object Null]`
+3. 让 `O` 成为 `ToObject(this)` 的结果
+4. 让 `class` 成为 `O` 的内部属性 `[[Class]]` 的值
+5. 返回由 **`"[object "`** **`class`** **`"]"`** 三个部分组成的字符串
+
+::: warning 注意点
+
+不同 `ECMAScript` 版本对 `toString` 方法的规范都有所不同
+
+[Object.prototype.toString 方法的原理](https://juejin.cn/post/6972878737582850062#heading-27)
+
+:::
