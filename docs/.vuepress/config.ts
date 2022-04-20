@@ -127,7 +127,10 @@ export default defineUserConfig<DefaultThemeOptions>({
       '/interview/': [
         {
           text: 'JavaScript 基础知识',
-          children: ['/interview/base/types.md']
+          children: [
+            '/interview/base/types.md',
+            '/interview/base/conversions.md'
+          ]
         }
       ],
       '/online-tools/': [
