@@ -94,10 +94,11 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
       {
         text: 'Git',
+        activeMatch: '^/git',
         link: '/git/README.md'
       },
       {
-        text: '软件相关',
+        text: '软件推荐',
         children: [
           '/software/cross-platform.md',
           '/software/mac.md',
@@ -109,17 +110,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         ]
       },
       {
-        text: '在线音乐',
-        children: [
-          { text: 'PC 端', link: 'https://netease-music.fe-mm.com' },
-          { text: '移动端', link: 'https://reactmusic.fe-mm.com' }
-        ]
-      },
-      {
-        text: '主页',
+        text: '主页和作品',
         children: [
           { text: 'Blog', link: 'https://www.fe-mm.com' },
-          { text: 'Github', link: 'https://github.com/maomao1996' }
+          { text: 'Github', link: 'https://github.com/maomao1996' },
+          { text: '在线音乐', link: 'https://netease-music.fe-mm.com' }
         ]
       }
     ],
@@ -170,7 +165,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       '/git/': ['/git/', '/git/command.md'],
       '/software/': [
         {
-          text: '软件相关',
+          text: '软件推荐',
           children: [
             '/software/cross-platform.md',
             '/software/mac.md',
