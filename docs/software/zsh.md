@@ -126,4 +126,16 @@ p10k configure
 git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
 ```
 
+自定义配置
+
+```sh
+# 打开 p10k 配置文件
+code ~/.p10k.zsh
+
+# 修改 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS 和 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS 的配置
+
+# 使配置生效
+source ~/.zshrc
+```
+
 [Github](https://github.com/romkatv/powerlevel10k)
