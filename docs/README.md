@@ -1,17 +1,16 @@
 ---
 home: true
-title: 茂茂物语
 heroImage: /logo.png
 actions:
-  - text: 在线工具
-    link: /online-tools/
+  - text: 前端知识
+    link: /interview/base/types.html
     type: primary
   - text: 软件推荐
     link: /software/cross-platform.html
     type: secondary
 features:
-  - title: 前端常用知识
-    details: vue react node css 等
+  - title: 前端知识
+    details: js vue react node css 等
   - title: 踩坑记录
     details: 各种兼容问题
   - title: 软件推荐
