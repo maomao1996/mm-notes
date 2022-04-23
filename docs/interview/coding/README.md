@@ -17,3 +17,15 @@
 
 [new 运算符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)<br>
 [相关学习文章](https://github.com/mqyqingfeng/Blog/issues/13)
+
+### instanceof 运算符
+
+::: tip instanceof 运算符原理
+`instanceof` 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上
+
+:::
+
+@[code](./code/instanceof.js)
+
+[instanceof 运算符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)<br>
+[相关学习文章](https://juejin.cn/post/6844903613584654344#heading-1)
