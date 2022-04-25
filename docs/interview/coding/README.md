@@ -30,6 +30,16 @@
 - [instanceof 运算符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)<br>
 - [instanceof 操作符的实现原理](https://juejin.cn/post/6844903613584654344#heading-1)
 
+### Object.create()
+
+::: tip Object.create()
+`Object.create()` 方法创建一个新对象，使用现有的对象来提供新创建的对象的 `__proto__`
+:::
+
+@[code](./code/object-create.js)
+
+[Object.create() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 ### Function.prototype.call()
 
 `call()` 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数
