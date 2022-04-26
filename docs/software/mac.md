@@ -76,6 +76,25 @@ chsh -s /bin/zsh
 [Github](https://github.com/gnachman/iTerm2)
 [软件官网](https://www.iterm2.com)
 
+### Fig
+
+终端自动补全命令提示工具
+
+- 支持近 300 多种 `CLI` 工具的补全提示，如 `cd git brew npm yarn`
+- 支持插件
+- 支持自定义补全规范
+
+安装
+
+```sh
+brew install --cask fig
+```
+
+在 `vscode` 中使用，需修改 `editor.accessibilitySupport` 为 `"off"`
+
+[Github](https://github.com/withfig/autocomplete)
+[软件官网](https://fig.io/)
+
 ## 效率神器 Alfred
 
 1. 定位文件、打开文件
@@ -174,3 +193,16 @@ sudo wechattweak-cli --uninstall
 
 [Github](https://github.com/dwarvesf/hidden)
 [App Store](https://apps.apple.com/cn/app/hidden-bar/id1452453066)
+
+## 音量管理 BackgroundMusic
+
+1. 背景音乐管理
+2. 设置各个应用程序的音量
+3. 录制系统音频
+
+[Github](https://github.com/kyleneideck/BackgroundMusic)
+
+## 窗口管理神器 Rectangle
+
+[Github](https://github.com/rxhanson/Rectangle)
+[软件官网](https://rectangleapp.com/)
