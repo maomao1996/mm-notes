@@ -13,7 +13,9 @@
 
 :::
 
+::: details 模拟实现 new 运算符
 @[code](./code/new.js)
+:::
 
 - [new 运算符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
 - [JavaScript 深入之 new 的模拟实现](https://github.com/mqyqingfeng/Blog/issues/13)
@@ -25,7 +27,9 @@
 
 :::
 
+::: details 模拟实现 instanceof 运算符
 @[code](./code/instanceof.js)
+:::
 
 - [instanceof 运算符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)<br>
 - [instanceof 操作符的实现原理](https://juejin.cn/post/6844903613584654344#heading-1)
@@ -36,13 +40,17 @@
 `Object.create()` 方法创建一个新对象，使用现有的对象来提供新创建的对象的 `__proto__`
 :::
 
+::: details 模拟实现 Object.create()
 @[code](./code/object-create.js)
+:::
 
 [Object.create() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
 ### Function.prototype.call()
 
 `call()` 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数
+
+::: details 模拟实现 Function.prototype.call()
 
 <CodeGroup>
   <CodeGroupItem title="ES6 实现" active>
@@ -57,12 +65,16 @@
   </CodeGroupItem>
 </CodeGroup>
 
+:::
+
 - [Function.prototype.call() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 - [JavaScript 深入之 call 和 apply 的模拟实现](https://github.com/mqyqingfeng/Blog/issues/11)
 
 ### Function.prototype.apply()
 
 `apply()` 方法调用一个具有给定 `this` 值的函数，以及以一个数组（或类数组对象）的形式提供的参数
+
+::: details 模拟实现 Function.prototype.apply()
 
 <CodeGroup>
   <CodeGroupItem title="ES6 实现" active>
@@ -77,12 +89,16 @@
   </CodeGroupItem>
 </CodeGroup>
 
+:::
+
 - [Function.prototype.apply() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 - [JavaScript 深入之 call 和 apply 的模拟实现](https://github.com/mqyqingfeng/Blog/issues/11)
 
 ### Function.prototype.bind()
 
 `bind()` 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数供调用时使用。
+
+::: details 模拟实现 Function.prototype.bind()
 
 <CodeGroup>
   <CodeGroupItem title="ES6 实现" active>
@@ -96,6 +112,8 @@
 
   </CodeGroupItem>
 </CodeGroup>
+
+:::
 
 - [Function.prototype.bind() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 - 相关学习文章
