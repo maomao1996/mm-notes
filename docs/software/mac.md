@@ -14,6 +14,30 @@ Mac 上安装命令行程序最好的工具
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
+常用命令
+
+```sh
+# 更新 Homebrew
+brew update
+
+# 查看已安装的包
+brew list
+
+# 查看可更新的包
+brew outdated
+
+# 更新所有包
+brew update
+# 更新指定包
+brew update git
+
+
+# 清理所有包的旧版本
+brew cleanup
+# 查看可清理的旧版本包
+brew cleanup -n
+```
+
 切换镜像
 
 ```sh
