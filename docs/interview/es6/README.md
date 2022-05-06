@@ -95,3 +95,18 @@ fn()
 const NAME = 'maomao'
 NAME = 'maomao1996' // 报错
 ```
+
+## 模板字符串
+
+模板字符串 (template string) 是增强版的字符串，用反引号(**`**)标识。它可以当作普通字符串、定义多行字符串或者在字符串中嵌入变量、函数调用以及表达式
+
+```js
+let name = 'maomao'
+let age = 18
+
+// ES5 拼接字符串
+let es5Str = '我叫: ' + name + '，我的年龄是: ' + (age + 1) + ' 岁'
+
+// ES6 模板字符串
+let es6Str = `我叫: ${name}，我的年龄是: ${age + 1} 岁`
+```
