@@ -127,6 +127,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             '/interview/base/conversions.md'
           ]
         },
+        '/interview/es6/',
         '/interview/coding/'
       ],
       '/online-tools/': [
