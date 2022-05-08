@@ -110,3 +110,37 @@ let es5Str = '我叫: ' + name + '，我的年龄是: ' + (age + 1) + ' 岁'
 // ES6 模板字符串
 let es6Str = `我叫: ${name}，我的年龄是: ${age + 1} 岁`
 ```
+
+## 解构赋值
+
+### 解构对象
+
+```js
+const obj = {
+  name: 'maomao',
+  age: 18
+}
+
+// ES5 写法
+const name = obj.name
+const age = obj.age
+
+/* ES6 解构写法 */
+const { name, age } = obj
+// 重命名
+const { name: myName } = obj
+```
+
+### 解构数组
+
+```js
+const arr = ['maomao', 18]
+
+// ES5 写法
+const name = arr[0]
+const age = arr[1]
+
+// ES6 解构写法
+const [name, age] = arr
+const { 0: name, 1: age } = arr
+```
