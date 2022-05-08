@@ -104,10 +104,10 @@ NAME = 'maomao1996' // 报错
 let name = 'maomao'
 let age = 18
 
-// ES5 拼接字符串
+/* ES5 拼接字符串 */
 let es5Str = '我叫: ' + name + '，我的年龄是: ' + (age + 1) + ' 岁'
 
-// ES6 模板字符串
+/* ES6 模板字符串 */
 let es6Str = `我叫: ${name}，我的年龄是: ${age + 1} 岁`
 ```
 
@@ -136,11 +136,132 @@ const { name: myName } = obj
 ```js
 const arr = ['maomao', 18]
 
-// ES5 写法
+/* ES5 写法 */
 const name = arr[0]
 const age = arr[1]
 
-// ES6 解构写法
+/* ES6 解构写法 */
 const [name, age] = arr
 const { 0: name, 1: age } = arr
+```
+
+## 函数的扩展
+
+### 参数默认值
+
+```js
+/* ES5 */
+function add(x, y) {
+  // 当参数 y 对应的布尔值为 false 则该赋值不起作用
+  y = y || 1
+  console.log(x + y)
+}
+add(10) // 11
+add(10, 2) // 12
+add(10, 0) // 11
+
+/* ES6 */
+function add(x, y = 1) {
+  console.log(x + y)
+}
+add(10) // 11
+add(10, 2) // 12
+add(10, 0) // 10
+```
+
+::: tip 函数参数的默认值
+
+- 参数变量是默认声明的不能用 `let`或 `const` 再次声明，否则会报错
+- 使用参数默认值时函数不能有同名参数
+- 参数默认值的位置应该是函数的尾参数
+
+:::
+
+### 剩余参数(rest 参数)
+
+`ES6` 引入 `rest` 参数(形式为 `...变量名`) 用于获取函数的剩余参数(可以替换 `arguments` 对象)
+
+```js
+function log(name, ...params) {
+  console.log(name, params)
+}
+
+log('maomao', 1, 2) // maomao [1, 2]
+log('maomao', 1, 2, 3) // maomao [1, 2, 3]
+```
+
+::: tip 剩余参数(rest 参数)
+
+- `rest` 参数是一个真正的数组，数组特有的方法都可以使用
+- `rest` 参数之后不能再有其他参数，否则会报错
+- 函数的 `length` 属性，不包括 `rest` 参数
+
+:::
+
+### 箭头函数
+
+`ES6` 允许使用**箭头**(`=>`)定义函数
+
+```js
+// 不需要参数时使用一个圆括号代表参数部分
+const fn = () => {}
+// 等同于
+const fn = function () {}
+
+// 当函数体只有 return 时
+const fn = (value) => value
+// 等同于
+const fn = function (value) {
+  return value
+}
+const fn = () => {
+  console.log('this', this)
+}
+```
+
+::: tip 箭头函数与普通函数的区别
+
+- `this`
+  - 普通函数
+    - `this` 指向是动态的(取决于函数的调用方式)
+    - 可以用 `call apply bind` 改变 `this` 指向
+  - 箭头函数
+    - `this` 指向是固定的，指向定义时上层作用域中的 `this`(它没有自己的 `this`)
+    - `call apply bind` 无法改变箭头函数的 `this` 指向(上下文值始终按词法解析)
+    - 全局作用域下 `this` 指向全局对象
+- 箭头函数不可以当作构造函数(不能使用 `new` 运算符，否则会报错)
+- 箭头函数的函数体内不可以使用`arguments super new.target`
+- 箭头函数不可以使用 yield 命令(不能用作 `Generator` 函数)
+- 在 `class` 中使用箭头函数其 `this` 会和类实例进行绑定
+
+:::
+
+[利用 `babel` 编译箭头函数代码查看 `this` 的指向](https://www.babeljs.cn/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=MYewdgzgLgBANiA5jAvDAFASlQPhgbwCgYZRIQ4BTAOgUXQHI6YoALASwgC4GAaFjhEyEAvoUIAzAK5hgUduBgSwWAsRgRKUACrsAtpRBSo6VSjxESJMhAo06jZQM49-bTsJIj-ARgAMfsIiQA&debug=false&forceAllTransforms=true&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=script&lineWrap=true&presets=env%2Creact&prettier=false&targets=&version=7.17.11&externalPlugins=&assumptions=%7B%7D)
+
+```js
+/* ES6 */
+const log = () => {
+  console.log('log this:', this)
+}
+
+function fn() {
+  setTimeout(() => {
+    console.log('fn this:', this)
+  }, 100)
+}
+
+/* babel 编译后的 ES5 代码 */
+var _this = this
+
+var log = function log() {
+  console.log('log this:', _this)
+}
+
+function fn() {
+  var _this2 = this
+
+  setTimeout(function () {
+    console.log('fn this:', _this2)
+  }, 100)
+}
 ```
