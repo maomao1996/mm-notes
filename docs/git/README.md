@@ -261,3 +261,39 @@ jobs:
 详细教程可以参考阮一峰老师的[GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 
 [GitHub Actions 中文文档](https://docs.github.com/cn/actions/reference)
+
+## git log 格式化
+
+### 修改默认时间格式
+
+```sh
+git config --global log.date iso8601
+```
+
+- `relative`: 相对时间格式
+- `local`: 本地格式
+- `iso` OR `iso8601`: `ISO8601` 格式
+- `rfc`: `RFC2822` 格式
+- `short`: `YYYY-MM-DD` 格式
+- `raw`: 时间戳格式
+- `default`: 默认格式
+
+### 自定义输出格式
+
+```sh
+# 格式为: [commit hash] [提交时间] [提交信息] [branch tag 信息] [作者名称]
+git log --pretty='%C(yellow)%h%C(reset) %ad %C(green)%s%C(reset) %C(red)%d%C(reset) %C(bold blue)[%an]%C(reset)'
+
+# 配置别名
+alias glogp="git log --pretty='%C(yellow)%h%C(reset) %ad %C(green)%s%C(reset) %C(red)%d%C(reset) %C(bold blue)[%an]%C(reset)'"
+```
+
+- `%C(颜色值)`: 修改输出颜色
+- `%H`: 完整的 `commit hash`
+- `%h`: 缩写的 `commit hash`
+- `%ad`: 提交时间(绝对时间 可以使用 `-date=` 定制格式)
+- `%ar`: 提交时间(相对时间 按多久之前显示)
+- `%s`: `commit message`
+- `%d`: `branch tag` 信息
+- `%an`: 作者名称
+- `%ae`: 作者的邮箱地址
