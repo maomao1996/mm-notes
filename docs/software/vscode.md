@@ -1,6 +1,8 @@
-# Visual Studio Code 扩展
+# Visual Studio Code 配置
 
-## 主题相关
+## 扩展插件推荐
+
+### 主题相关
 
 - `One Dark Pro`
 
@@ -31,7 +33,7 @@
   - 自定义背景
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=shalldie.background)
 
-## HTML 相关
+### HTML 相关
 
 - `Auto Close Tag`
 
@@ -48,13 +50,13 @@
   - Tag 高亮匹配标记
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
 
-## React 相关
+### React 相关
 
 - `ES7 React/Redux/GraphQL/React-Native snippets`
   - 提供 ES7 中的 JavaScript 和 React / Redux 片段，以及针对 VS Code 的 Babel 插件功能
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
-## Vue 相关
+### Vue 相关
 
 - `Vue 2 Snippets`
 
@@ -65,7 +67,7 @@
   - `Vue` 文件语法高亮、片段整理、错误检查、格式化
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
-## CSS 相关
+### CSS 相关
 
 - `Easy LESS`
 
@@ -81,7 +83,7 @@
   - `px` 和 `rem` 互相转换
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=sainoba.px-to-rem)
 
-## AI 代码提示和生成
+### AI 代码提示和生成
 
 - `GitHub Copilot`
 
@@ -90,7 +92,7 @@
 - `Tabnine`
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)
 
-## Markdown 相关
+### Markdown 相关
 
 - `markdownlint`
 
@@ -103,13 +105,13 @@
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
   - [官网](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
 
-## Git 相关
+### Git 相关
 
 - `GitLens — Git supercharged`
   - 增强构建在 VS Code 中的 Git 功能
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
-## 格式和代码检查相关
+### 格式和代码检查相关
 
 - `ESLint`
 
@@ -131,7 +133,7 @@
   - 突出显示代码错误和警告
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 
-## 调试相关
+### 调试相关
 
 - `Debugger for Chrome`
 
@@ -142,7 +144,7 @@
   - 启动具有实时重新加载功能的本地开发服务，以处理静态和动态页面
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-## 语法支持
+### 语法支持
 
 - `EditorConfig for VS Code`
 
@@ -154,7 +156,7 @@
   - .env 文件键值字符串高亮和格式化
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=IronGeek.vscode-env)
 
-## 开发体验提升
+### 开发体验提升
 
 - `Auto Import`
 
@@ -192,13 +194,13 @@
   - 为匹配的括号着色
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 
-## 微信小程序相关
+### 微信小程序相关
 
 - `WXML - Language Service`
   - 微信小程序标签、属性的智能补全（同时支持原生小程序、`mpvue` 和 `wepy` 框架，并提供 snippets）
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode)
 
-## 其他
+### 其他
 
 - `韭菜盒子`
   - 看股票、基金实时数据
@@ -463,3 +465,12 @@
   "minapp-vscode.disableAutoConfig": true
 }
 ```
+
+## 其他
+
+- [emmet 语法说明](https://docs.emmet.io/abbreviations/syntax/)
+
+### 扩展插件开发
+
+- [VS Code 插件开发文档-中文版](https://github.com/Liiked/VS-Code-Extension-Doc-ZH)
+- [VSCode 插件开发全攻略配套 demo](https://github.com/sxei/vscode-plugin-demo)
