@@ -194,6 +194,10 @@
   - 为匹配的括号着色
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 
+- `es6-string-html`
+  - ES6 模板字符串高亮
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
+
 ### 微信小程序相关
 
 - `WXML - Language Service`
