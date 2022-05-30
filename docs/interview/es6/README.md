@@ -506,3 +506,269 @@ arr.flatMap((x) => [[x * 2]]) // [[2], [4], [6], [8]]
 - `flatMap()` 只能展开一层数组
 
 :::
+
+## 对象的扩展
+
+### 属性简写
+
+`ES6` 允许在大括号里面直接写入变量和函数作为对象的属性和方法
+
+```js
+/* 属性简写 */
+// ES5 写法
+const key = 'maomao'
+const obj = { key: key }
+
+// ES6 写法
+const key = 'maomao'
+const obj = { key }
+
+/* 方法简写 */
+// ES5 写法
+const obj = {
+  log: function () {
+    console.log('maomao')
+  }
+}
+
+// ES6 写法
+const key = 'maomao'
+const obj = {
+  log() {}
+}
+```
+
+::: tip 属性简写
+
+简写的对象方法不能用作构造函数否则会报错
+
+```js
+const obj = {
+  f() {
+    this.name = 'maomao'
+  }
+}
+
+new obj.f() // 报错
+```
+
+:::
+
+### 属性名表达式
+
+```js
+// 定义属性名
+const key = 'age'
+const obj = {
+  ['name' + 1]: 'maomao',
+  [key]: 18
+}
+
+// 定义方法名
+const obj = {
+  ['log' + 'name']() {
+    console.log('maomao')
+  }
+}
+```
+
+::: tip 属性名表达式
+
+属性名表达式与属性简写不能同时使用否则会报错
+
+```js
+// 报错
+const key = 'name';
+const obj = { [key] }
+
+// 正确
+const key = 'name';
+const obj = { [key]: 'maomao'};
+```
+
+属性名表达式如果是一个对象会自动将其转为字符串 `[object Object]`
+
+```js
+const keyA = { a: 1 }
+const keyB = { b: 2 }
+
+const obj = {
+  [keyA]: 'valueA',
+  [keyB]: 'valueB'
+}
+
+console.log(obj) // {[object Object]: 'valueB'}
+```
+
+:::
+
+### Object.is()
+
+`Object.is()` 方法用来比较两个值是否严格相等，严格比较运算符 (`===`) 的行为基本一致
+
+```js
+Object.is('key', 'key') // true
+Object.is({}, {}) // false
+```
+
+::: tip Object.is() 与 === 的不同之处
+
+`+0`不等于`-0`
+
+```js
+/* +0 不等于 -0 */
+;+0 === -0 // true
+Object.is(+0, -0) // false
+
+/* NaN 等于自身 */
+NaN === NaN // false
+Object.is(NaN, NaN) // true
+```
+
+:::
+
+### Object.assign()
+
+`Object.assign()` 方法用于对象的合并，将源对象的所有可枚举属性复制到目标对象（第一个参数是目标对象后面的参数都是源对象）
+
+```js
+const target = { a: 1, b: 1 }
+
+const source1 = { b: 2, c: 2 }
+const source2 = { c: 3 }
+
+Object.assign(target, source1, source2)
+```
+
+##### 只有一个参数时会直接返回该参数
+
+```js
+const obj = { a: 1 }
+Object.assign(obj) === obj // true
+```
+
+##### 传入参数不是对象时会先转成对象再返回
+
+```js
+typeof Object.assign(1) // "object"
+typeof Object.assign(true) // "object"
+```
+
+##### 传入非对象类型的场景
+
+```js
+/* undefined 和 null */
+// 首位参数时会报错
+Object.assign(undefined) // TypeError
+Object.assign(null) // TypeError
+// 非首位参数时会忽略
+const obj = {}
+Object.assign(obj, undefined) === obj // true
+Object.assign(obj, null) === obj // true
+
+/* 非首位参数为数值 布尔值 字符串时 */
+// 数值和布尔值会忽略
+const obj = {}
+Object.assign(obj, 1, true) === obj // true
+// 字符串会以字符数组的形式做合并
+Object.assign({}, 'maomao') // {0: 'm', 1: 'a', 2: 'o', 3: 'm', 4: 'a', 5: 'o'}
+
+/* 数组 */
+// 当参数都为数组时
+Object.assign([1, 2, 3], [4, 5]) // [4, 5, 3]
+// 当首位参数为对象时，后续参数为数组时
+Object.assign({ a: 1 }, [1, 2]) // {0: 1, 1: 2, a: 1}
+```
+
+##### 传入数组时会把数组当对象处理
+
+```js
+Object.assign([1, 2, 3], [4, 5]) // [4, 5, 3]
+```
+
+::: tip Object.assign() 总结和应用场景
+
+总结
+
+- `Object.assign()` 是**浅拷贝**方法
+- 存在同名属性时，后面的属性会覆盖前面的属性
+- 只有一个参数时会直接返回该参数
+- 传入参数不是对象时会先转成对象再返回
+- 传入 `undefined` 和 `null` 时
+  - 如果为第一个参数会报错（无法转成对象）
+  - 如果不为第一个参数时会被忽略
+- 传入数组时会把数组当对象处理
+
+应用场景
+
+```js
+/* 为对象添加属性 */
+class Point {
+  constructor(x, y) {
+    Object.assign(this, { x, y })
+  }
+}
+
+/* 为对象添加方法 */
+Object.assign(Function.prototype, {
+  log() {}
+})
+
+/* 拷贝对象 */
+const clone = (origin) => Object.assign({}, origin)
+
+/* 合并多个对象 */
+const merge = (target, ...sources) => Object.assign(target, ...sources)
+
+/* 为属性指定默认值 */
+const DEFAULTS = { duration: 2000 }
+function toast(options) {
+  options = Object.assign({}, DEFAULTS, options)
+}
+toast({ content: '提示' }) // {duration: 2000, content: '提示'}
+```
+
+:::
+
+### Object.keys() Object.value() Object.entries()
+
+`Object.keys()` 方法返回一个数组，其成员为参数对象自身的（不含继承的）所有可遍历属性的键名(`ES5` 引入)
+
+`Object.value()` 方法返回一个数组，其成员为参数对象自身的（不含继承的）所有可遍历属性的键值(`ES2017` 引入)
+
+`Object.entries()` 方法返回一个数组（二维数组），其成员为参数对象自身的（不含继承的）所有可遍历属性的键值对数组(`ES2017` 引入)
+
+```js
+const obj = { name: 'maomao', age: 18 }
+Object.keys(obj) // ['name', 'age']
+Object.values(obj) //  ['maomao', 18]
+Object.entries(obj) // [['name', 'maomao'], ['age', 18]]
+```
+
+### Object.fromEntries()
+
+`Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将键值对的数据结构还原为对象
+
+```js
+Object.fromEntries([['name', 'maomao']]) // {name: 'maomao'}
+
+/* Map 转对象 */
+const map = new Map([['name', 'maomao']])
+Object.fromEntries(map) // {name: 'maomao'}
+
+/* 将查询字符串转为对象 */
+const params = 'name=maomao&age=18'
+Object.fromEntries(new URLSearchParams(params)) // {name: 'maomao', age: '18'}
+```
+
+### 对象遍历方法对比
+
+| 方法名                       | 继承的原型属性 |     不可枚举属性     | Symbol 属性 |      返回值      |
+| ---------------------------- | :------------: | :------------------: | :---------: | :--------------: |
+| for...in                     |       ✅       |          ❌          |     ❌      |       key        |
+| Object.keys                  |       ❌       |          ❌          |     ❌      |     [key...]     |
+| Object.getOwnPropertyNames   |       ❌       |          ✅          |     ❌      |     [key...]     |
+| Object.getOwnPropertySymbols |       ❌       | ✅(只有 symbol 属性) |     ✅      |     [key...]     |
+| Reflect.ownKeys              |       ❌       |          ✅          |     ✅      |     [key...]     |
+| Object.values                |       ❌       |          ❌          |     ❌      |    [value...]    |
+| Object.entries               |       ❌       |          ❌          |     ❌      | [[key,value]...] |
