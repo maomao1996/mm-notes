@@ -763,12 +763,26 @@ Object.fromEntries(new URLSearchParams(params)) // {name: 'maomao', age: '18'}
 
 ### 对象遍历方法对比
 
-| 方法名                       | 继承的原型属性 |     不可枚举属性     | Symbol 属性 |      返回值      |
-| ---------------------------- | :------------: | :------------------: | :---------: | :--------------: |
-| for...in                     |       ✅       |          ❌          |     ❌      |       key        |
-| Object.keys                  |       ❌       |          ❌          |     ❌      |     [key...]     |
-| Object.getOwnPropertyNames   |       ❌       |          ✅          |     ❌      |     [key...]     |
-| Object.getOwnPropertySymbols |       ❌       | ✅(只有 symbol 属性) |     ✅      |     [key...]     |
-| Reflect.ownKeys              |       ❌       |          ✅          |     ✅      |     [key...]     |
-| Object.values                |       ❌       |          ❌          |     ❌      |    [value...]    |
-| Object.entries               |       ❌       |          ❌          |     ❌      | [[key,value]...] |
+| 方法名                       | 说明                                                 | 继承的原型属性 | 不可枚举属性 | Symbol 属性 |      返回值      |
+| ---------------------------- | :--------------------------------------------------- | :------------: | :----------: | :---------: | :--------------: |
+| for...in                     | 遍历对象自身和继承的所有可枚举属性(不含 Symbol 属性) |       ✅       |      ❌      |     ❌      |       key        |
+| Object.keys                  | 遍历对象自身所有可枚举属性(不含 Symbol 属性)         |       ❌       |      ❌      |     ❌      |     [key...]     |
+| Object.getOwnPropertyNames   | 遍历对象自身所有属性(不含 Symbol 属性)               |       ❌       |      ✅      |     ❌      |     [key...]     |
+| Object.getOwnPropertySymbols | 遍历对象自身所有的 Symbol 属性                       |       ❌       |      ✅      |     ✅      |     [key...]     |
+| Reflect.ownKeys              | 遍历对象自身所有的属性(包含不可枚举和 Symbol 属性)   |       ❌       |      ✅      |     ✅      |     [key...]     |
+| Object.values                | 遍历对象自身所有可枚举属性(不含 Symbol 属性)         |       ❌       |      ❌      |     ❌      |    [value...]    |
+| Object.entries               | 遍历对象自身所有可枚举属性(不含 Symbol 属性)         |       ❌       |      ❌      |     ❌      | [[key,value]...] |
+
+::: tip 遍历顺序
+
+`ES5` 没有规定遍历顺序，其遍历顺序由浏览器厂商定义(可以简单理解为无序的)
+
+`ES6` 之后规定遍历顺序将按如下规则进行
+
+1. 首先遍历所有数值键，按照数值升序排列。
+2. 其次遍历所有字符串键，按照加入时间升序排列。
+3. 最后遍历所有 `Symbol` 键，按照加入时间升序排列。
+
+`ES6` 内部定义了 [\[\[OwnPropertyKeys\]\]()](https://262.ecma-international.org/11.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys) 方法对属性进行分类和排序
+
+:::
