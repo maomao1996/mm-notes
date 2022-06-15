@@ -128,6 +128,7 @@ export default defineUserConfig<DefaultThemeOptions>({
           ]
         },
         '/interview/es6/',
+        '/interview/browser/',
         '/interview/coding/'
       ],
       '/online-tools/': [
