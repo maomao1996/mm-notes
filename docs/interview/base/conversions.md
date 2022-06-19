@@ -43,6 +43,8 @@
 
 - 使用 `Object.create(null)` 创建的对象没有原型，即不存在 `valueOf()` 和 `toString()`，当对其进行类型转换时会抛出 `TypeError` 错误
 - 在做显式类型转换时 `valueOf()` 和 `toString()` 的调用顺序会根据转换目标不同去做相应调整
+  - 默认情况下都是先调用 `valueOf()` 再调用 `toString()`
+  - 当需要转换的目标为字符串时，会先调用 `toString()` 再调用 `valueOf()`
 
 :::
 
