@@ -786,3 +786,97 @@ Object.fromEntries(new URLSearchParams(params)) // {name: 'maomao', age: '18'}
 `ES6` 内部定义了 [\[\[OwnPropertyKeys\]\]()](https://262.ecma-international.org/11.0/#sec-ordinary-object-internal-methods-and-internal-slots-ownpropertykeys) 方法对属性进行分类和排序
 
 :::
+
+## 运算符的扩展
+
+### ?. 可选链操作符
+
+[ES2020](https://github.com/tc39/proposal-optional-chaining) 引入了可选链操作符(又名链判断运算符)，其允许我们在读取对象内部的某个属性时，不需要判断属性的上层对象是否存在
+
+```js
+// 可选链操作符之前的写法
+const firstName =
+  (message &&
+    message.body &&
+    message.body.user &&
+    message.body.user.firstName) ||
+  'default'
+
+// 可选链操作符简化写法
+const firstName = message?.body?.user?.firstName || 'default'
+```
+
+可选链操作符 `?.` 的三种写法
+
+```js
+/* 属性是否存在 */
+obj?.prop
+obj?.[expr]
+// 等同于
+obj == null ? undefined : obj.prop
+
+/* 函数或对象方法是否存在 */
+func?.(...args)
+// 等同于
+func == null ? undefined : func()
+```
+
+::: tip 注意点
+
+1. 可选链操作符相当于一种短路机制，只要不满足条件就不再往下执行
+2. 当有括号时，可选链操作符对圆括号外部没有影响，只对圆括号内部有影响。
+3. 右侧不得为十进制数值。为了保证兼容以前的代码，允许 `foo?.3:0` 会被解析成 `foo ? .3 : 0`，因此规定如果 `?.` 后面紧跟一个十进制数字，那么 `?.` 不再被看成是一个完整的运算符，而会按照三元运算符进行处理，即小数点会归属于后面的十进制数字形成一个小数。
+4. 禁止使用以下写法
+
+```js
+// 构造函数
+new a?.()
+new a?.b()
+
+// 右侧有模板字符串
+a?.`{b}`
+a?.b`{c}`
+
+// 左侧是 super
+super?.()
+super?.foo
+
+// 用于赋值运算符左侧
+a?.b = c
+```
+
+:::
+
+### ?? 空值合并运算符
+
+[ES2020](https://github.com/tc39/proposal-nullish-coalescing)引入了空值合并运算符，只有运算符左侧的值为 `null` 或 `undefined` 时才会返回右侧的值
+
+@[code](./code/nullish-coalescing.js)
+
+::: tip ?? 和 || 的区别
+
+- **`??` 运算符**只有左侧是 `null` 或 `undefined`才会返回右侧的值
+- **`||` 运算符**只要左侧是 [假值](/interview/base/conversions.html#toboolean) 就会返回右侧的值
+
+:::
+
+### 逻辑赋值运算符
+
+`ES2021` 引了入三个新的逻辑赋值运算符，用于将逻辑运算符与赋值运算符进行结合
+
+```js
+/* 或赋值运算符 */
+x ||= y
+// 等同于
+x || (x = y)
+
+/* 与赋值运算符 */
+x &&= y
+// 等同于
+x && (x = y)
+
+/* Null 赋值运算符 */
+x ??= y
+// 等同于
+x ?? (x = y)
+```
