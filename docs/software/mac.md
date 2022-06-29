@@ -27,9 +27,12 @@ brew list
 brew outdated
 
 # 更新所有包
-brew update
+brew upgrade
 # 更新指定包
-brew update git
+brew upgrade git
+
+# 查看包的详细信息
+brew info git
 
 
 # 清理所有包的旧版本
