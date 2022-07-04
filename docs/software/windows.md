@@ -205,3 +205,13 @@
 
 [软件官网](https://zh.snipaste.com/)
 [使用文档](https://docs.snipaste.com/zh-cn/getting-started)
+
+## 卸载神器 HiBit Uninstaller
+
+1. 强制卸载、批量卸载
+2. 安全的清理注册表和垃圾文件
+3. 快捷方式修复
+4. 空文件夹删除
+5. 系统更新补丁管理
+
+[软件官网](https://www.hibitsoft.ir/Uninstaller.html)
