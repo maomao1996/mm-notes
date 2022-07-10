@@ -103,6 +103,11 @@ chsh -s /bin/zsh
 [Github](https://github.com/gnachman/iTerm2)
 [软件官网](https://www.iterm2.com)
 
+### 配色方案
+
+- [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
+- [iterm2-material-design](https://github.com/MartinSeeler/iterm2-material-design)
+
 ### Fig
 
 终端自动补全命令提示工具
