@@ -329,7 +329,7 @@ document.cookie = 'name=maomao'
 
 ### Web Storage
 
-[Web Storage](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API)是 `HTML5` 专门为浏览器存储而提供的数据存储机制，其大小限制为 `5MB ~ 10MB`，数据仅保存在客户端不与服务器进行通信
+[Web Storage](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API)是 `HTML5` 专门为浏览器存储而提供的数据存储机制，其大小限制为 `5MB ~ 10MB` ([去查看当前浏览器下 Web Storage 的容量限制](http://dev-test.nemikor.com/web-storage/support-test/))，数据仅保存在客户端不与服务器进行通信
 
 `Web Storage` 提供了两种机制供我们使用
 
@@ -347,7 +347,8 @@ document.cookie = 'name=maomao'
 
 - 数据只存在于当前浏览器的标签页
 - **在新标签或窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文**
-  - 在当前页面中打开一个同域下的新页面时会复制当前的标签页的 `SessionStorage` 数据
+  - 在当前标签中打开一个同域下的页面时会复制当前标签页中的 `SessionStorage` 数据
+  - 复制的 `SessionStorage` 数据是独立的，不会相互影响(类似深拷贝)
 - 重新加载或恢复页面仍会保持原来的数据
 - 关闭对应浏览器标签或窗口后数据会被清除
 
