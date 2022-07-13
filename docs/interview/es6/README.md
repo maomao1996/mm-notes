@@ -214,9 +214,6 @@ const fn = (value) => value
 const fn = function (value) {
   return value
 }
-const fn = () => {
-  console.log('this', this)
-}
 ```
 
 ::: tip 箭头函数与普通函数的区别
@@ -233,6 +230,14 @@ const fn = () => {
 - 箭头函数的函数体内不可以使用`arguments super new.target`
 - 箭头函数不可以使用 yield 命令(不能用作 `Generator` 函数)
 - 在 `class` 中使用箭头函数其 `this` 会和类实例进行绑定
+
+:::
+
+::: warning 注意点(以下场合不应该使用箭头函数)
+
+- 定义对象方法且该方法内部包括 `this` 时
+- 定义原型方法且该方法内部包括 `this` 时
+- 需要动态 `this` 时
 
 :::
 
