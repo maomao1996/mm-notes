@@ -127,7 +127,12 @@ export default defineUserConfig<DefaultThemeOptions>({
             '/interview/base/conversions.md'
           ]
         },
+        {
+          text: '概念知识',
+          children: ['/interview/concept/module.md']
+        },
         '/interview/es6/',
+        '/interview/module/',
         '/interview/browser/',
         '/interview/coding/'
       ],
