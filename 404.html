@@ -3,13 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="generator" content="VuePress 2.0.0-beta.27">
+    <meta name="generator" content="VuePress 2.0.0-beta.49">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
     <link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#3eaf7c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/favicon.ico"><link rel="mask-icon" href="/favicon.ico" color="#3eaf7c"><meta name="msapplication-TileImage" content="/favicon.ico"><meta name="msapplication-TileColor" content="#000000"><script src="https://hm.baidu.com/hm.js?8092fab2f2adfc7938ba5b8885aef5b4"></script><title>茂茂物语</title><meta name="description" content="前端常用知识、踩坑记录、软件推荐等">
-    <link rel="preload" href="/mm-notes/assets/js/runtime~app.fc764d4b.js" as="script"><link rel="preload" href="/mm-notes/assets/css/styles.9a005c16.css" as="style"><link rel="preload" href="/mm-notes/assets/js/245.b3726c2e.js" as="script"><link rel="preload" href="/mm-notes/assets/js/app.b0fbe86e.js" as="script">
-    <link rel="stylesheet" href="/mm-notes/assets/css/styles.9a005c16.css">
+    <link rel="preload" href="/mm-notes/assets/js/runtime~app.b4bcd827.js" as="script"><link rel="preload" href="/mm-notes/assets/css/styles.de82b60f.css" as="style"><link rel="preload" href="/mm-notes/assets/js/737.32e3ef6a.js" as="script"><link rel="preload" href="/mm-notes/assets/js/app.0bbd0c09.js" as="script"><link rel="prefetch" href="/mm-notes/assets/js/v-086a9a24.6e832329.js"><link rel="prefetch" href="/mm-notes/assets/js/v-495eb4c4.a1542156.js"><link rel="prefetch" href="/mm-notes/assets/js/v-eb8ea600.179a4eff.js"><link rel="prefetch" href="/mm-notes/assets/js/v-4dbb1ce4.7c898d19.js"><link rel="prefetch" href="/mm-notes/assets/js/v-078cec97.065f9197.js"><link rel="prefetch" href="/mm-notes/assets/js/v-74473916.35f84bdb.js"><link rel="prefetch" href="/mm-notes/assets/js/v-5f5e8084.cee9922a.js"><link rel="prefetch" href="/mm-notes/assets/js/v-8e6560ec.45d79296.js"><link rel="prefetch" href="/mm-notes/assets/js/v-19aad6df.b142aae4.js"><link rel="prefetch" href="/mm-notes/assets/js/v-40748f39.9893d96c.js"><link rel="prefetch" href="/mm-notes/assets/js/v-6c94be79.c9f15c19.js"><link rel="prefetch" href="/mm-notes/assets/js/901.e99f2f33.js"><link rel="prefetch" href="/mm-notes/assets/js/v-7bd3de6f.286e010a.js"><link rel="prefetch" href="/mm-notes/assets/js/v-9588fb76.7c5c0263.js"><link rel="prefetch" href="/mm-notes/assets/js/v-46e6e855.fd9eb49f.js"><link rel="prefetch" href="/mm-notes/assets/js/v-7873c033.d705f471.js"><link rel="prefetch" href="/mm-notes/assets/js/v-2ab098c0.50b2e60c.js"><link rel="prefetch" href="/mm-notes/assets/js/v-73bc6b79.f0066ea9.js"><link rel="prefetch" href="/mm-notes/assets/js/v-4bbf47d6.08b04fc5.js"><link rel="prefetch" href="/mm-notes/assets/js/v-134daec4.36206d93.js"><link rel="prefetch" href="/mm-notes/assets/js/v-6dcf6fe2.9988b497.js"><link rel="prefetch" href="/mm-notes/assets/js/v-02b49bb5.af40671c.js"><link rel="prefetch" href="/mm-notes/assets/js/v-744e35e2.ae0d58df.js"><link rel="prefetch" href="/mm-notes/assets/js/v-43ebe826.cd26ee6d.js"><link rel="prefetch" href="/mm-notes/assets/js/v-74458d05.70fd7a42.js"><link rel="prefetch" href="/mm-notes/assets/js/v-4c78588a.0b334188.js"><link rel="prefetch" href="/mm-notes/assets/js/v-6657f713.b1be1f86.js"><link rel="prefetch" href="/mm-notes/assets/js/v-dd6edac6.2d2702aa.js"><link rel="prefetch" href="/mm-notes/assets/js/v-f20d4d92.8780050c.js"><link rel="prefetch" href="/mm-notes/assets/js/205.1a98be41.js"><link rel="prefetch" href="/mm-notes/assets/js/v-8daa1a0e.902eb830.js"><link rel="prefetch" href="/mm-notes/assets/js/491.991c5da2.js"><link rel="prefetch" href="/mm-notes/assets/js/v-3706649a.46b94ff0.js"><link rel="prefetch" href="/mm-notes/assets/css/504.styles.767bd766.css">
+    <link rel="stylesheet" href="/mm-notes/assets/css/styles.de82b60f.css">
   </head>
   <body>
-    <div id="app"><!--[--><div class="theme-container"><div class="theme-default-content"><h1>404</h1><blockquote>That&#39;s a Four-Oh-Four.</blockquote><a href="/mm-notes/" class="">Take me home</a></div></div><!----><!----><!--]--></div>
-    <script src="/mm-notes/assets/js/runtime~app.fc764d4b.js" defer></script><script src="/mm-notes/assets/js/245.b3726c2e.js" defer></script><script src="/mm-notes/assets/js/app.b0fbe86e.js" defer></script>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>看起来我们进入了错误的链接</blockquote><a href="/mm-notes/" class="">返回首页</a></div></main></div><!----><!----><!--]--></div>
+    <script src="/mm-notes/assets/js/runtime~app.b4bcd827.js" defer></script><script src="/mm-notes/assets/js/737.32e3ef6a.js" defer></script><script src="/mm-notes/assets/js/app.0bbd0c09.js" defer></script>
   </body>
 </html>
