@@ -33,6 +33,10 @@
 - [typed.js](https://github.com/mattboldt/typed.js) 动态打字效果
 - [tween.js](https://github.com/tweenjs/tween.js) 补间动画引擎
 
+### 特效
+
+- [canvas-confetti](https://github.com/catdad/canvas-confetti) 五彩纸屑特效
+
 ## 本地存储
 
 - [localForage](https://github.com/localForage/localForage)一个快速、简单的 JavaScript 存储库([中文文档](https://localforage.docschina.org/))
@@ -85,6 +89,10 @@
 - [webpack-chain](https://github.com/neutrinojs/webpack-chain)使用链式 API 来生成和简化 webpack 的配置的修改
 - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin)统计 webpack 在各阶段的构建速度
 - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)通过可视化分析 webpack 打包文件的大小
+
+## 解析相关
+
+- [cheerio](https://github.com/cheeriojs/cheerio) 为服务器特别定制的，快速、灵活、实施的 `jQuery` 核心实现，可以解析任何 `HTML` 或 `XML` 文档
 
 ## CLI 相关
 
