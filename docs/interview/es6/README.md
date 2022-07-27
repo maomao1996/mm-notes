@@ -47,6 +47,8 @@ let b = 'let'
 const c = 'const'
 ```
 
+[为什么 let 和 const 不存在变量提升？ - 知乎](https://www.zhihu.com/question/535442142/answer/2510328090)
+
 ### 挂载到全局对象
 
 ```js
@@ -933,6 +935,7 @@ export { name as nickname }
   - `import` 命令是编译阶段执行的
   - 不能使用表达式和变量
 - 重复执行同一句 `import` 命令只会执行一次
+- `import` 后面的 `from` 指定模块文件的位置，其可以是相对路径，也可以是绝对路径
 
 ```js
 // index.js
@@ -1087,5 +1090,88 @@ import('./dialogBox.js')
 ```js
 const isNotModuleScript = this !== undefined
 ```
+
+:::
+
+## Promise
+
+`Promise` 是异步编程的一种解决方案，比传统的解决方案(回调函数和事件)更合理和更强大
+
+`Promise` 对象具有以下 `3` 种状态
+
+- `pending` 等待(初始)
+- `fulfilled` 成功
+- `rejected` 拒绝
+
+::: tip Promise 的特点
+
+- `Promise` 对象的状态不受外界影响
+- 状态一旦改变就不会再变(不可逆)，任何时候都可以得到这个结果
+- 无法取消 `Promise`，一旦新建就会立即执行无法中途取消
+- 当处于 `pending` 状态时，无法得知目前进展到哪一个阶段(刚刚开始还是即将完成)
+
+:::
+
+```js
+/* 基本用法 */
+new Promise((resolve, reject) => {
+  setTimeout(() => resolve('成功'), 1000)
+}).then((res) => {
+  console.log(res)
+})
+
+/* 链式调用 */
+ajax('/get/1')
+  .then((res) => {
+    console.log(res)
+    return ajax('/get/2')
+  })
+  .then((res) => {
+    console.log(res)
+    return ajax('/get/3')
+  })
+  .then((res) => console.log(res))
+```
+
+::: tip 实例方法
+
+- `Promise.prototype.then()` 用于实例添加状态改变时的回调函数(第一个参数是 `fulfilled` 状态的回调函数，第二个参数是 `rejected` 状态的回调函数)，会返回的是一个新的 `Promise` 实例
+- `Promise.prototype.catch()` 用于指定 `rejected` 状态的回调函数(是 `.then(null, rejection)` 或 `.then(undefined, rejection)` 的别名)
+- `Promise.prototype.finally()` (ES2018) 用于指定不管 `Promise` 对象最后状态如何都会执行的操作 (`finally` 本质上是 `then` 方法的特例)
+
+```js
+/*  实现 finally 方法 */
+Promise.prototype.finally = function (callback) {
+  const P = this.constructor
+  return this.then(
+    (value) => P.resolve(callback()).then(() => value),
+    (reason) =>
+      P.resolve(callback()).then(() => {
+        throw reason
+      })
+  )
+}
+```
+
+:::
+
+::: tip 静态方法
+
+- `Promise.resolve()`
+  - 将传入的参数转为 `Promise` 对象
+    - 参数是一个 `Promise` 实例则直接返回
+    - 参数是一个 `thenable` 对象(具有 `then` 方法的对象) 转为 `Promise` 对象再立即执行 `thenable` 对象的 `then` 方法
+    - 参数不是具有 `then` 方法的对象或根本就不是对象时返回一个 `fulfilled` 状态的新 `Promise` 对象
+    - 没有参数时返回一个 `fulfilled` 状态的新 `Promise` 对象
+- `Promise.reject()`
+  - 返回一个 `rejected` 状态的新 `Promise` 对象
+- `Promise.all()`
+  - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，只有所有的 `Promise` 状态成功才会成功，如果其中一个 `Promise` 的状态失败就会失败
+- `Promise.race()`
+  - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，新的 `Promise` 实例状态会根据最先更改状态的参数实例而更改状态(可以轻松实现超时方法)
+- `Promise.allSettled()` (ES2020)
+  - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，新的 `Promise` 实例只有等到所有这些参数实例都返回结果，不管是 `fulfilled` 还是 `rejected` ，包装实例才会结束，一旦结束，状态总是 `fulfilled`
+- `Promise.any()` (ES2021)
+  - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，只要参数实例有一个变成 `fulfilled` 状态，包装实例就会变成 `fulfilled` 状态；如果所有参数实例都变成 `rejected` 状态，包装实例才会变成 `rejected` 状态
 
 :::
