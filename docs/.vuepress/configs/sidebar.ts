@@ -13,6 +13,11 @@ export const sidebar: SidebarConfig = {
       collapsible: true,
       children: ['/interview/concept/module.md']
     },
+    {
+      text: '网络知识',
+      collapsible: true,
+      children: ['/interview/network/http.md']
+    },
     '/interview/browser/',
     '/interview/coding/'
   ],
