@@ -13,6 +13,12 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+更新
+
+```sh
+omz update
+```
+
 [Github](https://github.com/ohmyzsh/ohmyzsh)
 [zsh 插件](zsh)
 
@@ -126,6 +132,12 @@ p10k configure
 git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
 ```
 
+查看当前配置使用的图标
+
+```sh
+get_icon_names
+```
+
 自定义配置
 
 ```sh
@@ -133,9 +145,40 @@ git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull
 code ~/.p10k.zsh
 
 # 修改 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS 和 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS 的配置
+# 比如显示当前使用的 node 版本
 
 # 使配置生效
 source ~/.zshrc
 ```
 
 [Github](https://github.com/romkatv/powerlevel10k)
+
+## 常用配置
+
+```zsh
+# 主题
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# 历史命令显示时间
+HIST_STAMPS="yyyy-mm-dd"
+
+# 插件配置
+plugins=(git autojump vscode brew node npm yarn web-search zsh-autosuggestions fast-syntax-highlighting)
+
+# 常用别名
+alias p="pnpm"
+alias d="p dev"
+alias s="p start"
+alias b="p build"
+
+# 代理相关
+proxy() {
+  export ALL_PROXY=socks5://127.0.0.1:1086
+  echo "已开启终端代理"
+}
+
+noproxy() {
+  unset ALL_PROXY
+  echo "已关闭终端代理"
+}
+```
