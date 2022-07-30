@@ -236,5 +236,13 @@ sudo wechattweak-cli --uninstall
 
 ## 窗口管理神器 Rectangle
 
+比系统分屏更强大，支持快捷键分屏、支持三个及以上分屏
+
 [Github](https://github.com/rxhanson/Rectangle)
 [软件官网](https://rectangleapp.com/)
+
+## 应用快捷启动神器 Thor Launcher
+
+通过设定快捷键，快速在应用之间切换
+
+[App Store](https://apps.apple.com/cn/app/thor-launcher/id1120999687)
