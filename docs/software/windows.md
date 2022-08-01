@@ -215,3 +215,12 @@
 5. 系统更新补丁管理
 
 [软件官网](https://www.hibitsoft.ir/Uninstaller.html)
+
+## 硬盘分析工具 WizTree
+
+1. 分析速度极快
+2. 可视化显示空间占用
+3. 支持数据导出
+4. 免费无广告支持免安装使用
+
+[软件官网](https://www.diskanalyzer.com)
