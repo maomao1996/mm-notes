@@ -103,7 +103,31 @@ chsh -s /bin/zsh
 [Github](https://github.com/gnachman/iTerm2)
 [软件官网](https://www.iterm2.com)
 
-### 配色方案
+### iTerm2 常用快捷键
+
+| 操作          | 含义                   |
+| :------------ | :--------------------- |
+| ⌘ + N         | 新建窗口               |
+| ⌘ + T         | 新建 Tab               |
+| ⌘ + W         | 关闭 Tab / 窗口        |
+| ⌘ + ←         | 切换到上一个 Tab       |
+| ⌘ + →         | 切换到下一个 Tab       |
+| ⌘ + 数字      | 快速切换 Tab           |
+| ⌘ + D         | 垂直分屏               |
+| ⌘ + Shift + D | 水平分屏               |
+| ⌘ + Enter     | 切换全屏               |
+| ⌘ + F         | 查找                   |
+| ⌘ + /         | 查看光标的位置         |
+| Ctrl + P      | 上一条命令             |
+| Ctrl + R      | 搜索命令历史           |
+| Ctrl + L      | 清屏                   |
+| Ctrl + U      | 清除当前行             |
+| Ctrl + W      | 删除光标前面的一个单词 |
+| Ctrl + K      | 删除光标后面的所有字符 |
+| Ctrl + A      | 移动光标到行首         |
+| Ctrl + E      | 移动光标到行尾         |
+
+### iTerm2 配色方案
 
 - [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 - [iterm2-material-design](https://github.com/MartinSeeler/iterm2-material-design)
