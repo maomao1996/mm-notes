@@ -16,7 +16,7 @@ export const sidebar: SidebarConfig = {
     {
       text: '网络知识',
       collapsible: true,
-      children: ['/interview/network/http.md']
+      children: ['/interview/network/tcp.md', '/interview/network/http.md']
     },
     '/interview/browser/',
     '/interview/coding/'
