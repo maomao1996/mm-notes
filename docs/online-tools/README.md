@@ -52,6 +52,7 @@ sidebarDepth: 2
 ### 代码生成
 
 - [webcode.tools](https://webcode.tools)Web 代码生成工具(CSS、HTML、meta 信息、JSON 等)
+- [nginx 配置可视化生成](https://do.co/nginxconfig) [(github)](https://github.com/digitalocean/nginxconfig.io)
 
 #### CSS 相关
 
@@ -94,3 +95,7 @@ sidebarDepth: 2
 
 - [ProcessOn](https://www.processon.com/) 免费在线流程图思维导图
 - [Excalidraw](https://excalidraw.com/) 手绘风格流程图
+
+## 休闲娱乐
+
+[yikm 小霸王在线游戏机](https://www.yikm.net/)
