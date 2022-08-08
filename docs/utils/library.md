@@ -52,6 +52,7 @@
 ## 图片处理
 
 - [html2canvas](https://github.com/niklasvh/html2canvas) 页面截图
+- [medium-zoom](https://github.com/francoischalifour/medium-zoom) 为图片提供可缩放的功能
 
 ## 文件处理
 
