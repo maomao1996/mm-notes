@@ -251,6 +251,9 @@
     "source.fixAll.eslint": true
     // "source.organizeImports": true,
   },
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true
+  },
   /** 工作台配置 */
   "workbench.colorTheme": "Bluloco Dark",
   "workbench.iconTheme": "material-icon-theme",
@@ -349,7 +352,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   /*** 第三方扩展配置 ***/
-  /** eslint 配置 https://github.com/antfu/eslint-config */
+  /** eslint 配置 */
   "eslint.format.enable": true,
   "eslint.options": {
     "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
@@ -390,8 +393,11 @@
     "ahooks",
     "weui",
     "weapp",
-    "wxml",
     "craco",
+    "execa",
+    /** 文件后缀 */
+    "wxml",
+    "xmind",
     /** 常用简写 */
     "btns"
   ],
@@ -446,13 +452,18 @@
   /** markdown 配置 */
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
   },
   "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
   "markdown-preview-enhanced.previewTheme": "one-dark.css",
   "markdownlint.config": {
     "MD001": false,
     "MD024": false,
+    // 内联 HTML
     "MD033": false
   },
   /** 微信小程序配置 */
