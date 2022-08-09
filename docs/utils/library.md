@@ -95,6 +95,20 @@
 
 - [cheerio](https://github.com/cheeriojs/cheerio) 为服务器特别定制的，快速、灵活、实施的 `jQuery` 核心实现，可以解析任何 `HTML` 或 `XML` 文档
 
+## lint / 格式化相关
+
+- [prettier](https://github.com/prettier/prettier) 代码格式化工具
+- [eslint](https://github.com/eslint/eslint) `ECMAScript/JavaScript` 代码检查工具
+- [stylelint](https://github.com/stylelint/stylelint) `CSS` 代码检查工具
+- [markdownlint](https://github.com/DavidAnson/markdownlint) `Markdown` 格式检查工具
+- [commitlint](https://github.com/conventional-changelog/commitlint) Git Commit Messages 格式检查工具
+
+### 相关辅助工具
+
+- [husky](https://github.com/typicode/husky) `Git Hooks` 工具，让你操作 `Git Hooks` 变得更容易
+- [lint-staged](https://github.com/okonet/lint-staged) 只对 `Git` 暂存文件运行 `lint` 从而提高速度
+- [commitizen](https://github.com/commitizen/cz-cli) commit 辅助工具，获得有关提交消息格式的即时反馈
+
 ## CLI 相关
 
 - [zx](https://github.com/google/zx) 用 `JavaScript` 或 `TypeScript` 编写简单的命令行脚本
