@@ -11,7 +11,10 @@ export const sidebar: SidebarConfig = {
     {
       text: '概念知识',
       collapsible: true,
-      children: ['/interview/concept/module.md']
+      children: [
+        '/interview/concept/module.md',
+        '/interview/concept/page-rendering.md'
+      ]
     },
     {
       text: '网络知识',
