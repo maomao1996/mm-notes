@@ -133,6 +133,11 @@
   - 突出显示代码错误和警告
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 
+- `Sort package.json`
+
+  - 对 `package.json` 文件进行排序
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=unional.vscode-sort-package-json)
+
 ### 调试相关
 
 - `Live Server`
@@ -185,8 +190,14 @@
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans)
 
 - `es6-string-html`
+
   - ES6 模板字符串高亮
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
+
+- `Todo Tree`
+
+  - 在树视图中显示 TODO FIXME 等注释标记
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
 ### 微信小程序相关
 
