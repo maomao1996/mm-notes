@@ -75,6 +75,10 @@
 
 - [braft-editor](https://github.com/margox/braft-editor) React 富文本编辑器
 
+## 代码编辑器
+
+- [monaco-editor](https://github.com/microsoft/monaco-editor) 微软开源的基于 VSCode 的代码编辑器。支持智能提示、代码高亮、代码格式化等。
+
 ## 用户体验
 
 - 用户引导动画
@@ -116,6 +120,7 @@
 - [enquirer](https://github.com/enquirer/enquirer) 交互式命令行工具（更好看）
 - [shelljs](https://github.com/shelljs/shelljs) 是 `Unix Shell` 在 `Node.js API` 层的轻量级实现，可以很方便的调用系统命令
 - [execa](https://github.com/sindresorhus/execa) [Node child_process 模块](http://nodejs.cn/api/child_process.html)的增强（如 promise 的支持、移除输出中最后的换行符等）
+- [npm-run-all](https://github.com/mysticatea/npm-run-all) 用于并行或串行执行多个 `npm` 脚本
 - [commander.js](https://github.com/tj/commander.js) 编写指令和处理命令行
 - [yargs](https://github.com/yargs/yargs) 命令行参数解析
 - [plop](https://github.com/plopjs/plop) 轻量级的项目搭建生成工具
