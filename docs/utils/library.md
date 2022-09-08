@@ -4,24 +4,24 @@
 
 ## 工具库
 
-- [lodash](https://github.com/lodash/lodash)是一个一致性、模块化、高性能的 JavaScript 实用工具库
-- [ramda](https://github.com/ramda/ramda)专为函数式编程而设计的工具库
-- [qs](https://github.com/ljharb/qs)带有一些附加安全性的请求参数 parse 和 stringify 库
+- [lodash](https://github.com/lodash/lodash) 是一个一致性、模块化、高性能的 JavaScript 实用工具库
+- [ramda](https://github.com/ramda/ramda) 专为函数式编程而设计的工具库
+- [qs](https://github.com/ljharb/qs) 带有一些附加安全性的请求参数 parse 和 stringify 库
 
 ## 时间处理
 
-- [moment](https://github.com/moment/moment)JavaScript 日期处理类库
-- [dayjs](https://github.com/iamkun/dayjs)一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样
-- [date-fns](https://github.com/date-fns/date-fns)轻量级的 JavaScript 日期库，纯函数实现支持模块化
+- [moment](https://github.com/moment/moment) JavaScript 日期处理类库
+- [dayjs](https://github.com/iamkun/dayjs) 一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样
+- [date-fns](https://github.com/date-fns/date-fns) 轻量级的 JavaScript 日期库，纯函数实现支持模块化
 
 ## 请求处理
 
-- [axios](https://github.com/axios/axios)是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中
+- [axios](https://github.com/axios/axios) 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中
 
 ## 精度处理
 
-- [big.js](https://github.com/MikeMcl/big.js)用于任意精度的十进制算术运算
-- [number-precision](https://github.com/nefe/number-precision)超小型精确四则运算
+- [big.js](https://github.com/MikeMcl/big.js) 用于任意精度的十进制算术运算
+- [number-precision](https://github.com/nefe/number-precision) 超小型精确四则运算
 
 ## 字符串处理
 
@@ -39,15 +39,15 @@
 
 ## 本地存储
 
-- [localForage](https://github.com/localForage/localForage)一个快速、简单的 JavaScript 存储库([中文文档](https://localforage.docschina.org/))
+- [localForage](https://github.com/localForage/localForage) 一个快速、简单的 JavaScript 存储库([中文文档](https://localforage.docschina.org/))
 
 ## 滚动处理
 
-- [better-scroll](https://github.com/ustbhuangyi/better-scroll)重点解决移动端（已支持 PC）各种滚动场景需求的插件
+- [better-scroll](https://github.com/ustbhuangyi/better-scroll) 重点解决移动端（已支持 PC）各种滚动场景需求的插件
 
 ## 事件处理
 
-- [hotkeys-js](https://github.com/jaywcjlove/hotkeys)用于捕获键盘输入和输入的组合键
+- [hotkeys-js](https://github.com/jaywcjlove/hotkeys) 用于捕获键盘输入和输入的组合键
 
 ## 图片处理
 
@@ -56,15 +56,17 @@
 
 ## 文件处理
 
-- [FileSaver.js](https://github.com/eligrey/FileSaver.js)保存/下载文件(受 blob 的大小和内存限制)
-- [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js)保存/下载文件(不受 blob 的大小和内存限制)
-- [sheetjs](https://github.com/SheetJS/sheetjs)用于 Excel 的读取和导出
-- [node-fs-extra](https://github.com/jprichardson/node-fs-extra) [Node fs 模块](http://nodejs.cn/api/fs.html#fs_file_system)的增强（如 promise 的支持）
-- [rimraf](https://github.com/isaacs/rimraf)用于删除文件和文件夹，类似 `rm -rf`
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js) 保存/下载文件(受 blob 的大小和内存限制)
+- [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js) 保存/下载文件(不受 blob 的大小和内存限制)
+- [sheetjs](https://github.com/SheetJS/sheetjs) 用于 Excel 的读取和导出
+- [node-fs-extra](https://github.com/jprichardson/node-fs-extra) [Node fs 模块](http://nodejs.cn/api/fs.html#fs_file_system)的增强（如 `promise` 的支持）
+- [rimraf](https://github.com/isaacs/rimraf) 用于删除文件和文件夹，类似 `rm -rf`
+- [glob](https://github.com/isaacs/node-glob) 文件查找
+- [globby](https://github.com/sindresorhus/globby) 使用更友好的文件查找（支持 `promise`、否定模式、`ignore`文件配置等）
 
 ## 版本号处理
 
-- [semver](https://github.com/npm/node-semver)语义化版本解析器
+- [semver](https://github.com/npm/node-semver) 语义化版本解析器
 
 ## 数据校验
 
@@ -91,9 +93,9 @@
 
 ## Webpack
 
-- [webpack-chain](https://github.com/neutrinojs/webpack-chain)使用链式 API 来生成和简化 webpack 的配置的修改
-- [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin)统计 webpack 在各阶段的构建速度
-- [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)通过可视化分析 webpack 打包文件的大小
+- [webpack-chain](https://github.com/neutrinojs/webpack-chain) 使用链式 API 来生成和简化 webpack 的配置的修改
+- [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) 统计 webpack 在各阶段的构建速度
+- [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) 通过可视化分析 webpack 打包文件的大小
 
 ## 解析相关
 
