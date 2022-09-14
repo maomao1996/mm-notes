@@ -51,9 +51,15 @@ export const navbar: NavbarConfig = [
     ]
   },
   {
-    text: 'Git',
-    activeMatch: '^/git',
-    link: '/git/README.md'
+    text: '终端',
+    children: [
+      '/terminal/zsh.md',
+      {
+        text: 'Git',
+        activeMatch: '^/git',
+        link: '/git/README.md'
+      }
+    ]
   },
   {
     text: '软件推荐',

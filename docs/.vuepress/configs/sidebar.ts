@@ -55,6 +55,12 @@ export const sidebar: SidebarConfig = {
     }
   ],
   '/git/': ['/git/', '/git/command.md'],
+  '/terminal/': [
+    {
+      text: '终端',
+      children: ['/terminal/zsh.md']
+    }
+  ],
   '/software/': [
     {
       text: '软件推荐',
