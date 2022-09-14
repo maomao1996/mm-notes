@@ -1,4 +1,6 @@
-# zsh
+# Zsh
+
+zsh 相关配置和好用的命令行工具
 
 ## oh-my-zsh
 
@@ -26,7 +28,7 @@ omz update
 
 ### autojump
 
-用于常用目录间的快速跳转(通过维护命令行中最常用的目录的数据库来工作)
+用于常用目录间的快速跳转（通过维护命令行中最常用的目录的数据库来工作）
 
 安装
 
@@ -167,9 +169,13 @@ plugins=(git autojump vscode brew node npm yarn web-search zsh-autosuggestions f
 
 # 常用别名
 alias p="pnpm"
-alias d="p dev"
-alias s="p start"
-alias b="p build"
+alias d="yarn dev"
+alias s="yarn start"
+alias b="yarn build"
+
+alias glogp="git log --pretty='%C(yellow)%h%C(reset) %ad %C(green)%s%C(reset) %C(red)%d%C(reset) %C(bold blue)[%an]%C(reset)'"
+
+alias cat="bat"
 
 # 代理相关
 proxy() {
