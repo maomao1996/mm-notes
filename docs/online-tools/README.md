@@ -9,6 +9,7 @@ sidebarDepth: 2
 - [Can I use](https://caniuse.com) 兼容性查询
 - [carbon](https://carbon.now.sh) 代码图片生成
 - [npm trends](https://www.npmtrends.com/) 比较 NPM 包下载情况
+- [Bundlephobia](https://bundlephobia.com/) 分析 npm package 的依赖、bundle 后的大小、下载速度预估
 
 ### 沙箱
 
@@ -21,9 +22,9 @@ sidebarDepth: 2
   - [regulex](https://jex.im/regulex)
   - [regexper](https://regexper.com)
   - [正则可视化](https://wangwl.net/r/vr)
-- [regex101](https://regex101.com)在线正则测试工具
-- [regexgen](https://npm.runkit.com/regexgen)生成与一组字符串匹配的正则表达式
-- [any-rule](https://any86.github.io/any-rule)正则大全
+- [regex101](https://regex101.com) 在线正则测试工具
+- [regexgen](https://npm.runkit.com/regexgen) 生成与一组字符串匹配的正则表达式
+- [any-rule](https://any86.github.io/any-rule) 正则大全
 
 ### 代码编译
 
@@ -51,17 +52,17 @@ sidebarDepth: 2
 
 ### 代码生成
 
-- [webcode.tools](https://webcode.tools)Web 代码生成工具(CSS、HTML、meta 信息、JSON 等)
+- [webcode.tools](https://webcode.tools) Web 代码生成工具 (CSS、HTML、meta 信息、JSON 等)
 - [nginx 配置可视化生成](https://do.co/nginxconfig) [(github)](https://github.com/digitalocean/nginxconfig.io)
 
 #### CSS 相关
 
-- [CSS Grid Generator](https://cssgrid-generator.netlify.app)grid 布局
-- [FANCY-BORDER-RADIUS](https://9elements.github.io/fancy-border-radius)border-radius 圆角
-- [CSS Shadows Generator](https://shadows.brumm.af)box-shadow 阴影
-- [Cubic-Bezier](https://cubic-bezier.com)贝塞尔曲线
-- [Easing Gradients](https://larsenwork.com/easing-gradients)渐变
-- [Clippy — CSS clip-path maker](https://bennettfeely.com/clippy)clip-path
+- [CSS Grid Generator](https://cssgrid-generator.netlify.app) grid 布局
+- [FANCY-BORDER-RADIUS](https://9elements.github.io/fancy-border-radius) border-radius 圆角
+- [CSS Shadows Generator](https://shadows.brumm.af) box-shadow 阴影
+- [Cubic-Bezier](https://cubic-bezier.com) 贝塞尔曲线
+- [Easing Gradients](https://larsenwork.com/easing-gradients) 渐变
+- [Clippy — CSS clip-path maker](https://bennettfeely.com/clippy) clip-path
 - [Neumorphism/Soft UI generator](https://neumorphism.io) `border-radius / background / box-shadow`
 
 #### SVG 相关
@@ -95,6 +96,10 @@ sidebarDepth: 2
 
 - [ProcessOn](https://www.processon.com/) 免费在线流程图思维导图
 - [Excalidraw](https://excalidraw.com/) 手绘风格流程图
+
+## 文件处理
+
+- [CloudConvert](https://cloudconvert.com/) 在线文件转换器（支持 200+ 种格式）
 
 ## 休闲娱乐
 
