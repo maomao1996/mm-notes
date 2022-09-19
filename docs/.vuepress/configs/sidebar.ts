@@ -70,8 +70,7 @@ export const sidebar: SidebarConfig = {
         '/software/windows.md',
         '/software/browser.md',
         '/software/vscode.md',
-        '/software/webstorm.md',
-        '/software/zsh.md'
+        '/software/webstorm.md'
       ]
     }
   ],
