@@ -482,6 +482,26 @@
 }
 ```
 
+## 代码片段
+
+````json
+{
+  /********** markdown 相关 **********/
+  "markdown code block": {
+    "scope": "markdown",
+    "prefix": "code",
+    "body": ["```${1:js}", "$2", "```"],
+    "description": "markdown 块级代码"
+  },
+  "markdown code inline": {
+    "scope": "markdown",
+    "prefix": "code",
+    "body": ["`$1`"],
+    "description": "markdown 行内代码"
+  }
+}
+````
+
 ## 其他
 
 - [emmet 语法说明](https://docs.emmet.io/abbreviations/syntax/)
@@ -490,3 +510,16 @@
 
 - [VS Code 插件开发文档-中文版](https://github.com/Liiked/VS-Code-Extension-Doc-ZH)
 - [VSCode 插件开发全攻略配套 demo](https://github.com/sxei/vscode-plugin-demo)
+
+### 下载小技巧
+
+1. 打开 [Visual Studio Code](https://code.visualstudio.com/Download) 官网进行下载
+2. 打开下载管理，复制下载链接
+3. 将链接中的域名 `az764295.vo.msecnd.net` 替换为 `vscode.cdn.azure.cn`
+
+```sh
+# 示例
+https://az764295.vo.msecnd.net/stable/74b1f979648cc44d385a2286793c226e611f59e7/VSCode-darwin-universal.zip
+# 替换如下
+https://vscode.cdn.azure.cn/stable/74b1f979648cc44d385a2286793c226e611f59e7/VSCode-darwin-universal.zip
+```
