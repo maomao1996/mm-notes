@@ -131,6 +131,11 @@ const age = obj.age
 const { name, age } = obj
 // 重命名
 const { name: myName } = obj
+
+/* 指定默认值 */
+const { x = 1, y = 2 } = { y: null }
+console.log(x) // 1
+console.log(y) // null
 ```
 
 ### 解构数组
@@ -145,7 +150,54 @@ const age = arr[1]
 /* ES6 解构写法 */
 const [name, age] = arr
 const { 0: name, 1: age } = arr
+
+/* 指定默认值 */
+const [x = 1] = []
+const [y = 2] = [undefined]
+console.log(x) // 1
+console.log(y) // 2
+
+const [z = 3] = [null]
+console.log(z) // null
 ```
+
+### 解构字符串
+
+字符串也可以解构赋值，因为字符串被转换成了一个类似数组的对象
+
+```js
+const [a, b, c] = 'maomao'
+console.log(a) // m
+console.log(b) // a
+console.log(c) // o
+
+/* 解构 length 属性 */
+const { length } = 'maomao'
+console.log(length) // 6
+```
+
+::: tip 解构赋值注意点
+
+- 解构数组和字符串时变量的取值由它的位置决定
+- 解构对象时变量必须与属性同名，才能取到正确的值
+- 变量在没有找到对应的值，多余的变量会被赋值为 `undefined`
+- 在指定默认值时，只有属性值严格等于 `undefined` 才会生效
+- 数组本质是特殊的对象，因此可以对数组进行对象属性的解构
+- 解构数值和布尔值时会通过其对应的包装函数将其转换成对象再解构
+- `undefined` 和 `null` 无法转为对象，在解构时会报错
+
+```js
+const { toString } = 123
+toString === Number.prototype.toString // true
+
+const { toString } = true
+toString === Boolean.prototype.toString // true
+
+const { x } = undefined // TypeError
+const { y } = null // TypeError
+```
+
+:::
 
 ## 函数的扩展
 
