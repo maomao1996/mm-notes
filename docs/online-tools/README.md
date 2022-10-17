@@ -78,8 +78,8 @@ sidebarDepth: 2
 
 ### 图片压缩
 
-- [docsmall](https://tinypng.com)
-- [TinyPNG](https://docsmall.com)
+- [TinyPNG](https://tinypng.com)
+- [docsmall](https://docsmall.com)
 
 ### 图片生成
 
@@ -99,7 +99,9 @@ sidebarDepth: 2
 
 ## 文件处理
 
-- [CloudConvert](https://cloudconvert.com/) 在线文件转换器（支持 200+ 种格式）
+- 在线格式转换
+  - [CloudConvert](https://cloudconvert.com/) 在线文件转换器，支持 200+ 种格式、支持自定义设置、图片可在线预览（英文界面）
+  - [Convertio](https://convertio.co/zh/) 在线转换文件的简单工具，支持 300+ 种格式、支持自定义设置（最大 100M）
 
 ## 休闲娱乐
 
