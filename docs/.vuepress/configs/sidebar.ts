@@ -7,6 +7,11 @@ export const sidebar: SidebarConfig = {
       collapsible: true,
       children: ['/interview/base/types.md', '/interview/base/conversions.md']
     },
+    {
+      text: 'HTML 与 CSS',
+      collapsible: true,
+      children: ['/interview/html-css/html.md']
+    },
     '/interview/es6/',
     {
       text: '概念知识',
