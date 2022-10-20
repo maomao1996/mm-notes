@@ -211,6 +211,22 @@
   - 看股票、基金实时数据
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=giscafer.leek-fund)
 
+## 安装 code 命令
+
+`code` 命令可以直接打开一个文件或者文件目录
+
+1. 使用 `shift + command + p` 打开命令面板
+2. 输入 `shell command` 进行搜索
+3. 点击 `Shell 命令：在 PATH 中安装 “code” 命令`
+
+```sh
+# 在 vscode 中编辑当前目录下的文件
+code .
+
+# 在 vscode 中编辑该文件（当文件不存在时会先创建该文件）
+code [文件名]
+```
+
 ## webpack 项目识别 alias
 
 1. 在项目根目录新建 `jsconfig.json` 或 `tsconfig.json`
