@@ -4,6 +4,7 @@
 - [Git 学习教程](https://learngitbranching.js.org/?locale=zh_CN)
 - [Git 入门指南](https://docs.github.com/cn/github/getting-started-with-github/getting-started-with-git)
 - [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
+- [Git Extras](https://github.com/tj/git-extras) git 命令行扩展工具
 - 下载相关
   - [Windows 版下载镜像](https://npmmirror.com/mirrors/git-for-windows/)
   - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
@@ -68,10 +69,16 @@ git branch
         分支名 # 新建一个分支(停留在当前分支)
         -r # 列出所有远程分支
         -a # 列出所有本地分支和远程分支
-        -d 分支名 # 删除分支
+        -d [分支名] # 删除分支
+        -D [分支名] # 强制删除分支
         -r # 列出所有远程分支
 # 新建一个空白分支
 git checkout --orphan 分支名
+
+# 删除本地所有分支
+git branch | xargs git branch -d
+# 批量删除包含指定字符的本地分支【以 dev 为例】
+git branch | grep 'dev' | xargs git branch -d
 ```
 
 ```sh
