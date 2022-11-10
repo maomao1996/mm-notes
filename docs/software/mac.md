@@ -194,7 +194,7 @@ sudo wechattweak-cli --uninstall
 [Github](https://github.com/iina/iina)
 [软件官网](https://iina.io/)
 
-## eZip
+## MacZip
 
 专为 macOS 而设计的压缩软件
 
@@ -270,3 +270,10 @@ sudo wechattweak-cli --uninstall
 通过设定快捷键，快速在应用之间切换
 
 [App Store](https://apps.apple.com/cn/app/thor-launcher/id1120999687)
+
+## 快捷键提示 CheatSheet
+
+长按 `Command` 即可查看当前应用的快捷键提示
+
+[软件官网](https://www.ergonis.com/products/keycue/)
+[安装包](https://github.com/maomao1996/software-backup/tree/main/mac/CheatSheet)
