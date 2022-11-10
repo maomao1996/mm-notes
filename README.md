@@ -20,3 +20,9 @@
 ### Github
 
 - <https://maomao1996.github.io/mm-notes>
+
+## 鼓励作者
+
+如果你觉得博客对你有帮助，可以帮忙点个 `star` 或者打赏犒劳一下
+
+![打赏](./docs/.vuepress/alias/images/sponsor.jpg)
