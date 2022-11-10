@@ -132,14 +132,57 @@
 隐式类型转换是指在执行过程中，当实际操作的值与 `JavaScript` 内部期望得到的值不同时，就会对其做隐式类型转换(即不易察觉的类型转换)<br>
 在 `JavaScript` 中有以下场景会发生隐式类型转换
 
-- 四则运算符 (`+ - * /`)
 - 相等运算符 (`==`)
+- 四则运算符 (`+ - * /`)
 - 关系运算符 (`> < >= <=`)
 - 逻辑操作符 (`&& ||`)
 - 条件判断语句
   - `if()`
   - `while()`
   - 三元运算符
+
+### 相等运算符运算规则（重点）
+
+**为什么 `0 == null` 是 `false` ？**
+
+```js
+0 == null // false
+```
+
+[ECMA-262 规范 7.2.12 小节对相等运算符的描述](https://www.ecma-international.org/ecma-262/6.0/#sec-abstract-equality-comparison)
+
+1. 如果 `x` 不是正常值（比如抛出一个错误），中断执行；
+2. 如果 `y` 不是正常值，中断执行；
+3. 如果 `Type(x)` 与 `Type(y)` 相同，执行严格相等运算 `x === y`；
+4. 如果 `x` 是 `null`，`y` 是 `undefined`，返回 `true`；
+5. 如果 `x` 是 `undefined`，`y` 是 `null`，返回 `true`；
+6. 如果 `Type(x)` 是数值，`Type(y)` 是字符串，返回 `x == ToNumber(y)` 的结果；
+7. 如果 `Type(x)` 是字符串，`Type(y)` 是数值，返回 `ToNumber(x) == y` 的结果；
+8. 如果 `Type(x)` 是布尔值，返回 `ToNumber(x) == y` 的结果；
+9. 如果 `Type(y)` 是布尔值，返回 `x == ToNumber(y)` 的结果；
+10. 如果 `Type(x)` 是字符串或数值或 `Symbol` 值，`Type(y)` 是对象，返回 `x == ToPrimitive(y)` 的结果；
+11. 如果 `Type(x)` 是对象，`Type(y)` 是字符串或数值或 `Symbol` 值，返回 `ToPrimitive(x) == y` 的结果；
+12. 返回 `false`。
+
+> [Type(x)](https://262.ecma-international.org/6.0/#sec-ecmascript-data-types-and-values) 是 `the type of x` 的简写，其中的 `type` 是 ECMA-262 规范中定义的 ECMAScript 语言和规范类型
+
+所以在计算 `0 == null` 时，由于 `0` 的类型是数值，`null` 的类型是 `Null`（这是规格 [4.3.13 小节](https://www.ecma-international.org/ecma-262/6.0/#sec-terms-and-definitions-null-type)的规定，是内部 `Type` 运算的结果，跟 `typeof` 运算符无关）；<br />
+因此上面的前 11 步都得不到结果，要到第 12 步才能得到 `false`。
+
+[相等运算符 —— ECMAScript 6 入门](https://es6.ruanyifeng.com/#docs/spec#%E7%9B%B8%E7%AD%89%E8%BF%90%E7%AE%97%E7%AC%A6)
+
+::: tip 相等运算符运算规则总结
+
+- 同类型比较时，执行严格相等运算 `x === y`
+- `undefined` 与 `null` 比较时返回 `true`
+- `string` 与 `number` 进行比较时，先将 `string` 做 `ToNumber` 处理，再进行比较
+- `boolean` 与其它类型进行比较时，先将 `boolean` 做 `ToNumber` 处理，再进行比较
+- `引用类型` 与 `基本类型` 进行比较时，将 `引用类型` 做 `ToPrimitive` 处理，再进行比较
+- `undefined` `null` 与其它类型的比较时都返回 `false`
+
+:::
+
+### 四则运算符运算规则
 
 ::: tip 四则运算符运算规则
 
@@ -153,16 +196,7 @@
 
 :::
 
-::: tip 相等运算符运算规则
-
-- `boolean` 与其它类型进行比较时，将 `boolean` 做 `ToNumber` 处理
-- `string` 与 `number` 进行比较时，将 `string` 做 `ToNumber` 处理
-- `undefined` 与 `null` 比较时返回 `true`
-- `undefined` `null` 与其它类型的比较时都返回 `false`
-- `引用类型` 与 `基本类型` 进行比较时，将 `引用类型` 做 `ToPrimitive` 处理
-- `引用类型` 与 `引用类型` 比较时，直接判断引用地址是否一致
-
-:::
+### 关系、逻辑、条件运算符运算规则
 
 ::: tip 关系运算符运算规则
 
@@ -172,6 +206,6 @@
 
 :::
 
-::: tip
+::: tip 逻辑操作符与条件判断语句
 在**逻辑操作符**与**条件判断语句**中都是做 `ToBoolean` 处理
 :::
