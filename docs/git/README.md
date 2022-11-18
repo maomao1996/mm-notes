@@ -31,11 +31,15 @@
 [xxx] 均为可选参数
 :::
 
+### git clone
+
 ```sh
 # 拷贝一个 Git 仓库到本地
 git clone 仓库地址
 git clone 仓库地址 --depth 1 # 只克隆最近一次的 commit
 ```
+
+### git 配置
 
 ```sh
 # 查看当前的 Git 配置
@@ -45,6 +49,8 @@ git config [--global] user.name "名称"
 # 设置使用 Git 时的邮箱地址
 git config [--global] user.email "邮箱"
 ```
+
+### git 文件操作
 
 ```sh
 # 添加所有文件到暂存区
@@ -64,26 +70,47 @@ git status
 ```
 
 ```sh
+# 只暂存被追踪的文件
+git stash
+        save '说明信息' # 添加说明信息
+        -u # 暂存所有文件
+# 查看 stash 列表
+git stash list
+# 取出最近一次的 stash
+git stash apply
+# 取出并删除最近一次的 stash
+git stash pop
+# 清空所有 stash
+git stash clear
+```
+
+### git 分支操作
+
+```sh
 # 列出所有本地分支
 git branch
-        分支名 # 新建一个分支(停留在当前分支)
+        [分支名] # 新建一个分支(停留在当前分支)
         -r # 列出所有远程分支
         -a # 列出所有本地分支和远程分支
         -d [分支名] # 删除分支
         -D [分支名] # 强制删除分支
         -r # 列出所有远程分支
 # 新建一个空白分支
-git checkout --orphan 分支名
+git checkout --orphan [分支名]
 
 # 删除本地所有分支
 git branch | xargs git branch -d
 # 批量删除包含指定字符的本地分支【以 dev 为例】
 git branch | grep 'dev' | xargs git branch -d
+
+# 获取当前的分支名
+git symbolic-ref --short -q HEAD
+git rev-parse --abbrev-ref HEAD
 ```
 
 ```sh
 # 合并指定分支到当前分支
-git merge 分支名
+git merge [分支名]
 ```
 
 ```sh
@@ -100,20 +127,7 @@ git push [remote][branch]
 git push [remote] --force
 ```
 
-```sh
-# 只暂存被追踪的文件
-git stash
-        save '说明信息' # 添加说明信息
-        -u # 暂存所有文件
-# 查看 stash 列表
-git stash list
-# 取出最近一次的 stash
-git stash apply
-# 取出并删除最近一次的 stash
-git stash pop
-# 清空所有 stash
-git stash clear
-```
+### git 日志
 
 ```sh
 # 查看提交过的完整日志
@@ -123,6 +137,20 @@ git log
 # 查看所有分支的所有操作记录（包括被删除的 commit 记录和 reset 操作）
 git reflog
 ```
+
+### git 统计
+
+```sh
+# 统计作者提交的次数
+git shortlog -s -n
+
+# 计算存储库中的提交总数
+git rev-list --all --count
+# 计算存储库中分支指定的提交总数
+git rev-list --count [分支名]
+```
+
+### git reset
 
 ```sh
 # 撤销 commit 操作
