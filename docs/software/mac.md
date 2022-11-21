@@ -277,3 +277,10 @@ sudo wechattweak-cli --uninstall
 
 [软件官网](https://www.ergonis.com/products/keycue/)
 [安装包](https://github.com/maomao1996/software-backup/tree/main/mac/CheatSheet)
+
+## 显示器控制 MonitorControl
+
+1. 控制外接显示器的亮度和音量
+2. 支持键盘控制亮度和音量
+
+[Github](https://github.com/MonitorControl/MonitorControl)
