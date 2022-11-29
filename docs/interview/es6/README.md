@@ -1004,7 +1004,7 @@ util.log() // maomao
 
 ### export default 命令
 
-`export default` 命令可以为模块指定默认输出
+`export default` 命令可以为模块指定默认输出，是**对 `default` 赋值的特例，本质上是一种赋值**
 
 ```js
 /* 输出匿名函数 */
@@ -1028,16 +1028,44 @@ log() // 'maomao'
 
 - 一个模块只能有一个默认输出(`export default` 命令只能使用一次)
 - `export default` 命令本质上是输出一个叫做 `default` 的变量或方法，使用时可以为它取任意名字
-- `export default` 命令后面不能跟变量声明语句
+- `export default` 命令后面是一个表达式，不能跟变量声明语句
 
 ```js
-// 错误
+/* 错误 */
 export default const a = 1;
 
-// 正确
+/* 正确 */
 const a = 1;
 export default a;
+
+// 直接输出
+export default 'maomao'
+export default 1 + 2
 ```
+
+:::
+
+::: tip export 和 export default 的区别
+
+- `export {}` 导出的都是引用
+- `export default` 导出的都是值而不是引用
+  - `export default` 是**对 `default` 赋值的特例，本质上是一种赋值**（即 `export default` 后的语句会被视为表达式）所以拿到的是值而不是引用
+  - **`export default function` 是特例，导出的是引用**
+  - `export { thing as default }` 写法为引用导出
+- 导入时除 `{} = await import()` 外均为引用
+
+###### 如何保证导入都是引用？
+
+- 保证导入总是引用
+  - 尽量使用命名导入（使用除 `{} = await import()` 外的写法）
+  - 注意命名导出的写法
+  - 少用默认导出
+- 做不到上面的要求时尽量把需要维持引用的变量使用 `Object` 封装，不要使用简单变量
+
+> 相关文章
+>
+> - [精读《默认、命名导出的区别》](https://github.com/ascoders/weekly/blob/master/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/204.%E7%B2%BE%E8%AF%BB%E3%80%8A%E9%BB%98%E8%AE%A4%E3%80%81%E5%91%BD%E5%90%8D%E5%AF%BC%E5%87%BA%E7%9A%84%E5%8C%BA%E5%88%AB%E3%80%8B.md)
+> - [`export default thing` is different to `export { thing as default }`](https://jakearchibald.com/2021/export-default-thing-vs-thing-as-default/)
 
 :::
 
@@ -1185,7 +1213,7 @@ ajax('/get/1')
   .then((res) => console.log(res))
 ```
 
-::: tip 实例方法
+### Promise 实例方法
 
 - `Promise.prototype.then()` 用于实例添加状态改变时的回调函数(第一个参数是 `fulfilled` 状态的回调函数，第二个参数是 `rejected` 状态的回调函数)，会返回的是一个新的 `Promise` 实例
 - `Promise.prototype.catch()` 用于指定 `rejected` 状态的回调函数(是 `.then(null, rejection)` 或 `.then(undefined, rejection)` 的别名)
@@ -1205,9 +1233,7 @@ Promise.prototype.finally = function (callback) {
 }
 ```
 
-:::
-
-::: tip 静态方法
+### Promise 静态方法
 
 - `Promise.resolve()`
   - 将传入的参数转为 `Promise` 对象
@@ -1225,5 +1251,3 @@ Promise.prototype.finally = function (callback) {
   - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，新的 `Promise` 实例只有等到所有这些参数实例都返回结果，不管是 `fulfilled` 还是 `rejected` ，包装实例才会结束，一旦结束，状态总是 `fulfilled`
 - `Promise.any()` (ES2021)
   - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，只要参数实例有一个变成 `fulfilled` 状态，包装实例就会变成 `fulfilled` 状态；如果所有参数实例都变成 `rejected` 状态，包装实例才会变成 `rejected` 状态
-
-:::
