@@ -56,7 +56,7 @@ export const sidebar: SidebarConfig = {
   '/node/': [
     {
       text: 'Node 相关',
-      children: ['/node/npm.md', '/node/toolkit.md']
+      children: ['/node/npm.md']
     }
   ],
   '/git/': ['/git/', '/git/command.md'],

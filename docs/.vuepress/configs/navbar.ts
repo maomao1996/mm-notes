@@ -26,7 +26,7 @@ export const navbar: NavbarConfig = [
     children: [
       {
         text: 'Node 相关',
-        children: ['/node/npm.md', '/node/toolkit.md']
+        children: ['/node/npm.md']
       },
       {
         text: 'CSS',
@@ -54,6 +54,7 @@ export const navbar: NavbarConfig = [
     text: '终端',
     children: [
       '/terminal/zsh.md',
+      '/terminal/toolkit.md',
       {
         text: 'Git',
         activeMatch: '^/git',
