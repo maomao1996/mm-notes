@@ -55,3 +55,24 @@ white-space: pre;
 </div>
 
 [使用 CSS(Unicode 字符)让 inline 水平元素换行](https://www.zhangxinxu.com/wordpress/2012/03/tip-css-multiline-display/)
+
+## 网页置灰
+
+```css
+html {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  /* 兼容 Firefox */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* 兼容 IE */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  /*兼容 Chrome Safari Edge 等 */
+  -webkit-filter: grayscale(1);
+}
+```
+
+[一段 css 让全站变灰](https://juejin.cn/post/6844904114053185544)
+[filter - CSS —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
