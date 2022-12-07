@@ -7,15 +7,9 @@ export const navbar: NavbarConfig = [
     link: '/interview/base/types.md'
   },
   {
-    text: '在线工具',
-    children: [
-      {
-        text: '网页工具',
-        link: '/online-tools/',
-        activeMatch: '/online-tools/$'
-      },
-      '/online-tools/bookmark-scripts.md'
-    ]
+    text: '源码阅读笔记',
+    activeMatch: '^/source-code',
+    link: '/source-code/only-allow.md'
   },
   {
     text: '工具方法',
@@ -60,6 +54,17 @@ export const navbar: NavbarConfig = [
         activeMatch: '^/git',
         link: '/git/README.md'
       }
+    ]
+  },
+  {
+    text: '在线工具',
+    children: [
+      {
+        text: '网页工具',
+        link: '/online-tools/',
+        activeMatch: '/online-tools/$'
+      },
+      '/online-tools/bookmark-scripts.md'
     ]
   },
   {
