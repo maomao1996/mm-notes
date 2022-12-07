@@ -84,5 +84,11 @@ export const sidebar: SidebarConfig = {
       text: '疑难杂症',
       children: ['/issue/h5.md', '/issue/pc.md']
     }
+  ],
+  '/source-code/': [
+    {
+      text: '源码阅读笔记',
+      children: ['/source-code/only-allow.md']
+    }
   ]
 }
