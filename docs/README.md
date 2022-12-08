@@ -3,7 +3,7 @@ home: true
 heroImage: /logo.png
 actions:
   - text: 前端知识
-    link: /interview/base/types.html
+    link: /interview/es6/
     type: primary
   - text: 软件推荐
     link: /software/cross-platform.html

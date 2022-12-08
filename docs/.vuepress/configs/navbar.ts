@@ -12,7 +12,7 @@ export const navbar: NavbarConfig = [
     link: '/source-code/only-allow.md'
   },
   {
-    text: '工具方法',
+    text: '库 / 方法',
     children: ['/utils/regexp.md', '/utils/function.md', '/utils/library.md']
   },
   {
@@ -57,25 +57,30 @@ export const navbar: NavbarConfig = [
     ]
   },
   {
-    text: '在线工具',
+    text: '软件 / 工具',
     children: [
       {
-        text: '网页工具',
-        link: '/online-tools/',
-        activeMatch: '/online-tools/$'
+        text: '软件推荐',
+        children: [
+          '/software/cross-platform.md',
+          '/software/mac.md',
+          '/software/windows.md',
+          '/software/browser.md',
+          '/software/vscode.md',
+          '/software/webstorm.md'
+        ]
       },
-      '/online-tools/bookmark-scripts.md'
-    ]
-  },
-  {
-    text: '软件推荐',
-    children: [
-      '/software/cross-platform.md',
-      '/software/mac.md',
-      '/software/windows.md',
-      '/software/browser.md',
-      '/software/vscode.md',
-      '/software/webstorm.md'
+      {
+        text: '在线工具',
+        children: [
+          {
+            text: '网页工具',
+            link: '/online-tools/',
+            activeMatch: '/online-tools/$'
+          },
+          '/online-tools/bookmark-scripts.md'
+        ]
+      }
     ]
   },
   {
