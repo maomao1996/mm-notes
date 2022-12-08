@@ -6,13 +6,22 @@ sidebarDepth: 2
 
 ## Homebrew
 
-Mac 上安装命令行程序最好的工具
+Mac 的软件包管理工具，用于安装、卸载和管理各种软件，包括命令行工具、库和应用程序等
 
 安装
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# 国内源完整版安装
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+# 极速安装（update 功能需要命令修复）
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)" speed
 ```
+
+- 安装教程
+  - [Homebrew 国内安装脚本](https://gitee.com/cunkai/HomebrewCN)
+  - [Homebrew 安装教程](https://github.com/ineo6/homebrew-install)
 
 常用命令
 
@@ -20,59 +29,34 @@ Mac 上安装命令行程序最好的工具
 # 更新 Homebrew
 brew update
 
-# 查看已安装的包
+# 安装指定的软件包
+brew install <package>
+
+# 卸载指定的软件包
+brew uninstall <package>
+
+# 搜索可用的软件包，并显示匹配的结果
+brew search <query>
+
+# 列出已安装的软件包
 brew list
 
-# 查看可更新的包
+# 查看可以升级的软件包
 brew outdated
 
-# 更新所有包
+# 升级所有软件包到最新版本
 brew upgrade
-# 更新指定包
-brew upgrade git
+# 升级指定的软件包到最新版本
+brew upgrade <package>
 
-# 查看包的详细信息
-brew info git
+# 查看指定软件包的信息，包括版本号、安装路径、依赖关系等
+brew info <package>
 
-
-# 清理所有包的旧版本
+# 清理 Homebrew 临时文件和旧版本的软件包
 brew cleanup
-# 查看可清理的旧版本包
+# 查看可以清理的 Homebrew 临时文件和旧版本的软件包
 brew cleanup -n
 ```
-
-切换镜像
-
-```sh
-# 切换 brew.git
-cd "$(brew --repo)"
-git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
-
-# 切换 homebrew-core.git
-cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
-
-# 刷新
-brew update
-
-# 切换 homebrew-bottles
-# 查看当前 shell
-echo $SHELL
-
-# Bash 版本
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.bash_profile
-source ~/.bash_profile
-
-# Zsh 版本
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.zshrc
-source ~/.zshrc
-```
-
-切换镜像详细可查看[阿里云 Homebrew 镜像](https://developer.aliyun.com/mirror/homebrew?spm=a2c6h.13651102.0.0.e40a1b11ZkPX9D)
-
-- 其他教程
-  - [Homebrew 国内安装脚本](https://gitee.com/cunkai/HomebrewCN)
-  - [Homebrew 安装教程](https://github.com/ineo6/homebrew-install)
 
 [Github](https://github.com/Homebrew)
 [软件官网](https://brew.sh/index_zh-cn)
@@ -130,7 +114,7 @@ chsh -s /bin/zsh
 ### iTerm2 配色方案
 
 - [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
-- [iterm2-material-design](https://github.com/MartinSeeler/iterm2-material-design)
+- [iTerm2-Material-Design](https://github.com/MartinSeeler/iterm2-material-design)
 
 ### Fig
 
