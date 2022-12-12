@@ -50,7 +50,7 @@ export const sidebar: SidebarConfig = {
   '/css/': [
     {
       text: 'CSS',
-      children: ['/css/', '/css/skill.md', '/css/scss.md']
+      children: ['/css/', '/css/skill.md', '/css/sass.md']
     }
   ],
   '/node/': [

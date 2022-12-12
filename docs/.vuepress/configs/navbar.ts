@@ -31,7 +31,7 @@ export const navbar: NavbarConfig = [
             activeMatch: '/css/$'
           },
           '/css/skill.md',
-          '/css/scss.md'
+          '/css/sass.md'
         ]
       },
       {
