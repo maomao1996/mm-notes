@@ -8,8 +8,9 @@ sidebarDepth: 2
 
 - [Can I use](https://caniuse.com) 兼容性查询
 - [carbon](https://carbon.now.sh) 代码图片生成
-- [npm trends](https://www.npmtrends.com/) 比较 NPM 包下载情况
+- [npm trends](https://www.npmtrends.com/) 比较 npm package 的下载情况
 - [Bundlephobia](https://bundlephobia.com/) 分析 npm package 的依赖、bundle 后的大小、下载速度预估
+- [Package Phobia](https://packagephobia.com/) 查询 npm package 的安装体积（磁盘大小）
 
 ### 沙箱
 
@@ -44,11 +45,11 @@ sidebarDepth: 2
 
 #### CSS 预处理器
 
-- [Scss](https://www.dute.org/sass-to-css)
-- [Less](https://www.dute.org/less-to-css)
-- Stylus
+- [Sass Playground](https://www.sassmeister.com)
+- [Less-To-CSS Playground](https://lesscss.org/less-preview)
+- Stylus Playground
   - [英文官网](https://stylus-lang.com/try.html)
-  - [中文站点](https://stylus.bootcss.com/try.html)
+  - [中文站点](https://www.stylus-lang.cn/try.html)
 
 ### 代码生成
 
