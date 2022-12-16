@@ -13,6 +13,8 @@ zsh 相关配置和好用的命令行工具
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# OR 国内镜像
+sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
 ```
 
 更新
@@ -116,7 +118,7 @@ source ~/.zshrc
 
 配置
 
-> 使用 `iTerm2` 可自动安装所需字体
+> 使用 [iTerm2](/software/mac.html#iterm2) 可自动安装所需字体
 
 ```sh
 p10k configure
@@ -169,9 +171,11 @@ plugins=(git autojump vscode brew node npm yarn web-search zsh-autosuggestions f
 
 # 常用别名
 alias p="pnpm"
+alias pnpx="pnpm dlx"
 alias d="yarn dev"
 alias s="yarn start"
 alias b="yarn build"
+alias t="yarn test"
 
 alias glogp="git log --pretty='%C(yellow)%h%C(reset) %ad %C(green)%s%C(reset) %C(red)%d%C(reset) %C(bold blue)[%an]%C(reset)'"
 
@@ -183,7 +187,7 @@ proxy() {
   echo "已开启终端代理"
 }
 
-noproxy() {
+unproxy() {
   unset ALL_PROXY
   echo "已关闭终端代理"
 }
