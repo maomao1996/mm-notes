@@ -53,6 +53,10 @@
 
 - [html2canvas](https://github.com/niklasvh/html2canvas) 页面截图
 - [medium-zoom](https://github.com/francoischalifour/medium-zoom) 为图片提供可缩放的功能
+- 二维码
+  - [qrcode](https://github.com/soldair/node-qrcode) QR 码和 2d 条码生成器（支持浏览器和 `Node`）
+  - [qrcode.react](https://github.com/zpao/qrcode.react) React 组件
+  - [qrcode-terminal](https://github.com/gtanner/qrcode-terminal) 在终端中生成二维码
 
 ## 文件处理
 
