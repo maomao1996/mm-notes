@@ -63,7 +63,11 @@ export const sidebar: SidebarConfig = {
   '/terminal/': [
     {
       text: '终端',
-      children: ['/terminal/zsh.md', '/terminal/toolkit.md']
+      children: [
+        '/terminal/zsh.md',
+        '/terminal/toolkit.md',
+        '/terminal/shell.md'
+      ]
     }
   ],
   '/software/': [

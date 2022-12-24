@@ -49,6 +49,7 @@ export const navbar: NavbarConfig = [
     children: [
       '/terminal/zsh.md',
       '/terminal/toolkit.md',
+      '/terminal/shell.md',
       {
         text: 'Git',
         activeMatch: '^/git',
