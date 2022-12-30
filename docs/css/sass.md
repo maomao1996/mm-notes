@@ -107,6 +107,8 @@
 
 ### 扩展点击区域
 
+常用于移动端，毕竟总有一些作妖小图标按钮不好点击
+
 ```scss
 /* 移除单位 */
 @function strip-unit($value) {
@@ -171,6 +173,8 @@ iPhone X 以上手机添加安全距离
 ```
 
 ### 转换为 rem
+
+一般情况下使用 [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 处理就行，但是有些神坑项目里面存在几套 `rem` 标准
 
 ```scss
 $rem-base: 16px !default;
