@@ -1251,3 +1251,5 @@ Promise.prototype.finally = function (callback) {
   - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，新的 `Promise` 实例只有等到所有这些参数实例都返回结果，不管是 `fulfilled` 还是 `rejected` ，包装实例才会结束，一旦结束，状态总是 `fulfilled`
 - `Promise.any()` (ES2021)
   - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例，只要参数实例有一个变成 `fulfilled` 状态，包装实例就会变成 `fulfilled` 状态；如果所有参数实例都变成 `rejected` 状态，包装实例才会变成 `rejected` 状态
+
+[Promise 实现](https://github.com/maomao1996/Promise) 简易实现、A+ 规范实现、原型方法、静态方法实现
