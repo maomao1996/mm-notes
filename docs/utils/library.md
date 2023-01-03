@@ -111,6 +111,11 @@
 
 - [cheerio](https://github.com/cheeriojs/cheerio) 为服务器特别定制的，快速、灵活、实施的 `jQuery` 核心实现，可以解析任何 `HTML` 或 `XML` 文档
 
+## 自动化工具
+
+- [puppeteer](https://github.com/puppeteer/puppeteer) 控制 Chromium 的自动化工具
+- [playwright](https://github.com/microsoft/playwright) 支持 Firefox / Chrome / WebKit(Safari) 三大浏览器的自动化工具
+
 ## lint / 格式化相关
 
 - [prettier](https://github.com/prettier/prettier) 代码格式化工具
