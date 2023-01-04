@@ -87,9 +87,14 @@
 
 - [monaco-editor](https://github.com/microsoft/monaco-editor) 微软开源的基于 VSCode 的代码编辑器。支持智能提示、代码高亮、代码格式化等。
 
+## 轮播
+
+- [swiper](https://github.com/nolimits4web/swiper) 高性能的触摸滑动插件，支持 `Javascript` `Vue 3` `React` `AngularJS` `Solid` `Svelte`
+- [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper) 基于 swiper 封装的 `Vue` 组件，支持 `Vue 2` 和 `Vue 3`
+
 ## 表格
 
-- [ag-grid](https://github.com/ag-grid/ag-grid) 支持 `Javascript` `Vue` `React` `AngularJS` `Web Components`
+- [ag-grid](https://github.com/ag-grid/ag-grid) 功能齐全的高性能表格，支持 `Javascript` `Vue` `React` `AngularJS` `Web Components`
 
 ## 用户体验
 
