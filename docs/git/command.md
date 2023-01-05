@@ -115,10 +115,10 @@ git push origin :refs/tags/[tagName]
 # 查看 tag 信息
 git show [tag]
 
-# 提交指定tag
+# 提交指定 tag
 git push [remote] [tag]
 
-# 提交所有tag
+# 提交所有 tag
 git push [remote] --tags
 
 # 新建一个分支，指向某个tag
@@ -182,7 +182,13 @@ git remote -v
 git remote show [remote]
 
 # 增加一个新的远程仓库，并命名
-git remote add [shortname] [url]
+git remote add [name] [url]
+
+# 删除远程仓库
+git remote remove [name]
+
+# 查看远程仓库地址
+git remote get-url [name]
 
 # 取回远程仓库的变化，并与本地分支合并
 git pull [remote] [branch]

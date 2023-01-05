@@ -120,6 +120,12 @@ git merge [分支名]
 ```sh
 # 显示所有远程仓库
 git remote -v
+# 添加远程仓库
+git remote add [name] [url]
+# 删除远程仓库
+git remote remove [name]
+# 查看远程仓库地址
+git remote get-url [name]
 ```
 
 ```sh
