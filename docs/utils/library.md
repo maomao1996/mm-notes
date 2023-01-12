@@ -147,7 +147,9 @@
 - [yargs](https://github.com/yargs/yargs) 命令行参数解析
 - [plop](https://github.com/plopjs/plop) 轻量级的项目搭建生成工具
 - [dotenv](https://github.com/motdotla/dotenv) 从 `.env` 文件加载环境变量到 `process.env`
+- [dotenv-expand](https://github.com/motdotla/dotenv-expand) `dotenv` 的变量扩展，使 `.env` 文件支持变量语法
 - [simple-git](https://github.com/steveukx/git-js) 在 `node` 中执行 `git` 命令
+- [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) 搜索并加载配置文件（会查找 `package.json` 的配置项以及 `name`.[`rc`, `json`, `.yaml`, `yml`, `js`, `cjs`] 文件）
 
 ### 命令行输出美化
 
