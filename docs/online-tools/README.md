@@ -81,6 +81,7 @@ sidebarDepth: 2
 
 - [TinyPNG](https://tinypng.com)
 - [docsmall](https://docsmall.com)
+- [squoosh](https://squoosh.app) [Google 开源](https://github.com/GoogleChromeLabs/squoosh)的图片压缩工具
 
 ### 图片生成
 
@@ -96,6 +97,7 @@ sidebarDepth: 2
 ## 作图工具
 
 - [ProcessOn](https://www.processon.com/) 免费在线流程图思维导图
+- [Draw.io](https://app.diagrams.net/) 流程图
 - [Excalidraw](https://excalidraw.com/) 手绘风格流程图
 
 ## 文件处理
