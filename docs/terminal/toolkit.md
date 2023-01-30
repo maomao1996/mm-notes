@@ -4,7 +4,7 @@
 
 ## bat
 
-`cat` 命令的增强版
+`cat` 命令的增强版，用于阅读文件
 
 - 带行号
 - 语法高亮
@@ -25,6 +25,40 @@ brew install bat
 ```
 
 [Github](https://github.com/sharkdp/bat)
+
+## fzf
+
+命令行模糊查找器
+
+- 快捷键绑定（支持 `bash`、`zsh` 和 `fish`）
+  - `CTRL-T` 在当前目录查找
+  - `CTRL-R` 查找历史命令
+- 预览 `fzf --preview 'cat {}'` 可结合 `bat` 使用
+
+[Homebrew 安装](https://formulae.brew.sh/formula/fzf)
+
+```sh
+brew install fzf
+```
+
+在 `zsh` 中使用时，快捷键绑定可能不生效，需要配置 `plugins`
+
+```sh
+# 在 ~/.zshrc 中配置
+plugins=(其他插件 fzf)
+
+# 使配置生效
+source ~/.zshrc
+```
+
+修改默认配置
+
+```sh
+# 在 ~/.zshrc 中配置
+export FZF_DEFAULT_OPTS="--layout=reverse --preview 'bat -n --color=always {}'"
+```
+
+[Github](https://github.com/junegunn/fzf)
 
 ## fnm
 
