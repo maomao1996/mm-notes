@@ -92,7 +92,7 @@ export const sidebar: SidebarConfig = {
   '/source-code/': [
     {
       text: '源码阅读笔记',
-      children: ['/source-code/only-allow.md']
+      children: ['/source-code/only-allow.md', '/source-code/clsx.md']
     }
   ]
 }
