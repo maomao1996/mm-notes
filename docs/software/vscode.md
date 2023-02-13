@@ -211,6 +211,15 @@
   - 看股票、基金实时数据
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=giscafer.leek-fund)
 
+## 使用小技巧
+
+### 删除空行
+
+1. 打开替换 `Alt + ⌘ + F`
+2. 输入 `^\s*(?=\r?$)\n`
+3. 勾选使用正则表达式 `Alt + ⌘ + R`
+4. 全部替换 `⌘ + Enter`
+
 ## 安装 code 命令
 
 `code` 命令可以直接打开一个文件或者文件目录
