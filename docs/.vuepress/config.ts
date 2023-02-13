@@ -21,6 +21,7 @@ export default defineUserConfig({
   base,
   dest: './dist',
   bundler: isProduction ? webpackBundler() : viteBundler(),
+  port: 8732,
   lang: 'zh-CN',
   title: '茂茂物语',
   description: '前端常用知识、踩坑记录、软件推荐等',
