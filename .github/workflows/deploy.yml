@@ -22,9 +22,22 @@ jobs:
         with:
           persist-credentials: false
 
+      # 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      # 设置 node 版本
+      - name: Set node version to 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
       # 打包静态文件
       - name: Build
-        run: npm install && npm run build:github
+        run: pnpm install && npm run build:github
 
       # 部署
       - name: Deploy
