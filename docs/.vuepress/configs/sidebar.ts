@@ -5,7 +5,11 @@ export const sidebar: SidebarConfig = {
     {
       text: 'JavaScript 基础知识',
       collapsible: true,
-      children: ['/interview/base/types.md', '/interview/base/conversions.md']
+      children: [
+        '/interview/base/types.md',
+        '/interview/base/conversions.md',
+        '/interview/base/inherit.md'
+      ]
     },
     {
       text: 'HTML 与 CSS',
