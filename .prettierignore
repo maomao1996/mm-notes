@@ -1,6 +1,10 @@
 package.json
-dist
-.temp
+tsconfig.json
+pnpm-lock.yaml
 
-docs/interview/base/code
-docs/interview/es6/code
+node_modules
+dist
+cache
+
+docs/fe/javascript/code
+docs/fe/es6/code
