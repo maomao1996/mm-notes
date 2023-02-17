@@ -2,6 +2,7 @@ name: GitHub Actions Build and Deploy
 
 # 触发条件: push 到 master 分支后
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -12,7 +13,7 @@ env:
 
 # 任务
 jobs:
-  build-and-deploy:
+  bot:
     # 服务器环境：最新版 ubuntu
     runs-on: ubuntu-latest
     steps:
