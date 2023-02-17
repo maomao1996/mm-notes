@@ -29,5 +29,5 @@ features:
   - title: 踩坑记录
     details: 总有一些让你意向不到的问题 <br /> 记录一些踩过的坑（随意更新）
   - title: 吾志所向，一往无前。
-    details: <br /><p align="right">一个想躺平的小开发</p>
+    details: '<br /><small align="right" style="display: block;">一个想躺平的小开发</small>'
 ---
