@@ -27,7 +27,7 @@ features:
   - title: 提效工具
     details: 工欲善其事，必先利其器 <br /> 记录开发和日常使用中所用到的软件、插件、扩展等
   - title: 踩坑记录
-    details: 总有一些让你意向不到的问题 <br /> 记录一些踩过的坑（随意更新）
+    details: 总有一些让你意想不到的问题 <br /> 记录一些踩过的坑（随意更新）
   - title: 吾志所向，一往无前。
     details: '<br /><small align="right" style="display: block;">一个想躺平的小开发</small>'
 ---
