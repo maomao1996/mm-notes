@@ -5,7 +5,7 @@ import Visitor from './components/Visitor.vue'
 import Copyright from './components/Copyright.vue'
 import AsideSponsors from './components/AsideSponsors.vue'
 
-import './styles/index.css'
+import './styles/index.scss'
 
 export default Object.assign({}, Theme, {
   Layout: () =>

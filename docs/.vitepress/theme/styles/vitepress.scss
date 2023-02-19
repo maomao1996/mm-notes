@@ -1,4 +1,5 @@
 /***** vitepress 样式优化 ******/
+
 /* 爱的魔力转圈圈 */
 .VPHero .image .image-src:hover {
   transform: translate(-50%, -50%) rotate(666turn);
@@ -17,7 +18,23 @@
   }
 }
 
-/***** 自定义组件样式 ******/
+/* nav 换行问题（6 个还是有点小多，后面看看怎么优化） */
+@media (max-width: 960px) {
+  .VPNav {
+    .VPNavBarMenuLink,
+    .button {
+      padding: 0 10px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  // 借鉴 https://cn.vuejs.org 的处理
+  .VPNav .DocSearch-Button-Placeholder {
+    display: none;
+  }
+}
+
+/* 版权信息 */
 .copyright {
   display: flex;
   justify-content: center;
