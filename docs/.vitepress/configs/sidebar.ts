@@ -115,8 +115,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: '踩坑记录',
       // collapsed: false,
       items: [
-        { text: 'H5 踩坑记录', link: '/issue/h5' },
-        { text: 'PC 踩坑记录', link: '/issue/pc' }
+        { text: 'H5 踩坑记录', link: '/pit/h5' },
+        { text: 'PC 踩坑记录', link: '/pit/pc' }
       ]
     }
   ]
