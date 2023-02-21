@@ -18,7 +18,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: 'HTML / CSS',
       collapsed: false,
-      items: [{ text: 'HTML 相关知识点', link: '/fe/html/' }]
+      items: [
+        { text: 'HTML 理论知识点', link: '/fe/html/' },
+        { text: 'CSS 理论知识点', link: '/fe/css/' }
+      ]
     },
     {
       text: '浏览器与网络',
