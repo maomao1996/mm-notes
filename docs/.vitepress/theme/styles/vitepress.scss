@@ -22,8 +22,9 @@
 @media (max-width: 960px) {
   .VPNav {
     .VPNavBarMenuLink,
-    .button {
-      padding: 0 10px;
+    .VPNavBarMenuGroup .button {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }
@@ -39,4 +40,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* 代码块标题，跟 h6 一样 */
+.custom-block .custom-block-title {
+  font-size: 16px;
 }
