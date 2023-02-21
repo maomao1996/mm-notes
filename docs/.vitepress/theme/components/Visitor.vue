@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import { inject, Ref } from 'vue'
-import { useRoute } from 'vitepress'
 
 const DEV = inject('DEV') as Ref<boolean>
-const route = useRoute()
 </script>
 
 <template>
   <img
     v-if="!DEV"
     class="visitor"
-    :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes&p=${route.path}`"
+    src="https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes"
     onerror="this.style.display='none'"
   />
 </template>
