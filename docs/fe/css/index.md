@@ -2,6 +2,36 @@
 
 > 记录一些（那啥需要的）理论知识点，其他的 [CSS 语法与技巧请点这里](/tricks/css/spec)
 
+## 介绍一下盒模型
+
+::: tip 什么是盒模型？
+
+当对一个文档进行布局时，浏览器的渲染引擎会根据标准之一的 **`CSS` 基础框盒模型**（CSS basic box model），将所有元素表示为一个个矩形的盒子；`CSS` 决定这些盒子的大小、位置以及属性（如颜色、背景、边框尺寸等）
+
+每个盒子（即盒模型）从外到内由这四个部分组成
+
+- `margin` 外边距（不计入盒子的实际大小）
+- `border` 边框
+- `padding` 内边距
+- `content` 内容
+
+[CSS 基础框盒模型介绍 - CSS：层叠样式表 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+
+:::
+
+盒模型分为 **`W3C` 标准盒模型**和 **`IE` 盒模型**，其区别只有一个：**计算盒子实际大小（即总宽度/总高度）的方式不一样**
+
+> 以宽度计算来举 🌰
+
+- `W3C` 标准盒模型（默认）
+  - **盒子实际宽 = `width` + `padding` + `border`**
+  - 其中 **`width` 只包含 `content`**（即内容区域的宽度）
+  - **通过 `box-sizing: content-box;` 来设置为 `W3C` 标准盒模型**
+- `IE` 盒模型
+  - **盒子实际宽 = `width`**
+  - 其中 **`width` = `content` + `border` + `padding`**
+  - **通过 `box-sizing: border-box;` 来设置为 `IE` 盒模型**
+
 ## 什么是 `BFC` ？
 
 > 先了解一些前置知识：格式化上下文（Formatting Context）
