@@ -176,3 +176,91 @@
 :::
 
 推荐阅读[张鑫旭的《CSS 选择器世界》](https://book.douban.com/subject/34846688/)
+
+## 实现垂直水平居中
+
+#### `text-align` + `line-height`
+
+> 只能**在行内内容在一行时使用**（换行了就 GG），同时还需要**知道高度的具体值**
+
+```css
+.parent {
+  height: 150px;
+  /* 行高的值要与 height 一致 */
+  line-height: 150px;
+  text-align: center;
+}
+.child {
+  /* 如果子元素是块级元素需要改为行内或行内块级才能生效 */
+  display: inline-block;
+  vertical-align: middle;
+}
+```
+
+#### `absolute + transform`
+
+```css
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  tansform: translate(-50%, -50%);
+}
+```
+
+#### `display: table-cell`
+
+```css
+.parent {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+```
+
+#### `flex`
+
+```css
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+#### `flex + margin`
+
+```css
+.parent {
+  display: flex;
+}
+.child {
+  margin: auto;
+}
+```
+
+#### `grid`
+
+```css
+.parent {
+  display: grid;
+}
+.child {
+  justify-self: center;
+  align-self: center;
+}
+```
+
+#### `grid + margin`
+
+```css
+.parent {
+  display: grid;
+}
+.child {
+  margin: auto;
+}
+```
