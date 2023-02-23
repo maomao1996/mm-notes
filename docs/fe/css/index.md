@@ -264,3 +264,82 @@
   margin: auto;
 }
 ```
+
+## `flex: 1` 代表什么？
+
+[`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 是一个 `CSS` 简写属性，用于设置 `Flex` 项目如何增大或缩小以适应其 `Flex` 容器中可用的空间
+
+::: tip `flex` 是 `flex-grow` `flex-shrink` `flex-basis` 属性的简写
+
+- [flex-grow](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow) 用于**设置 `flex` 项目的增长系数**
+  - 负值无效
+  - 初始值为 `0`
+  - 省略时默认值为 `1`
+- [flex-shrink](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 用于**设置 `flex` 项目的收缩系数**（仅在默认 `width/height` 之和大于容器时生效）
+  - 负值无效
+  - 初始值为 `1`
+  - 省略时默认值为 `1`
+- [flex-basis](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 用于**设置 `flex` 项目在主轴方向上的初始大小**
+  - 初始值为 `auto`
+  - 省略时默认值为 `0`
+
+:::
+
+### `flex` 缩写语法规则
+
+### 单值语法规则
+
+```css{17,18}
+/* 全局属性值 */
+/* 初始值 */
+flex: initial; => flex: 0 1 auto
+/* 从其父级继承 (flex 属性不可被继承，将设置为初始值) */
+flex: inherit; => flex: 0 1 auto
+/* 是关键字 initial 和 inherit 的组合(当属性可继承时为 inherit 不可继承时为 initial) */
+flex: unset; => flex: 0 1 auto
+
+
+/* 关键字值 */
+/* 根据自身的宽度与高度来确定尺寸 弹性 */
+flex: auto; => flex: 1 1 auto
+/* 根据自身宽高来设置尺寸 非弹性 */
+flex: none; => flex: 0 0 auto
+
+
+/* 无单位数: flex-grow（标题答案）*/
+flex: 1; => 1 1 0
+flex: 0; => 0 1 0
+
+
+/* 一个有效的 width/height 值: flex-basis */
+flex: 10px; => 1 1 10px
+flex: 20em; => 1 1 20em
+flex: min-content; => 1 1 min-content
+```
+
+### 双值语法规则
+
+1. **第一个值必须为一个无单位数**
+2. 第二个值必须为以下之一
+   1. **无单位数**：当作 `flex-shrink` 值
+   2. **有效的 `width/height` 值**：当作 `flex-basis` 值
+
+```css
+/* 无单位数: flex-grow | flex-shrink */
+flex: 2 2; => 2 2 0
+
+/* 有效的 width/height 值: flex-grow | flex-basis */
+flex: 2 30px; => 2 1 30px
+```
+
+### 三值语法规则
+
+1. **第一个值必须为一个无单位数**，当作 `flex-grow` 值
+2. **第二个值必须为一个无单位数**，当作 `flex-shrink` 值
+3. **第三个值必须为一个有效的 `width/height` 值**，当作 `flex-basis` 值
+
+```css
+flex: 2 2 10%;
+```
+
+[`Flex` 语法和计算规则](https://github.com/maomao1996/daily-notes/issues/23)
