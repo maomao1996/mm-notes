@@ -183,12 +183,26 @@ alias cat="bat"
 
 # 代理相关
 proxy() {
-  export ALL_PROXY=socks5://127.0.0.1:1086
+  http="http://127.0.0.1:1087"
+  socks5="socks5://127.0.0.1:1086"
+
+  # 只代理 http 请求
+  export http_proxy=$http
+  export HTTP_PROXY=$http
+
+  # 只代理 https 请求
+  export https_proxy=$http
+  export HTTPS_PROXY=$http
+
+  # 代理所有请求
+  export all_proxy=$socks5
+  export ALL_PROXY=$socks5
+
   echo "\033[32m已开启终端代理\033[0m"
 }
 
 unproxy() {
-  unset ALL_PROXY
+  unset http_proxy HTTP_PROXY https_proxy HTTPS_PROXY all_proxy ALL_PROXY
   echo "\033[32m已关闭终端代理\033[0m"
 }
 
@@ -214,3 +228,9 @@ if [[ -d .git ]]; then
   fi
 fi
 ```
+
+::: warning 代理相关说明
+
+同时设置大小写的环境变量来保证兼容性（因为有的应用读取的是大写的环境变量，而有的应用读取的是小写的环境变量）
+
+:::
