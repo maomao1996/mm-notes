@@ -11,11 +11,6 @@
     "lint:lint-staged": "lint-staged",
     "postinstall": "husky install"
   },
-  "lint-staged": {
-    "*.{js,ts,css,md,json}": [
-      "prettier --write"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maomao1996/mm-notes.git"
@@ -27,6 +22,7 @@
   },
   "homepage": "https://github.com/maomao1996/mm-notes#readme",
   "devDependencies": {
+    "@femm/prettier": "^1.0.1",
     "@types/node": "^18.13.0",
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",
@@ -35,5 +31,11 @@
     "sass": "^1.58.3",
     "vitepress": "1.0.0-alpha.46",
     "vue": "^3.2.47"
-  }
+  },
+  "lint-staged": {
+    "*.{js,ts,css,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": "@femm/prettier"
 }
