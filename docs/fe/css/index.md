@@ -343,3 +343,65 @@ flex: 2 2 10%;
 ```
 
 [`Flex` 语法和计算规则](https://github.com/maomao1996/daily-notes/issues/23)
+
+## `link` 和 `@import` 加载样式的区别
+
+[`<link>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link) 是一个 `HTML` 标签，其规定了当前文档与外部资源的关系
+
+[`@import`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@import) 是一个 `CSS` 语法规则，用于从其他样式表导入样式规则
+
+::: tip `link` 和 `@import` 加载样式的区别
+
+- 从属关系
+  - `<link>` 是一个 `HTML` 标签，只能出现在 `<head>` 标签中
+  - `@import` 是一个 `CSS` 语法规则，只能在 `<style>` 标签和 `CSS` 文件中使用
+- 应用范围
+  - `<link>` 标签用于链接各种类型的外部资源（这里只举三个 🌰）
+    - 加载 `CSS`：`<link rel="stylesheet" href="/index.css" />`
+    - 加载网站图标（`favicon`）：`<link rel="icon" href="favicon.ico" />`
+    - `DNS` 预解析：`<link rel="dns-prefetch" href="https://notes.fe-mm.com">`
+  - `@import` 只能用于引入 `CSS`
+- 加载顺序
+  - `<link>` 会在浏览器加载页面时同时加载（多个 `<link>` 会并行加载）
+  - `@import` 会在浏览器解析到 `CSS` 中的 `@import` 时再加载（多个 `@import` 会串行加载）
+- `DOM` 可控性
+  - `<link>` 可以通过 `JavaScript` 操作 `DOM` 进行插入
+  - `@import` 没有 `DOM` 接口，无法通过 `JavaScript` 操作
+
+:::
+
+::: warning 关于 `@import` 的加载顺序
+
+网上很多文章都说 `@import` 引入的 `CSS` 将在页面加载完毕后被加载，其实这个说法是有问题的，比如下面这段代码，我在 `style` 标签里面使用的 `@import`，难道还要在页面加载完毕后再去加载
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>关于 @import 的加载顺序</title>
+    <!-- 在 style 中使用 import 引入 css -->
+    <style>
+      @import url(./import.css);
+    </style>
+    <!-- 使用 link 引入 css -->
+    <link href="./link.css" rel="stylesheet" />
+  </head>
+  <body>
+    关于 @import 的加载顺序
+  </body>
+</html>
+```
+
+然后打开浏览器 `network` 面板去查看具体资源的加载时间
+
+> `import.css` 排队时间
+
+![import](./images/import.png)
+
+> `link.css` 排队时间
+
+![link](./images/link.png)
+
+所以 `@import` 的加载顺序要看其写在哪里，而不能一概而论
+
+:::
