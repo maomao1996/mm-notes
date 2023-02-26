@@ -9,7 +9,7 @@ hero:
     src: /logo.png
     alt: 茂茂物语
   actions:
-    - text: 前端知识
+    - text: 前端物语
       link: /fe/es6/
     - text: 提效工具
       link: /efficiency/online-tools
@@ -18,8 +18,8 @@ hero:
       link: https://netease-music.fe-mm.com
       theme: alt
 features:
-  - title: 前端知识
-    details: 整理前端所需要的知识点 <br /> 如有异议按你的理解为主，不接受反驳
+  - title: 前端物语
+    details: 整理前端常用知识点 <br /> 如有异议按你的理解为主，不接受反驳
   - title: 源码阅读
     details: 了解各种库的实现原理 <br /> 学习各种小技巧和冷知识
   - title: 奇淫技巧

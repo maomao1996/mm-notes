@@ -28,11 +28,16 @@
     }
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   // 借鉴 https://cn.vuejs.org 的处理
   .VPNav .DocSearch-Button-Placeholder {
     display: none;
   }
+}
+
+/* menu title 会换行 */
+.VPMenuGroup .title {
+  white-space: nowrap;
 }
 
 /* 版权信息 */
