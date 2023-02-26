@@ -92,7 +92,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: '软件/工具',
       collapsed: false,
       items: [
-        { text: '多平台', link: '/efficiency/software/cross-platform' },
+        { text: '多平台软件', link: '/efficiency/software/cross-platform' },
         { text: 'Mac 平台', link: '/efficiency/software/mac' },
         { text: 'Windows 平台', link: '/efficiency/software/windows' },
         { text: '浏览器设置与扩展', link: '/efficiency/software/browser' },
@@ -118,9 +118,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: '踩坑记录',
       // collapsed: false,
       items: [
-        { text: 'H5 踩坑记录', link: '/pit/h5' },
+        { text: 'npm 踩坑记录', link: '/pit/npm' },
         { text: 'PC 踩坑记录', link: '/pit/pc' },
-        { text: 'npm 踩坑记录', link: '/pit/npm' }
+        { text: 'H5 踩坑记录', link: '/pit/h5' }
       ]
     }
   ]
