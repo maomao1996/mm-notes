@@ -1,4 +1,5 @@
 import { h, App } from 'vue'
+import { useData } from 'vitepress'
 import Theme from 'vitepress/theme'
 
 import Visitor from './components/Visitor.vue'
@@ -30,8 +31,17 @@ if (typeof window !== 'undefined') {
 }
 
 export default Object.assign({}, Theme, {
-  Layout: () =>
-    h(Theme.Layout, null, {
+  Layout: () => {
+    const props: Record<string, any> = {}
+    // 获取 frontmatter
+    const { frontmatter } = useData()
+
+    /* 添加自定义 class */
+    if (frontmatter.value?.layoutClass) {
+      props.class = frontmatter.value.layoutClass
+    }
+
+    return h(Theme.Layout, props, {
       /**
        * 相关插槽
        * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
@@ -39,7 +49,8 @@ export default Object.assign({}, Theme, {
       'nav-bar-title-after': () => h(Visitor),
       'doc-after': () => h(Copyright),
       'aside-bottom': () => h(AsideSponsors)
-    }),
+    })
+  },
   enhanceApp({ app }: { app: App }) {
     app.provide('DEV', process.env.NODE_ENV === 'development')
   }
