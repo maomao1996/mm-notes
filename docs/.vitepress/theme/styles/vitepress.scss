@@ -1,11 +1,5 @@
 /***** vitepress 样式优化 ******/
 
-/* 爱的魔力转圈圈 */
-.VPHero .image .image-src:hover {
-  transform: translate(-50%, -50%) rotate(666turn);
-  transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
-}
-
 /* 同一行上的链接有间距才行 */
 .VPDoc .content-container .main a + a {
   margin-left: 12px;
