@@ -1,7 +1,7 @@
 /***** vitepress 样式优化 ******/
 
 /* 同一行上的链接有间距才行 */
-.VPDoc .content-container .main a + a {
+.vp-doc p a + a {
   margin-left: 12px;
 }
 
