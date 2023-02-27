@@ -12,8 +12,8 @@ hero:
   actions:
     - text: 前端物语
       link: /fe/es6/
-    - text: 提效工具
-      link: /efficiency/online-tools
+    - text: 前端导航
+      link: /nav
       theme: alt
     - text: mmPlayer
       link: https://netease-music.fe-mm.com
