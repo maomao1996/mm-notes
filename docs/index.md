@@ -27,7 +27,7 @@ features:
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
   - icon: 💡
     title: 奇淫技巧
-    details: 各种各样的奇淫技巧<br />配合 CV 大法来解决疑难杂症
+    details: 开发所需的奇淫技巧<small>（开发常用库/工具等）</small><br />配合 CV 大法来更好的摸鱼
   - icon: 🧰
     title: 提效工具
     details: 工欲善其事，必先利其器<br />记录开发和日常使用中所用到的软件、插件、扩展等

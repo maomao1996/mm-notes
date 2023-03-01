@@ -171,7 +171,7 @@ git reset --mixed HEAD~1 # git reset --mixed commit_id
 git reset --hard HEAD~1 # git reset --hard commit_id
 ```
 
-[查看完整版 Git 命令](/tricks/git/command)
+[查看完整版 Git 命令](./command)
 
 [三年 Git 使用心得 & 常见问题整理](https://juejin.cn/post/6844904191203213326)
 
