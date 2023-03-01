@@ -13,8 +13,15 @@
 }
 
 /* nav 换行问题（6 个还是有点小多，后面看看怎么优化） */
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
+  :root {
+    --vp-sidebar-width: 260px;
+  }
   .VPNav {
+    // 借鉴 https://cn.vuejs.org 的处理
+    .DocSearch-Button-Placeholder {
+      display: none;
+    }
     .VPNavBarMenuLink,
     .VPNavBarMenuGroup .button {
       padding-left: 10px;
@@ -22,10 +29,29 @@
     }
   }
 }
-@media (max-width: 1024px) {
-  // 借鉴 https://cn.vuejs.org 的处理
-  .VPNav .DocSearch-Button-Placeholder {
-    display: none;
+@media (max-width: 992px) {
+  .VPNav {
+    .VPNavBar {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .VPNavBarMenuLink,
+    .VPNavBarMenuGroup .button {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .VPNav {
+    .VPNavBarSearch {
+      padding-left: 16px;
+    }
+    .VPNavBarMenuLink,
+    .VPNavBarMenuGroup .button {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
   }
 }
 

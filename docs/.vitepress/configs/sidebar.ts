@@ -1,5 +1,20 @@
 import type { DefaultTheme } from 'vitepress'
 
+const TERMINAL_AND_GIT: DefaultTheme.Config['sidebar'] = [
+  { text: 'Zsh 配置', link: '/terminal/zsh' },
+  { text: 'npm 常用命令', link: '/terminal/npm' },
+  { text: '命令行工具', link: '/terminal/toolkit' },
+  { text: 'Shell 命令', link: '/terminal/shell' },
+  {
+    text: 'Git 语法与技巧',
+    // collapsed: false,
+    items: [
+      { text: 'Git 相关技巧', link: '/git/' },
+      { text: 'Git 命令清单', link: '/git/command' }
+    ]
+  }
+]
+
 export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/fe/': [
     {
@@ -66,14 +81,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     },
     {
-      text: 'Git 语法与技巧',
-      collapsed: false,
-      items: [
-        { text: 'Git 相关技巧', link: '/tricks/git/' },
-        { text: 'Git 命令清单', link: '/tricks/git/command' }
-      ]
-    },
-    {
       text: 'CSS 语法与技巧',
       collapsed: false,
       items: [
@@ -89,7 +96,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/efficiency/': [
     {
-      text: '软件/工具',
+      text: '软件推荐与配置',
       collapsed: false,
       items: [
         { text: '多平台软件', link: '/efficiency/software/cross-platform' },
@@ -97,22 +104,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Windows 平台', link: '/efficiency/software/windows' },
         { text: '浏览器设置与扩展', link: '/efficiency/software/browser' },
         { text: 'Visual Studio Code 配置', link: '/efficiency/software/vscode' },
-        { text: 'WebStorm 配置', link: '/efficiency/software/webstorm' },
-        { text: '在线工具', link: '/efficiency/online-tools' },
-        { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
+        { text: 'WebStorm 配置', link: '/efficiency/software/webstorm' }
       ]
     },
-    {
-      text: '终端相关',
-      collapsed: false,
-      items: [
-        { text: 'Zsh 配置', link: '/efficiency/terminal/zsh' },
-        { text: 'npm 常用命令', link: '/efficiency/terminal/npm' },
-        { text: '命令行工具', link: '/efficiency/terminal/toolkit' },
-        { text: 'Shell 命令', link: '/efficiency/terminal/shell' }
-      ]
-    }
+    { text: '在线工具', link: '/efficiency/online-tools' },
+    { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
   ],
+  '/terminal/': TERMINAL_AND_GIT,
+  '/git/': TERMINAL_AND_GIT,
   '/pit/': [
     {
       text: '踩坑记录',
