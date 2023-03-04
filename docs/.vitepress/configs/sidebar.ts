@@ -23,6 +23,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [
         { text: '数据类型', link: '/fe/javascript/types' },
         { text: '类型转换', link: '/fe/javascript/conversions' },
+        { text: '原型和原型链', link: '/fe/javascript/prototype' },
         { text: '继承', link: '/fe/javascript/inherit' }
       ]
     },
