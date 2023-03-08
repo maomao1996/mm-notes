@@ -1,3 +1,7 @@
+---
+description: '收录一些能提升使用体验的浏览器扩展、油猴脚本、实用小技巧'
+---
+
 # 浏览器设置与扩展
 
 - [Chrome 插件开发全攻略](https://github.com/sxei/chrome-plugin-demo)
@@ -82,7 +86,7 @@
 
 - 脚本推荐
 
-  - [AC-baidu](https://greasyfork.org/zh-CN/scripts/14178) 重定向优化百度搜狗谷歌搜索、去广告
+  - [access-link](https://greasyfork.org/zh-CN/scripts/395970)修复跳转链接为站外直链（移除重定向），免去拦截页面点击步骤可直达站外；拦截页面自动跳转
 
   - [解除 B 站区域限制](https://greasyfork.org/zh-CN/scripts/25718) 实现解除 B 站区域限制，只对 `HTML5` 播放器生效
 

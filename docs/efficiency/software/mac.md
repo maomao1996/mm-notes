@@ -1,3 +1,7 @@
+---
+description: '收录 Mac 平台下的实用软件，提升使用体验'
+---
+
 # Mac 平台
 
 ## Homebrew
