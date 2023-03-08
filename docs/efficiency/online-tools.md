@@ -1,3 +1,7 @@
+---
+description: '收录一些实用的在线工具，免去下载软件的烦恼'
+---
+
 # 在线工具
 
 ## 开发相关
@@ -65,6 +69,11 @@
 #### SVG 相关
 
 - [Get Waves](https://getwaves.io) SVG 波浪生成器
+
+### CDN
+
+- [jsDelivr](https://www.jsdelivr.com)
+- [esm.sh](https://esm.sh/)
 
 ## 图片处理
 

@@ -1,3 +1,7 @@
+---
+description: '茂茂的 Visual Studio Code 配置，记录扩展插件、使用小技巧和个人配置'
+---
+
 # Visual Studio Code 配置
 
 ## 扩展插件推荐
