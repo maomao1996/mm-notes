@@ -1,6 +1,6 @@
 # 茂茂物语
 
-- 前端知识
+- 前端物语
   - JavaScript
   - HTML
   - CSS
