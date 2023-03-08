@@ -35,7 +35,6 @@ export const NAV_DATA: NavData[] = [
       }
     ]
   },
-
   {
     title: 'React 生态',
     items: [
@@ -226,6 +225,35 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
+    title: '小程序相关',
+    items: [
+      {
+        icon: 'https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png',
+        title: '微信小程序文档',
+        desc: '微信小程序官方开发者文档',
+        link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/'
+      },
+      {
+        icon: 'https://cdn.docschina.org/home/logo/taro.png',
+        title: 'Taro',
+        desc: '多端统一开发解决方案',
+        link: 'https://taro.jd.com'
+      },
+      {
+        icon: 'https://web-assets.dcloud.net.cn/unidoc/zh/icon.png',
+        title: 'uni-app',
+        desc: '一个使用 Vue.js 开发所有前端应用的框架',
+        link: 'https://uniapp.dcloud.net.cn'
+      },
+      {
+        icon: 'https://mpxjs.cn/favicon.ico',
+        title: 'Mpx',
+        desc: '增强型跨端小程序框架',
+        link: 'https://mpxjs.cn'
+      }
+    ]
+  },
+  {
     title: 'Node 相关',
     items: [
       {
@@ -257,6 +285,42 @@ export const NAV_DATA: NavData[] = [
         title: 'Nest.js 中文文档',
         desc: '用于构建高效且可伸缩的服务端应用程序的渐进式 Node.js 框架',
         link: 'https://docs.nestjs.cn'
+      }
+    ]
+  },
+  {
+    title: '可视化',
+    items: [
+      {
+        icon: 'https://echarts.apache.org/zh/images/favicon.png',
+        title: 'ECharts',
+        desc: '一个基于 JavaScript 的开源可视化图表库',
+        link: 'https://echarts.apache.org/zh/index.html'
+      },
+      {
+        icon: 'https://antv.vision/icons/icon-72x72.png',
+        title: 'AntV',
+        desc: '蚂蚁集团全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。',
+        link: 'https://antv.vision/zh/'
+      },
+      {
+        icon: 'https://d3js.org/favicon.png',
+        title: 'D3.js',
+        desc: '一个遵循 Web 标准用于可视化数据的 JavaScript 库',
+        link: 'https://d3js.org'
+      },
+      {
+        icon: 'https://www.chartjs.org/favicon.ico',
+        title: 'Chart.js',
+        desc: '一个简单而灵活的 JavaScript 图表库',
+        link: 'https://www.chartjs.org'
+      },
+      {
+        icon: 'https://threejs.org/files/favicon.ico',
+        // icon: 'https://threejs.org/files/favicon_white.ico',
+        title: 'Three.js',
+        desc: 'JavaScript 3d 库',
+        link: 'https://threejs.org'
       }
     ]
   },
@@ -304,6 +368,41 @@ export const NAV_DATA: NavData[] = [
         title: 'SWC',
         desc: 'Rust-based platform for the Web',
         link: 'https://swc.rs'
+      }
+    ]
+  },
+  {
+    title: '站点生成器',
+    items: [
+      {
+        icon: 'https://astro.build/favicon.svg',
+        title: 'Astro',
+        desc: '一个现代化的轻量级静态站点生成器',
+        link: 'https://astro.build'
+      },
+      {
+        icon: 'https://cn.vuejs.org/logo.svg',
+        title: 'VitePress',
+        desc: '由 Vite 和 Vue 驱动的静态网站生成器',
+        link: 'https://vitepress.vuejs.org'
+      },
+      {
+        icon: 'https://cn.vuejs.org/logo.svg',
+        title: 'VuePress',
+        desc: 'Vue 驱动的静态网站生成器',
+        link: 'https://vuepress.vuejs.org/zh'
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png',
+        title: 'dumi',
+        desc: '基于 Umi 为组件研发而生的静态站点框架',
+        link: 'https://d.umijs.org'
+      },
+      {
+        icon: 'https://docusaurus.io/zh-CN/img/docusaurus.ico',
+        title: 'Docusaurus',
+        desc: '基于 React 的静态网站生成器',
+        link: 'https://docusaurus.io/zh-CN'
       }
     ]
   },
@@ -375,25 +474,37 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '摸摸鱼',
+    title: '摸鱼专用',
     items: [
-      {
-        icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
-        title: 'YouTube',
-        desc: '',
-        link: 'https://www.youtube.com'
-      },
-      {
-        icon: '/icons/twitter.svg',
-        title: 'Twitter',
-        desc: '',
-        link: 'https://twitter.com'
-      },
       {
         icon: 'https://momoyu.cc/icon-192.png',
         title: '摸摸鱼热榜',
         // desc: '聚合每日热门、搞笑、有趣、适合摸鱼的资讯',
         link: 'https://momoyu.cc'
+      },
+      {
+        icon: 'https://v.qq.com/favicon.ico',
+        title: '腾讯视频',
+        // desc: '中国领先的在线视频媒体平台，海量高清视频在线观看',
+        link: 'https://v.qq.com'
+      },
+      {
+        icon: 'https://static.hdslb.com/mobile/img/512.png',
+        title: '哔哩哔哩',
+        // desc: '',
+        link: 'https://www.bilibili.com'
+      },
+      {
+        icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
+        title: 'YouTube',
+        // desc: '',
+        link: 'https://www.youtube.com'
+      },
+      {
+        icon: '/icons/twitter.svg',
+        title: 'Twitter',
+        // desc: '',
+        link: 'https://twitter.com'
       }
     ]
   }
