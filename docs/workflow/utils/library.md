@@ -13,6 +13,7 @@
 - [moment](https://github.com/moment/moment) JavaScript 日期处理类库
 - [dayjs](https://github.com/iamkun/dayjs) 一个轻量的处理时间和日期的 `JavaScript` 库，和 Moment.js 的 API 设计保持完全一样
 - [date-fns](https://github.com/date-fns/date-fns) 轻量级的 `JavaScript` 日期库，纯函数实现支持模块化
+- [lunar-javascript](https://github.com/6tail/lunar-javascript) 支持阳历、阴历、佛历和道历的日历工具库
 
 ## 请求处理
 
