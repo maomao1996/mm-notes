@@ -1,34 +1,47 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
+  { text: '导航', link: '/nav', activeMatch: '^/nav' },
   { text: '前端物语', link: '/fe/es6/', activeMatch: '^/fe' },
   { text: '源码阅读', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
   {
-    text: '奇淫技巧',
+    text: 'Workflow',
     items: [
       {
         text: '常用工具/方法',
         items: [
-          { text: '工具库整理', link: '/tricks/utils/library' },
-          { text: '常用正则整理', link: '/tricks/utils/regexp' },
-          { text: '常用方法整理', link: '/tricks/utils/function' }
+          { text: '工具库整理', link: '/workflow/utils/library' },
+          { text: '常用正则整理', link: '/workflow/utils/regexp' },
+          { text: '常用方法整理', link: '/workflow/utils/function' }
         ]
       },
       {
-        text: 'CSS 语法与技巧',
+        text: 'CSS 相关',
         items: [
-          { text: 'CSS 语法', link: '/tricks/css/spec' },
-          { text: 'CSS 奇淫技巧', link: '/tricks/css/tricks' },
-          { text: 'Sass 常用技巧', link: '/tricks/sass' }
+          { text: 'CSS 语法', link: '/workflow/css/spec' },
+          { text: 'CSS 奇淫技巧', link: '/workflow/css/tricks' },
+          { text: 'Sass 常用技巧', link: '/workflow/sass/' }
         ]
       },
       {
         text: 'Vue 小技巧',
-        link: '/tricks/vue/'
-      }
+        link: '/workflow/vue/'
+      },
+      { text: 'npm 常用命令', link: '/workflow/node/npm' },
+      // {
+      //   text: '终端相关',
+      //   items: [
+      { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
+      { text: '命令行工具', link: '/workflow/terminal/toolkit' },
+      { text: 'Shell 命令', link: '/workflow/terminal/shell' },
+      //   ]
+      // },
+      { text: 'Git 相关技巧', link: '/workflow/git/' },
+      { text: 'Git 命令清单', link: '/workflow/git/command' }
     ],
-    activeMatch: '^/tricks'
+    activeMatch: '^/workflow'
   },
+  { text: '踩坑记录', link: '/pit/npm', activeMatch: '^/pit' },
   {
     text: '提效工具',
     items: [
@@ -48,24 +61,6 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/efficiency'
   },
-  {
-    text: '终端',
-    items: [
-      { text: 'Zsh 配置', link: '/terminal/zsh' },
-      { text: 'npm 常用命令', link: '/terminal/npm' },
-      { text: '命令行工具', link: '/terminal/toolkit' },
-      { text: 'Shell 命令', link: '/terminal/shell' },
-      {
-        text: 'Git 语法与技巧',
-        items: [
-          { text: 'Git 相关技巧', link: '/git/' },
-          { text: 'Git 命令清单', link: '/git/command' }
-        ]
-      }
-    ],
-    activeMatch: '^/terminal|git'
-  },
-  { text: '踩坑记录', link: '/pit/npm', activeMatch: '^/pit' },
   {
     text: '茂茂',
     items: [

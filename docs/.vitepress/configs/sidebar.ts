@@ -1,20 +1,5 @@
 import type { DefaultTheme } from 'vitepress'
 
-const TERMINAL_AND_GIT: DefaultTheme.Config['sidebar'] = [
-  { text: 'Zsh 配置', link: '/terminal/zsh' },
-  { text: 'npm 常用命令', link: '/terminal/npm' },
-  { text: '命令行工具', link: '/terminal/toolkit' },
-  { text: 'Shell 命令', link: '/terminal/shell' },
-  {
-    text: 'Git 语法与技巧',
-    // collapsed: false,
-    items: [
-      { text: 'Git 相关技巧', link: '/git/' },
-      { text: 'Git 命令清单', link: '/git/command' }
-    ]
-  }
-]
-
 export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/fe/': [
     {
@@ -71,34 +56,56 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
-  '/tricks/': [
+  '/workflow/': [
     {
       text: '常用工具/方法',
       collapsed: false,
       items: [
-        { text: '工具库整理', link: '/tricks/utils/library' },
-        { text: '常用正则整理', link: '/tricks/utils/regexp' },
-        { text: '常用方法整理', link: '/tricks/utils/function' }
+        { text: '工具库整理', link: '/workflow/utils/library' },
+        { text: '常用正则整理', link: '/workflow/utils/regexp' },
+        { text: '常用方法整理', link: '/workflow/utils/function' }
       ]
     },
     {
-      text: 'CSS 语法与技巧',
+      text: 'CSS 相关',
       collapsed: false,
       items: [
-        { text: 'CSS 语法', link: '/tricks/css/spec' },
-        { text: 'CSS 奇淫技巧', link: '/tricks/css/tricks' },
-        { text: 'Sass 常用技巧', link: '/tricks/sass' }
+        { text: 'CSS 语法', link: '/workflow/css/spec' },
+        { text: 'CSS 奇淫技巧', link: '/workflow/css/tricks' },
+        { text: 'Sass 常用技巧', link: '/workflow/sass/' }
       ]
     },
     {
-      text: 'Vue 小技巧',
-      link: '/tricks/vue/'
+      text: 'Vue 相关',
+      link: '/workflow/vue/'
+    },
+    {
+      text: 'Node 相关',
+      // collapsed: false,
+      items: [{ text: 'npm 常用命令', link: '/workflow/node/npm' }]
+    },
+    {
+      text: '终端相关',
+      collapsed: false,
+      items: [
+        { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
+        { text: '命令行工具', link: '/workflow/terminal/toolkit' },
+        { text: 'Shell 命令', link: '/workflow/terminal/shell' }
+      ]
+    },
+    {
+      text: 'Git 相关',
+      collapsed: false,
+      items: [
+        { text: 'Git 相关技巧', link: '/workflow/git/' },
+        { text: 'Git 命令清单', link: '/workflow/git/command' }
+      ]
     }
   ],
   '/efficiency/': [
     {
       text: '软件推荐与配置',
-      collapsed: false,
+      // collapsed: false,
       items: [
         { text: '多平台软件', link: '/efficiency/software/cross-platform' },
         { text: 'Mac 平台', link: '/efficiency/software/mac' },
@@ -111,8 +118,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     { text: '在线工具', link: '/efficiency/online-tools' },
     { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
   ],
-  '/terminal/': TERMINAL_AND_GIT,
-  '/git/': TERMINAL_AND_GIT,
   '/pit/': [
     {
       text: '踩坑记录',
