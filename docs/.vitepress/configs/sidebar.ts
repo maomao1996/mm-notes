@@ -18,6 +18,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: '/fe/es6/'
     },
     {
+      text: 'TypeScript',
+      link: '/fe/typescript/base'
+    },
+    {
       text: 'HTML / CSS',
       collapsed: false,
       items: [
