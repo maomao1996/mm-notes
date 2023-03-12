@@ -1,8 +1,8 @@
-# only-allow
+# `only-allow` 源码阅读
 
 [only-allow](https://github.com/pnpm/only-allow) 用于强制在项目中使用特定的包管理器
 
-## only-allow 使用方式
+## `only-allow` 使用方式
 
 在 `package.json` 中添加 `preinstall` 钩子，以 `npm` 为例
 
@@ -14,7 +14,7 @@
 }
 ```
 
-### npm 钩子说明
+### `npm` 钩子说明
 
 在 `npm` 脚本中有 `pre` 和 `post` 两个钩子
 
@@ -40,7 +40,7 @@ npm run prebuild && npm run build && npm run postbuild
 
 [使用 npm 脚本钩子](https://github.com/maomao1996/daily-notes/issues/20)
 
-## only-allow 源码笔记
+## `only-allow` 源码笔记
 
 ::: tip 前置知识
 
@@ -53,7 +53,7 @@ npm run prebuild && npm run build && npm run postbuild
 
 :::
 
-> **当前 only-allow 源码版本为 v1.1.1**
+> **当前 `only-allow` 源码版本为 v1.1.1**
 
 ```js
 #!/usr/bin/env node
@@ -129,7 +129,7 @@ For more details, go to https://yarnpkg.com/`,
 }
 ```
 
-## which-pm-runs 源码笔记
+## `which-pm-runs` 源码笔记
 
 [which-pm-runs](https://github.com/zkochan/packages/tree/main/which-pm-runs) 用于获取当前所使用的包管理器名称和版本
 
@@ -153,7 +153,7 @@ For more details, go to https://yarnpkg.com/`,
 
 :::
 
-> **当前 which-pm-runs 源码版本为 v1.1.0**
+> **当前 `which-pm-runs` 源码版本为 v1.1.0**
 
 ```js
 'use strict'

@@ -1,6 +1,6 @@
-# Vue
+# `Vue` 实用技巧
 
-## 在父组件中监听子组件的生命周期钩子
+## `Vue2` 在父组件中监听子组件的生命周期钩子
 
 ```vue
 <template>
@@ -17,7 +17,7 @@ export default {
 
 [相关源码](https://github.com/vuejs/vue/blob/dev/src/core/instance/lifecycle.js#L347)
 
-## 在 methods 中使用 debounce / throttle
+## 在 `methods` 中使用 `debounce` / `throttle`
 
 ```vue
 <template>
