@@ -1,4 +1,4 @@
-# clsx
+# `clsx` 源码阅读
 
 [clsx](https://github.com/lukeed/clsx) 轻量级工具库，用于有条件的拼接类名
 
@@ -6,7 +6,7 @@
 
 - [classnames](https://github.com/JedWatson/classnames)
 
-## clsx 使用方式
+## `clsx` 使用方式
 
 `clsx` 函数可以接受任意数量的参数，每个参数可以是对象、数组、布尔值、字符串或数值，经过处理后会返回一个字符串
 
@@ -44,7 +44,7 @@ clsx(true, false, '', null, undefined, 0, NaN)
 //=> ''
 ```
 
-## clsx 源码笔记
+## `clsx` 源码笔记
 
 > **当前 clsx 源码版本为 v1.2.1**
 
