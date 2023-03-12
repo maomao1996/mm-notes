@@ -9,6 +9,7 @@ const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
 export default defineConfig({
   outDir: '../dist',
+  base: process.env.APP_BASE_PATH || '/',
 
   lang: 'zh-CN',
   title: '茂茂物语',
