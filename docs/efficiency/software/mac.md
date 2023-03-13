@@ -4,6 +4,51 @@ description: '收录 Mac 平台下的实用软件，提升使用体验'
 
 # Mac 平台
 
+## 系统设置
+
+```sh
+# 禁止 “Are you sure you want to open this application?” 提示
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# 禁止磁盘映像验证
+defaults write com.apple.frameworks.diskimages skip-verify -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+
+# 桌面隐藏外部磁盘和可移动介质
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+# 显示所有扩展名和隐藏文件
+defaults write -g AppleShowAllExtensions -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# 禁用修改扩展名时的警告
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# 显示底部地址栏
+defaults write com.apple.finder ShowPathbar -bool true
+
+# 禁止创建 .DS_Store 文件
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+```
+
+### 允许打开任何来源的应用
+
+```sh
+sudo spctl --master-disable
+```
+
+## Xcode Command Line Tools
+
+```sh
+# 安装 Xcode Command Line Tools
+xcode-select --install
+
+# 删除 Xcode Command Line Tools
+sudo rm -rf /Library/Developer/CommandLineTools
+```
+
 ## Homebrew
 
 Mac 的软件包管理工具，用于安装、卸载和管理各种软件，包括命令行工具、库和应用程序等
@@ -134,6 +179,71 @@ brew install --cask fig
 
 [Github](https://github.com/withfig/autocomplete)
 [软件官网](https://fig.io/)
+
+## mas-cli
+
+Mac App Store 命令行工具
+
+安装
+
+```sh
+brew install mas
+```
+
+常用命令
+
+```sh
+# 搜索应用程序
+mas search [query]
+
+# 列出已经安装的应用程序
+mas list
+
+# 通过应用程序的 ID 进行安装，可以从 search 命令或者应用程序网页中获取
+mas install [app-id]
+
+# 升级已经安装的应用程序
+mas upgrade
+
+# 列出有更新可用的应用程序
+mas outdated
+```
+
+[Github](https://github.com/mas-cli/mas)
+
+## duti 设置默认应用程序
+
+设置默认应用程序的命令行工具
+
+```sh
+brew install duti
+```
+
+常用命令
+
+```sh
+# 查看指定文件类型的默认应用程序
+duti -x txt
+
+# 更改文件类型的默认应用程序
+duti -s com.apple.TextEdit .txt all
+```
+
+常用的默认应用程序设置
+
+> 万恶的微信开发者工具修改了很多默认应用程序设置
+>
+> 有一说一：微信开发者工具只配用来预览，开发还是一边玩去
+
+```sh
+duti -s com.microsoft.VSCode .ts all
+duti -s com.microsoft.VSCode .js all
+duti -s com.microsoft.VSCode .json all
+duti -s com.microsoft.VSCode .wxml all
+duti -s com.microsoft.VSCode .wxss all
+```
+
+[Github](https://github.com/moretension/duti)
 
 ## 效率神器 Alfred
 
