@@ -6,6 +6,10 @@ on:
   push:
     branches:
       - master
+    # 只在下列路径变更时触发
+    paths:
+      - 'docs/**'
+      - 'package.json'
 
 # 设置上海时区
 env:
