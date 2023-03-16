@@ -1,6 +1,6 @@
 import { h, App } from 'vue'
 import { useData } from 'vitepress'
-import Theme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme'
 
 import Visitor from './components/Visitor.vue'
 import Copyright from './components/Copyright.vue'
@@ -30,7 +30,8 @@ if (typeof window !== 'undefined') {
   }
 }
 
-export default Object.assign({}, Theme, {
+export default {
+  extends: DefaultTheme,
   Layout: () => {
     const props: Record<string, any> = {}
     // 获取 frontmatter
@@ -41,9 +42,10 @@ export default Object.assign({}, Theme, {
       props.class = frontmatter.value.layoutClass
     }
 
-    return h(Theme.Layout, props, {
+    return h(DefaultTheme.Layout, props, {
       /**
        * 相关插槽
+       * https://vitepress.dev/guide/extending-default-theme#layout-slots
        * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
        */
       'nav-bar-title-after': () => h(Visitor),
@@ -54,4 +56,4 @@ export default Object.assign({}, Theme, {
   enhanceApp({ app }: { app: App }) {
     app.provide('DEV', process.env.NODE_ENV === 'development')
   }
-})
+}
