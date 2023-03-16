@@ -1,7 +1,7 @@
 {
   "name": "茂茂物语",
   "short_name": "茂茂物语",
-  "description": "前端常用知识、踩坑记录、软件推荐等",
+  "description": "Mao Mao 的成长之路",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
