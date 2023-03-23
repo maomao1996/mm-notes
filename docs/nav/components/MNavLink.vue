@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { withBase } from 'vitepress'
 import { slugify } from '@mdit-vue/shared'
 
 import { NavLink } from './type'
@@ -30,7 +31,11 @@ const svg = computed(() => {
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
         <div v-else-if="icon && typeof icon === 'string'" class="icon">
-          <img :src="icon" :alt="title" onerror="this.parentElement.style.display='none'" />
+          <img
+            :src="withBase(icon)"
+            :alt="title"
+            onerror="this.parentElement.style.display='none'"
+          />
         </div>
         <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
       </div>
