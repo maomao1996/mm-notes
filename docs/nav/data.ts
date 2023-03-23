@@ -22,6 +22,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://tinypng.com'
       },
       {
+        icon: 'https://devtool.tech/logo.svg',
+        title: '开发者武器库',
+        desc: '开发者武器库，做开发者最专业最好用的专业工具箱',
+        link: 'https://devtool.tech'
+      },
+      {
         icon: 'https://tool.lu/favicon.ico',
         title: '在线工具',
         desc: '开发人员的工具箱',
@@ -32,6 +38,31 @@ export const NAV_DATA: NavData[] = [
         title: 'Json 中文网',
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn'
+      }
+    ]
+  },
+  {
+    title: 'AI 导航',
+    items: [
+      {
+        icon: '/icons/chatgpt.png',
+        title: 'ChatGPT（最强）',
+        link: 'https://chat.openai.com/chat'
+      },
+      {
+        icon: 'https://www.notion.so/images/logo-ios.png',
+        title: 'Notion AI（笔记）',
+        link: 'https://www.notion.so'
+      },
+      {
+        icon: 'https://www.midjourney.com/apple-touch-icon.png',
+        title: 'Midjourney（绘画）',
+        link: 'https://www.midjourney.com'
+      },
+      {
+        icon: 'https://global-uploads.webflow.com/59deb588800ae30001ec19c9/5d4891e0e260e3c1bc37b100_beautiful%20ai%20favicon%20%20blue%20square.png',
+        title: 'Beautiful.ai（PPT）',
+        link: 'https://www.beautiful.ai'
       }
     ]
   },
@@ -263,7 +294,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/'
       },
       {
-        icon: 'https://cdn.docschina.org/home/logo/taro.png',
+        icon: '/icons/taro.svg',
         title: 'Taro',
         desc: '多端统一开发解决方案',
         link: 'https://taro.jd.com'
@@ -286,7 +317,7 @@ export const NAV_DATA: NavData[] = [
     title: 'Node 相关',
     items: [
       {
-        icon: 'https://nodejs.org/static/images/favicons/apple-touch-icon.png',
+        icon: '/icons/nodejs.svg',
         title: 'Node.js',
         desc: 'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境',
         link: 'https://nodejs.org/zh-cn'
@@ -298,7 +329,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://expressjs.com'
       },
       {
-        icon: 'https://nodejs.org/static/images/favicons/',
+        icon: '/icons/koa.svg',
         title: 'Koa',
         desc: '基于 Node.js 平台的下一代 web 开发框架',
         link: 'https://koajs.com'
@@ -413,7 +444,7 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://cn.vuejs.org/logo.svg',
         title: 'VitePress',
         desc: '由 Vite 和 Vue 驱动的静态网站生成器',
-        link: 'https://vitepress.vuejs.org'
+        link: 'https://vitepress.dev'
       },
       {
         icon: 'https://cn.vuejs.org/logo.svg',
@@ -472,6 +503,12 @@ export const NAV_DATA: NavData[] = [
         title: '菜鸟教程',
         desc: '学的不仅是技术，更是梦想！',
         link: 'https://www.runoob.com'
+      },
+      {
+        icon: '/icons/es6.svg',
+        title: 'ES6 入门教程',
+        desc: '阮一峰的网络日志',
+        link: 'http://es6.ruanyifeng.com'
       }
     ]
   },
@@ -557,6 +594,12 @@ export const NAV_DATA: NavData[] = [
         title: 'Twitter',
         // desc: '',
         link: 'https://twitter.com'
+      },
+      {
+        icon: '/icons/pixiv.png',
+        title: 'Pixiv',
+        // desc: '',
+        link: 'https://www.pixiv.net'
       }
     ]
   }
