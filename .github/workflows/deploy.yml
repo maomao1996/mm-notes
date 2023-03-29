@@ -50,6 +50,8 @@ jobs:
         with:
           # GitHub 密钥
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 指定仓库
+          REPOSITORY_NAME: maomao1996/mm-notes
           # GitHub Pages 读取的分支
           BRANCH: gh-pages
           # 静态文件所在目录
