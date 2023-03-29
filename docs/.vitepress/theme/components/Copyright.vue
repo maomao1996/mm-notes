@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { inject, Ref } from 'vue'
+import { inject, Ref, computed } from 'vue'
 import { useRoute } from 'vitepress'
 
 const DEV = inject('DEV') as Ref<boolean>
 const route = useRoute()
+
+const pageId = computed(() => route.path.replace('/mm-notes', ''))
 </script>
 
 <template>
@@ -11,7 +13,7 @@ const route = useRoute()
     <img
       v-if="!DEV"
       class="visitor"
-      :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${route.path}`"
+      :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${pageId}`"
       title="当前页面累计访问数"
       onerror="this.style.display='none'"
     />
