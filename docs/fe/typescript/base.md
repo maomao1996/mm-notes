@@ -224,7 +224,7 @@ console.log(tuple[2]) // Error
 tuple[0] = 666 // Error
 ```
 
-### 枚举类型 Enum
+### 枚举 Enum
 
 `enum` 类型是对 `JavaScript` 标准数据类型的一个补充。像 `C#` 等其它语言一样，使用枚举类型可以为一组数值赋予友好的名字。
 
@@ -449,6 +449,165 @@ const person: Person = {
 // Error: 无法为 "id" 赋值，因为它是只读属性
 person.id = 1996
 ```
+
+### 函数
+
+常见的定义函数的方式：
+
+- 函数声明
+- 函数表达式
+- 箭头函数
+
+```ts
+/* 函数声明 */
+function fn1() {
+  console.log('Hello, world')
+}
+
+/* 函数表达式 */
+const fn2 = function () {
+  console.log('Hello, world')
+}
+
+/* 箭头函数 */
+const fn3 = () => {
+  console.log('Hello, world')
+}
+```
+
+在 `TypeScript` 中对函数进行约束时，需要指定函数的参数类型和返回类型
+
+```ts
+function add(x: number, y: number): number {
+  return x + y
+}
+
+add(1, 2) // 3
+add(1, '2') // Error: 类型 “string” 的参数不能赋给类型 “number” 的参数
+```
+
+#### 接口定义函数
+
+函数也可以使用接口来为其定义类型：
+
+```ts
+interface AddInterface {
+  (x: number, y: number): number
+}
+
+const add1: AddInterface = function (x, y) {
+  return x + y
+}
+// OR
+let add2: AddInterface
+add2 = function (x, y) {
+  return x + y
+}
+
+add1(1, 2) // 3
+add2(1, 2) // 3
+```
+
+使用函数表达式 + 接口定义函数的方式时，对等号左侧进行类型限制，可以保证后面对函数名赋值时保证参数个数、参数类型、返回值类型不变
+
+#### 可选参数
+
+如果一个函数接受一个参数，而这个参数又是可选的，这时可以用 `?` 表示可选的参数：
+
+```ts
+function add(x: number, y?: number): number {
+  if (y) {
+    return x + y
+  } else {
+    return x
+  }
+}
+
+add(10, 20) // 30
+add(10) // 10
+```
+
+::: warning
+可选参数必须接在必需参数后面，即**可选参数后面不允许再出现必需参数**
+:::
+
+```ts
+// Error: 必选参数不能位于可选参数后
+function add(x?: number, y: number): number {
+  if (x) {
+    return x + y
+  } else {
+    return y
+  }
+}
+```
+
+#### 参数默认值
+
+在 `ES6` 中，我们可以给参数设置默认值，因此另外一种处理可选参数的方式是：为参数提供一个默认值，此时 `TypeScript` 会把该参数识别为可选参数
+
+```ts
+function add(x: number, y: number = 1): number {
+  return x + y
+}
+
+add(10, 20) // 30
+add(10) // 11
+```
+
+::: tip
+当给一个参数设置了默认值后，就不再受 `TypeScript` 可选参数必须在最后一个位置的限制
+:::
+
+```ts {6}
+function add(x: number = 10, y: number): number {
+  return x + y
+}
+
+add(10, 20) // 30
+/* 必须显示传递一个 undefined 进行占位 */
+add(undefined, 10) // 20
+```
+
+#### 剩余参数
+
+在 `ES6` 中，可以使用 `...变量名` 的方式获取函数的剩余参数（`rest` 参数）
+
+```ts {1}
+/* rest 是一个数组，我们可以使用数组的类型来定义它 */
+function getTotal(a: number, ...rest: number[]) {
+  console.log(a) // 1
+  console.log(rest) // [2, 3, 4]
+}
+
+getTotal(1, 2, 3, 4)
+```
+
+#### 函数重载
+
+在 `JavaScript` 中，并没有限制函数参数的个数或者类型，因此 `JavaScript` 没有函数重载的概念；在 `TypeScript` 中对于函数重载的理解是：只要函数参数的类型或者函数参数的数量不同时，就可以认为这是两个函数，即函数重载（**允许一个函数接受不同数量或类型的参数时作出不同的处理**）
+
+```ts
+/* 函数重载 */
+function add(a: number, b: number): number
+function add(a: string, b: string): string
+
+/* 实际函数 */
+function add(a: any, b: any): any {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b
+  } else {
+    return a + '' + b
+  }
+}
+
+add(1, 2) // 3
+add('1', '2') // 12
+```
+
+::: tip
+当存在函数重载时，会优先从第一个进行逐一匹配，因此如果重载函数有包含关系时应将**最精准的函数定义写在最前面**
+:::
 
 ### 类型别名
 
