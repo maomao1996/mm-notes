@@ -740,3 +740,237 @@ let strLength: number = (someValue as string).length
 ```
 
 两种形式是等价的。使用哪个大多数情况下是凭个人喜好；在 `tsx` 文件中我们只能使用 `as` 语法。
+
+## 进阶
+
+### 类
+
+在 `JavaScript` 语言中，生成实例对象的传统方法是通过构造函数，这种写法跟传统的面向对象语言（比如 `C++` 和 `Java`）差异很大，很容易让新学习这门语言的程序员感到困惑，所以 `ES6` 提供了更接近传统语言的写法，引入了 `Class`（类）这个概念
+
+#### 类的继承
+
+- 通过 `extends` 关键字来实现子类继承父类
+- 子类通过 `super` 关键字来执行父类构造函数、访问父类的属性或方法
+
+```ts
+class Person {
+  name: string
+  constructor(name: string) {
+    this.name = name
+  }
+  sayHello() {
+    console.log(`hello, ${this.name}`)
+  }
+}
+class Man extends Person {
+  constructor(name: string) {
+    // 调用父类的构造函数
+    super(name)
+  }
+}
+
+const instance = new Man('茂茂')
+console.log(instance) // Man { name: '茂茂' }
+instance.sayHello() // 'hello, 茂茂'
+```
+
+#### 访问修饰符
+
+`TypeScript` 提供了几种语义化的修饰符，用于描述类中各种属性
+
+- **`readonly`** 只读属性
+
+```ts {9}
+class Person {
+  readonly name: string
+  constructor(name: string) {
+    this.name = name
+  }
+}
+
+const man = new Person('maomao')
+man.name = '茂茂' // Error: 无法为“name”赋值，因为它是只读属性
+```
+
+- **`public`** 表示公有的访问修饰符，在任何地方都可以访问到
+- **`private`** 表示私有的访问修饰符，只能在类的内部进行使用
+- **`protected`**：表示受保护的访问修饰符，只能在类的内部及其子类内部使用
+
+```ts{16,26-27}
+class Person {
+  public name: string
+  private age: number
+  protected address: string
+  constructor(name: string, age: number, address: string) {
+    this.name = name
+    this.age = age
+    this.address = address
+  }
+}
+class Man extends Person {
+  constructor(name: string, age: number, address: string) {
+    super(name, age, address)
+  }
+  getAge() {
+    console.log(this.age) // Error: 属性“age”为私有属性，只能在类“Person”中访问
+  }
+  getAddress() {
+    return this.address
+  }
+}
+
+const instance = new Man('茂茂',  20, '浙江杭州')
+
+console.log(instance.name)     // 茂茂
+console.log(instance.age)      // Error: 属性“age”为私有属性，只能在类“Person”中访问
+console.log(instance.address)  // Error: 属性“address”受保护，只能在类“Person”及其子类中访问
+```
+
+- **`static`** 静态属性与静态方法
+
+不同于实例属性/方法，**静态属性/方法不会被实例所继承，必须通过类来使用**
+
+```ts
+class SingleInstance {
+  static instance: SingleInstance
+  private constructor(public name: string) {}
+  static getInstance(name: string) {
+    if (!this.instance) {
+      this.instance = new SingleInstance(name)
+    }
+    return this.instance
+  }
+}
+
+const instance1 = SingleInstance.getInstance('instance1')
+const instance2 = SingleInstance.getInstance('instance2')
+console.log(instance1 === instance2) // true
+```
+
+#### 存取器
+
+在类中可以通过 `getters` / `setters` 拦截对象成员的存取行为
+
+```ts
+class Person {
+  // 私有属性，只能在类中进行访问
+  private _name: string
+  constructor(_name: string) {
+    this._name = _name
+  }
+  get name() {
+    return this._name
+  }
+  set name(name) {
+    this._name = name
+  }
+}
+const instance = new Person('maomao')
+console.log(instance.name) // 'maomao'
+
+instance.name = '茂茂'
+console.log(instance.name) // '茂茂'
+```
+
+::: tip
+
+仅设置了 `get` 而没有 `set` 的存取器将被推断为 `readonly`
+
+```ts {12}
+class Person {
+  private _name: string
+  constructor(_name: string) {
+    this._name = _name
+  }
+  get name() {
+    return this._name
+  }
+}
+
+const instance = new Person('maomao')
+instance.name = '茂茂' // Error: 无法为“name”赋值，因为它是只读属性
+```
+
+:::
+
+#### 抽象类
+
+除了上述关键字，`TypeScript` 还提供了 `abstract` 关键字用于定义抽象类以及抽象类内部的抽象方法
+
+```ts
+abstract class Animal {
+  constructor(public name: string) {}
+  abstract sayHello(): void
+}
+```
+
+::: tip
+
+- **抽象类不能被实例化，只能被继承**
+- **抽象类中的抽象方法必须被子类实现**
+
+:::
+
+```ts {16}
+abstract class Animal {
+  constructor(public name: string) {}
+  abstract sayHello(): void
+}
+
+class Person extends Animal {
+  constructor(name: string) {
+    super(name)
+  }
+  sayHello() {
+    console.log(`hello, ${this.name}`)
+  }
+}
+
+const instance = new Person('maomao')
+const err = new Animal() // Error: 无法创建抽象类的实例
+```
+
+#### 类实现接口
+
+类同 `Java` 和 `C#`，`TypeScript` 支持类继承一个或多个接口以约束类的行为，即类必须拥有接口中对应的属性和方法，通过 `implements` 关键字实现
+
+```ts
+interface Animal {
+  name: string
+  sayHello(): void
+}
+
+class Person implements Animal {
+  constructor(name: string) {
+    super(name)
+  }
+  sayHello() {
+    console.log(`hello, ${this.name}`)
+  }
+}
+```
+
+#### 接口继承类
+
+在有些语言中接口一般而言是不能继承类的，但在 `TypeScript` 中支持接口继承类，接口继承类后，将拥有类中所有的属性与方法
+
+```ts
+class Point {
+  x: number
+  y: number
+  constructor(x: number, y: number) {
+    this.x = x
+    this.y = y
+  }
+}
+interface Point3d extends Point {
+  z: number
+}
+
+const point3d: Point3d = {
+  x: 10,
+  y: 20,
+  z: 30
+}
+console.log(point3d) // { x: 10, y: 20, z: 30 }
+```
