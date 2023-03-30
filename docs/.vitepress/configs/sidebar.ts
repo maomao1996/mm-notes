@@ -19,6 +19,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     },
     {
       text: 'TypeScript',
+      collapsed: false,
+      items: [
+        { text: '基础知识', link: '/fe/typescript/base' },
+        { text: '类型体操', link: '/fe/typescript/challenges' }
+      ],
       link: '/fe/typescript/base'
     },
     {
