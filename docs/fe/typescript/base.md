@@ -12,7 +12,7 @@
 
 用 `TypeScript` 编写的文件以 `.ts` 为后缀；用 `TypeScript` 编写 `React` 时，以 `.tsx` 为后缀。
 
-## 数据类型
+## 基础
 
 ### 原始类型
 
@@ -101,7 +101,7 @@ free.log()
 free = '茂茂'
 ```
 
-:::warning 注意点
+:::warning
 无论是开发者指定或是由 `TypeScript` 隐式推断出的 `any` 类型，都会导致 `TypeScript` 失去准确的类型推断能力，这可能会导致遗漏一些运行时错误，违背了使用 `TypeScript` 的初衷
 :::
 
@@ -373,7 +373,9 @@ const person: Person = {
 
 **使用 `[propName: string]` 定义了任意属性取 `string` 类型的值**
 
-注意点：**一旦定义了任意属性，那么确定属性和可选属性的类型都必须是它的类型的子集**：
+::: warning
+**一旦定义了任意属性，那么确定属性和可选属性的类型都必须是它的类型的子集**
+:::
 
 ```ts{7}
 interface Person {
@@ -622,6 +624,75 @@ type Person = {
 }
 ```
 
+### 联合类型
+
+联合类型是由两个或者更多类型组成的类型，并用 `|` 连接，表示值可能是这些类型中的任意一个
+
+```ts
+function padLeft(value: string, padding: string | number) {
+  if (typeof padding === 'number') {
+    return Array(padding + 1).join(' ') + value
+  }
+  if (typeof padding === 'string') {
+    return padding + value
+  }
+}
+
+padLeft('Hello world', 4) // '    Hello world'
+padLeft('Hello world', 'maomao ') // 'maomao Hello world'
+
+padLeft('Hello world', true) // Error: 类型 “boolean” 的参数不能赋给类型 “string | number” 的参数
+```
+
+::: warning
+在使用联合类型时，因为 `TypeScript` 不确定其具体是哪一个类型，所以我们**只能访问此联合类型的所有类型里共有的成员**
+:::
+
+```ts {2}
+/* 编译报错 */
+function getLength(value: string | number): number {
+  // Error: 类型 “string | number” 上不存在属性 “length”（类型 “number”上 不存在属性 “length”）
+  return value.length
+}
+
+/* 编译通过 */
+function valueToStr(value: string | number): string {
+  return value.toString()
+}
+```
+
+::: warning
+当联合类型被赋值后，`TypeScript` 会根据类型推断来确定变量的类型，一旦确定后，则此变量只能使用这种类型的属性和方法
+:::
+
+```ts
+let value: string | number
+
+value = '123'
+console.log(value.length) // 编译正确
+
+value = 123
+console.log(value.length) // Error: 类型 “number” 上不存在属性 “length”
+```
+
+### 交叉类型
+
+交叉类型是将多个类型合并为一个类型，用 `&` 连接
+
+```ts
+type Bird = {
+  fly: () => void
+}
+type Fish = {
+  swim: () => void
+}
+
+const animal: Bird & Fish = {
+  fly() {},
+  swim() {}
+}
+```
+
 ### 字面量类型
 
 字面量类型是一种特殊的类型，表示一个固定的值
@@ -645,3 +716,27 @@ type IsLoggedIn = true
 ```
 
 使用字面量类型可以在编译时进行更严格的类型检查，避免因为传入了不正确的值导致运行时出错。同时字面量类型还可以用于定义联合类型、交叉类型等高级类型，提高代码的可读性和可维护性
+
+### 类型断言
+
+有时候你会遇到这样的情况，你会比 `TypeScript` 更了解某个值的详细信息。通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型，这时我们可以通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。
+
+类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。它没有运行时的影响，只是在编译阶段起作用。`TypeScript` 会假设你已经进行了必须的检查。
+
+类型断言有两种形式。其一是“尖括号”语法：
+
+```ts
+let someValue: any = 'this is a string'
+
+let strLength: number = (<string>someValue).length
+```
+
+另一个为 `as` 语法：
+
+```ts
+let someValue: any = 'this is a string'
+
+let strLength: number = (someValue as string).length
+```
+
+两种形式是等价的。使用哪个大多数情况下是凭个人喜好；在 `tsx` 文件中我们只能使用 `as` 语法。
