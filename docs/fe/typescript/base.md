@@ -1148,3 +1148,151 @@ function add(a: number | string, b: number | string): number | string {
   return `${a}${b}`
 }
 ```
+
+### `typeof`
+
+`typeof` 操作符用于获取一个 `JavaScript` 变量的类型，常用于获取一个普通对象或者一个函数的类型
+
+```ts
+/* 对象 */
+const obj = { name: 'maomao', age: 20 }
+type Obj = typeof obj
+// Obj: { name: string; age: number }
+
+/* 函数 */
+function add(a: number, b: number): number {
+  return a + b
+}
+type AddFn = typeof add
+// AddFn: (a: number, b: number) => number
+```
+
+### 联合类型中的 `never`
+
+`never` 关键字除了应用于[函数声明](#never)，还有额外的特性：**一个联合类型中存在 `never`，其实际的联合类型并不会包含 `never`**
+
+```ts {3}
+type Type = number | string | never
+// 实际为
+type Type = number | string
+```
+
+### `keyof`
+
+`keyof` 操作符用于获取对象所有属性键的字面量组合而成的联合类型，其类似于 `JavaScript` 中的 `Object.keys()`，它们的共同点都是获取属性键的集合，只不过 `keyof T` 得到的结果是一个联合类型，而 `Object.keys()` 得到的是一个数组
+
+```ts
+type Person = {
+  name: string
+  age: number
+}
+
+type result = keyof Person
+// 'name' | 'age'
+```
+
+### `in`
+
+`in` 操作符右侧跟随一个联合类型，表示逐一遍历该联合类型的所有字面量，类似于 `JavaScript` 中的 `for...in`，通常结合 `keyof` 用于创建索引签名的映射类型
+
+```ts
+in 'name' | 'age'
+'name' // 第一次迭代结果
+'age'  // 第二次迭代结果
+```
+
+根据 `keyof` 和 `in` 的特点，我们可以撰写一些辅助工具，这里用 `MReadonly` 举 🌰
+
+```ts
+type MReadonly<T> = {
+  readonly [P in keyof T]: T[P]
+}
+type Person = {
+  name: string
+  age: number
+}
+
+type result = MReadonly<Person>
+// { readonly name: string; readonly age: number; }
+```
+
+`[P in keyof T]` 表示遍历 `T` 中的每一个属性键，每次遍历时属性键取名为 `P`，这和 `JavaScript` 中的 `for in` 非常类似
+
+```ts
+// TypeScript 中的迭代
+P in keyof T
+
+// JavaScript 中的迭代
+for (let key in obj)
+```
+
+### `extends`
+
+`extends` 关键词一般有两种用法：**条件类型**和**类型约束**
+
+#### 条件类型
+
+**条件类型**类似于 `JavaScript` 中的三元表达式
+
+```ts{1,2}
+type IsBoolean<T> = T extends boolean ? true : false
+type IsArray<T> = T extends { length: number } ? true : false
+
+type Res1 = IsBoolean<string>   // false
+type Res2 = IsBoolean<true>     // true
+type Res3 = IsBoolean<true>     // false
+type Res4 = IsArray<[1, 2]>     // true
+```
+
+#### 分布式条件类型
+
+在条件类型中有一个特别需要注意的东西就是：**分布式条件类型**（对联合类型应用 `extends` 时，会遍历联合类型成员并一一应用该条件类型）
+
+```ts
+// 内置工具：交集
+type Extract<T, U> = T extends U ? T : never
+type type1 = 'name' | 'age'
+type type2 = 'name' | 'address' | 'sex'
+
+type test = Extract<type1, type2>
+// 结果为 'name'
+```
+
+**代码详解**：
+
+- `T extends U ? T : never`：因为 `T` 是一个联合类型，所以这里适用于分布式条件类型的概念。根据其概念，在实际的过程中会把 `T` 类型中的每一个子类型进行迭代
+
+```ts
+'name' | 'age' extends 'name' | 'address' | 'sex' ? T : never
+// 第一次迭代得到 'name'
+'name' extends 'name' | 'address' | 'sex' ? 'name' : never
+// 第二次迭代得到 never
+'age' extends 'name' | 'address' | 'sex' : never
+```
+
+- 在迭代完成之后，会把每次迭代的结果组合成一个新的联合类型（根据 `never` 类型的特点，最后的结果会剔除掉 `never`）
+
+```ts
+type result = 'name' | never
+// 实际为 type result = 'name'
+```
+
+### `infer`
+
+`infer` 关键词的作用是延时推导，它会在类型未推导时进行占位，等到真正推导成功后再返回正确的类型
+
+以 `ReturnType<T>` 为例来获取函数返回类型
+
+```ts
+type ReturnType<T> = T extends (...args: any) => infer R ? R : any
+
+const add = (a: number, b: number): number => a + b
+
+type Result = ReturnType<typeof add>
+// Result: number
+```
+
+- 声明泛型变量 `T` 表示一个函数类型
+- 声明占位变量 `R`，此时并不确定函数具体返回类型
+- 若 `T` 类型为函数类型，则根据函数类型上下文推导出 `R` 具体类型并返回，否则则返回 `any` 类型
+- 在上述例子中，`add` 即为返回 `number` 类型的函数，由此推断出 `R` 为 `number`
