@@ -160,6 +160,11 @@ description: '茂茂的 Visual Studio Code 配置，记录扩展插件、使用�
   - .env 文件键值字符串高亮和格式化
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=IronGeek.vscode-env)
 
+- `shell-format`
+
+  - `shell` 脚本格式化
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)
+
 ### 开发体验提升
 
 - `Auto Import`
@@ -260,11 +265,10 @@ code [文件名]
 ## 推荐配置
 
 ```json
-// 将设置放入此文件中以覆盖默认设置
 {
-  /** 编辑器相关配置 */
+  /********** 编辑器相关配置 **********/
   "editor.fontSize": 13.5,
-  "editor.fontFamily": "Input Mono, Fira Code, monospace",
+  "editor.fontFamily": "Input Mono, Fira Code, Cascadia Mono, monospace",
   "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
   "editor.tabSize": 2,
   // 关闭快速预览
@@ -276,14 +280,13 @@ code [文件名]
     "comments": true,
     "strings": true
   },
-  // bug控制缩进不关tabSize修改无用
   "editor.detectIndentation": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.renderWhitespace": "boundary",
   "editor.glyphMargin": true,
   "editor.accessibilitySupport": "off",
+  "editor.stickyScroll.enabled": true,
   // 保存格式化
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
@@ -294,7 +297,7 @@ code [文件名]
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true
   },
-  /** 工作台配置 */
+  /********** 工作台相关配置 **********/
   "workbench.colorTheme": "Bluloco Dark",
   "workbench.iconTheme": "material-icon-theme",
   // 新开标签页查看文件而不是覆盖当前标签页
@@ -307,12 +310,20 @@ code [文件名]
   "workbench.startupEditor": "newUntitledFile",
   "workbench.fontAliasing": "antialiased",
   /** 终端配置 */
+  "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.inheritEnv": false,
+  // p10k 主题字体
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "extensions.autoUpdate": "onlyEnabledExtensions",
-  "extensions.ignoreRecommendations": true,
+  /********** 针对指定语言的编辑器配置 **********/
   // 如需要开发微信小程序，需要注释这段代码，不然会和 minapp-vscode 插件冲突
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
@@ -342,6 +353,9 @@ code [文件名]
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -352,7 +366,11 @@ code [文件名]
   "[wxml]": {
     "editor.defaultFormatter": "qiu8310.minapp-vscode"
   },
-  // 文件配置
+  "[shell]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  /** 文件配置 */
+  "files.eol": "\n",
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -391,7 +409,7 @@ code [文件名]
   /** 资源管理器配置 */
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  /*** 第三方扩展配置 ***/
+  /********** 第三方扩展配置 **********/
   /** eslint 配置 */
   "eslint.format.enable": true,
   "eslint.options": {
@@ -423,21 +441,28 @@ code [文件名]
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
   "cSpell.ignoreWords": [
+    /** 个人 */
+    "mmplayer",
+    "femm",
     /** 库相关 */
     "yalc",
     "vetur",
     "vuex",
     "vuepress",
-    "vite",
+    "vitepress",
     "antd",
     "ahooks",
     "weui",
     "weapp",
     "craco",
     "execa",
+    "shiki",
     /** 文件后缀 */
     "wxml",
     "xmind",
+    /** 品牌 */
+    "chatgpt",
+    "pixiv",
     /** 常用简写 */
     "btns"
   ],
@@ -466,6 +491,8 @@ code [文件名]
       "parser": "babylon"
     }
   },
+  /** tailwindCSS 配置 */
+  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
   "gitlens.keymap": "alternate",
   "tabnine.experimentalAutoImports": true,
   // 标签高亮
@@ -504,7 +531,8 @@ code [文件名]
     "MD001": false,
     "MD024": false,
     // 内联 HTML
-    "MD033": false
+    "MD033": false,
+    "MD041": false
   },
   /** 微信小程序配置 */
   "minapp-vscode.disableAutoConfig": true
