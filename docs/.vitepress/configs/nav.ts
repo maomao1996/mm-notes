@@ -8,6 +8,10 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: 'Workflow',
     items: [
       {
+        text: '编程规范',
+        link: '/workflow/style-guide'
+      },
+      {
         text: '常用工具/方法',
         items: [
           { text: '工具库整理', link: '/workflow/utils/library' },
