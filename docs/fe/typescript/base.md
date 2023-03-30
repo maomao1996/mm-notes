@@ -286,7 +286,7 @@ console.log(colorName) // 'Green' 因为上面代码里它的值是 2
 
 :::
 
-### 对象的类型 —— 接口
+### 对象的类型 — 接口
 
 在 `TypeScript` 中，我们使用接口（Interfaces）来定义对象的类型。
 接口是一种用于描述对象形状的方式，它可以定义一个对象需要具备哪些属性和方法（接口只是对类型做出了一些限制，并不会在代码中创建新的对象，即不会编译到 `JavaScript` 中）
@@ -717,30 +717,6 @@ type IsLoggedIn = true
 
 使用字面量类型可以在编译时进行更严格的类型检查，避免因为传入了不正确的值导致运行时出错。同时字面量类型还可以用于定义联合类型、交叉类型等高级类型，提高代码的可读性和可维护性
 
-### 类型断言
-
-有时候你会遇到这样的情况，你会比 `TypeScript` 更了解某个值的详细信息。通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型，这时我们可以通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。
-
-类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。它没有运行时的影响，只是在编译阶段起作用。`TypeScript` 会假设你已经进行了必须的检查。
-
-类型断言有两种形式。其一是“尖括号”语法：
-
-```ts
-let someValue: any = 'this is a string'
-
-let strLength: number = (<string>someValue).length
-```
-
-另一个为 `as` 语法：
-
-```ts
-let someValue: any = 'this is a string'
-
-let strLength: number = (someValue as string).length
-```
-
-两种形式是等价的。使用哪个大多数情况下是凭个人喜好；在 `tsx` 文件中我们只能使用 `as` 语法。
-
 ## 进阶
 
 ### 类
@@ -1078,4 +1054,97 @@ class Person {
 
 const person = createPerson(Person)
 console.log(person) // Person { name: 'maomao' }
+```
+
+### 类型收窄
+
+除了上下文的类型推断，`TypeScript` 还提供**类型收窄**机制，可协助编辑器将类型推断为更精确的类型范围，即将宽类型约束为窄类型
+
+#### 类型保护
+
+类型保护通常使用 `JavaScript` 代码逻辑判断进行类型收窄：
+
+- `typeof` 判断原始数据类型
+- `boolean` 类型转换
+- `switch` 与 `===`、`!==` 等值判断
+- `in` 判断对象属性是否存在
+- `instanceof` 判断构造函数实例
+- `if`、`while` 等控制流语句
+
+#### 类型断言
+
+有时候你会遇到这样的情况，你会比 `TypeScript` 更了解某个值的详细信息。通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型，这时我们可以通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。
+
+类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。它没有运行时的影响，只是在编译阶段起作用。`TypeScript` 会假设你已经进行了必须的检查。
+
+类型断言有两种形式。其一是“尖括号”语法：
+
+```ts
+let someValue: any = 'this is a string'
+
+let strLength: number = (<string>someValue).length
+```
+
+另一个为 `as` 语法：
+
+```ts
+let someValue: any = 'this is a string'
+
+let strLength: number = (someValue as string).length
+```
+
+两种形式是等价的。使用哪个大多数情况下是凭个人喜好；在 `tsx` 文件中我们只能使用 `as` 语法。
+
+#### 类型谓词
+
+类型谓词采用 `parameterName is Type` 形式进行类型收窄
+
+```ts
+type Bird = {
+  fly: () => void
+}
+type Fish = {
+  swim: () => void
+}
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined
+}
+
+function behavior(pet: Fish | Bird) {
+  if (isFish(pet)) {
+    pet.swim() // pet: Fish
+  } else {
+    pet.fly() // pet: Bird
+  }
+}
+```
+
+### 声明合并
+
+**声明合并**是指 `TypeScript` 编译器会针对函数、接口或类等的同名声明进行合并，并拥有所有合并的声明的特性
+
+在 `Java` 之类的语言中，最熟悉的声明合并就是 **函数重载**
+
+```ts
+/* 接口合并 */
+interface Person {
+  name: string
+}
+interface Person {
+  age: number
+}
+const person: Person = {
+  name: '茂茂',
+  age: 20
+}
+
+/* 函数重载 */
+function add(a: number, b: number): number
+function add(a: string, b: string): string
+function add(a: number | string, b: number | string): number | string {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b
+  }
+  return `${a}${b}`
+}
 ```
