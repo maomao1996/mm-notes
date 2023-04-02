@@ -80,7 +80,7 @@ type MyReadonly<T> = {
 const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
 
 type result = TupleToObject<typeof tuple>
-// expected { tesla: 'tesla', 'model 3': 'model 3', 'model X': 'model X', 'model Y': 'model Y'}
+// 结果：{ tesla: 'tesla', 'model 3': 'model 3', 'model X': 'model X', 'model Y': 'model Y'}
 ```
 
 **实现**:
@@ -108,8 +108,11 @@ type TupleToObject<T extends readonly any[]> = {
 type arr1 = ['a', 'b', 'c']
 type arr2 = [3, 2, 1]
 
-type head1 = First<arr1> // expected to be 'a'
-type head2 = First<arr2> // expected to be 3
+type head1 = First<arr1>
+// 结果：'a'
+
+type head2 = First<arr2>
+// 结果：3
 ```
 
 **实现**:
@@ -137,11 +140,11 @@ type First<T extends any[]> = T extends [infer F, ...infer Rest] ? F : never
 `Length<T>` 用来获取一个数组（包括类数组）的长度
 
 ```ts
-// 结果：3
 type result1 = Length<[1, 2, 3]>
+// 结果：3
 
-// 结果：10
 type result2 = Length<{ a: 'a'; length: 10 }>
+// 结果：10
 ```
 
 **实现**:
@@ -156,3 +159,63 @@ type Length<T extends any> = T extends { length: number } ? T['length'] : never
 ::: warning
 在 `TypeScript` 中不能使用 `T.length` 来取值，应使用 `T['length']` 即索引访问类型
 :::
+
+### `Exclude` 排除
+
+> 实现内置的 `Exclude <T, U>`
+
+从联合类型 `T` 中排除 `U` 的类型成员（即取 `T` 对于 `U` 的差集），来构造一个新的类型
+
+```ts
+type Result = MyExclude<'name' | 'age' | 'sex', 'sex' | 'address'>
+// 结果：'name' | 'age'
+```
+
+**实现**:
+
+```ts
+type MyExclude<T, U> = T extends U ? never : T
+```
+
+[分布式条件类型](/fe/typescript/base#分布式条件类型)（对联合类型应用 `extends` 时，会遍历联合类型成员并一一应用该条件类型）
+
+### `Awaited` 获取 `Promise` 返回值类型
+
+> 实现内置的 `Awaited<T>`
+
+`Awaited` 可以用来获取 `Promise` 返回值类型
+
+```ts
+type Result1 = MyAwaited<Promise<string>>
+// 结果：string
+
+type Result2 = MyAwaited<Promise<string | number>>
+// 结果：string | number
+```
+
+**实现**:
+
+```ts
+type MyAwaited<T> = T extends Promise<infer R> ? MyAwaited<R> : T
+```
+
+### `If` 判断
+
+`If<C, T, F>` 接收一个条件类型 `C` ，一个判断为真时的返回类型 `T` ，以及一个判断为假时的返回类型 `F`。 `C` 只能是 `true` 或者 `false`， `T` 和 `F` 可以是任意类型
+
+```ts
+type A = If<true, 'a', 'b'>
+// 结果：'a'
+
+type B = If<false, 'a', 'b'>
+// 结果：'b'
+```
+
+**实现**:
+
+```ts
+type If<C extends boolean, T, F> = C extends true ? T : F
+```
+
+- `C extends boolean` 表示类型 `C` 只能为 `boolean` 的子类型，即只能为 `true` 或 `false`
+- `C extends true` 表示类型 `C` 可以被赋值为字面量类型 `true` 时条件成立（相当于 `JavaScript` 中的 `C === true`）
