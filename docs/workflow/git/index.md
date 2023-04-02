@@ -12,22 +12,7 @@
 - 下载相关
   - [Windows 版下载镜像](https://npmmirror.com/mirrors/git-for-windows/)
   - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
-
-## commit 常用 type
-
-| type     | 含义                                   |
-| :------- | :------------------------------------- |
-| feat     | 新功能                                 |
-| fix      | 修复 bug                               |
-| docs     | 修改文档                               |
-| style    | 代码格式修改                           |
-| refactor | 重构（即不是新增功能，也不是修复 bug） |
-| perf     | 更改代码以提高性能                     |
-| test     | 增加测试                               |
-| build    | 构建过程或辅助工具的变动               |
-| ci       | 修改项目持续集成流程                   |
-| chore    | 其他类型的提交                         |
-| revert   | 恢复上一次提交                         |
+- [commit 常用的 type](/workflow/style-guide#commit-常用的-type)
 
 ## 常用 Git 命令
 
