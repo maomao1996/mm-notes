@@ -7,6 +7,7 @@ import type { NavLink } from '../types'
 
 const props = defineProps<{
   title: string
+  noIcon?: boolean
   items: NavLink[]
 }>()
 
@@ -25,6 +26,7 @@ const formatTitle = computed(() => {
       v-for="{ icon, title, desc, link } in items"
       :key="link"
       :icon="icon"
+      :noIcon="noIcon"
       :title="title"
       :desc="desc"
       :link="link"
