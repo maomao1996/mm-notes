@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import Visitor from './components/Visitor.vue'
 import Copyright from './components/Copyright.vue'
 import AsideSponsors from './components/AsideSponsors.vue'
+import MNavLinks from './components/MNavLinks.vue'
 
 import './styles/index.scss'
 
@@ -54,6 +55,8 @@ export default {
     })
   },
   enhanceApp({ app }: { app: App }) {
+    app.component('MNavLinks', MNavLinks)
+
     app.provide('DEV', process.env.NODE_ENV === 'development')
   }
 }

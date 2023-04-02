@@ -5,8 +5,6 @@ outline: [2, 3, 4]
 ---
 
 <script setup>
-import MNavLinks from './nav/components/MNavLinks.vue'
-
 import { NAV_DATA } from './nav/data'
 </script>
 <style src="./nav/index.scss"></style>
