@@ -2,7 +2,16 @@ import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
   { text: '导航', link: '/nav', activeMatch: '^/nav' },
-  { text: '前端物语', link: '/fe/es6/', activeMatch: '^/fe' },
+  {
+    text: '前端物语',
+    items: [
+      { text: 'JavaScript 基础知识', link: '/fe/javascript/types' },
+      { text: 'ES6 常用知识', link: '/fe/es6/' },
+      { text: 'TypeScript 基础知识', link: '/fe/typescript/base' },
+      { text: '浏览器相关知识', link: '/fe/browser/' }
+    ],
+    activeMatch: '^/fe'
+  },
   { text: '源码阅读', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
   {
     text: 'Workflow',
