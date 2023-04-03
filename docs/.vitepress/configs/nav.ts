@@ -12,7 +12,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/fe'
   },
-  { text: '源码阅读', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
+  { text: '源码阅读', link: '/analysis/react/18', activeMatch: '^/analysis' },
   {
     text: 'Workflow',
     items: [

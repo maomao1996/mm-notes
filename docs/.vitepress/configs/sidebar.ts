@@ -58,6 +58,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/analysis/': [
     {
+      text: 'React',
+      items: [{ text: 'React 18 的新特性', link: '/analysis/react/18' }]
+    },
+    {
       text: '工具库',
       // collapsed: false,
       items: [
