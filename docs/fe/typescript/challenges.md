@@ -4,7 +4,7 @@
 
 在 `Type-Challenges` 中，我们可以从简单、中等、困难以及地狱难度，循序渐进的学习 `TypeScript` 高级技巧
 
-## 简单
+## Easy 简单
 
 ### `Pick` 选取
 
@@ -186,10 +186,10 @@ type MyExclude<T, U> = T extends U ? never : T
 `Awaited` 可以用来获取 `Promise` 返回值类型
 
 ```ts
-type Result1 = MyAwaited<Promise<string>>
+type result1 = MyAwaited<Promise<string>>
 // 结果：string
 
-type Result2 = MyAwaited<Promise<string | number>>
+type result2 = MyAwaited<Promise<string | number>>
 // 结果：string | number
 ```
 
@@ -219,3 +219,125 @@ type If<C extends boolean, T, F> = C extends true ? T : F
 
 - `C extends boolean` 表示类型 `C` 只能为 `boolean` 的子类型，即只能为 `true` 或 `false`
 - `C extends true` 表示类型 `C` 可以被赋值为字面量类型 `true` 时条件成立（相当于 `JavaScript` 中的 `C === true`）
+
+### `Concat` 数组的 `concat` 方法
+
+`Concat<T, U>` 可以将两个数组合并起来，即在类型系统里实现 `JavaScript` 内置的 `Array.concat` 方法
+
+```ts
+type result = Concat<[1, 2], [3, 4]>
+// 结果：[1, 2, 3, 4]
+```
+
+**实现**:
+
+```ts
+type Concat<T extends any[], U extends any[]> = [...T, ...U]
+```
+
+- `T extends any[]` 限制传入的参数只能是数组
+- `[...T, ...U]` 和 `ES6` 的扩展运算符一样
+
+### `Includes` 数组的 `includes` 方法
+
+> 这题不太 Easy
+
+`Includes<T, U>` 判断 `U` 是否在数组 `T` 中，即在类型系统里实现 `JavaScript` 的 `Array.includes` 方法
+
+```ts
+type result1 = Includes<[1, 2, 3], 1>
+// 结果：true
+
+type result2 = Includes<[1, 2, 3], 4>
+// 结果：false
+
+type result3 = Includes<[boolean, 1, 2, 3], true>
+// 结果：false
+
+type result4 = Includes<[true, 1, 2, 3], boolean>
+// 结果：false
+```
+
+**实现**:
+
+```ts
+/* 简单版（存在问题）*/
+type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2
+  ? true
+  : false
+
+/* 递归完善版 */
+type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2
+  ? true
+  : false
+type Includes<T extends any[], U> = T extends [infer F, ...infer Rest]
+  ? Equal<F, U> extends true
+    ? true
+    : Includes<Rest, U>
+  : false
+```
+
+::: tip
+`boolean` 实际是 `true ｜ false` 的别名（[详细信息](https://github.com/microsoft/TypeScript/issues/22596)）
+:::
+
+- `Equal` 是用来判断两个值是否相等的辅助方法（具体可以[看这里](https://stackoverflow.com/questions/52443276/how-to-exclude-getter-only-properties-from-type-in-typescript)）
+
+### `Push` 数组 `push` 方法
+
+`Push<T, U>` 将 `U` 添加到数组 `T` 中，即在类型系统里实现 `JavaScript` 的 `Array.push` 方法
+
+```ts
+type result = Push<[1, 2, 3], 4>
+// 结果：[1, 2, 3, 4]
+```
+
+**实现**:
+
+```ts
+type Push<T extends any[], U> = [...T, U]
+```
+
+### `Unshift` 数组的 `unshift` 方法
+
+在类型系统里实现 `JavaScript` 的 `Array.unshift` 方法
+
+```ts
+type result = Unshift<[1, 2], 0>
+// 结果：[0, 1, 2]
+```
+
+**实现**:
+
+```ts
+type Unshift<T extends any[], U> = [U, ...T]
+```
+
+### `Parameters` 函数的参数类型
+
+> 实现内置的 `Parameters<T>`
+
+`Parameters` 可以获取一个函数的参数类型，其返回的结果是一个元组
+
+```ts
+const foo = (arg1: string, arg2: number): void => {}
+const bar = (arg1: boolean, arg2: { a: 'A' }): void => {}
+const baz = (): void => {}
+
+type result1 = MyParameters<typeof foo>
+// 结果：[boolean, { a: 'A' }]
+
+type result2 = MyParameters<typeof bar>
+// 结果：[boolean, { a: 'A' }]
+
+type result3 = MyParameters<typeof baz>
+// 结果：[]
+```
+
+**实现**:
+
+```ts
+type MyParameters<T extends (...args: any[]) => any> = T extends (...args: infer R) => any
+  ? R
+  : never
+```
