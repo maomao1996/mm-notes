@@ -8,6 +8,7 @@ import { NavLink } from '../types'
 const props = defineProps<{
   noIcon?: boolean
   icon?: NavLink['icon']
+  badge?: NavLink['badge']
   title?: NavLink['title']
   desc?: NavLink['desc']
   link: NavLink['link']
@@ -24,11 +25,18 @@ const svg = computed(() => {
   if (typeof props.icon === 'object') return props.icon.svg
   return ''
 })
+
+const formatBadge = computed(() => {
+  if (typeof props.badge === 'string') {
+    return { text: props.badge, type: 'info' }
+  }
+  return props.badge
+})
 </script>
 
 <template>
   <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
-    <article class="box">
+    <article class="box" :class="{ 'has-badge': formatBadge }">
       <div class="box-header">
         <template v-if="!noIcon">
           <div v-if="svg" class="icon" v-html="svg"></div>
@@ -44,6 +52,7 @@ const svg = computed(() => {
           {{ title }}
         </h5>
       </div>
+      <Badge v-if="formatBadge" class="badge" :type="formatBadge.type" :text="formatBadge.text" />
       <p v-if="desc" class="desc">{{ desc }}</p>
     </article>
   </a>
@@ -71,9 +80,13 @@ const svg = computed(() => {
   .box {
     display: flex;
     flex-direction: column;
+    position: relative;
     padding: var(--m-nav-box-gap);
     height: 100%;
     color: var(--vp-c-text-1);
+    &.has-badge {
+      padding-top: calc(var(--m-nav-box-gap) + 2px);
+    }
     &-header {
       display: flex;
       align-items: center;
@@ -111,6 +124,13 @@ const svg = computed(() => {
     &:not(.no-icon) {
       line-height: var(--m-nav-icon-box-size);
     }
+  }
+
+  .badge {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    transform: scale(0.8);
   }
 
   .desc {

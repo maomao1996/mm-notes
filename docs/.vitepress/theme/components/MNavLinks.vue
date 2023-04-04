@@ -22,15 +22,7 @@ const formatTitle = computed(() => {
     <a class="header-anchor" :href="`#${formatTitle}`" aria-hidden="true"></a>
   </h2>
   <div class="m-nav-links">
-    <MNavLink
-      v-for="{ icon, title, desc, link } in items"
-      :key="link"
-      :icon="icon"
-      :noIcon="noIcon"
-      :title="title"
-      :desc="desc"
-      :link="link"
-    />
+    <MNavLink v-for="item in items" :noIcon="noIcon" v-bind="item" />
   </div>
 </template>
 
