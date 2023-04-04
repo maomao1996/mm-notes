@@ -167,7 +167,7 @@ type Length<T extends any> = T extends { length: number } ? T['length'] : never
 从联合类型 `T` 中排除 `U` 的类型成员（即取 `T` 对于 `U` 的差集），来构造一个新的类型
 
 ```ts
-type Result = MyExclude<'name' | 'age' | 'sex', 'sex' | 'address'>
+type result = MyExclude<'name' | 'age' | 'sex', 'sex' | 'address'>
 // 结果：'name' | 'age'
 ```
 
@@ -341,3 +341,51 @@ type MyParameters<T extends (...args: any[]) => any> = T extends (...args: infer
   ? R
   : never
 ```
+
+## Medium 中级
+
+### `ReturnType` 函数返回类型
+
+> 实现内置的 `ReturnType<T>`
+
+```ts
+const fn = (v: boolean) => (v ? 1 : 2)
+type result = MyReturnType<typeof fn>
+// 结果：1 | 2
+```
+
+**实现**:
+
+```ts
+type MyReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer R
+  ? R
+  : never
+```
+
+### `Omit` 移除
+
+> 实现内置的 `Omit<T, K>`
+
+`Omit` 可以移除 `T` 类型中的指定字段
+
+```ts
+interface Todo {
+  title: string
+  description: string
+  completed: boolean
+}
+
+type result = MyOmit<Todo, 'description'>
+// 结果：{ completed: boolean  }
+```
+
+**实现**:
+
+> 可以借助在上面已经实现过的 `Pick` 和 `Exclude` 配合来实现
+
+```ts
+type MyOmit<T, K extends keyof any> = MyPick<T, MyExclude<keyof T, K>>
+```
+
+- `MyExclude<keyof T, K>` 从 `T` 中移除指定字段，得到一个联合类型（`'title' | 'completed'`）即我们需要数据
+- `MyPick<T, 'title' | 'completed'>` 从 `T` 中选取这两个字段组成一个新的类型
