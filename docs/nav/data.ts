@@ -1,9 +1,4 @@
-import type { NavLink } from '../.vitepress/theme/types'
-
-type NavData = {
-  title: string
-  items: NavLink[]
-}
+import type { NavData } from '../.vitepress/theme/types'
 
 export const NAV_DATA: NavData[] = [
   {

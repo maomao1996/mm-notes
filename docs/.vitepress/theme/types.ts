@@ -14,3 +14,8 @@ export interface NavLink {
   /** 站点链接 */
   link: string
 }
+
+export interface NavData {
+  title: string
+  items: NavLink[]
+}
