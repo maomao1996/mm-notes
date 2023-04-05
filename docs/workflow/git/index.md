@@ -164,13 +164,13 @@ git reset --hard HEAD~1 # git reset --hard commit_id
 
 ## 删除 Git 中的所有提交历史记录
 
-::: tip 提示
+::: tip
 以 `master` 分支为例
 :::
 
 ```sh
-# 创建 orphan 分支
-git checkout --orphan [分支名]
+# 创建 orphan 分支（以 main 为例）
+git checkout --orphan main
 
 # 添加需要上传文件
 git add .
@@ -211,8 +211,9 @@ git push origin master
 1. 安装 `gh-pages`
 
 ```sh
-yarn add -D gh-pages
-# OR npm install -D gh-pages
+pnpm add -D gh-pages
+# OR
+npm install -D gh-pages
 ```
 
 2. 在 `package.json` 中添加如下脚本
@@ -225,8 +226,9 @@ yarn add -D gh-pages
 3. 运行 `deploy` 脚本
 
 ```sh
-yarn deploy
-# OR npm run deploy
+pnpm deploy
+# OR
+npm run deploy
 ```
 
 ## 使用 GitHub Actions 自动部署
@@ -292,7 +294,7 @@ jobs:
 
 [GitHub Actions 中文文档](https://docs.github.com/cn/actions/reference)
 
-## git log 格式化
+## `git log` 格式化
 
 ### 修改默认时间格式
 
@@ -327,3 +329,54 @@ alias glogp="git log --pretty='%C(yellow)%h%C(reset) %ad %C(green)%s%C(reset) %C
 - `%d`: `branch tag` 信息
 - `%an`: 作者名称
 - `%ae`: 作者的邮箱地址
+
+## 本地不同分支关联不同的远程仓库
+
+::: tip
+以茂茂的 [mm-notes](https://github.com/maomao1996/mm-notes) 和 [daily-notes](http://github.com/maomao1996/daily-notes) 仓库为例
+:::
+
+1. `clone` 仓库 `mm-notes`（默认的 `remote` 为 `origin`）
+
+```sh
+git clone https://github.com/maomao1996/mm-notes
+```
+
+2. 添加远程仓库 `daily-notes`（`remote` 取名为 `daily-notes`）
+
+```sh
+git remote add daily-notes http://github.com/maomao1996/daily-notes
+```
+
+3. 拉取 `daily-notes` 的 `master` 分支到本地（本地分支名为 `notes`）
+
+```sh
+git fetch daily-notes master:notes
+
+# 推送本地分支 notes 到远程仓库 daily-notes 的 master 分支
+git push daily-notes notes:master
+```
+
+4. 关联分支（本地分支 `notes` 关联远程仓库 `daily-notes` 的 `master` 分支）
+
+> 本地分支关联远程分支后，可直接使用 `git push` 和 `git pull` 命令
+
+```sh
+git branch --set-upstream-to=daily-notes/master notes
+```
+
+5. 提取 `master` 分支的指定提交到 `notes` 分支
+
+```sh
+# 切换到 notes 分支
+git checkout notes
+
+# 查看 master 分支的 commit 信息
+git log --oneline master
+
+# 提取 master 分支的指定提交到 notes 分支
+git cherry-pick <commit hash>
+
+# 推送到远程仓库
+git push
+```
