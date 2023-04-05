@@ -389,3 +389,113 @@ type MyOmit<T, K extends keyof any> = MyPick<T, MyExclude<keyof T, K>>
 
 - `MyExclude<keyof T, K>` 从 `T` 中移除指定字段，得到一个联合类型（`'title' | 'completed'`）即我们需要数据
 - `MyPick<T, 'title' | 'completed'>` 从 `T` 中选取这两个字段组成一个新的类型
+
+### `Readonly` 按需只读
+
+> 内置的 `Readonly` 增强版
+
+`MyReadonly<T, K>`
+
+- 当传递 `K` 时，只对 `K` 中的属性集变成只读（按需只读）
+- 未传递 `K`时则使所有属性都变为只读
+
+```ts
+interface Todo {
+  title: string
+  description: string
+  completed?: boolean
+}
+
+interface Expected1 {
+  readonly title: string
+  readonly description: string
+  readonly completed?: boolean
+}
+interface Expected2 {
+  title: string
+  readonly description: string
+  readonly completed?: boolean
+}
+
+type result1 = MyReadonly<Todo>
+// 结果：Expected1
+
+type result2 = MyReadonly<Todo, 'description' | 'completed'>
+// 结果：Expected2
+
+const todo: MyReadonly<Todo, 'title' | 'description'> = {
+  title: 'Hey',
+  description: 'foobar',
+  completed: false
+}
+
+todo.title = 'Hello' // Error
+todo.description = 'barFoo' // Error
+todo.completed = true // OK
+```
+
+**实现**:
+
+```ts
+type MyReadonly<T, K extends keyof T = keyof T> = Omit<T, K> & {
+  readonly [P in K]: T[P]
+}
+```
+
+- `K extends keyof T = keyof T` 表示 `K` 只能是 `T` 的键，同时如果没有传递 `K` 则默认为 `T` 的所有键
+
+### `DeepReadonly` 深度只读
+
+`DeepReadonly<T>` 可以将对象的每个参数及其子对象递归地设为只读
+
+```ts
+type X = {
+  x: {
+    a: 1
+    b: 'hi'
+  }
+  y: 'hey'
+}
+
+type result = DeepReadonly<X>
+// 结果：Expected
+type Expected = {
+  readonly x: {
+    readonly a: 1
+    readonly b: 'hi'
+  }
+  readonly y: 'hey'
+}
+```
+
+**实现**:
+
+```ts
+type DeepReadonly<T> = {
+  readonly [P in keyof T]: T[P] extends { [key: string]: any } ? DeepReadonly<T[P]> : T[P]
+}
+```
+
+- `T[P] extends { [key: string]: any }` 判断 `T[P]` 是否是一个包含索引签名的对象，如果是则递归调用 `DeepReadonly`，否则直接返回 `T[P]`
+
+### `TupleToUnion` 元组转联合类型
+
+`TupleToUnion<T>` 可以将元组转换为联合类型
+
+```ts
+type result = TupleToUnion<['1', '2', '3']>
+// 结果：'1' | '2' | '3'
+```
+
+**实现**:
+
+```ts
+/* 使用 T[number] */
+type TupleToUnion<T extends readonly any[]> = T[number]
+
+/* 使用 infer R */
+type TupleToUnion<T> = T extends Array<infer R> ? R : never
+```
+
+- `T[number]` 获取类型 `T` 中的所有元素类型，并将它们组成一个联合类型
+- `T extends Array<infer R> ? R : never` 表示如果 `T` 是一个数组，则返回数组的每个元素，否则返回 `never`
