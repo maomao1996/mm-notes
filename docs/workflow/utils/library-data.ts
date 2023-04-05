@@ -175,8 +175,18 @@ export const DATA: NavData[] = [
     items: [
       {
         title: 'html2canvas',
-        desc: '页面截图',
+        desc: '页面截图（将 DOM 节点绘制为 canvas 再生成图片）',
         link: 'https://github.com/niklasvh/html2canvas'
+      },
+      {
+        title: 'html-to-image',
+        desc: '页面截图（将 DOM 节点绘制为 canvas 或 SVG 再生成图片）',
+        link: 'https://github.com/bubkoo/html-to-image'
+      },
+      {
+        title: 'satori',
+        desc: '页面截图（将 HTML 和 CSS 转换为 SVG）',
+        link: 'https://github.com/vercel/satori'
       },
       {
         title: 'medium-zoom',
@@ -308,6 +318,28 @@ export const DATA: NavData[] = [
     ]
   },
   {
+    title: '表单处理',
+    items: [
+      {
+        badge: 'react',
+        title: 'formik',
+        desc: '提供组件和 Hooks 来管理表单状态和验证',
+        link: 'https://github.com/jaredpalmer/formik'
+      },
+      {
+        badge: 'react',
+        title: 'react-hook-form',
+        desc: '用于表单状态管理和验证的 React Hook',
+        link: 'https://github.com/react-hook-form/react-hook-form'
+      },
+      {
+        title: 'formily',
+        desc: '阿里巴巴统一前端表单解决方案，支持 React, React Native, Vue 2/3',
+        link: 'https://github.com/alibaba/formily'
+      }
+    ]
+  },
+  {
     title: '表格',
     items: [
       {
@@ -339,6 +371,12 @@ export const DATA: NavData[] = [
         title: 'copy-to-clipboard',
         desc: '复制到剪贴板',
         link: 'https://github.com/sudodoki/copy-to-clipboard'
+      },
+      {
+        badge: 'node',
+        title: 'clipboardy',
+        desc: '在 Node.js 中访问系统剪贴板',
+        link: 'https://github.com/sindresorhus/clipboardy'
       },
       {
         title: 'screenfull.js',
@@ -527,26 +565,6 @@ export const DATA: NavData[] = [
         title: 'ora',
         desc: '命令行 loading 效果',
         link: 'https://github.com/sindresorhus/ora'
-      }
-    ]
-  },
-  {
-    title: '文档',
-    items: [
-      {
-        title: 'VuePress',
-        desc: 'Vue 驱动的静态网站生成器',
-        link: 'https://github.com/vuejs/vuepress'
-      },
-      {
-        title: 'dumi',
-        desc: '基于 Umi 为组件开发场景而生的文档工具',
-        link: 'https://github.com/umijs/dumi'
-      },
-      {
-        title: 'Docusaurus',
-        desc: '基于 React 的静态网站生成器',
-        link: 'https://github.com/facebook/docusaurus'
       }
     ]
   }
