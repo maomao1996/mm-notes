@@ -499,3 +499,96 @@ type TupleToUnion<T> = T extends Array<infer R> ? R : never
 
 - `T[number]` 获取类型 `T` 中的所有元素类型，并将它们组成一个联合类型
 - `T extends Array<infer R> ? R : never` 表示如果 `T` 是一个数组，则返回数组的每个元素，否则返回 `never`
+
+### `Chainable` 链式调用
+
+`Chainable` 让一个对象可以进行链式调用（提供两个函数 `option(key, value)` 和 `get()`：在 `option` 中你需要使用提供的 `key` 和 `value` 扩展当前的对象类型，通过 `get` 获取最终结果）
+
+```ts
+declare const config: Chainable<{}>
+
+const result = config
+  .option('foo', 123)
+  .option('name', 'type-challenges')
+  .option('bar', { value: 'Hello World' })
+  .get()
+
+// 结果：
+interface Expected {
+  foo: number
+  name: string
+  bar: {
+    value: string
+  }
+}
+```
+
+**实现**:
+
+```ts
+type Chainable<T> = {
+  option<K extends string, V>(key: K, value: V): Chainable<Omit<T, K> & { [P in K]: V }>
+  get(): T
+}
+```
+
+- `Chainable<>` 返回一个新的 `Chainable` 对象，使其可以递归调用，其中 `T` 为 `Omit<T, K> & { [P in K]: V }`
+- `Omit<T, K>` 移除 `T` 中的指定字段 `K`
+
+### `Last` 数组的最后一个元素
+
+`Last<T>` 会接受一个数组 `T` 并返回其最后一个元素的类型
+
+```ts
+type result1 = Last<['a', 'b', 'c']>
+// 结果：'c'
+
+type result2 = Last<[3, 2, 1]>
+// 结果：1
+```
+
+**实现**:
+
+```ts
+/* 使用 infer 占位实现 */
+type Last<T extends any[]> = T extends [...infer Rest, infer L] ? L : never
+
+type Last<T extends any[]> = [any, ...T][T['length']]
+```
+
+- `T extends [...infer Rest, infer L] ? L : never` 表示如果 `T` 是一个数组，则返回数组的最后一个元素，否则返回 `never`
+- `[any, ...T]` 构建一个新数组，第一个元素为 `any`，其余元素为 `T`
+- `T['length']` 可以获取数组 `T` 的长度
+
+```ts
+/* 以 type result1 = Last<['a', 'b', 'c']> 为例 */
+// 原数组
+const T = ['a', 'b', 'c']
+
+// 新数组
+const arr = [any, 1, 2, 3]
+
+// 结果：'c'
+const result = arr[T['length']]
+```
+
+### `Pop` 数组的 pop 方法
+
+`Pop<T>` 返回一个由数组 `T` 的前 `length-1` 项以相同的顺序组成的数组
+
+```ts
+type result1 = Last<['a', 'b', 'c', 'd']>
+// 结果：['a', 'b', 'c']
+
+type result2 = Last<[]>
+// 结果：[]
+```
+
+**实现**:
+
+```ts
+type Pop<T extends any[]> = T extends [] ? [] : T extends [...infer Rest, infer L] ? Rest : never
+```
+
+- 先判断 `T` 是否为空数组，如果是则返回空数组
+- 再判断 `T` 是否是一个数组
