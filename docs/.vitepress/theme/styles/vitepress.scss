@@ -1,10 +1,5 @@
 /***** vitepress 样式优化 ******/
 
-/* 同一行上的链接有间距才行 */
-.vp-doc p a + a {
-  margin-left: 12px;
-}
-
 /* 大屏大一点 */
 @media (min-width: 1440px) {
   .VPDoc.has-aside .content-container.content-container {
