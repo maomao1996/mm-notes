@@ -11,8 +11,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 3. 自带 `git`、`ls` 等命令
 4. 自定义配置项
 
-[Github](https://github.com/cmderdev/cmder)
-[软件官网](https://cmder.net/)
+- [Github](https://github.com/cmderdev/cmder)
+- [软件官网](https://cmder.net/)
 
 ## 搜索神器 Everything
 
@@ -31,8 +31,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 5. 支持插件扩展
 6. 支持自定义主题
 
-[Github](https://github.com/Wox-launcher/Wox)
-[软件官网](https://wox.one/)
+- [Github](https://github.com/Wox-launcher/Wox)
+- [软件官网](https://wox.one/)
 
 ## 视频播放神器 PotPlayer
 
@@ -41,8 +41,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 3. 纯粹的本地播放器
 4. 视频/音频格式支持非常全面
 
-[软件官网](https://potplayer.daum.net/?lang=zh_CN)
-[最新版直链下载](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
+- [软件官网](https://potplayer.daum.net/?lang=zh_CN)
+- [最新版直链下载](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
 
 ## 压缩/解压神器 bandizip
 
@@ -63,8 +63,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 4. 支持快捷键设置
 5. 在播放设备之间移动应用
 
-[Github](https://github.com/File-New-Project/EarTrumpet)
-[Microsoft Store](https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp)
+- [Github](https://github.com/File-New-Project/EarTrumpet)
+- [Microsoft Store](https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp)
 
 ## 看图神器 Honeyview
 
@@ -80,8 +80,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 2. 支持视频、网页、2D、3D、GIF 等类型壁纸
 3. 强大的创意工坊拥有海量壁纸可供选择
 
-[Steam 商店地址](https://store.steampowered.com/app/431960/Wallpaper_Engine/)
-[创意工坊](https://steamcommunity.com/app/431960/workshop/)
+- [Steam 商店地址](https://store.steampowered.com/app/431960/Wallpaper_Engine/)
+- [创意工坊](https://steamcommunity.com/app/431960/workshop/)
 
 ## 系统优化工具 Dism++
 
@@ -89,8 +89,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 2. 体积小，解压即用，方便快捷
 3. 集成空间清理、系统管理/优化、热备份还原等功能于一体
 
-[Github](https://github.com/Chuyu-Team/Dism-Multi-language)
-[软件官网](https://www.chuyu.me/zh-Hans/index.html)
+- [Github](https://github.com/Chuyu-Team/Dism-Multi-language)
+- [软件官网](https://www.chuyu.me/zh-Hans/index.html)
 
 ## 隐私优化 WPD
 
@@ -113,9 +113,9 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 2. 支持自定义颜色
 3. 只支持 Windows 10
 
-[Github](https://github.com/TranslucentTB/TranslucentTB)
-[Microsoft Store](https://www.microsoft.com/zh-cn/p/translucenttb/9pf4kz2vn4w9)
-[Microsoft Store 汉化版](https://www.microsoft.com/zh-cn/p/translucenttb-%E6%B1%89%E5%8C%96-by-tpxxn/9n5w18jc9bg2)
+- [Github](https://github.com/TranslucentTB/TranslucentTB)
+- [Microsoft Store](https://www.microsoft.com/zh-cn/p/translucenttb/9pf4kz2vn4w9)
+- [Microsoft Store 汉化版](https://www.microsoft.com/zh-cn/p/translucenttb-%E6%B1%89%E5%8C%96-by-tpxxn/9n5w18jc9bg2)
 
 ## 查重神器 Duplicate Cleaner
 
@@ -125,8 +125,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 4. 删除重复文件至回收站
 5. 移动重复文件到新位置
 
-[软件官网](https://www.duplicatecleaner.com)
-[绿色汉化版](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1224420)
+- [软件官网](https://www.duplicatecleaner.com)
+- [绿色汉化版](https://www.52pojie.cn/forum.php?mod=viewthread&tid=1224420)
 
 ## 电子书格式转换器 NeatConverter
 
@@ -167,12 +167,13 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
   - 预览重命名结果
 
 - [PowerToys Run](https://aka.ms/PowerToysOverview_PowerToysRun) 快速启动程序
+
   - 搜索应用程序、文件夹或文件
   - 使用计算器执行简单计算
   - 默认启动快捷键: `Alt` + `Space`
 
-[Github](https://github.com/microsoft/PowerToys)
-[安装文档](https://docs.microsoft.com/zh-cn/windows/powertoys/install)
+- [Github](https://github.com/microsoft/PowerToys)
+- [安装文档](https://docs.microsoft.com/zh-cn/windows/powertoys/install)
 
 ## 网速监控悬浮窗 TrafficMonitor
 
@@ -189,8 +190,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 2. 可对 Gif 进行压缩、裁剪、涂鸦、模糊、添加字幕、添加水印、添加进度条等操作
 3. 免费无广告支持免安装使用
 
-[Github](https://github.com/NickeManarin/ScreenToGif)
-[软件官网](https://www.screentogif.com/)
+- [Github](https://github.com/NickeManarin/ScreenToGif)
+- [软件官网](https://www.screentogif.com/)
 
 ## 按键精灵 KeymouseGo
 
@@ -207,8 +208,8 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 5. 贴图、取色
 6. 支持自定义设置
 
-[软件官网](https://zh.snipaste.com/)
-[使用文档](https://docs.snipaste.com/zh-cn/getting-started)
+- [软件官网](https://zh.snipaste.com/)
+- [使用文档](https://docs.snipaste.com/zh-cn/getting-started)
 
 ## 卸载神器 HiBit Uninstaller
 

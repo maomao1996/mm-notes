@@ -23,8 +23,8 @@ description: '收录那些支持多个平台（Mac、Windows）的实用软件�
 4. 基于 Aria2
 5. 自动更新 Tracker 服务器列表
 
-[Github](https://github.com/agalwood/Motrix)
-[软件官网](https://motrix.app/zh-CN)
+- [Github](https://github.com/agalwood/Motrix)
+- [软件官网](https://motrix.app/zh-CN)
 
 ## SwitchHosts
 
@@ -59,8 +59,8 @@ Hosts 管理工具
 5. 支持自定义复制到剪贴板的链接格式、
 6. 丰富的[插件系统](https://github.com/PicGo/Awesome-PicGo)
 
-[Github](https://github.com/Molunerfinn/PicGo)
-[软件官网](https://molunerfinn.com/PicGo/)
+- [Github](https://github.com/Molunerfinn/PicGo)
+- [软件官网](https://molunerfinn.com/PicGo/)
 
 ## Sourcetree
 

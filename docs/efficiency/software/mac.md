@@ -103,8 +103,8 @@ brew cleanup
 brew cleanup -n
 ```
 
-[Github](https://github.com/Homebrew)
-[软件官网](https://brew.sh/index_zh-cn)
+- [Github](https://github.com/Homebrew)
+- [软件官网](https://brew.sh/index_zh-cn)
 
 ## iTerm2
 
@@ -129,8 +129,8 @@ cat /etc/passwd | grep sh
 chsh -s /bin/zsh
 ```
 
-[Github](https://github.com/gnachman/iTerm2)
-[软件官网](https://www.iterm2.com)
+- [Github](https://github.com/gnachman/iTerm2)
+- [软件官网](https://www.iterm2.com)
 
 ### iTerm2 常用快捷键
 
@@ -177,8 +177,8 @@ brew install --cask fig
 
 在 `vscode` 中使用，需修改 `editor.accessibilitySupport` 为 `"off"`
 
-[Github](https://github.com/withfig/autocomplete)
-[软件官网](https://fig.io/)
+- [Github](https://github.com/withfig/autocomplete)
+- [软件官网](https://fig.io/)
 
 ## mas-cli
 
@@ -285,8 +285,8 @@ sudo wechattweak-cli --uninstall
 3. 支持鼠标和触控板手势
 4. 在线字幕、缩略图预览、画中画等
 
-[Github](https://github.com/iina/iina)
-[软件官网](https://iina.io/)
+- [Github](https://github.com/iina/iina)
+- [软件官网](https://iina.io/)
 
 ## MacZip
 
@@ -313,8 +313,8 @@ sudo wechattweak-cli --uninstall
 3. 支持截图导圆角、阴影调节
 4. 贴图、取色
 
-[软件官网](https://www.better365.cn/ishot.html)
-[App Store](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E5%BD%95%E5%B1%8F-2020%E5%85%A8%E6%96%B0%E9%AB%98%E5%BA%A6/id1485844094)
+- [软件官网](https://www.better365.cn/ishot.html)
+- [App Store](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E5%BD%95%E5%B1%8F-2020%E5%85%A8%E6%96%B0%E9%AB%98%E5%BA%A6/id1485844094)
 
 ## 超级右键 iRightMouse
 
@@ -323,8 +323,8 @@ sudo wechattweak-cli --uninstall
 3. 常用目录设置
 4. 快速打开终端、vscode 等
 
-[软件官网](https://www.better365.cn/irightmouse.html)
-[App Store](https://apps.apple.com/cn/app/irightmouse-%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE/id1497428978)
+- [软件官网](https://www.better365.cn/irightmouse.html)
+- [App Store](https://apps.apple.com/cn/app/irightmouse-%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE/id1497428978)
 
 ## 翻译软件 Bob
 
@@ -333,16 +333,16 @@ sudo wechattweak-cli --uninstall
 3. 自动识别语种
 4. 可自定义插件
 
-[Github](https://github.com/ripperhe/Bob)
-[软件官网](https://ripperhe.gitee.io/bob)
+- [Github](https://github.com/ripperhe/Bob)
+- [软件官网](https://ripperhe.gitee.io/bob)
 
 ## 菜单栏图标管理 Hidden Bar
 
 1. 简单易用、支持全局快捷键
 2. 免费开源、支持中文
 
-[Github](https://github.com/dwarvesf/hidden)
-[App Store](https://apps.apple.com/cn/app/hidden-bar/id1452453066)
+- [Github](https://github.com/dwarvesf/hidden)
+- [App Store](https://apps.apple.com/cn/app/hidden-bar/id1452453066)
 
 ## 音量管理 BackgroundMusic
 
@@ -356,8 +356,8 @@ sudo wechattweak-cli --uninstall
 
 比系统分屏更强大，支持快捷键分屏、支持三个及以上分屏
 
-[Github](https://github.com/rxhanson/Rectangle)
-[软件官网](https://rectangleapp.com/)
+- [Github](https://github.com/rxhanson/Rectangle)
+- [软件官网](https://rectangleapp.com/)
 
 ## 应用快捷启动神器 Thor Launcher
 
@@ -369,8 +369,8 @@ sudo wechattweak-cli --uninstall
 
 长按 `Command` 即可查看当前应用的快捷键提示
 
-[软件官网](https://www.ergonis.com/products/keycue/)
-[安装包](https://github.com/maomao1996/software-backup/tree/main/mac/CheatSheet)
+- [软件官网](https://www.ergonis.com/products/keycue/)
+- [安装包](https://github.com/maomao1996/software-backup/tree/main/mac/CheatSheet)
 
 ## 显示器控制 MonitorControl
 
