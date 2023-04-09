@@ -1,5 +1,6 @@
 export interface NavLink {
   /** 站点图标 */
+  noIcon?: boolean
   icon?: string | { svg: string }
   badge?:
     | string
@@ -18,5 +19,6 @@ export interface NavLink {
 export interface NavData {
   title: string
   tag?: string
+  noIcon?: boolean
   items: NavLink[]
 }
