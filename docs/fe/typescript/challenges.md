@@ -592,3 +592,68 @@ type Pop<T extends any[]> = T extends [] ? [] : T extends [...infer Rest, infer 
 
 - 先判断 `T` 是否为空数组，如果是则返回空数组
 - 再判断 `T` 是否是一个数组
+
+### `PromiseAll` 获取 `Promise.all` 的返回值类型
+
+`PromiseAll` 可以用来获取 `Promise.all()` 函数的所有返回值类型
+
+```ts
+type result = typeof PromiseAll([1, 2, Promise.resolve(3)])
+
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise<string>((resolve, reject) => {
+  setTimeout(resolve, 100, 'foo');
+});
+
+const p = PromiseAll([promise1, promise2, promise3] as const)
+// 结果：Promise<[number, 42, string]>
+```
+
+**实现**:
+
+::: warning
+声明 `PromiseAll` 时，应使用 `function` ，而不是 `type`
+:::
+
+```ts
+type MyAwaited<T> = T extends Promise<infer R> ? MyAwaited<R> : T
+
+declare function PromiseAll<T extends any[]>(
+  values: readonly [...T]
+): Promise<{
+  [K in keyof T]: MyAwaited<T[K]>
+}>
+```
+
+- 遍历传入的数组，获取每个元素的类型
+- `MyAwaited<T>` 是之前实现的 [`Awaited` 类型](#awaited-获取-promise-返回值类型)，用于获取 `Promise` 的返回值类型
+
+### `LookUp` 查找
+
+`LookUp` 可以根据某个属性值在联合类型中查找类型
+
+```ts
+interface Cat {
+  type: 'cat'
+  breeds: 'Abyssinian' | 'Shorthair' | 'Curl' | 'Bengal'
+}
+
+interface Dog {
+  type: 'dog'
+  breeds: 'Hound' | 'Brittany' | 'Bulldog' | 'Boxer'
+  color: 'brown' | 'white' | 'black'
+}
+
+type MyDog = LookUp<Cat | Dog, 'dog'>
+// 结果：Dog
+```
+
+**实现**:
+
+```ts
+type LookUp<U extends { type: string }, T extends string> = U extends { type: T } ? U : never
+```
+
+- `U extends { type: string }` 表示 `U` 必须包含 `type` 属性
+- `T extends string` 表示 `T` 必须是一个字符串
