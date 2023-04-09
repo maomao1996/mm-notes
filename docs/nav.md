@@ -11,4 +11,4 @@ import { NAV_DATA } from './nav/data'
 
 # 前端导航
 
-<MNavLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>
+<MNavLinks v-for="item in NAV_DATA" v-bind="item"/>

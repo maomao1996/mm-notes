@@ -10,4 +10,4 @@ import { DATA } from './library-data'
 
 > 收集个人使用过或遇到的类库
 
-<MNavLinks v-for="{title, tag, items} in DATA" :title="title" :tag="tag" noIcon :items="items"/>
+<MNavLinks v-for="item in DATA" noIcon v-bind="item"/>
