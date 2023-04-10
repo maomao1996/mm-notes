@@ -90,6 +90,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     },
     {
+      text: '常用库的使用与配置',
+      collapsed: false,
+      items: [{ text: 'Tailwind CSS', link: '/workflow/library/tailwindcss' }]
+    },
+    {
       text: 'CSS 相关',
       collapsed: false,
       items: [
