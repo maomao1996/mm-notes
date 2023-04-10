@@ -44,6 +44,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     },
     {
+      text: 'Node',
+      collapsed: false,
+      items: [{ text: 'package.json', link: '/fe/node/pkg' }]
+    },
+    {
       text: '概念知识点',
       collapsed: false,
       items: [
