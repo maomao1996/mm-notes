@@ -657,3 +657,55 @@ type LookUp<U extends { type: string }, T extends string> = U extends { type: T 
 
 - `U extends { type: string }` 表示 `U` 必须包含 `type` 属性
 - `T extends string` 表示 `T` 必须是一个字符串
+
+### `TrimLeft` `TrimRight` `Trim`
+
+`TrimLeft` `TrimRight` `Trim` 用于移除字符串中的空白字符
+
+```ts
+type result1 = TrimLeft<'  Hello World  '>
+// 结果：'Hello World  '
+
+type result2 = TrimRight<'  Hello World  '>
+// 结果：'  Hello World'
+
+type result3 = Trim<'  Hello World  '>
+// 结果：'Hello World'
+```
+
+**实现**:
+
+```ts
+type Space = ' ' | '\n' | '\t'
+
+type TrimLeft<S extends string> = S extends `${Space}${infer R}` ? TrimLeft<R> : S
+
+type TrimRight<S extends string> = S extends `${infer R}${Space}` ? TrimRight<R> : S
+
+type Trim<S extends string> = S extends `${Space}${infer R}` | `${infer R}${Space}` ? Trim<R> : S
+```
+
+### `Capitalize` 首字母大写和 `Uncapitalize` 首字母小写
+
+> 实现内置的 `Capitalize` 和 `Uncapitalize`
+
+- `Capitalize<T>` 将一个字符串的首字母变成大写的
+- `Uncapitalize<T>` 将一个字符串的首字母变成小写的
+
+```ts
+type result1 = MyCapitalize<'hello world'>
+// 结果：'Hello world'
+
+type result2 = MyUncapitalize<'Hello world'>
+// 结果：'hello world'
+```
+
+**实现**:
+
+```ts
+type MyCapitalize<S extends string> = S extends `${infer L}${infer R}` ? `${Uppercase<L>}${R}` : S
+
+type MyUncapitalize<S extends string> = S extends `${infer L}${infer R}` ? `${Lowercase<L>}${R}` : S
+```
+
+- 通过 `infer` 获取字符串的首字母和剩余部分，然后调用内置的工具函数 `Uppercase` 或 `Lowercase` 实现首字母的大小写转换
