@@ -41,12 +41,21 @@ module.exports = {
 
 Tailwind CSS 提供了 `theme()` 函数，可以让我们在自定义样式中使用 `tailwindcss` 的变量
 
+> 使用 `theme()` 函数
+
 ```css
 .content {
-  height: calc(100vh - theme(spacing.10));
-  background-color: theme(colors.blue.400);
+  height: calc(100vh - theme('spacing.10'));
+  background-color: theme('colors.blue.400');
 }
 ```
+
+::: warning 关于 `theme()` 函数的参数
+
+- 可以使用 `.` 进行嵌套
+- 最好使用引号包裹，否则在 `VSCode` 中会出现 `Intellisense` 智能提示错误
+
+:::
 
 > 编译结果
 
@@ -65,6 +74,29 @@ Tailwind CSS 提供了 `theme()` 函数，可以让我们在自定义样式中�
 :::
 
 [使用 theme() 函数 | Tailwind CSS 文档](https://tailwindcss.com/docs/functions-and-directives#theme)
+
+### 优先使用插件注入样式的方式
+
+::: tip
+优先使用插件注入的方式，而不是直接定义样式，这样可以在 `VSCode` 中使用 `tailwindcss` 的 `Intellisense` 功能（智能提示）
+:::
+
+使用 `layer` 直接定义的样式，在 `VSCode` 中没有智能提示
+
+```css
+@layer utilities {
+  .flex-row-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-col-center {
+    @apply flex-row-center flex-col;
+  }
+}
+```
+
+使用插件注入的样式，**在 `VSCode` 中可以使用 `tailwindcss` 的 `Intellisense` 功能（智能提示）**
+
+![使用插件注入的样式](./images/tailwindcss-flex.png)
 
 ## 常用插件
 
@@ -165,23 +197,79 @@ module.exports = {
 }
 ```
 
-::: tip 使用插件注入样式与直接定义样式的区别
+::: tip
 
-**使用 `layer` 直接定义样式**：
+为了方便使用，已发布到 [npm](https://www.npmjs.com/package/@femm/prettier)
 
-```css
-@layer utilities {
-  .flex-row-center {
-    @apply flex justify-center items-center;
-  }
-  .flex-col-center {
-    @apply flex-row-center flex-col;
-  }
+> 安装依赖
+
+```sh
+pnpm add -D @femm/tailwind-config
+```
+
+> 创建 `tailwind.config.cjs` 文件（内容如下）
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  presets: [require('@femm/tailwind-config')]
 }
 ```
 
-- 使用插件注入的样式，**在 `VSCode` 中可以使用 `tailwindcss` 的 `Intellisense` 功能（智能提示）**
-
-![使用插件注入的样式](./images/tailwindcss-flex.png)
-
 :::
+
+[Presets | Tailwind CSS 文档](https://tailwindcss.com/docs/presets)
+
+## 如何测试 `tailwindcss` 的样式
+
+- 使用 [Tailwind CSS Play](https://play.tailwindcss.com)
+- [使用 `jest` 进行测试](#使用-jest-进行测试)
+
+### 使用 `jest` 进行测试
+
+> 安装依赖
+
+```sh
+pnpm add -D jest postcss tailwindcss
+# 配置脚本
+npm pkg set scripts.jest='jest'
+```
+
+::: warning
+如果被 `jest` 缓存坑了（比如我），可以改成 `jest && jest --clearCache` 清除缓存
+:::
+
+> 创建测试文件 `tailwindcss.test.js`
+
+```js {4,19-20}
+const postcss = require('postcss')
+
+it('tailwindcss presets config', () => {
+  /* 编译出来的缩进是 4 空格 */
+  const expected = `
+.z-\\[1996\\] {
+    z-index: 1996
+}
+.flex {
+    display: flex
+}
+`
+  postcss([
+    require('tailwindcss')({
+      content: [{ raw: `flex z-[1996]` }],
+      presets: [require('../lib/index')]
+    })
+  ])
+    /* @tailwind utilities 是 tailwindcss 的语法 */
+    .process('@tailwind utilities', { from: undefined })
+    .then(({ css }) => {
+      expect(css).toBe(expected.trim())
+    })
+})
+```
+
+> 运行测试
+
+```sh
+pnpm test
+```
