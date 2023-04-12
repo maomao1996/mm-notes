@@ -427,41 +427,6 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '站点生成器',
-    items: [
-      {
-        icon: 'https://astro.build/favicon.svg',
-        title: 'Astro',
-        desc: '一个现代化的轻量级静态站点生成器',
-        link: 'https://astro.build'
-      },
-      {
-        icon: 'https://cn.vuejs.org/logo.svg',
-        title: 'VitePress',
-        desc: '由 Vite 和 Vue 驱动的静态网站生成器',
-        link: 'https://vitepress.dev'
-      },
-      {
-        icon: 'https://cn.vuejs.org/logo.svg',
-        title: 'VuePress',
-        desc: 'Vue 驱动的静态网站生成器',
-        link: 'https://vuepress.vuejs.org/zh'
-      },
-      {
-        icon: 'https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png',
-        title: 'dumi',
-        desc: '基于 Umi 为组件研发而生的静态站点框架',
-        link: 'https://d.umijs.org'
-      },
-      {
-        icon: 'https://docusaurus.io/zh-CN/img/docusaurus.ico',
-        title: 'Docusaurus',
-        desc: '基于 React 的静态网站生成器',
-        link: 'https://docusaurus.io/zh-CN'
-      }
-    ]
-  },
-  {
     title: '图标库',
     items: [
       {
@@ -477,10 +442,28 @@ export const NAV_DATA: NavData[] = [
         link: 'https://iconpark.oceanengine.com/official'
       },
       {
+        icon: 'https://icones.js.org/favicon.svg',
+        title: 'Icônes',
+        desc: '基于 Iconify 的图标浏览器',
+        link: 'https://icones.js.org'
+      },
+      {
         icon: 'https://emoji.muan.co/appicon.png',
         title: 'Emoji searcher',
-        desc: 'Emoji 表情大全',
-        link: ''
+        desc: 'emoji 表情大全',
+        link: 'https://emoji.muan.co'
+      },
+      {
+        icon: 'https://www.webfx.com/wp-content/uploads/2021/10/favicon.png',
+        title: 'Emoji Cheat Sheet',
+        desc: '可以在 GitHub 中使用的 emoji 表情',
+        link: 'https://www.webfx.com/tools/emoji-cheat-sheet'
+      },
+      {
+        icon: 'https://gitmoji.dev/static/apple-icon-144x144.png',
+        title: 'gitmoji',
+        desc: '可以在 git 中使用的 emoji 表情',
+        link: 'https://gitmoji.dev'
       }
     ]
   },
@@ -554,6 +537,67 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
         desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
         link: 'https://juejin.cn'
+      }
+    ]
+  },
+  {
+    title: '高质量周刊与博客',
+    items: [
+      {
+        badge: '周一更新',
+        icon: '/icons/frontender-ua.png',
+        title: 'Frontend Weekly',
+        desc: '前端周刊',
+        link: 'https://frontender-ua.medium.com'
+      },
+      {
+        badge: '周五更新',
+        icon: '/icons/ruanyifeng.jpeg',
+        title: '科技爱好者周刊',
+        desc: '阮一峰的科技爱好者周刊',
+        link: 'https://www.ruanyifeng.com/blog/archives.html'
+      },
+      {
+        badge: '周五更新',
+        icon: 'https://s0.ssl.qhres2.com/static/3444fd94a3c31e92.ico',
+        title: '奇舞周刊',
+        desc: '领略前端技术 阅读奇舞周刊（360 前端团队）',
+        link: 'https://weekly.75.team'
+      },
+      {
+        badge: '周一更新',
+        icon: 'https://img.alicdn.com/imgextra/i3/O1CN01uKTVpD1UK8BCxFBwo_!!6000000002498-2-tps-500-500.png',
+        title: 'MDH Weekly',
+        desc: '云谦的前端周刊',
+        link: 'https://mdhweekly.com/weekly'
+      },
+      {
+        icon: 'https://overreacted.io/icons/icon-96x96.png?v=8c19a894ebc3f54d282a8f2418cf5398',
+        title: 'Overreacted',
+        desc: 'Dan Abramov 的个人博客',
+        link: 'https://overreacted.io/zh-hans'
+      },
+      {
+        icon: 'https://xiaolincoding.com/logo.webp',
+        title: '小林coding',
+        desc: '小林 x 图解计算机基础（计算机网络、操作系统、计算机组成、数据库）',
+        link: 'https://xiaolincoding.com'
+      },
+      {
+        icon: 'https://cdn.zhangxinxu.com/zxx_ico.png',
+        title: '鑫空间-鑫生活',
+        desc: '张鑫旭的个人博客',
+        link: 'https://www.zhangxinxu.com/wordpress'
+      },
+      {
+        title: '前端精读周刊',
+        desc: '帮你理解最前沿、实用的技术',
+        link: 'https://github.com/ascoders/weekly'
+      },
+      {
+        title: '冴羽博客',
+        desc: '四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列',
+        link: 'https://github.com/mqyqingfeng/Blog'
       }
     ]
   },
