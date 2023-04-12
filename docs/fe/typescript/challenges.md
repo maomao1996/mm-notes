@@ -709,3 +709,68 @@ type MyUncapitalize<S extends string> = S extends `${infer L}${infer R}` ? `${Lo
 ```
 
 - 通过 `infer` 获取字符串的首字母和剩余部分，然后调用内置的工具函数 `Uppercase` 或 `Lowercase` 实现首字母的大小写转换
+
+### `Replace` 替换
+
+`Replace<S, From, To>` 将字符串 `S` 中的 `From` 替换为 `To`
+
+```ts
+type result = Replace<'types are fun!', 'fun', 'awesome'>
+// 结果：'types are awesome!'
+```
+
+**实现**:
+
+```ts
+type Replace<S extends string, From extends string, To extends string> = From extends ''
+  ? S
+  : S extends `${infer L}${From}${infer R}`
+  ? `${L}${To}${R}`
+  : S
+```
+
+- `From extends ''` 表示 `From` 为空字符串时
+- 通过 `infer` 获取字符串的前缀、后缀和 `From` 的位置，然后拼接字符串
+
+### `ReplaceAll` 替换所有
+
+`ReplaceAll<S, From, To>` 将字符串 `S` 中的所有 `From` 替换为 `To`
+
+```ts
+type result = ReplaceAll<'t y p e s', ' ', ''>
+// 结果：'types'
+```
+
+**实现**:
+
+```ts
+type ReplaceAll<S extends string, From extends string, To extends string> = From extends ''
+  ? S
+  : S extends `${infer L}${From}${infer R}`
+  ? `${L}${To}${ReplaceAll<R, From, To>}`
+  : S
+```
+
+- 在 `Replace` 的基础上，递归调用 `ReplaceAll` 实现替换所有
+- `L` 不需要递归调用，因为 `L` 是前缀，不会包含 `From`
+
+### `AppendArgument` 追加参数
+
+`AppendArgument<Fn, A>` 将类型 `A` 追加到函数 `Fn` 的参数列表中
+
+```ts
+type Fn = (a: number, b: string) => number
+
+type result = AppendArgument<Fn, boolean>
+// 结果：(a: number, b: string, x: boolean) => number
+```
+
+**实现**:
+
+```ts
+type AppendArgument<Fn, A> = Fn extends (...args: infer Args) => infer T
+  ? (...args: [...Args, A]) => T
+  : never
+```
+
+- 通过 `infer` 获取函数的参数列表和返回值类型，然后将 `A` 追加到参数列表中，最后返回一个新的函数类型
