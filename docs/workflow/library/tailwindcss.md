@@ -199,7 +199,7 @@ module.exports = {
 
 ::: tip
 
-为了方便使用，已发布到 [npm](https://www.npmjs.com/package/@femm/prettier)
+为了方便使用，已发布到 [npm](https://www.npmjs.com/package/@femm/tailwind-config)
 
 > 安装依赖
 
@@ -218,7 +218,8 @@ module.exports = {
 
 :::
 
-[Presets | Tailwind CSS 文档](https://tailwindcss.com/docs/presets)
+- [Presets | Tailwind CSS 文档](https://tailwindcss.com/docs/presets)
+- [@femm/tailwind-config | GitHub](https://github.com/maomao1996/femm/tree/main/packages/tailwind-config)
 
 ## 如何测试 `tailwindcss` 的样式
 
