@@ -2,7 +2,7 @@
 
 > 一些自己常用 `shell` 命令的学习笔记
 
-## echo
+## `echo` 输出
 
 用于字符串的输出
 
@@ -97,3 +97,82 @@ echo -e "\033[30;37;4m 黑底白字带下划线 \033[0m"
 - `\033[u` 恢复光标位置
 - `\033[?25l` 隐藏光标
 - `\033[?25h` 显示光标
+
+## `cp` 复制
+
+用于复制文件或目录
+
+> 语法格式
+
+- `cp [options] source_file target_file`
+- `cp [options] source_file ... target_directory`
+
+```sh
+# 复制单个文件到指定目录
+cp test.txt ./test
+
+# 复制单个文件到指定目录并重命名
+cp test.txt ./test/test1.txt
+
+# 复制多个文件到指定目录
+cp test1.txt test2.txt ./test
+
+# 复制目录到指定目录
+cp -r ./test ./test1
+
+# 复制目录到指定目录并重命名
+cp -r ./test ./test1/test2
+```
+
+::: warning
+复制目录时必须使用 `-r` 参数，否则会报错
+:::
+
+**常用参数说明**：
+
+- `-r` 递归复制目录
+- `-i` 覆盖前提示
+- `-f` 强制覆盖已存在的文件
+- `-p` 保留文件的属性（权限、时间戳等）
+- `-a` 递归复制目录，并保留文件属性（相当于同时使用 `-p` 和 `-r`）
+- `-v` 显示详细的复制过程
+
+## `mv` 移动
+
+用于移动文件或目录
+
+> 语法格式
+
+- `mv [options] source target`
+- `mv [options] source... directory`
+
+```sh
+# 移动单个文件到指定目录
+mv test.txt ./test
+
+# 移动单个文件到指定目录并重命名
+mv test.txt ./test/test1.txt
+
+# 移动多个文件到指定目录
+mv test1.txt test2.txt ./test
+
+# 移动目录到指定目录
+mv ./test ./test1
+```
+
+::: tip
+
+- 当 `source` 为文件时，`target` 可以为文件或目录
+- 当 `source` 为目录时，`target` 必须为目录
+- 当 `target` 为目录时，`source` 会被移动到 `target` 目录下
+- 当 `target` 已存在时，`source` 会覆盖 `target` 文件或目录
+- 当 `target` 不存在时，`source` 会被重命名为 `target` 文件或目录
+
+:::
+
+**常用参数说明**：
+
+- `-f` 强制移动文件或目录
+- `-i` 覆盖前提示
+- `-n` 不覆盖已存在的文件
+- `-v` 显示详细的移动过程
