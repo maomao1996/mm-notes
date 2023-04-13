@@ -42,7 +42,10 @@ jobs:
 
       # 打包静态文件
       - name: Build
-        run: pnpm install && npm run build:github
+        run: pnpm install && pnpm run build:github
+
+      - name: Copy files
+        run: cp README.md ./dist/
 
       # 部署
       - name: Deploy
