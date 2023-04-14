@@ -152,6 +152,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       // collapsed: false,
       items: [
         { text: 'npm 踩坑记录', link: '/pit/npm' },
+        { text: '第三方库踩坑记录', link: '/pit/library' },
         { text: 'PC 踩坑记录', link: '/pit/pc' },
         { text: 'H5 踩坑记录', link: '/pit/h5' }
       ]
