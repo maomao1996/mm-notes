@@ -774,3 +774,68 @@ type AppendArgument<Fn, A> = Fn extends (...args: infer Args) => infer T
 ```
 
 - 通过 `infer` 获取函数的参数列表和返回值类型，然后将 `A` 追加到参数列表中，最后返回一个新的函数类型
+
+### `Permutation` 全排列
+
+`Permutation` 可以将联合类型中的每一个类型进行排列组合
+
+```ts
+type result = Permutation<'A' | 'B' | 'C'>
+// 结果：['A', 'B', 'C'] | ['A', 'C', 'B'] | ['B', 'A', 'C'] | ['B', 'C', 'A'] | ['C', 'A', 'B'] | ['C', 'B', 'A']
+```
+
+**实现**:
+
+```ts
+type Permutation<T, K = T> = [T] extends [never]
+  ? []
+  : T extends T
+  ? [T, ...Permutation<Exclude<K, T>>]
+  : never
+```
+
+- `[T] extends [never]` 用于判断联合类型是否已经遍历完毕（遍历完毕时返回空数组）
+- `T extends T` 利用分部条件类型的特性，将 `T` 作为 `true` 条件分支，`never` 作为 `false` 条件分支
+- `[T, ...Permutation<Exclude<K, T>>]` 将 `T` 放在数组的第一位，然后递归调用 `Permutation`，将 `T` 从 `K` 中移除
+
+### `LengthOfString` 字符串长度
+
+`LengthOfString<S>` 用于计算字符串的长度
+
+```ts
+type result = LengthOfString<'maomao'>
+// 结果：6
+```
+
+**实现**:
+
+```ts
+type LengthOfString<S extends string, T extends string[] = []> = S extends `${infer Char}${infer R}`
+  ? LengthOfString<R, [...T, Char]>
+  : T['length']
+```
+
+- 通过一个数组 `T` 来计算字符串的长度，通过条件判断进行递归调用，最后返回 `T` 的长度（即字符串的长度）
+  - `T extends string[] = []` 用于记录字符串的每一个字符
+  - `S extends ${infer Char}${infer R}` 通过 `infer` 获取字符串的首字符和剩余部分
+  - `T['length']` 通过索引类型获取数组的长度
+
+```ts
+// 第一次调用
+type result1 = LengthOfString<'maomao', []> // T = []
+
+// 第二次调用
+type result2 = LengthOfString<'aomao', ['m']> // T = ['m']
+
+// 第三次调用
+type result3 = LengthOfString<'omao', ['m', 'a']> // T = ['m', 'a']
+
+// 第四次调用
+type result4 = LengthOfString<'mao', ['m', 'a', 'o']> // T = ['m', 'a', 'o']
+
+// 第五次调用
+type result5 = LengthOfString<'ao', ['m', 'a', 'o', 'm']> // T = ['m', 'a', 'o', 'm']
+
+// 第六次调用
+type result6 = LengthOfString<'o', ['m', 'a', 'o', 'm', 'a']> // T = ['m', 'a', 'o', 'm', 'a']
+```
