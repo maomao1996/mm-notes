@@ -839,3 +839,63 @@ type result5 = LengthOfString<'ao', ['m', 'a', 'o', 'm']> // T = ['m', 'a', 'o',
 // 第六次调用
 type result6 = LengthOfString<'o', ['m', 'a', 'o', 'm', 'a']> // T = ['m', 'a', 'o', 'm', 'a']
 ```
+
+### `Flatten` 数组扁平化
+
+`Flatten<T>` 用于将多维数组扁平化为一维数组
+
+```ts
+type result = Flatten<[1, 2, [3, 4], [[[5]]]]>
+// 结果：[1, 2, 3, 4, 5]
+```
+
+**实现**:
+
+```ts
+type Flatten<T extends any[]> = T extends [infer L, ...infer R]
+  ? L extends any[]
+    ? [...Flatten<L>, ...Flatten<R>]
+    : [L, ...Flatten<R>]
+  : []
+```
+
+- 遍历数组的每一项并判断其是否为数组，如果是数组则递归调用 `Flatten`，否则直接返回
+
+### `AppendToObject` 给对象追加属性
+
+`AppendToObject` 可以给对象（接口）追加一个新的属性
+
+```ts
+type result = AppendToObject<{ id: number }, 'name', 'maomao'>
+// 结果：{ id: number; name: 'maomao' }
+```
+
+**实现**:
+
+```ts
+type AppendToObject<T, K extends keyof any, V> = {
+  [P in keyof T | K]: P extends keyof T ? T[P] : V
+}
+```
+
+- `K extends keyof any` 用于将 `K` 限制为 `string | number | symbol` 中的一种
+- `keyof T | K` 将 `T` 的所有属性和 `K` 合并为一个联合类型
+- 再通过条件判断，如果 `P` 是 `T` 的属性，则返回 `T[P]`，否则返回 `V`
+
+### `Absolute` 绝对值
+
+`Absolute` 可以获取一个数值的绝对值（返回值类型为 `string`）
+
+```ts
+type result = Absolute<-1996>
+// 结果：'1996'
+```
+
+**实现**:
+
+```ts
+type Absolute<T extends number | string | bigint> = `${T}` extends `-${infer R}` ? R : `${T}`
+```
+
+- 通过条件判断，如果 `T` 是负数，则返回其绝对值，否则直接返回
+- 通过 \``${T}`\` 将`T` 转换为字符串类型
