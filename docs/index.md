@@ -15,6 +15,8 @@ hero:
     - text: 前端导航
       link: /nav
       theme: alt
+    - text: 日常笔记
+      link: /daily-notes/
     - text: mmPlayer
       link: https://netease-music.fe-mm.com
       theme: alt

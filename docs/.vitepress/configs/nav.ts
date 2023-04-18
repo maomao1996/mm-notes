@@ -60,6 +60,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/workflow'
   },
+  { text: '日常笔记', link: '/daily-notes/', activeMatch: '^/daily-notes' },
   { text: '踩坑记录', link: '/pit/npm', activeMatch: '^/pit' },
   {
     text: '提效工具',
@@ -84,10 +85,6 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '茂茂',
     items: [
       { text: '个人主页', link: 'https://fe-mm.com' },
-      {
-        text: '日常笔记',
-        link: 'https://github.com/maomao1996/daily-notes'
-      },
       { text: 'mmPlayer', link: 'https://netease-music.fe-mm.com' },
       {
         text: '油猴脚本',

@@ -16,3 +16,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# User-specific files
+docs/daily-notes
+scripts/daily-notes.json
