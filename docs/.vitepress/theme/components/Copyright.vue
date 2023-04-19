@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { inject, Ref, computed } from 'vue'
 import { useRoute } from 'vitepress'
+import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar'
 
 const DEV = inject('DEV') as Ref<boolean>
 const route = useRoute()
+const { hasSidebar } = useSidebar()
 
 const pageId = computed(() => route.path.replace('/mm-notes', ''))
 </script>
 
 <template>
-  <div class="copyright">
+  <div v-show="hasSidebar" class="copyright">
     <img
       v-if="!DEV"
       class="visitor"
