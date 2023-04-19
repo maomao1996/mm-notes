@@ -899,3 +899,73 @@ type Absolute<T extends number | string | bigint> = `${T}` extends `-${infer R}`
 
 - 通过条件判断，如果 `T` 是负数，则返回其绝对值，否则直接返回
 - 通过 \``${T}`\` 将`T` 转换为字符串类型
+
+### `StringToUnion` 字符串转联合类型
+
+`StringToUnion<T>` 可以将字符串转换为联合类型
+
+```ts
+type result = StringToUnion<'mao'>
+// 结果：'m' | 'a' | 'o'
+```
+
+**实现**:
+
+```ts
+type StringToUnion<T extends string> = T extends `${infer L}${infer R}`
+  ? L | StringToUnion<R>
+  : never
+```
+
+- 通过条件判断：如果 `T` 不是空字符串，则将 `T` 的首字符和剩余部分分别赋值给 `L` 和 `R`，然后递归调用 `StringToUnion`，否则返回 `never`
+
+### `Merge` 合并对象
+
+`Merge<F, S>` 可以将两个对象合并为一个对象，如果有相同的属性，则使用第二个对象的属性
+
+```ts
+type result = Merge<
+  {
+    name: string
+    age: string
+  },
+  {
+    age: number
+    sex: string
+  }
+>
+// 结果：{ name: string; age: number; sex: string }
+```
+
+**实现**:
+
+```ts
+type Merge<F, S> = {
+  [P in keyof F | keyof S]: P extends keyof S ? S[P] : P extends keyof F ? F[P] : never
+}
+```
+
+- `keyof F | keyof S` 将 `F` 和 `S` 的所有属性合并为一个联合类型
+- 先判断 P 是否是 `S` 的属性，再判断 P 是否是 `F` 的属性
+
+### `KebabCase` 驼峰转短横线
+
+`KebabCase<S>` 可以将驼峰形式的字符串转换为短横线形式（即 `camelCase` or `PascalCase` 转换为 `kebab-case`）
+
+```ts
+type result = KebabCase<'FooBarBaz'>
+// 结果：'foo-bar-baz'
+```
+
+**实现**:
+
+```ts
+type KebabCase<S extends string> = S extends `${infer L}${infer R}`
+  ? R extends Uncapitalize<R>
+    ? `${Uncapitalize<L>}${KebabCase<R>}`
+    : `${Uncapitalize<L>}-${KebabCase<R>}`
+  : S
+```
+
+- 先通过 `infer` 获取字符串的首字符和剩余部分
+- 通过条件判断，如果剩余部分是小写，则直接拼接，否则在首字符后面拼接 `-` 再拼接剩余部分，同时对剩余部分递归调用 `KebabCase`
