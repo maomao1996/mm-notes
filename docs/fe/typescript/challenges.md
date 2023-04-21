@@ -969,3 +969,53 @@ type KebabCase<S extends string> = S extends `${infer L}${infer R}`
 
 - 先通过 `infer` 获取字符串的首字符和剩余部分
 - 通过条件判断，如果剩余部分是小写，则直接拼接，否则在首字符后面拼接 `-` 再拼接剩余部分，同时对剩余部分递归调用 `KebabCase`
+
+### `Diff` 获取两个类型的差异属性
+
+`Diff<O1, O2>` 可以获取两个接口类型中的差异属性
+
+```ts
+type Foo = {
+  a: string
+  b: number
+}
+type Bar = {
+  a: string
+  c: boolean
+}
+type result = Diff<Foo, Bar>
+// 结果：{ b: number, c: boolean }
+```
+
+**实现**:
+
+```ts
+type Diff<O1, O2> = Omit<O1 & O2, keyof O1 & keyof O2>
+```
+
+先获取 `O1` 和 `O2` 的共有属性，然后再从 `O1 & O2` 中移除这些共有属性
+
+- `O1 & O2` 将 `O1` 和 `O2` 合并为一个类型
+- `keyof O1 & keyof O2` 获取 `O1` 和 `O2` 共有的属性名称并组成一个联合类型
+
+### `AnyOf` 数组元素真值判断
+
+`AnyOf<T>` 可以判断数组中是否有元素为真值
+
+```ts
+type result1 = AnyOf<[1, '', false, [], {}]>
+// 结果：true
+
+type result2 = AnyOf<[0, '', false, [], {}]>
+// 结果：false
+```
+
+**实现**:
+
+```ts
+type False = 0 | '' | false | undefined | null | [] | { [key: string]: never }
+type AnyOf<T extends readonly any[]> = T[number] extends False ? false : true
+```
+
+- `False` 是一个假值类型，包含了 `0`、`''`、`false`、`undefined`、`null`、`[]`、`{}` 等
+- 再通过 `T[number]` 索引迭代，判断数组中的每个元素是否是假值类型
