@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@femm/prettier': ^1.0.1
+  '@femm/prettier': ^1.0.2
   '@mdit-vue/shared': ^0.12.0
   '@octokit/rest': ^19.0.7
   '@types/fs-extra': ^11.0.1
@@ -17,7 +17,7 @@ specifiers:
   vue: ^3.2.47
 
 devDependencies:
-  '@femm/prettier': 1.0.1
+  '@femm/prettier': 1.0.2
   '@mdit-vue/shared': 0.12.0
   '@octokit/rest': 19.0.7
   '@types/fs-extra': 11.0.1
@@ -408,8 +408,8 @@ packages:
     dev: true
     optional: true
 
-  /@femm/prettier/1.0.1:
-    resolution: {integrity: sha512-i/Hs3nYhOWaI7Ra0nCoCVSEIrbg1EfibnzBPR1M8G8OyYK4VMIhyjJMDs00qEaqHHYnqssYhve7MZCK4oPVTnw==}
+  /@femm/prettier/1.0.2:
+    resolution: {integrity: sha512-Hm+Hd777yvvwVxrQxKk3+lg5J5DNqPB9MSIdORdneb5uJOknzjmq9iQcdOycAT0BZ48NDdfdkBb9ObxZIKF5Gg==}
     dev: true
 
   /@mdit-vue/shared/0.12.0:
