@@ -233,7 +233,7 @@ module.exports = {
 ```sh
 pnpm add -D jest postcss tailwindcss
 # 配置脚本
-npm pkg set scripts.jest='jest'
+npm pkg set scripts.test='jest'
 ```
 
 ::: warning
@@ -274,3 +274,5 @@ it('tailwindcss presets config', () => {
 ```sh
 pnpm test
 ```
+
+- [@femm/tailwind-config/tests | GitHub](https://github.com/maomao1996/femm/tree/main/packages/tailwind-config/tests)
