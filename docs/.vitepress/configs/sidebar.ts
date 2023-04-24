@@ -26,6 +26,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       collapsed: false,
       items: [
         { text: '基础知识', link: '/fe/typescript/base' },
+        { text: '编译配置', link: '/fe/typescript/tsconfig' },
         { text: '类型体操', link: '/fe/typescript/challenges' }
       ],
       link: '/fe/typescript/base'
