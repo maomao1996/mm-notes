@@ -45,17 +45,26 @@ description: '茂茂的 WebStorm 配置，记录扩展插件、使用小技巧'
 
 ## 插件市场
 
-- [官方](https://plugins.jetbrains.com/)
+- [Plugins | JetBrains](https://plugins.jetbrains.com/)
 
-## 保存格式化
+## 配置 Prettier 保存格式化
+
+**新版本**：
+
+1. 进入 `WebStorm - Settings - 框架和语言 - JavaScript - Prettier`
+2. 勾选 `执行“重新格式化代码”操作时(R)` 和 `保存时(S)`
+3. 进入 `WebStorm - Settings - 工具 - 保存时的操作`
+4. 勾选 `重新格式化代码` 和 `运行 Prettier`
+
+**老版本可使用 File Watchers 方案**：
 
 1. 进入 `文件 - 设置 - 工具 - File Watchers`
 2. 点击 `+` 选择 `Prettier`
 3. 将 `File type` 修改为你需要的文件类型，通用可选 `Any`
 
-## webpack 项目识别 alias
+## `webpack` 项目识别 `alias`
 
 1. 进入 `文件 - 设置 - 框架和语言 - JavaScript - Webpack`
-2. 将 webpack 配置文件地址修改为对应地址
-   1. vue-cli2: 项目地址 + `\build\webpack.base.conf.js`
-   2. vue-cli3: 项目地址 + `\node_modules\@vue\cli-service\webpack.config.js`
+2. 将 `webpack` 配置文件地址修改为对应地址
+   1. `vue-cli2`: 项目地址 + `\build\webpack.base.conf.js`
+   2. `vue-cli3`: 项目地址 + `\node_modules\@vue\cli-service\webpack.config.js`
