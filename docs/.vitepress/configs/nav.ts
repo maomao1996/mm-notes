@@ -83,13 +83,6 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   {
     text: '茂茂',
-    items: [
-      { text: '个人主页', link: 'https://fe-mm.com' },
-      { text: 'mmPlayer', link: 'https://netease-music.fe-mm.com' },
-      {
-        text: '油猴脚本',
-        link: 'https://github.com/maomao1996/tampermonkey-scripts'
-      }
-    ]
+    link: '/mao'
   }
 ]
