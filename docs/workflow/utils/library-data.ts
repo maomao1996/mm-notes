@@ -43,6 +43,11 @@ export const DATA: NavData[] = [
         title: 'lunar-javascript',
         desc: '支持阳历、阴历、佛历和道历的日历工具库',
         link: 'https://github.com/6tail/lunar-javascript'
+      },
+      {
+        title: 'calendar.js',
+        desc: '中国农历（阴阳历）和西元阳历即公历互转',
+        link: 'https://github.com/jjonline/calendar.js'
       }
     ]
   },
@@ -51,8 +56,14 @@ export const DATA: NavData[] = [
     items: [
       {
         title: 'axios',
-        desc: '基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中',
+        desc: '基于 promise 的 HTTP 库，可以用在浏览器和 Node.js 中',
         link: 'https://github.com/axios/axios'
+      },
+      {
+        badge: 'node',
+        title: 'got',
+        desc: '一个人性化且功能强大的 Node.js HTTP 请求库',
+        link: 'https://github.com/sindresorhus/got'
       }
     ]
   },
@@ -558,13 +569,54 @@ export const DATA: NavData[] = [
     items: [
       {
         title: 'chalk',
-        desc: '修改控制台内容输出的样式',
+        desc: '美化终端输出的文本样式',
         link: 'https://github.com/chalk/chalk'
+      },
+      {
+        title: 'picocolors',
+        desc: '美化终端输出的文本样式（更轻量）',
+        link: 'https://github.com/alexeyraspopov/picocolors'
       },
       {
         title: 'ora',
         desc: '命令行 loading 效果',
         link: 'https://github.com/sindresorhus/ora'
+      }
+    ]
+  },
+  {
+    title: '站点生成器',
+    noIcon: false,
+    items: [
+      {
+        icon: 'https://astro.build/favicon.svg',
+        title: 'Astro',
+        desc: '一个现代化的轻量级静态站点生成器',
+        link: 'https://astro.build'
+      },
+      {
+        icon: 'https://cn.vuejs.org/logo.svg',
+        title: 'VitePress',
+        desc: '由 Vite 和 Vue 驱动的静态网站生成器',
+        link: 'https://vitepress.dev'
+      },
+      {
+        icon: 'https://cn.vuejs.org/logo.svg',
+        title: 'VuePress',
+        desc: 'Vue 驱动的静态网站生成器',
+        link: 'https://vuepress.vuejs.org/zh'
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png',
+        title: 'dumi',
+        desc: '基于 Umi 为组件研发而生的静态站点框架',
+        link: 'https://d.umijs.org'
+      },
+      {
+        icon: 'https://docusaurus.io/zh-CN/img/docusaurus.ico',
+        title: 'Docusaurus',
+        desc: '基于 React 的静态网站生成器',
+        link: 'https://docusaurus.io/zh-CN'
       }
     ]
   }
