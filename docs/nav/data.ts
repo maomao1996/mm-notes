@@ -33,6 +33,12 @@ export const NAV_DATA: NavData[] = [
         title: 'Json 中文网',
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn'
+      },
+      {
+        icon: 'https://transform.tools/static/favicon.png',
+        title: 'transform',
+        desc: '一个支持多语言的在线转换器',
+        link: 'https://transform.tools/json-schema-to-typescript'
       }
     ]
   },
@@ -40,23 +46,38 @@ export const NAV_DATA: NavData[] = [
     title: 'AI 导航',
     items: [
       {
+        badge: '对话',
         icon: '/icons/chatgpt.png',
         title: 'ChatGPT（最强）',
         link: 'https://chat.openai.com/chat'
       },
       {
+        icon: '/icons/chatgpt.png',
+        title: 'ChatGPT 镜像站点列表',
+        link: 'https://github.com/xx025/carrot'
+      },
+      {
+        badge: '笔记',
         icon: 'https://www.notion.so/images/logo-ios.png',
-        title: 'Notion AI（笔记）',
+        title: 'Notion AI',
         link: 'https://www.notion.so'
       },
       {
+        badge: '绘画',
         icon: 'https://www.midjourney.com/apple-touch-icon.png',
-        title: 'Midjourney（绘画）',
+        title: 'Midjourney',
         link: 'https://www.midjourney.com'
       },
       {
+        badge: '绘画',
+        icon: 'https://stablediffusionweb.com/favicon.ico',
+        title: 'Stable Diffusion',
+        link: 'https://stablediffusionweb.com'
+      },
+      {
+        badge: 'PPT',
         icon: 'https://global-uploads.webflow.com/59deb588800ae30001ec19c9/5d4891e0e260e3c1bc37b100_beautiful%20ai%20favicon%20%20blue%20square.png',
-        title: 'Beautiful.ai（PPT）',
+        title: 'Beautiful.ai',
         link: 'https://www.beautiful.ai'
       }
     ]
@@ -582,6 +603,12 @@ export const NAV_DATA: NavData[] = [
         title: '小林coding',
         desc: '小林 x 图解计算机基础（计算机网络、操作系统、计算机组成、数据库）',
         link: 'https://xiaolincoding.com'
+      },
+      {
+        icon: 'https://antfu.me/favicon.svg',
+        title: 'Blog - Anthony Fu',
+        desc: 'Vue, Vite, Nuxt 核心团队成员 | VueUse, Slidev, Vitest, UnoCSS 作者',
+        link: 'https://antfu.me/posts'
       },
       {
         icon: 'https://cdn.zhangxinxu.com/zxx_ico.png',

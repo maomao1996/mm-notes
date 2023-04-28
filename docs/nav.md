@@ -11,4 +11,10 @@ import { NAV_DATA } from './nav/data'
 
 # 前端导航
 
+::: details 本站其他导航
+
+- [前端开发常用工具库](/workflow/utils/library) 个人使用过或遇到的类库
+- [在线工具](/efficiency/online-tools) 一些实用的在线工具，免去下载软件的烦恼
+
+:::
 <MNavLinks v-for="item in NAV_DATA" v-bind="item"/>
