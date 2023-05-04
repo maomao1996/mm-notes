@@ -1019,3 +1019,97 @@ type AnyOf<T extends readonly any[]> = T[number] extends False ? false : true
 
 - `False` 是一个假值类型，包含了 `0`、`''`、`false`、`undefined`、`null`、`[]`、`{}` 等
 - 再通过 `T[number]` 索引迭代，判断数组中的每个元素是否是假值类型
+
+### `IsNever` 是否是 Never 类型
+
+`IsNever<T>` 可以判断 `T` 是否是 `never` 类型
+
+```ts
+type result1 = IsNever<never>
+// 结果：true
+
+type result2 = IsNever<undefined>
+// 结果：false
+
+type result3 = IsNever<null>
+// 结果：false
+```
+
+**实现**:
+
+```ts
+type IsNever<T> = [T] extends [never] ? true : false
+```
+
+- `[T] extends [never]` 可以判断 `T` 是否是 `never` 类型
+
+### `IsUnion` 是否是联合类型
+
+`IsUnion<T>` 可以判断 `T` 是否是联合类型
+
+```ts
+type result1 = IsUnion<string | number>
+// 结果：true
+
+type result2 = IsUnion<string>
+// 结果：false
+```
+
+**实现**:
+
+```ts
+type IsUnion<T, C = T> = (T extends T ? (C extends T ? true : unknown) : never) extends true
+  ? false
+  : true
+```
+
+- `T extends T ? (C extends T ? true : unknown) : never` 可以判断 `T` 是否是联合类型
+  - `T extends T` 应用[分布式条件类型](/fe/typescript/base#分布式条件类型)对 `T` 进行子类型分发
+  - `C extends T` 判断 `C` 是否是 `T` 的子类型
+
+```ts
+/* 案例一 */
+type T = string | number
+// 执行 T extends T
+string | number extends string | number
+string extends string | number // true 走 C extends T 逻辑
+
+// 执行 C extends T
+string | number extends string // unknown
+string | number extends number // unknown
+
+unknown extends true // false
+
+/* 案例二 */
+type T = string
+// 执行 T extends T
+string extends string // true 走 C extends T 逻辑
+
+// 执行 C extends T
+string extends string // true
+
+true extends true // true
+```
+
+### `ReplaceKeys` 类型替换
+
+`ReplaceKeys<U, T, Y>` 可以将类型 `U` 中已经存在的类型 `T` 替换为类型 `Y`
+
+```ts
+type result1 = ReplaceKeys<{ id: number; name: string }, 'name', { name: boolean }>
+// 结果：{ id: number; name: boolean }
+
+type result2 = ReplaceKeys<{ id: number; name: string }, 'age', { age: number }>
+// 结果：{ id: number; name: string }
+```
+
+**实现**:
+
+```ts
+type ReplaceKeys<U, T, Y> = {
+  [P in keyof U]: P extends T ? (P extends keyof Y ? Y[P] : never) : U[P]
+}
+```
+
+- `[P in keyof U]` 遍历 `U` 的所有属性
+- 判断 `P` 是否是 `T`，如果是则判断 `P` 是否是 `Y` 的属性，如果是则返回 `Y[P]`，否则返回 `never`，如果不是则返回 `U[P]`
