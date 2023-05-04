@@ -1,5 +1,9 @@
 # CSS 语法相关
 
+## CSS 语法规则
+
+![CSS 语法规则](./images/syntax.svg)
+
 ## 滚动条样式
 
 ```css
@@ -38,4 +42,4 @@
 }
 ```
 
-[MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::-webkit-scrollbar)
+[::-webkit-scrollbar | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::-webkit-scrollbar)
