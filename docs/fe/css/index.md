@@ -32,6 +32,10 @@
   - 其中 **`width` = `content` + `border` + `padding`**
   - **通过 `box-sizing: border-box;` 来设置为 `IE` 盒模型**
 
+|               `W3C` 标准盒模型                |               `IE` 盒模型               |
+| :-------------------------------------------: | :-------------------------------------: |
+| ![W3C 标准盒模型](./images/box-model-w3c.png) | ![IE 盒模型](./images/box-model-ie.png) |
+
 ## 什么是 `BFC` ？
 
 > 先了解一些前置知识：格式化上下文（Formatting Context）
