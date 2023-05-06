@@ -1113,3 +1113,62 @@ type ReplaceKeys<U, T, Y> = {
 
 - `[P in keyof U]` 遍历 `U` 的所有属性
 - 判断 `P` 是否是 `T`，如果是则判断 `P` 是否是 `Y` 的属性，如果是则返回 `Y[P]`，否则返回 `never`，如果不是则返回 `U[P]`
+
+### `RemoveIndexSignature` 移除索引签名
+
+`RemoveIndexSignature<T>` 可以移除类型 `T` 中的索引签名
+
+```ts
+type result = RemoveIndexSignature<{ [key: string]: any; foo(): void }>
+// 结果：{ foo(): void }
+```
+
+**实现**:
+
+```ts
+type RemoveIndexSignature<T> = {
+  [K in keyof T as string extends K
+    ? never
+    : number extends K
+    ? never
+    : symbol extends K
+    ? never
+    : K]: T[K]
+}
+```
+
+- 索引签名为 `string`、`number`、`symbol`，所以可以通过 `string extends K`、`number extends K`、`symbol extends K` 来判断是否是索引签名
+- `as` 关键字可以用来重命名属性名称，这里将索引签名的属性名称重命名为 `never`，这样就可以移除索引签名
+
+### `PercentageParser` 百分比解析
+
+`PercentageParser<A>` 可以将百分比字符串解析为数组
+
+```ts
+type result1 = PercentageParser<'+100%'>
+// 结果：['+', '100', '%']
+
+type result2 = PercentageParser<'-100'>
+// 结果：['-', '100', '']
+
+type result3 = PercentageParser<'100%'>
+// 结果：['', '100', '%']
+
+type result4 = PercentageParser<'100'>
+// 结果：['', '100', '']
+```
+
+**实现**:
+
+```ts
+type CheckPrefix<T extends string> = T extends '+' | '-' ? T : never
+type CheckSuffix<T extends string> = T extends `${infer L}%` ? [L, '%'] : [T, '']
+type PercentageParser<A extends string> = A extends `${CheckPrefix<infer L>}${infer R}`
+  ? [L, ...CheckSuffix<R>]
+  : ['', ...CheckSuffix<A>]
+```
+
+- `CheckPrefix` 用来判断是否有 `+` 或 `-` 前缀，如果不存在则返回 `never` 表示没有符号
+- `CheckSuffix` 用来判断是否有 `%` 后缀
+  - 存在 `%` 时返回的数组最后一个元素是 `%`
+  - 不存在 `%` 时返回的数组最后一个元素是空字符串
