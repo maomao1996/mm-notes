@@ -297,6 +297,12 @@ export const NAV_DATA: NavData[] = [
         title: 'TailwindCSS 中文网',
         desc: '一个功能类优先的 CSS 框架',
         link: 'https://www.tailwindcss.cn'
+      },
+      {
+        icon: 'https://unocss.dev/logo.svg',
+        title: 'UnoCSS',
+        desc: '一个即时的原子化 CSS 引擎',
+        link: 'https://unocss.dev'
       }
     ]
   },
@@ -469,6 +475,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://icones.js.org'
       },
       {
+        icon: 'https://icones.js.org/favicon.svg',
+        title: 'Simple Icons',
+        desc: '包含 2457 种流行品牌的免费 SVG 图标库',
+        link: 'https://simpleicons.org'
+      },
+      {
         icon: 'https://emoji.muan.co/appicon.png',
         title: 'Emoji searcher',
         desc: 'emoji 表情大全',
@@ -617,11 +629,13 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.zhangxinxu.com/wordpress'
       },
       {
+        icon: '/icons/ascoders.png',
         title: '前端精读周刊',
         desc: '帮你理解最前沿、实用的技术',
         link: 'https://github.com/ascoders/weekly'
       },
       {
+        icon: '/icons/mqyqingfeng.jpeg',
         title: '冴羽博客',
         desc: '四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列',
         link: 'https://github.com/mqyqingfeng/Blog'
