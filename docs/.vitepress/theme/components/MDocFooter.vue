@@ -1,34 +1,56 @@
 <script setup lang="ts">
 import { inject, Ref, computed } from 'vue'
-import { useRoute } from 'vitepress'
+import { useData, useRoute, DefaultTheme } from 'vitepress'
 import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar'
 
-const DEV = inject('DEV') as Ref<boolean>
+const DEV = inject<Ref<boolean>>('DEV')
+const { theme } = useData<DefaultTheme.Config>()
 const route = useRoute()
 const { hasSidebar } = useSidebar()
 
 const pageId = computed(() => route.path.replace('/mm-notes', ''))
+const isDocFooterVisible = computed(() => {
+  const { footer = {} } = theme.value
+  return !DEV || footer.message || footer.copyright
+})
 </script>
 
 <template>
-  <div v-show="hasSidebar" class="copyright">
-    <img
-      v-if="!DEV"
-      class="visitor"
-      :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${pageId}`"
-      title="当前页面累计访问数"
-      onerror="this.style.display='none'"
-    />
-    Copyright © 2019-present maomao
+  <div v-if="isDocFooterVisible" v-show="hasSidebar" class="m-doc-footer">
+    <div class="m-doc-footer-message">
+      <img
+        v-if="!DEV"
+        class="visitor"
+        :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${pageId}`"
+        title="当前页面累计访问数"
+        onerror="this.style.display='none'"
+      />
+      <p v-if="theme.footer?.message">{{ theme.footer.message }}</p>
+    </div>
+    <p class="m-doc-footer-copyright" v-if="theme.footer?.copyright">
+      {{ theme.footer.copyright }}
+    </p>
   </div>
 </template>
 
 <style scoped>
-.copyright {
+.m-doc-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 24px;
   border-top: 1px solid var(--vp-c-gutter);
-  padding: 32px 24px;
-  background-color: var(--vp-c-bg);
+  padding: 32px 24px 0;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+}
+
+.m-doc-footer-message,
+.m-doc-footer-copyright {
+  display: flex;
+  align-items: center;
 }
 
 .visitor {
