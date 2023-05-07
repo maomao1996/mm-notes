@@ -12,12 +12,7 @@ const props = defineProps<{
   items: NavLink[]
 }>()
 
-const component = computed(() => {
-  if (props.tag) {
-    return props.tag
-  }
-  return 'h2'
-})
+const component = computed(() => props.tag ?? 'h2')
 
 const formatTitle = computed(() => {
   return slugify(props.title)
