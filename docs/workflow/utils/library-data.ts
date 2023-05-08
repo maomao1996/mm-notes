@@ -83,7 +83,7 @@ export const DATA: NavData[] = [
     ]
   },
   {
-    title: '字符串处理',
+    title: '字符串文本处理',
     items: [
       {
         title: 'change-case',
@@ -104,6 +104,17 @@ export const DATA: NavData[] = [
         title: 'typed.js',
         desc: '动态打字效果',
         link: 'https://github.com/mattboldt/typed.js'
+      },
+      {
+        title: 'countup.js',
+        desc: '数字滚动动画',
+        link: 'https://github.com/inorganik/countUp.js'
+      },
+      {
+        badge: 'react',
+        title: 'react-countup',
+        desc: '基于 countup.js 封装的 React 组件',
+        link: 'https://github.com/glennreyes/react-countup'
       },
       {
         title: 'tween.js',
@@ -264,6 +275,12 @@ export const DATA: NavData[] = [
         title: 'globby',
         desc: '使用更友好的文件查找（支持 promise、否定模式、ignore 文件配置等）',
         link: 'https://github.com/sindresorhus/globby'
+      },
+      {
+        badge: 'node',
+        title: 'cpy',
+        desc: '使用更友好的文件复制（支持 glob 模式）',
+        link: 'https://github.com/sindresorhus/cpy'
       }
     ]
   },
@@ -364,13 +381,18 @@ export const DATA: NavData[] = [
     title: '用户体验',
     items: [
       {
+        title: 'shepherd',
+        desc: '用户引导动画（基于 SVG 和 floating-ui）',
+        link: 'https://github.com/shipshapecode/shepherd'
+      },
+      {
         title: 'intro.js',
-        desc: '用户引导动画',
+        desc: '用户引导动画（使用 box-shadow 实现遮罩）',
         link: 'https://github.com/usablica/intro.js'
       },
       {
         title: 'driver.js',
-        desc: '用户引导动画',
+        desc: '用户引导动画（使用 outline 实现遮罩）',
         link: 'https://github.com/kamranahmedse/driver.js'
       },
       {
@@ -393,6 +415,16 @@ export const DATA: NavData[] = [
         title: 'screenfull.js',
         desc: '将页面或任何元素全屏显示',
         link: 'https://github.com/sindresorhus/screenfull.js'
+      },
+      {
+        title: 'nprogress',
+        desc: '轻量级的加载进度条',
+        link: 'https://github.com/rstacruz/nprogress'
+      },
+      {
+        title: 'floating-ui',
+        desc: '创建浮动元素的轻量库（气泡提示、用户引导、下拉框等）',
+        link: 'https://github.com/floating-ui/floating-ui'
       }
     ]
   },
@@ -439,6 +471,11 @@ export const DATA: NavData[] = [
         title: 'playwright',
         desc: '支持 Firefox / Chrome / WebKit(Safari) 三大浏览器的自动化工具',
         link: 'https://github.com/microsoft/playwright'
+      },
+      {
+        title: 'puppeteer-extra',
+        desc: 'puppeteer 的插件扩展',
+        link: 'https://github.com/berstend/puppeteer-extra'
       }
     ]
   },
