@@ -1,9 +1,20 @@
 {
   "name": "mm-notes",
-  "description": "Development related notes",
-  "version": "1.0.0",
-  "private": true,
   "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.0.0",
+  "description": "Development related notes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maomao1996/mm-notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maomao1996/mm-notes/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/maomao1996/mm-notes#readme",
+  "author": "maomao1996 <1714487678@qq.com>",
   "scripts": {
     "dev": "cross-env NODE_ENV=development vitepress dev docs --port=8732",
     "build": "npm run daily-notes && vitepress build docs",
@@ -14,16 +25,6 @@
     "lint:lint-staged": "lint-staged",
     "postinstall": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maomao1996/mm-notes.git"
-  },
-  "author": "maomao1996 <1714487678@qq.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maomao1996/mm-notes/issues"
-  },
-  "homepage": "https://github.com/maomao1996/mm-notes#readme",
   "devDependencies": {
     "@femm/prettier": "^1.0.2",
     "@mdit-vue/shared": "^0.12.0",
