@@ -59,5 +59,25 @@
       ":::"
     ],
     "description": "vitepress 自定义容器 details"
+  },
+  "typescript challenges": {
+    "scope": "markdown",
+    "prefix": "challenge",
+    "body": [
+      "### $1",
+      "",
+      "$2",
+      "",
+      "```ts",
+      "type result$3",
+      "```",
+      "",
+      "**实现**:",
+      "",
+      "```ts",
+      "$4",
+      "```"
+    ],
+    "description": "typescript 类型体操"
   }
 }
