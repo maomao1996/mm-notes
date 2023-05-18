@@ -86,6 +86,11 @@ export const DATA: NavData[] = [
     title: '字符串文本处理',
     items: [
       {
+        title: 'camelcase',
+        desc: '将使用破折号/点号/下划线/空格分隔的字符串转换为驼峰形式（camelCase）',
+        link: 'https://github.com/sindresorhus/camelcase'
+      },
+      {
         title: 'change-case',
         desc: '快速转换字符串格式，支持 camelCase, PascalCase, Capital Case, snake_case, param-case, CONSTANT_CASE 等',
         link: 'https://github.com/blakeembrey/change-case'
@@ -549,9 +554,9 @@ export const DATA: NavData[] = [
         link: 'https://github.com/enquirer/enquirer'
       },
       {
-        title: 'shelljs',
-        desc: '是 Unix Shell 在 Node.js API 层的轻量级实现，可以很方便的调用系统命令',
-        link: 'https://github.com/shelljs/shelljs'
+        title: 'prompts',
+        desc: '轻量级交互式命令行工具',
+        link: 'https://github.com/terkelg/prompts'
       },
       {
         title: 'execa',
