@@ -2,9 +2,9 @@ import { h, App } from 'vue'
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
-import Visitor from './components/Visitor.vue'
-import Copyright from './components/Copyright.vue'
-import AsideSponsors from './components/AsideSponsors.vue'
+import MNavVisitor from './components/MNavVisitor.vue'
+import MDocFooter from './components/MDocFooter.vue'
+import MAsideSponsors from './components/MAsideSponsors.vue'
 import MNavLinks from './components/MNavLinks.vue'
 
 import './styles/index.scss'
@@ -49,9 +49,9 @@ export default {
        * https://vitepress.dev/guide/extending-default-theme#layout-slots
        * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
        */
-      'nav-bar-title-after': () => h(Visitor),
-      'doc-after': () => h(Copyright),
-      'aside-bottom': () => h(AsideSponsors)
+      'nav-bar-title-after': () => h(MNavVisitor),
+      'doc-after': () => h(MDocFooter),
+      'aside-bottom': () => h(MAsideSponsors)
     })
   },
   enhanceApp({ app }: { app: App }) {
