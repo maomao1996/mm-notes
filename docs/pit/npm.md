@@ -6,7 +6,7 @@ outline: 2
 
 > 记录 `npm` `yarn` `pnpm` 相关踩坑
 
-## npm 安装 `node-sass` 经常失败
+## 安装 `node-sass` 经常失败
 
 > 虽说 `node-sass` 已经被淘汰，现在都用 [dart-sass](https://github.com/sass/dart-sass)，但你总会遇到一些老古董项目的
 
@@ -50,8 +50,6 @@ function getBinaryUrl() {
 
 :::
 
-#### 解决方法
-
 > 临时解决（以 `node-sass` 为例）
 
 ```sh
@@ -75,3 +73,33 @@ electron_mirror=https://npmmirror.com/mirrors/electron
 profiler_binary_host_mirror=https://npmmirror.com/mirrors/node-inspector
 chromedriver_cdnurl=https://npmmirror.com/mirrors/chromedriver
 ```
+
+## `npm` 包中的文件丢失
+
+最近在发布自己的 `npm` 包时，发现包中的文件未完全上传，导致安装后缺少文件
+
+::: tip `npm` 上传时默认会忽略这些文件
+
+- `.*.swp`
+- `._*`
+- `.DS_Store`
+- `.git`
+- `.gitignore`
+- `.hg`
+- `.npmignore`
+- `.npmrc`
+- `.lock-wscript`
+- `.svn`
+- `.wafpickle-*`
+- `config.gypi`
+- `CVS`
+- `npm-debug.log`
+
+[npm ignored | GitHub](https://github.com/npm/cli/blob/6cc4a93babf8d537a7ec2393a485c854a476e3b7/docs/lib/content/using-npm/developers.md?plain=1#LL115C26)
+
+:::
+
+#### 解决方法
+
+1. 将需要上传的文件添加到 `package.json` 的 `files` 字段中
+2. 修改文件名
