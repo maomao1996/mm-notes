@@ -2,7 +2,7 @@
 
 > 只介绍安装方法和常用命令，具体可点击其 github 查看详情
 
-## bat
+## bat 显示文件内容
 
 `cat` 命令的增强版，用于阅读文件
 
@@ -24,9 +24,9 @@ alias cat="bat"
 brew install bat
 ```
 
-[Github](https://github.com/sharkdp/bat)
+[bat | Github](https://github.com/sharkdp/bat)
 
-## fzf
+## fzf 命令行模糊查找
 
 命令行模糊查找器
 
@@ -58,9 +58,9 @@ source ~/.zshrc
 export FZF_DEFAULT_OPTS="--layout=reverse --preview 'bat -n --color=always {}'"
 ```
 
-[Github](https://github.com/junegunn/fzf)
+[fzf | Github](https://github.com/junegunn/fzf)
 
-## fnm
+## fnm Node 版本管理工具
 
 跨平台的 `node` 版本管理工具（Fast Node Manager）
 
@@ -155,8 +155,8 @@ source ~/.zshrc
 
 使用 `yarn` 或 `pnpm` 包管理器安装的全局包都有单独的全局目录，不依赖于 `node` 的安装目录
 
-[Github](https://github.com/Schniz/fnm)
-[科普文：用锈化的 fnm 管理 Node.js 版本](https://zhuanlan.zhihu.com/p/587008009)
+- [fnm | Github](https://github.com/Schniz/fnm)
+- [科普文：用锈化的 fnm 管理 Node.js 版本](https://zhuanlan.zhihu.com/p/587008009)
 
 ## nvm
 
@@ -172,7 +172,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 curl -o- https://gitee.com/mirrors/nvm/raw/v0.39.2/install.sh | bash
 ```
 
-[Github - Mac](https://github.com/nvm-sh/nvm)
+[nvm | Github](https://github.com/nvm-sh/nvm)
 
 #### 安装和设置 - Windows
 
@@ -186,7 +186,7 @@ nvm node_mirror https://npmmirror.com/mirrors/node/
 nvm npm_mirror https://npmmirror.com/mirrors/npm/
 ```
 
-[Github - Windows](https://github.com/coreybutler/nvm-windows)
+[nvm-windows | Github](https://github.com/coreybutler/nvm-windows)
 
 #### 常用命令
 
@@ -213,7 +213,7 @@ nvm use <版本号>
 nvm alias default <版本号>
 ```
 
-## nrm
+## nrm npm 镜像管理工具
 
 `npm registry` 管理工具，能够查看和切换当前使用的 `registry`
 
@@ -231,7 +231,163 @@ nrm use yarn
  nrm add [别名] [registry 地址]
 ```
 
-[Github](https://github.com/Pana/nrm)
+[nrm | Github](https://github.com/Pana/nrm)
+
+## ni 包管理器工具
+
+使用正确的软件包管理器运行项目，支持 [npm](https://docs.npmjs.com/cli/commands/npm)、[yarn](https://yarnpkg.com)、[pnpm](https://pnpm.io)、[bun](https://bun.sh)
+
+> 安装
+
+```sh
+npm i -g @antfu/ni
+# OR
+pnpm add -g @antfu/ni
+# OR
+yarn global add @antfu/ni
+```
+
+### `ni` - install 安装依赖
+
+```bash
+# 安装依赖
+ni
+# npm install
+# yarn install
+# pnpm install
+# bun install
+
+# 安装指定包
+ni vite
+# npm i vite
+# yarn add vite
+# pnpm add vite
+# bun add vite
+
+# 安装指定包到开发依赖
+ni @types/node -D
+# npm i @types/node -D
+# yarn add @types/node -D
+# pnpm add -D @types/node
+# bun add -d @types/node
+
+# 使用锁定文件安装依赖
+ni --frozen
+# npm ci
+# yarn install --frozen-lockfile (Yarn 1)
+# yarn install --immutable (Yarn Berry)
+# pnpm install --frozen-lockfile
+# bun install --no-save
+
+# 安装依赖到全局环境
+ni -g eslint
+# npm i -g eslint
+# yarn global add eslint (Yarn 1)
+# pnpm add -g eslint
+# bun add -g eslint
+```
+
+::: tip
+全局安装时使用默认的包管理器
+:::
+
+### `nr` - run 运行脚本
+
+```bash
+nr dev --port=3000
+# npm run dev -- --port=3000
+# yarn run dev --port=3000
+# pnpm run dev --port=3000
+# bun run dev --port=3000
+
+# 使用交互模式运行脚本
+nr
+
+# 重新运行上一条命令
+nr -
+```
+
+### `nlx` - 下载并执行
+
+```bash
+nlx vitest
+
+# npx vitest
+# yarn dlx vitest
+# pnpm dlx vitest
+# bunx vitest
+```
+
+### `nu` - upgrade 升级依赖
+
+```bash
+nu
+# (not available for bun)
+# npm upgrade
+# yarn upgrade (Yarn 1)
+# yarn up (Yarn Berry)
+# pnpm update
+
+# 使用交互模式升级依赖
+nu -i
+# (not available for npm & bun)
+# yarn upgrade-interactive (Yarn 1)
+# yarn up -i (Yarn Berry)
+# pnpm update -i
+```
+
+### `nun` - uninstall 卸载依赖
+
+```bash
+nun webpack
+# npm uninstall webpack
+# yarn remove webpack
+# pnpm remove webpack
+# bun remove webpack
+
+# 卸载全局依赖
+nun -g silent
+# npm uninstall -g silent
+# yarn global remove silent
+# pnpm remove -g silent
+# bun remove -g silent
+```
+
+### `nci` - clean install 清理安装
+
+```bash
+nci
+
+# npm ci
+# yarn install --frozen-lockfile
+# pnpm install --frozen-lockfile
+# bun install --no-save
+```
+
+### `na` - agent alias 代理别名
+
+```bash
+na
+
+# npm
+# yarn
+# pnpm
+# bun
+```
+
+### 配置文件
+
+`~/.nirc`
+
+```sh
+# 默认使用的包管理器（默认为 prompt）
+defaultAgent=npm
+
+# 全局安装时使用的包管理器
+globalAgent=npm
+```
+
+[@antfu/ni | Github](https://github.com/antfu/ni)
 
 ## npm-check-updates
 
@@ -262,7 +418,7 @@ ncu --target minor
 ncu --target patch
 ```
 
-[Github](https://github.com/tjunnone/npm-check-updates)
+[npm-check-updates | Github](https://github.com/tjunnone/npm-check-updates)
 
 ## yalc
 
@@ -296,7 +452,7 @@ yalc remove [my-package]
 yalc remove --all
 ```
 
-[Github](https://github.com/wclr/yalc)
+[yalc | Github](https://github.com/wclr/yalc)
 
 ## nodemon
 
@@ -312,7 +468,7 @@ npm install --save-dev nodemon
 nodemon [入口文件]
 ```
 
-[Github](https://github.com/remy/nodemon)
+[nodemon | Github](https://github.com/remy/nodemon)
 
 ## pm2
 
@@ -349,4 +505,4 @@ pm2 logs [id]
 pm2 logs [name]
 ```
 
-[Github](https://github.com/Unitech/pm2)
+[pm2 | Github](https://github.com/Unitech/pm2)
