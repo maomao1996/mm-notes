@@ -39,6 +39,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'CSS 理论知识点', link: '/fe/css/' }
       ]
     },
+    { text: ' Webpack', link: '/fe/webpack/' },
     {
       text: '浏览器与网络',
       collapsed: false,
