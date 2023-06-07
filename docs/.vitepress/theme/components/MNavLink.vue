@@ -6,12 +6,16 @@ import { slugify } from '@mdit-vue/shared'
 import { NavLink } from '../types'
 
 const props = defineProps<{
-  noIcon?: boolean
+  noIcon?: NavLink['noIcon']
   icon?: NavLink['icon']
   badge?: NavLink['badge']
   title?: NavLink['title']
   desc?: NavLink['desc']
   link: NavLink['link']
+}>()
+
+const emits = defineEmits<{
+  (event: 'nav-click', data: Partial<NavLink>): void
 }>()
 
 const formatTitle = computed(() => {
@@ -32,10 +36,19 @@ const formatBadge = computed(() => {
   }
   return props.badge
 })
+
+const handleClick = () => emits('nav-click', props)
 </script>
 
 <template>
-  <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
+  <a
+    v-if="link"
+    class="m-nav-link"
+    :href="link"
+    target="_blank"
+    rel="noreferrer"
+    @click="handleClick"
+  >
     <article class="box" :class="{ 'has-badge': formatBadge }">
       <div class="box-header">
         <template v-if="!noIcon">
