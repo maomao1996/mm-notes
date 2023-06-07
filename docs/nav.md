@@ -5,9 +5,8 @@ outline: [2, 3, 4]
 ---
 
 <script setup>
-import { NAV_DATA } from './nav/data'
+import MNav from './nav/MNav.vue'
 </script>
-<style src="./nav/index.scss"></style>
 
 # 前端导航
 
@@ -17,4 +16,5 @@ import { NAV_DATA } from './nav/data'
 - [在线工具](/efficiency/online-tools) 一些实用的在线工具，免去下载软件的烦恼
 
 :::
-<MNavLinks v-for="item in NAV_DATA" v-bind="item"/>
+
+<MNav/>
