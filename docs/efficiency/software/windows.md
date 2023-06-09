@@ -107,6 +107,16 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 
 [Github](https://github.com/huiyadanli/RevokeMsgPatcher)
 
+## 微信清理工具 CleanMyWechat
+
+1. 自动识别微信账号，支持用户选择自定义路径
+2. 同时管理多个账号，保留配置参数，打开即用
+3. 自由设置想要删除的文件类型，包括图片类缓存、文件、图片、视频
+4. 自由设置需要删除的文件的距离时间，默认 365 天
+5. 删除后的文件放置在回收站中，检查后自行清空，防止删错需要的文件
+
+[CleanMyWechat | Github](https://github.com/blackboxo/CleanMyWechat)
+
 ## 任务栏透明 TranslucentTB
 
 1. 支持亚克力、模糊、透明、主题色、不透明效果
