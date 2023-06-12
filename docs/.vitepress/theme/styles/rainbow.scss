@@ -661,7 +661,8 @@
   --vp-c-brand-dark: #008269;
   --vp-c-brand-darker: #005d47;
   --vp-c-brand-next: #009ff7;
-  animation: rainbow 180s linear infinite;
+  // 一共 82 种颜色，颜色过度时间为 3s
+  animation: rainbow 246s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
