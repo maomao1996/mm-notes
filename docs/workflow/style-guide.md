@@ -2,7 +2,50 @@
 
 > 记录自己所总结和遵守的编程规范（即个人风格指南）
 
-## 项目文件结构
+## 命名规范与项目结构
+
+### 命名规范
+
+命名规范是编程规范中最重要的一部分，它直接影响到代码的可读性和可维护性
+
+::: tip 常用的命名形式
+
+- `camelCase` 小驼峰式命名法（首字母小写）
+- `PascalCase` 大驼峰式命名法（首字母大写）
+- `snake_case` 下划线命名法
+- `kebab-case` 短横线命名法
+- `UPPER_CASE` 大写命名法
+
+:::
+
+### 文件命名规范
+
+::: info
+除组件命名外，均使用短横线命名法
+:::
+
+- 项目名称使用短横线命名法。🌰 `mm-notes`
+- `html / css / md / js / ts / jsx / tsx` 文件使用短横线命名法
+- `React / Vue` 组件文件使用大写驼峰式命名法。🌰 `Dialog.vue` / `Dialog.tsx`
+- 静态资源文件使用短横线命名法。🌰 `logo-white.png`
+
+### 代码命名规范
+
+#### `JavaScript` 命名规范
+
+- 常量使用大写命名法。🌰 `const MAX_COUNT = 1996`
+- 变量使用小驼峰式命名法。🌰 `const maxCount = 1996`
+- 方法使用小驼峰式命名法。🌰 `function getUserInfo() {}`
+- 对象 `key` 使用小驼峰式命名法。🌰 `const user = { userName: 'maomao' }`
+- 路由 `path` 使用短横线命名法。🌰 `path: '/user-info'`
+
+#### `CSS` 命名规范
+
+- 类名使用短横线命名法。🌰 `.user-info`
+- `ID` 使用小驼峰式命名法。🌰 `#userInfo`
+- 自定义变量使用短横线命名法。🌰 `--main-color: #fff`
+
+### 项目结构
 
 > 约定优于配置
 
