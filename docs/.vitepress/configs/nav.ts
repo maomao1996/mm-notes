@@ -37,6 +37,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       // {
       //   text: 'CSS 相关',
       //   items: [
+      { text: 'HTML 语法', link: '/workflow/html/spec' },
       { text: 'CSS 语法', link: '/workflow/css/spec' },
       { text: 'CSS 奇淫技巧', link: '/workflow/css/tricks' },
       { text: 'Sass 常用技巧', link: '/workflow/sass/' },
