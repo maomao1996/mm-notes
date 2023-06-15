@@ -17,6 +17,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://tinypng.com'
       },
       {
+        icon: 'https://npm.devtool.tech/logo.svg',
+        title: 'npm 库在线执行',
+        desc: '在浏览器控制台中在线运行调试与测试 npm 中的库',
+        link: 'https://npm.devtool.tech'
+      },
+      {
         icon: 'https://devtool.tech/logo.svg',
         title: '开发者武器库',
         desc: '开发者武器库，做开发者最专业最好用的专业工具箱',
@@ -293,7 +299,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://sass-lang.com'
       },
       {
-        icon: 'https://www.tailwindcss.cn/apple-touch-icon.png',
+        icon: '/icons/tailwindcss.png',
         title: 'TailwindCSS 中文网',
         desc: '一个功能类优先的 CSS 框架',
         link: 'https://www.tailwindcss.cn'
@@ -374,13 +380,13 @@ export const NAV_DATA: NavData[] = [
     title: '可视化',
     items: [
       {
-        icon: 'https://echarts.apache.org/zh/images/favicon.png',
+        icon: '/icons/echarts.png',
         title: 'ECharts',
         desc: '一个基于 JavaScript 的开源可视化图表库',
         link: 'https://echarts.apache.org/zh/index.html'
       },
       {
-        icon: 'https://antv.vision/icons/icon-72x72.png',
+        icon: '/icons/antv.png',
         title: 'AntV',
         desc: '蚂蚁集团全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。',
         link: 'https://antv.vision/zh/'
@@ -475,7 +481,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://icones.js.org'
       },
       {
-        icon: 'https://icones.js.org/favicon.svg',
+        icon: '/icons/simpleicons.svg',
         title: 'Simple Icons',
         desc: '包含 2457 种流行品牌的免费 SVG 图标库',
         link: 'https://simpleicons.org'
@@ -520,6 +526,13 @@ export const NAV_DATA: NavData[] = [
         title: 'ES6 入门教程',
         desc: '阮一峰的网络日志',
         link: 'http://es6.ruanyifeng.com'
+      },
+      {
+        badge: '官网',
+        icon: 'https://www.typescriptlang.org/icons/icon-72x72.png?v=8944a05a8b601855de116c8a56d3b3ae',
+        title: 'TypeScript',
+        desc: 'TypeScript 是具有类型语法的 JavaScript',
+        link: 'https://www.typescriptlang.org/zh/'
       }
     ]
   },

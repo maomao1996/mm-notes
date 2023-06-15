@@ -17,9 +17,15 @@
     max-width: 224px;
   }
 
-  /* tip */
-  .tip {
-    p {
+  /* custom-block */
+  .custom-block {
+    .custom-block-title {
+      font-size: var(--vp-custom-block-font-size);
+    }
+    ul {
+      margin: 8px 0;
+    }
+    li {
       margin: 0;
     }
   }
