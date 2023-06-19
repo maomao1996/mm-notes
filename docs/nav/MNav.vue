@@ -1,16 +1,28 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { inBrowser } from 'vitepress'
 
 import type { NavLink } from '../.vitepress/theme/types'
 import { NAV_DATA } from './data'
 
 const M_RECENT_LINKS_KEY = 'mm-notes-recent-links'
 
-const items = ref<NavLink[]>(
-  localStorage.getItem(M_RECENT_LINKS_KEY)
-    ? JSON.parse(localStorage.getItem(M_RECENT_LINKS_KEY)!)
-    : []
-)
+const getItems = () => {
+  if (!inBrowser) {
+    return []
+  }
+  const value = localStorage.getItem(M_RECENT_LINKS_KEY)
+  if (value) {
+    try {
+      return JSON.parse(value)
+    } catch (e) {
+      return []
+    }
+  }
+  return []
+}
+
+const items = ref<NavLink[]>(getItems())
 
 const handleClick = (data: NavLink) => {
   let newData = items.value.filter((item) => item.link !== data.link)
