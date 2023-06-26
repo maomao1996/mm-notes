@@ -255,7 +255,16 @@ duti -s com.microsoft.VSCode .wxss all
 
 [软件官网](https://www.alfredapp.com)
 
-## Mac 微信功能拓展
+## 微信相关
+
+### 设置使用默认浏览器打开链接
+
+> 微信 3.8.0 for Mac 以上版本可用
+
+1. 微信搜索框输入 **`:recover`**
+2. 勾选『**使用默认浏览器打开链接**』
+
+### Mac 微信功能拓展
 
 1. 消息防撤回
 2. 免认证登录与多开
@@ -274,7 +283,7 @@ sudo wechattweak-cli --install
 sudo wechattweak-cli --uninstall
 ```
 
-[Github](https://github.com/Sunnyyoung/WeChatTweak-macOS)
+[WeChatTweak-macOS | Github](https://github.com/Sunnyyoung/WeChatTweak-macOS)
 
 ## IINA
 
