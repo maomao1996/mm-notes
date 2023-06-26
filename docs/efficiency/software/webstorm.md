@@ -8,7 +8,44 @@ description: '茂茂的 WebStorm 配置，记录扩展插件、使用小技巧'
 
 [使用开源项目免费申请 JetBrains 全家桶开源许可证](https://www.jetbrains.com/shop/eform/opensource)
 
+## 常用插件
+
+1. 进入「`设置 - Plugins/插件 - Marketplace`」
+2. 复制插件名后进行搜索安装
+
+- **`Chinese ​(Simplified)​ Language Pack / 中文语言包`** 编辑器汉化
+- **`GitHub Copilot`** 代码智能提示
+- **`.env files support`** `.env` 文件键值字符串高亮
+- **`.ignore`** `.env` 提示哪些文件可以被 `ignore`
+- **`WakaTime`** 统计代码编写时间 ([WakaTime 官网](https://wakatime.com/dashboard))
+
+### 插件市场
+
+- [Plugins | JetBrains](https://plugins.jetbrains.com/)
+
+## 主题美化
+
+> 主题插件
+
+- **`Atom Material Icons`** 图标美化
+- **`Atom OneDark Theme`** Atom OneDark 主题
+- **`Material Theme UI`** Material Design 主题
+- **`One Dark theme`** 暗黑风格主题
+
+> 配色方案
+
+- [bluloco 方案](https://github.com/uloco/webstorm-bluloco-scheme)
+  - [Dark 下载](https://cdn.jsdelivr.net/gh/uloco/webstorm-bluloco-scheme/Bluloco%20Dark.icls)
+  - [Light 下载](https://cdn.jsdelivr.net/gh/uloco/webstorm-bluloco-scheme/Bluloco%20Light.icls)
+
+> 自定义背景图
+
+1. 进入 `设置 - 外观和行为 - Appearance`
+2. 点击 `BACKGROUND IMAGE`
+
 ## 汉化
+
+> 老版本
 
 - 方案一
   - 进入 `文件 - 设置 - Plugins - Marketplace`
@@ -25,27 +62,6 @@ description: '茂茂的 WebStorm 配置，记录扩展插件、使用小技巧'
   - 通过磁盘安装刚下载的文件
 
 ![磁盘安装](./images/instasll.jpg)
-
-## 编辑器美化
-
-- 主题（进入 `文件 - 设置 - Plugins - Marketplace` 安装如下插件）
-  - [Atom Material Icons](https://plugins.jetbrains.com/plugin/10044-atom-material-icons/) 图标美化
-  - [Atom OneDark Theme](https://plugins.jetbrains.com/plugin/12178-atom-onedark-theme) Atom OneDark 主题
-  - [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) Material Design 主题
-  - [One Dark theme](https://plugins.jetbrains.com/plugin/index?xmlId=com.markskelton.one-dark-theme) 黑色主题
-- 配色方案
-  - [bluloco 方案](https://github.com/uloco/webstorm-bluloco-scheme)
-    - [Dark 下载](https://cdn.jsdelivr.net/gh/uloco/webstorm-bluloco-scheme/Bluloco%20Dark.icls)
-    - [Light 下载](https://cdn.jsdelivr.net/gh/uloco/webstorm-bluloco-scheme/Bluloco%20Light.icls)
-- 自定义背景图
-  - 进入 `文件 - 设置 - 外观和行为 - Appearance`
-  - 点击 `BACKGROUND IMAGE`
-- 其他
-  - [.env files support](https://plugins.jetbrains.com/plugin/9525--env-files-support) `.env` 文件键值字符串高亮
-
-## 插件市场
-
-- [Plugins | JetBrains](https://plugins.jetbrains.com/)
 
 ## 配置 Prettier 保存格式化
 
@@ -66,5 +82,5 @@ description: '茂茂的 WebStorm 配置，记录扩展插件、使用小技巧'
 
 1. 进入 `文件 - 设置 - 框架和语言 - JavaScript - Webpack`
 2. 将 `webpack` 配置文件地址修改为对应地址
-   1. `vue-cli2`: 项目地址 + `\build\webpack.base.conf.js`
-   2. `vue-cli3`: 项目地址 + `\node_modules\@vue\cli-service\webpack.config.js`
+   1. `vue-cli2.x`: 项目地址 + `\build\webpack.base.conf.js`
+   2. `vue-cli3.x 及以上`: 项目地址 + `\node_modules\@vue\cli-service\webpack.config.js`
