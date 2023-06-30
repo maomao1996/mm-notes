@@ -383,6 +383,22 @@ export const DATA: NavData[] = [
     ]
   },
   {
+    title: '拖放',
+    items: [
+      {
+        title: 'Sortable.js',
+        desc: '适用于现代浏览器和触摸设备的可重新排序的拖放列表',
+        link: 'https://github.com/SortableJS/Sortable'
+      },
+      {
+        badge: 'react',
+        title: 'dnd-kit',
+        desc: 'React 的现代、轻量级、高性能、可访问和可扩展的拖放工具包',
+        link: 'https://github.com/clauderic/dnd-kit'
+      }
+    ]
+  },
+  {
     title: '用户体验',
     items: [
       {
@@ -655,7 +671,7 @@ export const DATA: NavData[] = [
         link: 'https://d.umijs.org'
       },
       {
-        icon: 'https://docusaurus.io/zh-CN/img/docusaurus.ico',
+        icon: '/icons/docusaurus.svg',
         title: 'Docusaurus',
         desc: '基于 React 的静态网站生成器',
         link: 'https://docusaurus.io/zh-CN'

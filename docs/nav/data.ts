@@ -157,6 +157,18 @@ export const NAV_DATA: NavData[] = [
         link: 'https://mobile.ant.design'
       },
       {
+        icon: '/icons/mui.svg',
+        title: 'Material UI',
+        desc: '基于 Google Material Design 设计语言的 React 组件库',
+        link: 'https://mui.com'
+      },
+      {
+        icon: '/icons/mantine.svg',
+        title: 'Mantine UI',
+        desc: '一套功能齐全的 React 组件库',
+        link: 'https://mantine.dev'
+      },
+      {
         icon: 'https://docs.pmnd.rs/apple-touch-icon.png',
         title: 'Zustand',
         desc: '一个小型、快速、可扩展的 React 状态管理解决方案',
