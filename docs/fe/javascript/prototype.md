@@ -31,7 +31,7 @@ console.log(person1) // Person {name: 'maomao'}
 
 在 `JavaScript` 中，每个函数都有一个原型属性 `prototype`，其指向**调用该构造函数而创建的实例的原型**（原型可以是 `null` 或其他对象）
 
-![prototype](./images/prototype/prototype.png)
+![prototype](./images/prototype/prototype.jpg)
 
 在原型对象（`prototype`）上定义的属性和方法会被对象实例共享
 
@@ -59,7 +59,7 @@ Person.prototype // { constructor: ƒ Person(name) }
 Person.prototype.constructor === Person // true
 ```
 
-![constructor](./images/prototype/constructor.png)
+![constructor](./images/prototype/constructor.jpg)
 
 ## `__proto__`
 
@@ -92,13 +92,13 @@ Object.getPrototypeOf(person) === Person.prototype // true
 Reflect.getPrototypeOf(person) === Person.prototype // true
 ```
 
-![__proto__](./images/prototype/__proto__.png)
+![**proto**](./images/prototype/__proto__.jpg)
 
 ## 原型链
 
 每个对象都拥有一个原型对象，通过 `__proto__` 指针指向上一个原型 ，并从中继承方法和属性，同时原型对象也可能拥有原型，这样一层一层，最终指向 `null`。这个**链式结构**被称为**原型链**。
 
-![prototype-chain](./images/prototype/prototype-chain.png)
+![prototype-chain](./images/prototype/prototype-chain.jpg)
 
 ::: tip `Object.prototype.__proto__ === null`
 `Object.prototype` 是 `JavaScript` 中所有对象的原型。其定义了所有 `JavaScript` 对象都可以使用的属性和方法，例如 `toString()` `hasOwnProperty()` 等<br />
