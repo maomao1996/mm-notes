@@ -15,8 +15,10 @@ description: '茂茂的 WebStorm 配置，记录扩展插件、使用小技巧'
 
 - **`Chinese ​(Simplified)​ Language Pack / 中文语言包`** 编辑器汉化
 - **`GitHub Copilot`** 代码智能提示
+- **`GitToolBox`** 增强内置的 Git 功能（猪哥推荐）
 - **`.env files support`** `.env` 文件键值字符串高亮
 - **`.ignore`** `.env` 提示哪些文件可以被 `ignore`
+- **`CodeGlance Pro`** 在侧边栏显示代码缩略图（猪哥推荐）
 - **`WakaTime`** 统计代码编写时间 ([WakaTime 官网](https://wakatime.com/dashboard))
 
 ### 插件市场
