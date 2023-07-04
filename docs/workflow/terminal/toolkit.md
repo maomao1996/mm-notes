@@ -393,10 +393,19 @@ globalAgent=npm
 
 更新 `package.json` 中的依赖包
 
-```sh
-# 安装
-npm install -g npm-check-updates
+> 安装
 
+```sh
+npm i -g npm-check-updates
+# OR
+pnpm add -g npm-check-updates
+# OR
+yarn global add npm-check-updates
+```
+
+> 常用命令
+
+```sh
 # 检查所有依赖包版本
 ncu
 # 检查指定包版本
@@ -424,14 +433,21 @@ ncu --target patch
 
 `npm` 包调试工具，可配合 `nodemon` 做自动化
 
-> 在本地将 npm 包模拟发布，将发布后的资源存放在全局，再通过 `yalc` 命令将包添加至对应项目中
+在本地将 npm 包模拟发布，将发布后的资源存放在全局，再通过 `yalc` 命令将包添加至对应项目中
+
+> 安装
 
 ```sh
-# 安装
-npm i yalc -g
-#OR
+npm i -g yalc
+# OR
+pnpm add -g yalc
+# OR
 yarn global add yalc
+```
 
+> 常用命令
+
+```sh
 # 发布
 yalc publish
 # OR 快速更新所有依赖
@@ -474,14 +490,24 @@ nodemon [入口文件]
 
 `node` 进程管理工具，提供了进程监控、负载均衡、内存监控、日志管理、服务管理等功能
 
-```sh
-# 安装
-npm install pm2 -g
-#OR
-yarn global add pm2
+> 安装
 
-# 启动应用
+```sh
+npm i -g pm2
+# OR
+pnpm add -g pm2
+# OR
+yarn global add pm2
+```
+
+> 常用命令
+
+```sh
+# 通过文件启动应用
 pm2 start [入口文件]
+
+# 通过包管理器启动应用（比如 next 项目）
+pm2 start yarn --name "app" -- run start
 
 # 查看 pm2 管理的所有应用列表
 pm2 list
@@ -499,10 +525,17 @@ pm2 stop all
 pm2 restart [id]
 pm2 restart [name]
 
+# 删除应用
+pm2 delete [id]
+pm2 delete [name]
+
 # 查看日志
 pm2 logs
 pm2 logs [id]
 pm2 logs [name]
+
+# 查看进程状态
+pm2 monit
 ```
 
 [pm2 | Github](https://github.com/Unitech/pm2)
