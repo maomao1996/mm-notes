@@ -34,7 +34,12 @@ function generateIndexFile(data) {
 
 日常笔记记录（零零散散啥都记系列）
 
-[去写一篇小笔记](https://github.com/${owner}/${repo}/issues/new)
+> [新写一篇小笔记](https://github.com/${owner}/${repo}/issues/new)
+
+共计 **${issueYearGroups.reduce(
+    (total, [, issues]) => total + issues.length,
+    0
+  )}** 篇（上次更新: ${formatTime(issueYearGroups[0][1][0].created_at)}）
 
 ${issueYearGroups
   .map(
