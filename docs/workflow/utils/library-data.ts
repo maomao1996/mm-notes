@@ -450,6 +450,33 @@ export const DATA: NavData[] = [
     ]
   },
   {
+    title: '开发调试',
+    items: [
+      {
+        badge: 'node',
+        title: 'serve',
+        desc: '在本地快速启动一个静态文件服务器（支持各种配置功能强大）',
+        link: 'https://github.com/vercel/serve'
+      },
+      {
+        badge: 'node',
+        title: 'http-server',
+        desc: '在本地快速启动一个静态文件服务器（轻量）',
+        link: 'https://github.com/http-party/http-server'
+      },
+      {
+        title: 'eruda',
+        desc: '在移动浏览器上展示开发者调试面板',
+        link: 'https://github.com/liriliri/eruda'
+      },
+      {
+        title: 'vconsole',
+        desc: '一个轻量、可拓展、针对手机网页的前端开发者调试面板',
+        link: 'https://github.com/Tencent/vConsole'
+      }
+    ]
+  },
+  {
     title: 'Webpack',
     items: [
       {
