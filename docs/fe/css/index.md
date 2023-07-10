@@ -1,3 +1,33 @@
+<script setup>
+import { ref } from 'vue'
+import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
+
+const isTansform = ref(false)
+</script>
+
+<style>
+.fixed-container {
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-brand);
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+}
+.fixed-container.transform {
+  transform: translateZ(0);
+}
+.fixed-content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  padding: 10px;
+  width: 100%;
+  color: var(--vp-button-brand-text);
+  background-color: var(--vp-button-brand-bg);
+}
+</style>
+
 # CSS 理论知识点
 
 > 记录一些（那啥需要的）理论知识点，其他的 [CSS 语法与技巧请点这里](/workflow/css/spec)
@@ -104,6 +134,41 @@
 - `GFC`：网格格式化上下文（Grid Formatting Context）在 `GFC` 中网格元素可以按照网格的行和列进行排列
 
 `FFC` 和 `GFC` 除布局之外规则与 `BFC` 块格式上下文类似，其容器中不存在浮动子元素，但排除外部浮动和阻止外边距重叠仍然有效
+
+## `position` 属性
+
+`position` 属性用于指定一个元素在文档中的定位方式，其有 5 个值可选
+
+- **`static`**
+  - 默认值，元素在文档中正常定位
+  - 此时 `top`, `right`, `bottom`, `left` 和 `z-index` 属性无效
+- **`relative`**
+  - 相对定位，元素相对于其正常位置进行定位
+  - 对 `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` 元素无效
+- **`absolute`**
+  - 绝对定位，元素相对于其最近的非 `static` 定位祖先元素进行定位
+  - 可以设置外边距（margin）且不会与其他边距合并
+- **`fixed`**
+  - 固定定位，元素相对于浏览器窗口进行定位
+  - **当元素祖先的 `transform`, `perspective`, `filter`, `backdrop-filter` 属性非 `none` 时，容器由视口改为该祖先**
+- **`sticky`**
+  - 粘性定位，元素根据正常文档流进行定位，但在偏移量达到阈值之前为相对定位，之后为固定定位
+  - `sticky` 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上
+
+::: details 修改 `fixed` 元素的定位参考祖先
+
+<div class="fixed-container" :class="{transform: isTansform}">
+  <VPButton :text="isTansform ? '修改 fixed 相对于浏览器窗口' : '修改 fixed 相对于 transform 元素'" theme="alt" @click="isTansform = !isTansform"></VPButton>
+  <div class="fixed-content">我是测试用的 fixed 元素</div>
+</div>
+
+:::
+
+::: tip
+当 `position` 属性的值不为 **`static`** 时，会创建新的层叠上下文
+:::
+
+[position - CSS：层叠样式表 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
 
 ## 伪选择器（伪元素和伪类）
 
