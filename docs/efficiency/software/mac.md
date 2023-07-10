@@ -387,3 +387,33 @@ sudo wechattweak-cli --uninstall
 2. 支持键盘控制亮度和音量
 
 [MonitorControl | Github](https://github.com/MonitorControl/MonitorControl)
+
+## 显示器设置 BetterDisplay
+
+> 主要用于解决外接显示器不清晰问题（4k 以下），部分功能与 [MonitorControl](#显示器控制-monitorcontrol) 重叠
+
+1. 解锁 HiDPI （Retina 显示）
+2. 自定义分辨率
+3. 创建虚拟显示器
+4. 创建显示器的画中画窗口
+5. 控制显示器的亮度和音量
+
+::: tip 操作方法 - 以 BetterDisplay v1.4.15 为例
+
+1. 下载 - 安装 - 打开
+2. 点击导航栏小图标
+3. 点击面板最下面的设置按钮
+   1. 点击『`Display`』
+   2. 选择扩展显示器
+   3. 勾选『`Edit the system configuration of this display`』
+   4. 添加自定义分辨率（可选）
+      1. 勾选『『`Add custom scaled resolutions`』
+      2. 设置自己需要的分辨率（如 `1600x900` ）
+   5. 修改 Default resolution 选项
+      1. 勾选『`Edit default resolution`』
+      2. 设置自己需要的分辨率（如 `1920x1080@60` ）
+4. 保存并应用设置（设置完以后可关闭软件，不需要一直开着）
+
+:::
+
+[BetterDisplay | Github](https://github.com/waydabber/BetterDisplay)
