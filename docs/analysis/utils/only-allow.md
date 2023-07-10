@@ -83,8 +83,6 @@ if (wantedPM !== 'npm' && wantedPM !== 'cnpm' && wantedPM !== 'pnpm' && wantedPM
 // 获取当前所使用的包管理器名称和版本
 const usedPM = whichPMRuns()
 
-console.log('process.env.npm_config_user_agent', process.env.npm_config_user_agent, usedPM)
-
 // 获取 Node 进程当前工作的目录（即项目目录）
 const cwd = process.env.INIT_CWD || process.cwd()
 
