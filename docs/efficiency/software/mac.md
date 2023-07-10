@@ -103,7 +103,7 @@ brew cleanup
 brew cleanup -n
 ```
 
-- [Github](https://github.com/Homebrew)
+- [Homebrew | Github](https://github.com/Homebrew/brew)
 - [软件官网](https://brew.sh/index_zh-cn)
 
 ## iTerm2
@@ -129,7 +129,7 @@ cat /etc/passwd | grep sh
 chsh -s /bin/zsh
 ```
 
-- [Github](https://github.com/gnachman/iTerm2)
+- [iTerm2 | Github](https://github.com/gnachman/iTerm2)
 - [软件官网](https://www.iterm2.com)
 
 ### iTerm2 常用快捷键
@@ -177,7 +177,7 @@ brew install --cask fig
 
 在 `vscode` 中使用，需修改 `editor.accessibilitySupport` 为 `"off"`
 
-- [Github](https://github.com/withfig/autocomplete)
+- [Fig | Github](https://github.com/withfig/autocomplete)
 - [软件官网](https://fig.io/)
 
 ## mas-cli
@@ -209,7 +209,7 @@ mas upgrade
 mas outdated
 ```
 
-[Github](https://github.com/mas-cli/mas)
+[mas-cli | Github](https://github.com/mas-cli/mas)
 
 ## duti 设置默认应用程序
 
@@ -243,7 +243,7 @@ duti -s com.microsoft.VSCode .wxml all
 duti -s com.microsoft.VSCode .wxss all
 ```
 
-[Github](https://github.com/moretension/duti)
+[duti | Github](https://github.com/moretension/duti)
 
 ## 效率神器 Alfred
 
@@ -294,7 +294,7 @@ sudo wechattweak-cli --uninstall
 3. 支持鼠标和触控板手势
 4. 在线字幕、缩略图预览、画中画等
 
-- [Github](https://github.com/iina/iina)
+- [IINA | Github](https://github.com/iina/iina)
 - [软件官网](https://iina.io/)
 
 ## MacZip
@@ -342,7 +342,7 @@ sudo wechattweak-cli --uninstall
 3. 自动识别语种
 4. 可自定义插件
 
-- [Github](https://github.com/ripperhe/Bob)
+- [Bob | Github](https://github.com/ripperhe/Bob)
 - [软件官网](https://ripperhe.gitee.io/bob)
 
 ## 菜单栏图标管理 Hidden Bar
@@ -350,7 +350,7 @@ sudo wechattweak-cli --uninstall
 1. 简单易用、支持全局快捷键
 2. 免费开源、支持中文
 
-- [Github](https://github.com/dwarvesf/hidden)
+- [Hidden Bar | Github](https://github.com/dwarvesf/hidden)
 - [App Store](https://apps.apple.com/cn/app/hidden-bar/id1452453066)
 
 ## 音量管理 BackgroundMusic
@@ -359,13 +359,13 @@ sudo wechattweak-cli --uninstall
 2. 设置各个应用程序的音量
 3. 录制系统音频
 
-[Github](https://github.com/kyleneideck/BackgroundMusic)
+[BackgroundMusic | Github](https://github.com/kyleneideck/BackgroundMusic)
 
 ## 窗口管理神器 Rectangle
 
 比系统分屏更强大，支持快捷键分屏、支持三个及以上分屏
 
-- [Github](https://github.com/rxhanson/Rectangle)
+- [Rectangle | Github](https://github.com/rxhanson/Rectangle)
 - [软件官网](https://rectangleapp.com/)
 
 ## 应用快捷启动神器 Thor Launcher
@@ -386,4 +386,4 @@ sudo wechattweak-cli --uninstall
 1. 控制外接显示器的亮度和音量
 2. 支持键盘控制亮度和音量
 
-[Github](https://github.com/MonitorControl/MonitorControl)
+[MonitorControl | Github](https://github.com/MonitorControl/MonitorControl)

@@ -23,8 +23,7 @@ sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install
 omz update
 ```
 
-[Github](https://github.com/ohmyzsh/ohmyzsh)
-[zsh 插件](zsh)
+[Oh My Zsh | Github](https://github.com/ohmyzsh/ohmyzsh)
 
 ## zsh 插件
 
@@ -46,7 +45,7 @@ cd autojump
 ./install.py or ./uninstall.py
 ```
 
-[Github](https://github.com/wting/autojump)
+[autojump | Github](https://github.com/wting/autojump)
 
 ### z
 
@@ -60,7 +59,7 @@ plugins=(其他插件 z)
 source ~/.zshrc
 ```
 
-[Github](https://github.com/rupa/z)
+[z | Github](https://github.com/rupa/z)
 
 ### fast-syntax-highlighting
 
@@ -79,7 +78,7 @@ plugins=(其他插件 fast-syntax-highlighting)
 source ~/.zshrc
 ```
 
-[Github](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+[Fast Syntax Highlighting | Github](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
 ### zsh-autosuggestions
 
@@ -98,7 +97,7 @@ plugins=(其他插件 zsh-autosuggestions)
 source ~/.zshrc
 ```
 
-[Github](https://github.com/zsh-users/zsh-autosuggestions)
+[zsh-autosuggestions | Github](https://github.com/zsh-users/zsh-autosuggestions)
 
 ## zsh 主题
 
@@ -155,7 +154,7 @@ code ~/.p10k.zsh
 source ~/.zshrc
 ```
 
-[Github](https://github.com/romkatv/powerlevel10k)
+[Powerlevel10k | Github](https://github.com/romkatv/powerlevel10k)
 
 ## 常用配置
 
