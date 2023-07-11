@@ -70,7 +70,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/analysis/': [
     {
       text: 'React',
-      items: [{ text: 'React 18 的新特性', link: '/analysis/react/18' }]
+      items: [
+        { text: 'React 18 的新特性', link: '/analysis/react/18' },
+        { text: 'React 常见面试题', link: '/analysis/react/interview' }
+      ]
     },
     {
       text: '工具库',
