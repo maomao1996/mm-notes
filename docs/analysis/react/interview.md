@@ -259,3 +259,48 @@ function Parent() {
 
 - [你可能不需要使用派生 state](https://zh-hans.legacy.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
 - [React lifecycle methods diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+## 受控组件与非受控组件
+
+`React` 的受控组件与非受控组件的概念是针对表单元素而言的，由于获取表单元素内部 `state` 的实现方式的不同，就产生了受控组件和非受控组件
+
+### 受控组件
+
+受控组件是由 `React` 控制表单数据，即**表单数据由 `React` 组件的 `state` 管理**
+
+```jsx
+// 组件内部管理表单的值
+function App() {
+  const [value, setValue] = useState('')
+
+  return <input value={value} onChange={(e) => setValue(e.target.value)} />
+}
+
+// 父组件管理表单的值
+function App({ value, onChange }) {
+  return <input value={value} onChange={(e) => onChange(e.target.value)} />
+}
+```
+
+### 非受控组件
+
+**非受控组件是指表单数据将交由 `DOM` 节点来处理**
+
+```jsx
+function App() {
+  const inputRef = useRef(null)
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={() => console.log(inputRef.current.value)}>获取表单的值</button>
+    </>
+  )
+}
+```
+
+**相关资料**：
+
+- [受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/forms.html)
+- [非受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/uncontrolled-components.html)
+- [React 组件的受控与非受控](https://zhuanlan.zhihu.com/p/536322574)
