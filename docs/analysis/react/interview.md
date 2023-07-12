@@ -184,14 +184,16 @@ function Parent() {
 常见的解决方案有以下几种：
 
 - 使用 `React` 的 `Context` 进行通信
+- 使用发布订阅模式进行通信
+  - [event-emitter](https://github.com/medikoo/event-emitter)
+  - [mitt](https://github.com/developit/mitt)
+  - [eventbus](
 - 使用第三方状态管理库进行通信
   - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
   - [Redux](https://cn.redux.js.org)
   - [Mobx](https://zh.mobx.js.org)
 
-通过 `props` 传递 `children` 进行通信
-
-> 使用 `React` 的 `Context` 进行通信
+**使用 `React` 的 `Context` 进行通信**
 
 ```jsx
 // 创建 Context
@@ -215,3 +217,45 @@ function Parent() {
 ```
 
 更多关于 `Context` 的内容请参考：[使用 Context 深层传递参数 | React](https://zh-hans.react.dev/learn/passing-data-deeply-with-context)
+
+## 组件的生命周期
+
+> 只有类组件才有生命周期，函数组件没有生命周期
+
+::: tip `getDerivedStateFromProps` 方法
+
+- 用于 `props` 到 `state` 的映射
+- 设计成静态方法的是为了阻止开发者在其内部使用 `this`，从而防止错误的使用 `this.setState`
+
+:::
+
+### React 16.3 的生命周期
+
+![React 16.3 的生命周期](./images/react-lifecycle/16.3.png)
+
+在 `React 16.3` 版本时只有父组件的更新会触发 `static getDerivedStateFromProps`
+
+### React 16.4 之后的生命周期
+
+![React 16.4 的生命周期](./images/react-lifecycle/16.4.png)
+
+- 挂载阶段
+  - `constructor`：初始化 `state` 和 `props`
+  - `static getDerivedStateFromProps`：根据 `props` 初始化 `state`
+  - `render`：渲染组件
+  - `componentDidMount`：组件挂载完成
+- 更新阶段
+  - `static getDerivedStateFromProps`：根据 `props` 更新 `state`
+  - `shouldComponentUpdate`：控制组件是否更新
+  - `render`：渲染组件
+  - `getSnapshotBeforeUpdate`：在组件更新前获取 DOM 信息
+  - `componentDidUpdate`：组件更新完成
+- 卸载阶段
+  - `componentWillUnmount`：组件卸载前
+
+在 React 16.4 之后，任何因素触发的组件更新流程（包括 `this.setState` 和 `forceUpdate` 触发的更新流程）都会触发 `static getDerivedStateFromProps`
+
+**相关资料**：
+
+- [你可能不需要使用派生 state](https://zh-hans.legacy.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
+- [React lifecycle methods diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
