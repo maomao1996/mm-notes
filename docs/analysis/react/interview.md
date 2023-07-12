@@ -304,3 +304,25 @@ function App() {
 - [受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/forms.html)
 - [非受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/uncontrolled-components.html)
 - [React 组件的受控与非受控](https://zhuanlan.zhihu.com/p/536322574)
+
+## 类组件与函数组件的区别
+
+类组件与函数组件都是 `React` 组件的展现形式，其区别主要有以下几点：
+
+- 类组件是 `OOP（面向对象编程）`，函数组件是 `FP（函数式编程）`
+- 类组件可以使用 `this` 来访问组件实例，函数组件没有实例只能通过函数的参数和闭包来访问组件状态和方法
+- 类组件使用 `PureComponent` 或 `shouldComponentUpdate` 来控制组件是否更新；函数组件依靠 `React.memo`、`useMemo`、`useCallback`、`useRef` 缓存来提升性能
+  - `PureComponent` 由 `React` 内部控制组件是否更新
+  - `shouldComponentUpdate` 由开发者控制组件是否更新
+  - `React.memo` 用于缓存组件渲染结果
+  - `useMemo` 用于缓存值
+  - `useCallback` 用于缓存函数
+- 类组件通过生命周期包装业务逻辑，函数组件通过 `Hooks` 来实现相应的功能
+- 类组件可以使用 `ref` 来获取组件实例，函数组件需要使用 `useRef` 来获取组件实例
+
+::: tip
+总的来说，函数组件更加简洁、易于维护和测试，而类组件容易造成代码冗余、逻辑难以复用（业务逻辑散落在生命周期中）；<br />
+同时随着 `React Hooks` 的推出，生命周期概念的淡出，函数组件可以完全取代类组件；<br />
+其次继承并不是组件最佳的设计模式，官方更推崇“组合优于继承”的设计概念，所以类组件在这方面的优势也在淡出；<br />
+类组件在未来时间切片与并发模式中，由于生命周期带来的复杂度，并不易于优化。而函数组件本身轻量简单，且在 `Hooks` 的基础上提供了比原先更细粒度的逻辑组织与复用，更能适应 `React` 的未来发展。
+:::
