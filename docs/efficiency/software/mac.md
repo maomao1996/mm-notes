@@ -39,6 +39,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 sudo spctl --master-disable
 ```
 
+然后去『`系统设置 > 安全性与隐私 > 安全性 > 任何来源`』打开
+
 ## Xcode Command Line Tools
 
 ```sh
