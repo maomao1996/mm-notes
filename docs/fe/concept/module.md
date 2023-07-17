@@ -191,6 +191,10 @@ seajs.use(['./utils.js'], function (utils) {
 })
 ```
 
-## 相关文章
+---
+
+::: tip 相关资料
 
 [深入 CommonJs 与 ES6 Module](https://segmentfault.com/a/1190000017878394)
+
+:::

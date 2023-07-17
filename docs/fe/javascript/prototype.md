@@ -188,10 +188,14 @@ Function.__proto__ === Function.prototype // true
 - 所有的对象都有一个 `__proto__` 属性（隐式原型）指向创建该对象的函数的 `prototype`（实例的隐式原型 === 构造函数的原型）
 - 每个对象都拥有一个原型对象，通过 `__proto__` 指针指向上一个原型 ，同时原型对象也可能拥有原型，这样一层一层，最终指向 `null`。这个**链式结构**被称为**原型链**
 
-## 相关文章
+---
+
+::: tip 相关资料
 
 - [深入理解 javascript 原型和闭包](https://www.cnblogs.com/wangfupeng1988/p/3977924.html)
 - [Javascript Object Hierarchy](http://www.mollypages.org/tutorials/js.mp)
 - [JavaScript 世界万物诞生记](https://zhuanlan.zhihu.com/p/356980105)
 - [从探究 `Function.__proto__ === Function.prototype` 过程中的一些收获](https://github.com/jawil/blog/issues/13)
 - [深入探究 Function & Object 鸡蛋问题](https://github.com/yygmind/blog/issues/35)
+
+:::

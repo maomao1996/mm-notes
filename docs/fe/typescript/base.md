@@ -1297,9 +1297,14 @@ type Result = ReturnType<typeof add>
 - 若 `T` 类型为函数类型，则根据函数类型上下文推导出 `R` 具体类型并返回，否则则返回 `any` 类型
 - 在上述例子中，`add` 即为返回 `number` 类型的函数，由此推断出 `R` 为 `number`
 
-## 相关学习资料
+---
+
+::: tip 相关资料
 
 - [TypeScript 中文文档](https://www.typescriptlang.org/zh/docs/)
+- [TypeScript 演练场 —— 一个用于 TypeScript 和 JavaScript 的在线编辑器](https://www.typescriptlang.org/zh/play)
 - [TypeScript 入门教程 | GitHub](https://github.com/xcatliu/typescript-tutorial)
 - [深入理解 TypeScript | GitHub](https://github.com/jkchao/typescript-book-chinese)
 - [TypeScript | 汪图南](https://wangtunan.github.io/blog/typescript/base.html)
+
+:::

@@ -159,7 +159,11 @@
 ![CORS 请求过程](./images/cors-process.png)
 :::
 
-[参考资料 —— 跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+---
+
+::: tip 相关资料
+[跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+:::
 
 ### JSONP
 

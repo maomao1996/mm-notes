@@ -1,6 +1,6 @@
 # React 常见面试题
 
-::: tip 一些相关资料
+::: tip 相关资料
 
 - [React 官方文档](https://zh-hans.reactjs.org/)
 - [旧版 React 官方文档](https://zh-hans.legacy.reactjs.org)
@@ -216,7 +216,9 @@ function Parent() {
 }
 ```
 
-更多关于 `Context` 的内容请参考：[使用 Context 深层传递参数 | React](https://zh-hans.react.dev/learn/passing-data-deeply-with-context)
+::: tip `Context` 相关资料
+[使用 Context 深层传递参数 | React](https://zh-hans.react.dev/learn/passing-data-deeply-with-context)
+:::
 
 ## 组件的生命周期
 
@@ -255,10 +257,14 @@ function Parent() {
 
 在 React 16.4 之后，任何因素触发的组件更新流程（包括 `this.setState` 和 `forceUpdate` 触发的更新流程）都会触发 `static getDerivedStateFromProps`
 
-**相关资料**：
+---
+
+::: tip 相关资料
 
 - [你可能不需要使用派生 state](https://zh-hans.legacy.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
 - [React lifecycle methods diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+:::
 
 ## 受控组件与非受控组件
 
@@ -299,11 +305,15 @@ function App() {
 }
 ```
 
-**相关资料**：
+---
+
+::: tip 相关资料
 
 - [受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/forms.html)
 - [非受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/uncontrolled-components.html)
 - [React 组件的受控与非受控](https://zhuanlan.zhihu.com/p/536322574)
+
+:::
 
 ## 类组件与函数组件的区别
 

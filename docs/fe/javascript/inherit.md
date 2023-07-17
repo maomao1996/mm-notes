@@ -385,8 +385,12 @@ var ColorPoint = /*#__PURE__*/ (function (_Point) {
 - 寄生式继承：**创建一个实现继承的函数，以某种方式增强对象，然后返回这个对象**
 - 寄生组合式继承：**通过借用构造函数继承属性，再使用寄生式继承来继承父类原型，然后将返回的新对象赋值给子类原型**
 
-## 相关文章
+---
+
+::: tip 相关资料
 
 - [JavaScript 常用八种继承方案](https://github.com/yygmind/blog/issues/7)
 - [JavaScript 深入之继承的多种方式和优缺点](https://github.com/mqyqingfeng/Blog/issues/16)
 - [ES6 系列之 Babel 是如何编译 Class 的(下)](https://github.com/mqyqingfeng/Blog/issues/106)
+
+:::

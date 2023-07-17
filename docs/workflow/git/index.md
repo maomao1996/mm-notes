@@ -1,6 +1,6 @@
 # Git
 
-## 相关学习文章和配置指南
+::: tip 相关资料
 
 - [官网](https://git-scm.com/)
 - [Git 学习教程](https://learngitbranching.js.org/?locale=zh_CN)
@@ -14,11 +14,11 @@
   - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
 - [commit 常用的 type](/workflow/style-guide#commit-常用的-type)
 
+:::
+
 ## 常用 Git 命令
 
-::: tip 提示
-[xxx] 均为可选参数
-:::
+> `[xxx]` 均为可选参数
 
 ### git clone
 
@@ -290,9 +290,14 @@ jobs:
           FOLDER: dist
 ```
 
-详细教程可以参考阮一峰老师的[GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+---
 
-[GitHub Actions 中文文档](https://docs.github.com/cn/actions/reference)
+::: tip 相关资料
+
+- [GitHub Actions 入门教程 | 阮一峰](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+- [GitHub Actions 中文文档](https://docs.github.com/cn/actions/reference)
+
+:::
 
 ## `git log` 格式化
 
