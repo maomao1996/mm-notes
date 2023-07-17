@@ -336,3 +336,116 @@ function App() {
 其次继承并不是组件最佳的设计模式，官方更推崇“组合优于继承”的设计概念，所以类组件在这方面的优势也在淡出；<br />
 类组件在未来时间切片与并发模式中，由于生命周期带来的复杂度，并不易于优化。而函数组件本身轻量简单，且在 `Hooks` 的基础上提供了比原先更细粒度的逻辑组织与复用，更能适应 `React` 的未来发展。
 :::
+
+## 什么是高阶组件 (HOC)
+
+> 高阶组件即 higher-order component (HOC)
+
+高阶组件是灵活使用 `React` 组件的一种技巧，其本身不是组件，而是**一个参数为组件返回值也是一个组件的函数**
+
+**高阶组件的作用**：
+
+- 代码复用、逻辑复用：页面复用
+- 条件渲染：控制组件的渲染逻辑（权限控制）
+- 生命周期捕获/劫持：借助父组件子组件生命周期规则捕获子组件的生命周期（组件渲染性能追踪、日志打点）
+
+**实现高阶组件的方式及其功能**：
+
+- 属性代理
+  - 操作 `props`（增加、删除、修改）
+  - 提取 `state`
+  - 条件渲染
+  - 用其他元素包裹 `WrappedComponent`（样式修改）
+- 反向继承
+  - 劫持生命周期
+  - 渲染劫持
+    - 条件渲染
+    - 操作由 `render()` 输出的 `React` 元素树
+    - 用其他元素包裹 `WrappedComponent`（样式修改）
+  - 操作 `WrappedComponent` 组件的 `state`
+
+### 属性代理
+
+> 一般来说业务组件表示被代理的组件，高阶组件表示代理组件
+
+属性代理是用高阶组件包裹一层业务组件，通过高阶组件对业务组件进行代理操作，其生命周期关系完全是 `React` 父子组件的生命周期关系（即通过父组件对子组件进行一系列强化操作）
+
+```jsx
+/* 使用函数组件实现高阶组件 */
+function HOC(WrappedComponent) {
+  return function H(props) {
+    const [state] = useState({ name :'hoc' })
+
+    return <WrappedComponent {...props} {...state} />
+  }
+}
+
+/* 使用类组件实现高阶组件 */
+function HOC(WrappedComponent) {
+  return class H extends React.Component {
+    state = { name: 'hoc' }
+    render() {
+      return <WrappedComponent {...this.props} {this.state} />
+    }
+  }
+}
+```
+
+### 反向继承
+
+反向继承是指高阶组件通过继承业务组件的方式来操作业务组件的 `state`、`props`、组件生命周期方法和 `render` 方法
+
+```jsx{2-3}
+function HOC(WrappedComponent) {
+  // 继承业务组件，而不是 React.Component
+  return class H extends WrappedComponent {
+    render() {
+      return super.render()
+    }
+  }
+}
+```
+
+### 属性代理和反向继承的总结
+
+- 属性代理是从组合的角度来实现，即从外部去操作 `WrappedComponent`
+  - **优点**
+    - 适用于函数组件和类组件（对于**条件渲染**和 **props 属性增强**来说，高阶组件只负责控制子组件渲染和传递额外的 `props`）
+    - 可以和业务组件低耦合，零耦合
+    - 可以完全隔离业务组件的渲染
+    - 多个属性代理的高阶组件可嵌套使用，无嵌套数量和顺序限制
+  - **缺点**
+    - 无法直接获取业务组件的状态（需要通过 `ref` 获取）
+    - 无法直接继承静态属性
+      - 手动拷贝静态属性
+      - 使用第三方库 [hoist-non-react-statics | Github](https://github.com/mridgway/hoist-non-react-statics)
+- 反向继承是从继承的角度来实现，即从内部去操作 `WrappedComponent`
+  - **优点**
+    - 方便获取组件内部状态（`state`、`props`、`生命周期`、`绑定的事件`）
+    - 无须对静态属性和方法进行额外的处理
+  - **缺点**
+    - 函数组件无法使用
+    - 被业务组件强耦合，需要知道业务组件的内部实现
+    - 多个反向继承的高阶组件嵌套使用时，当前状态会覆盖上一个状态，同时还需要注意嵌套顺序
+
+属性代理耦合度低，适用于多个业务组件的复用，而反向继承耦合度高，适用于单个业务组件的复用；通过反向继承方式实现的高阶组件比属性代理实现的高阶组件功能更强大，个性化程度更高
+
+::: warning 高阶组件的缺点
+
+- 静态方法丢失（属性代理的方式需单独处理）
+- `ref` 属性不能透传（需单独处理）
+- 代码难理解不直观
+- 会增加很多额外的组件节点，带来调试负担
+
+:::
+
+---
+
+::: tip 相关资料
+
+- [「react 进阶」一文吃透 React 高阶组件(HOC)](https://github.com/GoodLuckAlien/blogs/blob/028fc6dce405027a7048985d92cb505134090949/react/react-hoc.md)
+- [React 高阶组件(HOC)的入门 📖 及实践 💻](https://juejin.cn/post/6844904050236850184)
+- [深入理解 React 高阶组件](https://zhuanlan.zhihu.com/p/24776678)
+- [基于 Decorator 的组件扩展实践](https://zhuanlan.zhihu.com/p/22054582)
+
+:::
