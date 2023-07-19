@@ -449,3 +449,42 @@ function HOC(WrappedComponent) {
 - [基于 Decorator 的组件扩展实践](https://zhuanlan.zhihu.com/p/22054582)
 
 :::
+
+## `setState` 是同步更新还是异步更新
+
+> `setState` 在类组件中是 `this.setState` 方法，在函数组件中是 `useState` 返回值的修改函数
+> `setState` 用于变更状态，触发组件重新渲染，更新视图 UI
+
+`setState` 是同步更新还是异步更新指的是：在调用 `setState` 之后是否马上能得到最新的 `state` 值，如果能就是同步，如果不能就是异步（`React` 官方定义是异步的）
+
+### 在 `React 18` 之前
+
+> `legacy` 模式：`ReactDOM.render(<App />, rootNode)`
+
+在 `legacy` 模式下，只要在 `React` 可以控制的地方，`setState` 的执行都是异步的，比如在 `React` 生命周期事件和合成事件中，都会走合并操作，延迟更新的策略<br />
+而在 `React` 无法控制的地方，如监听原生事件和异步调用的地方，`setState` 的执行都是就是同步的。比如在 `addEventListener` 、`setTimeout`、`setInterval`、`Promise`、`MessageChannel` 的回调函数中
+
+### 在 `React 18` 之后
+
+> `concurrent` 模式：`ReactDOM.createRoot(rootNode).render(<App />)`
+
+在 `concurrent` 模式下，由于默认启用了并发更新，所以 `setState` 的执行都是异步的，即不管是在 `React` 可以控制的地方还是无法控制的地方，默认都会走合并操作，延迟更新的策略
+
+::: tip 为什么 `setState` 是异步的？
+
+- **性能优化、减少渲染次数**
+- **保持内部一致性**（如果改为同步更新，尽管 `setState` 变成了同步，但 `props` 不是）
+- **为后续的架构升级启用并发更新**（启用并发更新，完成异步渲染）
+
+[RFClarification: why is setState asynchronous?](https://github.com/facebook/react/issues/11527)
+
+:::
+
+---
+
+::: tip 相关资料
+
+- [RFClarification: why is setState asynchronous?](https://github.com/facebook/react/issues/11527)
+- [使用 Concurrent 模式（实验性）](https://zh-hans.legacy.reactjs.org/docs/concurrent-mode-adoption.html)
+
+:::
