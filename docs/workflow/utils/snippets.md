@@ -1,10 +1,10 @@
 ---
-description: 记录开发中的一些常用方法：环境判断、验证url是否有效、提取身份证信息
+description: 记录开发中的一些常用方法：环境判断、验证 url 是否有效、提取身份证信息
 ---
 
-# 常用方法
+# 常用代码片段
 
-> 收集开发中的一些常用方法
+> 收集开发中的一些常用代码片段
 
 ## 环境判断
 
@@ -36,6 +36,31 @@ const isWeChat = /micromessenger/.test(UA)
 const isMobile = 'ontouchstart' in window
 ```
 
+## 验证 `url` 是否有效
+
+```js
+function isUrl(string) {
+  if (typeof string !== 'string') {
+    return false
+  }
+  try {
+    new URL(string)
+    return true
+  } catch (err) {
+    return false
+  }
+}
+
+isUrl('maomao') // false
+
+isUrl('https://github.com/maomao1996') // true
+isUrl('https://a.b.c') // true
+```
+
+::: warning 注意
+该技巧只适用于一些验证不严格的场景，[严格场景下可以使用这个 npm 包 —— is-url](https://github.com/segmentio/is-url)
+:::
+
 ## 微信 `api promise` 化
 
 ```js
@@ -61,31 +86,6 @@ promisify(wx.getSystemInfo)
     console.log('fail', err)
   })
 ```
-
-## 验证 `url` 是否有效
-
-```js
-function isUrl(string) {
-  if (typeof string !== 'string') {
-    return false
-  }
-  try {
-    new URL(string)
-    return true
-  } catch (err) {
-    return false
-  }
-}
-
-isUrl('maomao') // false
-
-isUrl('https://github.com/maomao1996') // true
-isUrl('https://a.b.c') // true
-```
-
-::: warning 注意
-该技巧只适用于一些验证不严格的场景，[严格场景下可以使用这个 npm 包 —— is-url](https://github.com/segmentio/is-url)
-:::
 
 ## 提取身份证信息
 

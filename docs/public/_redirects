@@ -1,3 +1,5 @@
+/workflow/utils/function                    /workflow/utils/snippets  301
+
 # https://notes-7w2tusrb9-fe-mm.vercel.app
 
 /interview/base/:path                       /fe/javascript/:path    301
@@ -17,6 +19,7 @@
 /css/                                       /workflow/css/spec    301
 /css/skill.html                             /workflow/css/tricks  301
 /css/sass.html                              /workflow/sass/       301
+/css/scss.html                              /workflow/sass/       301
 /vue/                                       /workflow/vue/        301
 
 /issue/:path                                /pit/:path  301

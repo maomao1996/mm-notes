@@ -95,7 +95,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [
         { text: '工具库整理', link: '/workflow/utils/library' },
         { text: '常用正则整理', link: '/workflow/utils/regexp' },
-        { text: '常用方法整理', link: '/workflow/utils/function' }
+        { text: '常用代码片段', link: '/workflow/utils/snippets' }
       ]
     },
     {
