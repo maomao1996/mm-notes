@@ -36,6 +36,44 @@ const isWeChat = /micromessenger/.test(UA)
 const isMobile = 'ontouchstart' in window
 ```
 
+## 主题切换
+
+根据用户的主题首选项（`light`、`dark` 或 `system`）切换主题
+
+```js
+;(() => {
+  try {
+    const rootElement = document.documentElement
+    const classList = rootElement.classList
+    const userTheme = localStorage.getItem('theme')
+
+    // 移除 'light' 和 'dark' class，确保没有重复的主题类
+    classList.remove('light', 'dark')
+
+    // 判断用户的主题首选项
+    if (userTheme === 'system' || !userTheme) {
+      // 判断用户的系统主题首选项是否为 dark
+      const systemDarkQuery = '(prefers-color-scheme: dark)'
+      const systemMatchMedia = window.matchMedia(systemDarkQuery)
+      const isSystemDark = systemMatchMedia.media !== systemDarkQuery || systemMatchMedia.matches
+
+      // 根据系统主题设置添加对应的 class 和 document 的颜色模式
+      if (isSystemDark) {
+        classList.add('dark')
+        rootElement.style.colorScheme = 'dark'
+      } else {
+        classList.add('light')
+        rootElement.style.colorScheme = 'light'
+      }
+    } else {
+      // 如果用户设置了具体的主题首选项（'light' 或 'dark'），则添加对应的 class 和 document 的颜色模式
+      classList.add(userTheme)
+      rootElement.style.colorScheme = userTheme
+    }
+  } catch (e) {}
+})()
+```
+
 ## 验证 `url` 是否有效
 
 ```js
