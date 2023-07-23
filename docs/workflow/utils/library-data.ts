@@ -181,9 +181,26 @@ export const DATA: NavData[] = [
     title: '滚动处理',
     items: [
       {
+        title: 'body-scroll-lock',
+        desc: '一种通用的 body 滚动锁定解决方案',
+        link: 'https://github.com/willmcpo/body-scroll-lock'
+      },
+      {
         title: 'better-scroll',
         desc: '重点解决移动端（已支持 PC）各种滚动场景需求的插件',
         link: 'https://github.com/ustbhuangyi/better-scroll'
+      },
+      {
+        badge: 'react',
+        title: 'better-scroll',
+        desc: 'React 滚动组件',
+        link: 'https://github.com/fisshy/react-scroll'
+      },
+      {
+        badge: 'react',
+        title: 'smooth-scrollbar',
+        desc: '可定制、可扩展和高性能的自定义滚动条解决方案',
+        link: 'https://github.com/idiotWu/smooth-scrollbar'
       }
     ]
   },
