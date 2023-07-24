@@ -29,7 +29,7 @@ description: '收录一些能提升使用体验的浏览器扩展、油猴脚本
 
 ## 翻译
 
-- [Relingo - Master words from any webpage](https://chrome.google.com/webstore/detail/relingo-master-words-from/dpphkcfmnbkdpmgneljgdhfnccnhmfig) 识别网站中的生词并翻译（可根据自己的情况设置英语等级）
+- [Relingo](https://chrome.google.com/webstore/detail/relingo-master-words-from/dpphkcfmnbkdpmgneljgdhfnccnhmfig) 识别网站中的生词并翻译（可根据自己的情况设置英语等级）、YouTube 支持双语字幕，生词高亮字幕
 - [沉浸式翻译](https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh) 免费的又好用的沉浸式双语对照翻译
 - [Saladict 沙拉查词](https://chrome.google.com/webstore/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D-%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/cdonnmffkdaoajfknoeeecmchibpmkmg) 一款专业划词翻译扩展，为交叉阅读而生。涵盖中英日韩法德西语，支持复杂的划词操作、网页翻译、生词本与 PDF 浏览
 - [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh) 全文翻译(中英对照)
