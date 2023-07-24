@@ -37,6 +37,8 @@
 
 ### 变量提升
 
+变量提升是指**在代码执行过程中 `var` 变量和函数声明会在它们被实际执行之前被"提升"到它们所在作用域的顶部**
+
 ```js
 console.log(a) // 输出 undefined
 console.log(b) // 报错
@@ -48,6 +50,35 @@ const c = 'const'
 ```
 
 [为什么 let 和 const 不存在变量提升？ - 知乎](https://www.zhihu.com/question/535442142/answer/2510328090)
+
+::: tip 函数声明优先于变量声明，函数声明会覆盖变量声明
+
+变量提升
+
+```js {2,6}
+/* var 变量声明 */
+console.log(a) // undefined
+var a = 'var'
+
+/* 函数声明 */
+fn() // function a() { console.log('fn') }
+function fn() {
+  console.log('fn')
+}
+```
+
+在同一作用域内存在同名的函数声明和 `var` 变量声明时**函数声明会覆盖变量声明**
+
+```js {1}
+console.log(a) // function a() { console.log('fn') }
+
+var a = 'var'
+function a() {
+  console.log('fn')
+}
+```
+
+:::
 
 ### 挂载到全局对象
 
