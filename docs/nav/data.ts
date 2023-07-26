@@ -79,12 +79,83 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://stablediffusionweb.com/favicon.ico',
         title: 'Stable Diffusion',
         link: 'https://stablediffusionweb.com'
+      }
+    ]
+  },
+  {
+    title: '高质量周刊与博客',
+    items: [
+      {
+        badge: '周一更新',
+        icon: '/icons/frontender-ua.png',
+        title: 'Frontend Weekly',
+        desc: '前端周刊',
+        link: 'https://frontender-ua.medium.com'
       },
       {
-        badge: 'PPT',
-        icon: 'https://global-uploads.webflow.com/59deb588800ae30001ec19c9/5d4891e0e260e3c1bc37b100_beautiful%20ai%20favicon%20%20blue%20square.png',
-        title: 'Beautiful.ai',
-        link: 'https://www.beautiful.ai'
+        badge: '周五更新',
+        icon: '/icons/ruanyifeng.jpeg',
+        title: '科技爱好者周刊',
+        desc: '阮一峰的科技爱好者周刊',
+        link: 'https://www.ruanyifeng.com/blog/archives.html'
+      },
+      {
+        badge: '周五更新',
+        icon: 'https://s0.ssl.qhres2.com/static/3444fd94a3c31e92.ico',
+        title: '奇舞周刊',
+        desc: '领略前端技术 阅读奇舞周刊（360 前端团队）',
+        link: 'https://weekly.75.team'
+      },
+      {
+        badge: '周一更新',
+        icon: 'https://img.alicdn.com/imgextra/i3/O1CN01uKTVpD1UK8BCxFBwo_!!6000000002498-2-tps-500-500.png',
+        title: 'MDH Weekly',
+        desc: '云谦的前端周刊',
+        link: 'https://mdhweekly.com/weekly'
+      },
+      {
+        badge: '每周更新',
+        icon: '/icons/geekhyt-weekly.png',
+        title: '前端食堂技术周刊',
+        desc: '周周尝鲜，人工筛选前端圈每周最新资讯',
+        link: 'https://hungryturbo.zhubai.love'
+        // link: 'https://github.com/Geekhyt/weekly'
+      },
+      {
+        icon: 'https://overreacted.io/icons/icon-96x96.png?v=8c19a894ebc3f54d282a8f2418cf5398',
+        title: 'Overreacted',
+        desc: 'Dan Abramov 的个人博客',
+        link: 'https://overreacted.io/zh-hans'
+      },
+      {
+        icon: 'https://xiaolincoding.com/logo.webp',
+        title: '小林coding',
+        desc: '小林 x 图解计算机基础（计算机网络、操作系统、计算机组成、数据库）',
+        link: 'https://xiaolincoding.com'
+      },
+      {
+        icon: 'https://antfu.me/favicon.svg',
+        title: 'Blog - Anthony Fu',
+        desc: 'Vue, Vite, Nuxt 核心团队成员 | VueUse, Slidev, Vitest, UnoCSS 作者',
+        link: 'https://antfu.me/posts'
+      },
+      {
+        icon: 'https://cdn.zhangxinxu.com/zxx_ico.png',
+        title: '鑫空间-鑫生活',
+        desc: '张鑫旭的个人博客',
+        link: 'https://www.zhangxinxu.com/wordpress'
+      },
+      {
+        icon: '/icons/ascoders.png',
+        title: '前端精读周刊',
+        desc: '帮你理解最前沿、实用的技术',
+        link: 'https://github.com/ascoders/weekly'
+      },
+      {
+        icon: '/icons/mqyqingfeng.jpeg',
+        title: '冴羽博客',
+        desc: '四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列',
+        link: 'https://github.com/mqyqingfeng/Blog'
       }
     ]
   },
@@ -305,7 +376,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://postcss.org'
       },
       {
-        icon: 'https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg',
+        icon: '/icons/sass.svg',
         title: 'Sass',
         desc: '一个成熟，稳定，功能强大的专业级 CSS 扩展语言',
         link: 'https://sass-lang.com'
@@ -321,6 +392,23 @@ export const NAV_DATA: NavData[] = [
         title: 'UnoCSS',
         desc: '一个即时的原子化 CSS 引擎',
         link: 'https://unocss.dev'
+      },
+      {
+        icon: '/icons/you-need-to-know-css.ico',
+        title: 'You-need-to-know-css',
+        desc: 'Web开发者应该掌握的CSS tricks',
+        link: 'https://lhammer.cn/You-need-to-know-css/#/zh-cn/'
+      },
+      {
+        icon: '/icons/qishaoxuan-css-tricks.png',
+        title: 'CSS 常用样式',
+        desc: 'CSS 常用样式和奇技淫巧总结',
+        link: 'https://qishaoxuan.github.io/css_tricks/'
+      },
+      {
+        title: 'CSS 常见布局',
+        desc: 'CSS 各种常见的布局实现',
+        link: 'https://sweet-kk.github.io/css-layout/'
       }
     ]
   },
@@ -332,6 +420,29 @@ export const NAV_DATA: NavData[] = [
         title: '微信小程序文档',
         desc: '微信小程序官方开发者文档',
         link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/'
+      },
+      {
+        icon: '/icons/alipay.svg',
+        title: '支付宝小程序文档',
+        desc: '支付宝小程序官方开发者文档',
+        link: 'https://opendoc.alipay.com/mini/'
+      }
+    ]
+  },
+  {
+    title: '跨平台',
+    items: [
+      {
+        icon: '/icons/electron.svg',
+        title: 'Electron',
+        desc: '使用 Web 技术构建跨平台桌面应用程序',
+        link: 'https://www.electronjs.org/zh/'
+      },
+      {
+        icon: '/icons/tauri.png',
+        title: 'Tauri',
+        desc: '使用 Web 技术构建更小、更快、更安全的桌面应用程序',
+        link: 'https://tauri.app/zh-cn/'
       },
       {
         icon: '/icons/taro.svg',
@@ -595,75 +706,6 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
         desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
         link: 'https://juejin.cn'
-      }
-    ]
-  },
-  {
-    title: '高质量周刊与博客',
-    items: [
-      {
-        badge: '周一更新',
-        icon: '/icons/frontender-ua.png',
-        title: 'Frontend Weekly',
-        desc: '前端周刊',
-        link: 'https://frontender-ua.medium.com'
-      },
-      {
-        badge: '周五更新',
-        icon: '/icons/ruanyifeng.jpeg',
-        title: '科技爱好者周刊',
-        desc: '阮一峰的科技爱好者周刊',
-        link: 'https://www.ruanyifeng.com/blog/archives.html'
-      },
-      {
-        badge: '周五更新',
-        icon: 'https://s0.ssl.qhres2.com/static/3444fd94a3c31e92.ico',
-        title: '奇舞周刊',
-        desc: '领略前端技术 阅读奇舞周刊（360 前端团队）',
-        link: 'https://weekly.75.team'
-      },
-      {
-        badge: '周一更新',
-        icon: 'https://img.alicdn.com/imgextra/i3/O1CN01uKTVpD1UK8BCxFBwo_!!6000000002498-2-tps-500-500.png',
-        title: 'MDH Weekly',
-        desc: '云谦的前端周刊',
-        link: 'https://mdhweekly.com/weekly'
-      },
-      {
-        icon: 'https://overreacted.io/icons/icon-96x96.png?v=8c19a894ebc3f54d282a8f2418cf5398',
-        title: 'Overreacted',
-        desc: 'Dan Abramov 的个人博客',
-        link: 'https://overreacted.io/zh-hans'
-      },
-      {
-        icon: 'https://xiaolincoding.com/logo.webp',
-        title: '小林coding',
-        desc: '小林 x 图解计算机基础（计算机网络、操作系统、计算机组成、数据库）',
-        link: 'https://xiaolincoding.com'
-      },
-      {
-        icon: 'https://antfu.me/favicon.svg',
-        title: 'Blog - Anthony Fu',
-        desc: 'Vue, Vite, Nuxt 核心团队成员 | VueUse, Slidev, Vitest, UnoCSS 作者',
-        link: 'https://antfu.me/posts'
-      },
-      {
-        icon: 'https://cdn.zhangxinxu.com/zxx_ico.png',
-        title: '鑫空间-鑫生活',
-        desc: '张鑫旭的个人博客',
-        link: 'https://www.zhangxinxu.com/wordpress'
-      },
-      {
-        icon: '/icons/ascoders.png',
-        title: '前端精读周刊',
-        desc: '帮你理解最前沿、实用的技术',
-        link: 'https://github.com/ascoders/weekly'
-      },
-      {
-        icon: '/icons/mqyqingfeng.jpeg',
-        title: '冴羽博客',
-        desc: '四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列',
-        link: 'https://github.com/mqyqingfeng/Blog'
       }
     ]
   },
