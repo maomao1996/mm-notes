@@ -66,8 +66,23 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/workflow'
   },
-  { text: '日常笔记', link: '/daily-notes/', activeMatch: '^/daily-notes' },
-  { text: '踩坑记录', link: '/pit/npm', activeMatch: '^/pit' },
+  {
+    text: '笔记',
+    items: [
+      { text: '日常笔记', link: '/daily-notes/', activeMatch: '^/daily-notes' },
+      {
+        text: '踩坑记录',
+        items: [
+          { text: 'npm 踩坑记录', link: '/pit/npm' },
+          { text: '第三方库踩坑记录', link: '/pit/library' },
+          { text: 'PC 踩坑记录', link: '/pit/pc' },
+          { text: 'H5 踩坑记录', link: '/pit/h5' },
+          { text: '微信开发踩坑记录', link: '/pit/wechat' }
+        ]
+      }
+    ],
+    activeMatch: '^/daily-notes|pit'
+  },
   {
     text: '提效工具',
     items: [
