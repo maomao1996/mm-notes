@@ -172,5 +172,5 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
-  '/daily-notes/issue': sidebarDailyNotes
+  '/daily-notes': sidebarDailyNotes
 }

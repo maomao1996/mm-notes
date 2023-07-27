@@ -6,6 +6,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '前端物语',
     items: [
       { text: 'JavaScript 基础知识', link: '/fe/javascript/types' },
+      { text: 'CSS 理论知识点', link: '/fe/css/' },
       { text: 'ES6 常用知识', link: '/fe/es6/' },
       {
         items: [
