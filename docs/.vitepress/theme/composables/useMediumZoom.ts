@@ -11,7 +11,7 @@ declare module 'medium-zoom' {
   }
 }
 
-const defaultSelector = ':not(a) > img:not(.image-src)'
+const defaultSelector = ':not(a) > img:not(.image-src, .visitor, .vp-sponsor-grid-image)'
 
 export const mediumZoomSymbol: InjectionKey<Zoom> = Symbol('medium-zoom')
 
