@@ -1,7 +1,8 @@
 # Tailwind CSS 使用与配置
 
-- [Tailwind CSS 中文文档](https://www.tailwindcss.cn/docs)
+- [Tailwind CSS 中文文档](https://www.tailwindcss.cn/docs/installation)
 - [Tailwind CSS 英文文档](https://tailwindcss.com/docs/installation)
+- [Tailwind CSS 在线练习场](https://play.tailwindcss.com/)
 - [Tailwind CSS | Github](https://github.com/tailwindlabs/tailwindcss)
 - [awesome-tailwindcss](https://github.com/aniftyco/awesome-tailwindcss)
 
@@ -34,6 +35,52 @@ module.exports = {
   plugins: []
 }
 ```
+
+## Tailwind CSS 的响应式设计
+
+Tailwind CSS 默认提供了 5 个断点，可以通过 `theme.screens` 进行修改
+
+| 断点前缀 | 最小宽度 | CSS                                  |
+| -------- | -------- | ------------------------------------ |
+| `sm`     | 640px    | `@media (min-width: 640px) { ... }`  |
+| `md`     | 768px    | `@media (min-width: 768px) { ... }`  |
+| `lg`     | 1024px   | `@media (min-width: 1024px) { ... }` |
+| `xl`     | 1280px   | `@media (min-width: 1280px) { ... }` |
+| `2xl`    | 1536px   | `@media (min-width: 1536px) { ... }` |
+
+Tailwind CSS 断点系统是**移动端优先**（即样式默认在所有屏幕尺寸下都有效，通过添加带前缀的工具类在较大的断点处覆盖之前的样式）
+
+> 下面的样式表示默认居中，当在 `md` 断点处时居左
+
+```html
+<div class="text-center md:text-left">Tailwind CSS 的响应式设计 maomao 1996</div>
+```
+
+[响应式设计 | Tailwind Play](https://play.tailwindcss.com/2M8FeA1APS)
+
+::: tip
+在编写样式时，最好先实现设计的移动布局，然后对 `sm` 屏幕有意义的任何更改进行分层，然后是 `md` 屏幕等
+:::
+
+### 定位断点范围
+
+通过将 `md` 之类的响应修饰符与下一个断点的 `max-*` 修饰符堆叠来定位该断点的范围
+
+| 修饰符    | CSS                                              |
+| --------- | ------------------------------------------------ |
+| `max-sm`  | `@media not all and (min-width: 640px) { ... }`  |
+| `max-md`  | `@media not all and (min-width: 768px) { ... }`  |
+| `max-lg`  | `@media not all and (min-width: 1024px) { ... }` |
+| `max-xl`  | `@media not all and (min-width: 1280px) { ... }` |
+| `max-2xl` | `@media not all and (min-width: 1536px) { ... }` |
+
+> 下面的样式表示默认居中，当断点处于 `md` 和 `lg` 之间时居左
+
+```html
+<div class="text-center md:max-lg:text-left">Tailwind CSS 的定位断点范围 maomao 1996</div>
+```
+
+[定位断点范围 | Tailwind Play](https://play.tailwindcss.com/vHbTlgN2kH)
 
 ## 常用技巧
 
