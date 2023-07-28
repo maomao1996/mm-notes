@@ -17,6 +17,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://tinypng.com'
       },
       {
+        icon: '/icons/carbon.png',
+        title: 'Carbon',
+        desc: '代码图片生成',
+        link: 'https://carbon.now.sh'
+      },
+      {
         icon: 'https://npm.devtool.tech/logo.svg',
         title: 'npm 库在线执行',
         desc: '在浏览器控制台中在线运行调试与测试 npm 中的库',
@@ -45,40 +51,12 @@ export const NAV_DATA: NavData[] = [
         title: 'transform',
         desc: '一个支持多语言的在线转换器',
         link: 'https://transform.tools/json-schema-to-typescript'
-      }
-    ]
-  },
-  {
-    title: 'AI 导航',
-    items: [
-      {
-        badge: '对话',
-        icon: '/icons/chatgpt.png',
-        title: 'ChatGPT（最强）',
-        link: 'https://chat.openai.com/chat'
       },
       {
-        icon: '/icons/chatgpt.png',
-        title: 'ChatGPT 镜像站点列表',
-        link: 'https://github.com/xx025/carrot'
-      },
-      {
-        badge: '笔记',
-        icon: 'https://www.notion.so/images/logo-ios.png',
-        title: 'Notion AI',
-        link: 'https://www.notion.so'
-      },
-      {
-        badge: '绘画',
-        icon: 'https://www.midjourney.com/apple-touch-icon.png',
-        title: 'Midjourney',
-        link: 'https://www.midjourney.com'
-      },
-      {
-        badge: '绘画',
-        icon: 'https://stablediffusionweb.com/favicon.ico',
-        title: 'Stable Diffusion',
-        link: 'https://stablediffusionweb.com'
+        icon: '/icons/excalidraw.ico',
+        title: 'Excalidraw',
+        desc: '手绘风格流程图',
+        link: 'https://excalidraw.com'
       }
     ]
   },
@@ -156,6 +134,40 @@ export const NAV_DATA: NavData[] = [
         title: '冴羽博客',
         desc: '四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列',
         link: 'https://github.com/mqyqingfeng/Blog'
+      }
+    ]
+  },
+  {
+    title: 'AI 导航',
+    items: [
+      {
+        badge: '对话',
+        icon: '/icons/chatgpt.png',
+        title: 'ChatGPT（最强）',
+        link: 'https://chat.openai.com/chat'
+      },
+      {
+        icon: '/icons/chatgpt.png',
+        title: 'ChatGPT 镜像站点列表',
+        link: 'https://github.com/xx025/carrot'
+      },
+      {
+        badge: '笔记',
+        icon: 'https://www.notion.so/images/logo-ios.png',
+        title: 'Notion AI',
+        link: 'https://www.notion.so'
+      },
+      {
+        badge: '绘画',
+        icon: 'https://www.midjourney.com/apple-touch-icon.png',
+        title: 'Midjourney',
+        link: 'https://www.midjourney.com'
+      },
+      {
+        badge: '绘画',
+        icon: 'https://stablediffusionweb.com/favicon.ico',
+        title: 'Stable Diffusion',
+        link: 'https://stablediffusionweb.com'
       }
     ]
   },
@@ -596,6 +608,12 @@ export const NAV_DATA: NavData[] = [
         title: 'IconPark 图标库',
         desc: 'IconPark图标库是一个通过技术驱动矢量图标样式的开源图标库，可以实现根据单一 SVG 源文件变换出多种主题， 具备丰富的分类、更轻量的代码和更灵活的使用场景；致力于构建高质量、统一化、可定义的图标资源，让大多数人都能够选择适合自己的风格图标',
         link: 'https://iconpark.oceanengine.com/official'
+      },
+      {
+        icon: '/icons/iconify.png',
+        title: 'Iconify',
+        desc: '一个开源的图标集合和图标工具',
+        link: 'https://iconify.design'
       },
       {
         icon: 'https://icones.js.org/favicon.svg',
