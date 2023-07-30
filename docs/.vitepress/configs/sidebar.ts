@@ -80,7 +80,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       // collapsed: false,
       items: [
         { text: 'only-allow', link: '/analysis/utils/only-allow' },
-        { text: 'clsx', link: '/analysis/utils/clsx' }
+        { text: 'clsx', link: '/analysis/utils/clsx' },
+        { text: 'await-to-js', link: '/analysis/utils/await-to-js' }
       ]
     }
   ],
