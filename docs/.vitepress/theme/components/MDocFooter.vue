@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { inject, Ref, computed } from 'vue'
 import { useData, useRoute, DefaultTheme } from 'vitepress'
-import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar'
+import { useSidebar } from 'vitepress/theme'
 
 const DEV = inject<Ref<boolean>>('DEV')
 const { theme } = useData<DefaultTheme.Config>()
