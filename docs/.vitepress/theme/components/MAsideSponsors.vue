@@ -7,16 +7,14 @@ const data = [
   {
     items: [
       {
-        img: withBase('/sponsor/wechat-color.jpg'),
-        url: '/mao'
+        img: withBase('/sponsor/wechat-color.webp')
       }
     ]
   },
   {
     items: [
       {
-        img: withBase('/sponsor/alipay-color.jpg'),
-        url: '/mao'
+        img: withBase('/sponsor/alipay-color.webp')
       }
     ]
   }
@@ -50,9 +48,15 @@ const data = [
   }
 }
 
-.vp-sponsor-grid.medium .vp-sponsor-grid-image {
-  max-height: 90px;
-  filter: grayscale(0.8);
+.vp-sponsor-grid.vp-sponsor-grid {
+  .vp-sponsor-grid-link {
+    height: 144px;
+  }
+  .vp-sponsor-grid-image {
+    max-width: none;
+    max-height: 128px;
+    filter: grayscale(0.8);
+  }
 }
 
 .dark .vp-sponsor-grid-item:hover {
