@@ -57,6 +57,7 @@ const handleClick = () => emits('nav-click', props)
             <img
               :src="withBase(icon)"
               :alt="title"
+              loading="lazy"
               onerror="this.parentElement.style.display='none'"
             />
           </div>
