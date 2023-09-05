@@ -237,6 +237,8 @@ npm run deploy
 
 ### 配置 Secrets
 
+2023.09.05：最新的 GitHub Actions 中 GitHub 会自动创建唯一的 GITHUB_TOKEN 机密以在工作流中使用（当需要操作其他仓库时，还是需要配置个人的 Secrets）
+
 > Action 需要有操作仓库的权限
 
 GitHub 官方的帮助文档：[创建用于命令行的个人访问令牌](https://help.github.com/cn/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
@@ -252,11 +254,18 @@ GitHub 官方的帮助文档：[创建用于命令行的个人访问令牌](http
 ```yml
 name: GitHub Actions Build and Deploy
 
-# 触发条件: push 到 master 分支后
+# 触发条件
 on:
+  # 手动触发
+  workflow_dispatch:
+  # push 到指定分支
   push:
     branches:
       - master
+
+# 设置权限
+permissions:
+  contents: write
 
 # 设置上海时区
 env:
@@ -270,24 +279,39 @@ jobs:
     steps:
       # 拉取代码
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          fetch-depth: 0
+
+      # 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      # 设置 node 版本
+      - name: Set node version to 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
 
       # 打包静态文件
       - name: Build
-        run: npm install && npm run build
+        run: pnpm install && pnpm run build
 
       # 部署
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # GitHub 密钥
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 当需要操作其他仓库时，需要配置个人的 token（根据需要设置）
+          token: ${{ secrets.ACCESS_TOKEN }}
+          # 指定仓库（根据需要设置）
+          repository-name: maomao1996/mm-notes
           # GitHub Pages 读取的分支
-          BRANCH: gh-pages
+          branch: gh-pages
           # 静态文件所在目录
-          FOLDER: dist
+          folder: dist
 ```
 
 ---
