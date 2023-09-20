@@ -33,17 +33,21 @@
 }
 ```
 
-### 显示省略号
+### 文字溢出显示省略号
+
+单行省略号
 
 ```scss
-/* 单行省略号 */
 @mixin ellipsis() {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+```
 
-/* 多行省略号 */
+多行省略号
+
+```scss
 @mixin multi-ellipsis($row: 2) {
   @if type-of($row) != 'number' {
     @error '$row 必须是一个有效的数字';
@@ -56,8 +60,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+```
 
-/* 组合写法 */
+单行和多行的组合写法
+
+```scss
 @mixin ellipsis($row: 1) {
   @if type-of($row) != 'number' {
     @error '$row 必须是一个有效的数字';
@@ -131,7 +138,7 @@
 
 [strip-unit](#移除单位)
 
-### 安全距离
+### IOS 安全距离
 
 iPhone X 以上手机添加安全距离
 
