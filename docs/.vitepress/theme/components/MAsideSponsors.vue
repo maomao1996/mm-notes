@@ -43,7 +43,7 @@ const data = [
     text-decoration: underline;
 
     &:hover {
-      color: var(--vp-custom-block-tip-text);
+      color: var(--vp-c-brand-2);
     }
   }
 }

@@ -41,7 +41,7 @@
     "prettier": "^2.8.8",
     "sass": "^1.67.0",
     "sitemap": "^7.1.1",
-    "vitepress": "1.0.0-beta.7",
+    "vitepress": "1.0.0-rc.20",
     "vue": "^3.3.4"
   },
   "lint-staged": {
