@@ -35,7 +35,7 @@ function getBinaryUrl() {
 
 :::
 
-#### 解决方法
+**解决方法**：
 
 ::: tip 前置知识：`.npmrc`
 `.npmrc` 文件是 `npm` 的配置文件
@@ -99,7 +99,7 @@ chromedriver_cdnurl=https://npmmirror.com/mirrors/chromedriver
 
 :::
 
-#### 解决方法
+**解决方法**：
 
 1. 将需要上传的文件添加到 `package.json` 的 `files` 字段中
 2. 修改文件名
