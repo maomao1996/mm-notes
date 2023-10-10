@@ -1,3 +1,7 @@
+---
+description: 茂茂的编程规范（命名规范与项目结构、Git 提交规范、Prettier 配置等）
+---
+
 # 编程规范
 
 > 记录自己所总结和遵守的编程规范（即个人风格指南）
@@ -177,7 +181,7 @@ module.exports = {
   // 自动格式化嵌入的代码内容
   embeddedLanguageFormatting: 'auto',
   // 不强制 html vue jsx 中的属性（具有多个时）单独占一行
-  singleAttributePerLine: false
+  singleAttributePerLine: false,
 }
 ```
 

@@ -1,3 +1,7 @@
+---
+description: '前端物语：ES6 常用知识的学习笔记'
+---
+
 # ES6 常用知识
 
 `ECMAScript 6` (简称 `ES6`) 是 `JavaScript` 语言的下一代标准
@@ -151,7 +155,7 @@ let es6Str = `我叫: ${name}，我的年龄是: ${age + 1} 岁`
 ```js
 const obj = {
   name: 'maomao',
-  age: 18
+  age: 18,
 }
 
 // ES5 写法
@@ -417,13 +421,13 @@ const obj = { ...obj1, ...obj2 }
 ```js
 const obj = {
   ...(false ? { a: 1 } : {}),
-  b: 2
+  b: 2,
 }
 // {b: 2}
 
 const obj = {
   ...(true ? { a: 1 } : {}),
-  b: 2
+  b: 2,
 }
 // {a: 1, b: 2}
 ```
@@ -493,7 +497,7 @@ const arrayLike = {
   0: 'a',
   1: 'b',
   2: 'c',
-  length: 3
+  length: 3,
 }
 
 // ES5 写法
@@ -649,13 +653,13 @@ const obj = { key }
 const obj = {
   log: function () {
     console.log('maomao')
-  }
+  },
 }
 
 // ES6 写法
 const key = 'maomao'
 const obj = {
-  log() {}
+  log() {},
 }
 ```
 
@@ -667,7 +671,7 @@ const obj = {
 const obj = {
   f() {
     this.name = 'maomao'
-  }
+  },
 }
 
 new obj.f() // 报错
@@ -682,14 +686,14 @@ new obj.f() // 报错
 const key = 'age'
 const obj = {
   ['name' + 1]: 'maomao',
-  [key]: 18
+  [key]: 18,
 }
 
 // 定义方法名
 const obj = {
   ['log' + 'name']() {
     console.log('maomao')
-  }
+  },
 }
 ```
 
@@ -715,7 +719,7 @@ const keyB = { b: 2 }
 
 const obj = {
   [keyA]: 'valueA',
-  [keyB]: 'valueB'
+  [keyB]: 'valueB',
 }
 
 console.log(obj) // {[object Object]: 'valueB'}
@@ -832,7 +836,7 @@ class Point {
 
 /* 为对象添加方法 */
 Object.assign(Function.prototype, {
-  log() {}
+  log() {},
 })
 
 /* 拷贝对象 */
@@ -1286,7 +1290,7 @@ Promise.prototype.finally = function (callback) {
     (reason) =>
       P.resolve(callback()).then(() => {
         throw reason
-      })
+      }),
   )
 }
 ```

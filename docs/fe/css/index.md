@@ -1,3 +1,7 @@
+---
+description: '前端物语：记录一些面试需要的 CSS 理论知识点'
+---
+
 <script setup>
 import { ref } from 'vue'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'

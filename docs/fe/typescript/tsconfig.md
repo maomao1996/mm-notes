@@ -1,3 +1,7 @@
+---
+description: '前端物语：TypeScript 编译配置的学习笔记'
+---
+
 # TypeScript 编译配置
 
 TypeScript 编译配置指的是 TypeScript 编译器的选项和参数，这些选项和参数描述了 TypeScript 编译器应如何将 TypeScript 代码编译为可执行的 JavaScript 代码

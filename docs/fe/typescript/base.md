@@ -1,3 +1,7 @@
+---
+description: '前端物语：TypeScript 基础知识的学习笔记'
+---
+
 # TypeScript 基础知识
 
 `TypeScript` 作为 `JavaScript` 语言的超集，它为 `JavaScript` 添加了可选择的类型标注，大大增强了代码的可读性和可维护性。同时，它提供最新和不断发展的 `JavaScript` 特性，能让我们建立更健壮的组件。
@@ -232,7 +236,7 @@ tuple[0] = 666 // Error
 enum Color {
   Red,
   Green,
-  Blue
+  Blue,
 }
 const c: Color = Color.Green
 ```
@@ -243,7 +247,7 @@ const c: Color = Color.Green
 enum Color {
   Red = 1,
   Green,
-  Blue
+  Blue,
 }
 const c: Color = Color.Green
 ```
@@ -254,7 +258,7 @@ const c: Color = Color.Green
 enum Color {
   Red = 1,
   Green = 2,
-  Blue = 4
+  Blue = 4,
 }
 const c: Color = Color.Green
 ```
@@ -265,7 +269,7 @@ const c: Color = Color.Green
 enum Color {
   Red = 1,
   Green,
-  Blue
+  Blue,
 }
 const colorName: string = Color[2]
 
@@ -299,7 +303,7 @@ interface Person {
 
 const person: Person = {
   name: 'maomao',
-  age: 18
+  age: 18,
 }
 ```
 
@@ -334,7 +338,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: 'maomao'
+  name: 'maomao',
 }
 ```
 
@@ -367,7 +371,7 @@ interface Person {
 
 const person: Person = {
   name: 'maomao',
-  gender: 'male'
+  gender: 'male',
 }
 ```
 
@@ -404,7 +408,7 @@ interface Person {
 const person: Person = {
   name: '茂茂',
   age: 18,
-  gender: 'male'
+  gender: 'male',
 }
 ```
 
@@ -689,7 +693,7 @@ type Fish = {
 
 const animal: Bird & Fish = {
   fly() {},
-  swim() {}
+  swim() {},
 }
 ```
 
@@ -946,7 +950,7 @@ interface Point3d extends Point {
 const point3d: Point3d = {
   x: 10,
   y: 20,
-  z: 30
+  z: 30,
 }
 console.log(point3d) // { x: 10, y: 20, z: 30 }
 ```
@@ -1135,7 +1139,7 @@ interface Person {
 }
 const person: Person = {
   name: '茂茂',
-  age: 20
+  age: 20,
 }
 
 /* 函数重载 */

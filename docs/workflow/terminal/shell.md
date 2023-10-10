@@ -1,3 +1,7 @@
+---
+description: '一些常用 shell 命令的学习笔记'
+---
+
 # Shell 命令
 
 > 一些自己常用 `shell` 命令的学习笔记

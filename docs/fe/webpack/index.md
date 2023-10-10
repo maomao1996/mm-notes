@@ -1,3 +1,7 @@
+---
+description: '前端物语：记录一些面试需要的 Webpack 理论知识点'
+---
+
 # Webpack
 
 Webpack 是一个用于现代 `JavaScript` 应用程序的静态模块打包工具
