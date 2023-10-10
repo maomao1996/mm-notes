@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { inject, Ref, computed } from 'vue'
-import { useData, useRoute, DefaultTheme } from 'vitepress'
+import { useData } from 'vitepress'
 import { useSidebar } from 'vitepress/theme'
 
-const DEV = inject<Ref<boolean>>('DEV')
-const { theme } = useData<DefaultTheme.Config>()
-const route = useRoute()
-const { hasSidebar } = useSidebar()
+import { useFormatPath } from '../composables'
 
-const pageId = computed(() => route.path.replace('/mm-notes', ''))
+const DEV = inject<Ref<boolean>>('DEV')
+const { theme } = useData()
+
+const { hasSidebar } = useSidebar()
+const formatPath = useFormatPath()
+
 const isDocFooterVisible = computed(() => {
   const { footer = {} } = theme.value
   return !DEV || footer.message || footer.copyright
@@ -21,7 +23,7 @@ const isDocFooterVisible = computed(() => {
       <img
         v-if="!DEV"
         class="visitor"
-        :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${pageId}`"
+        :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${formatPath}`"
         title="当前页面累计访问数"
         onerror="this.style.display='none'"
       />
