@@ -28,6 +28,7 @@
   "devDependencies": {
     "@femm/prettier": "^1.1.0",
     "@femm/verify-commit": "^1.0.1",
+    "@giscus/vue": "^2.3.0",
     "@mdit-vue/shared": "^0.12.1",
     "@octokit/rest": "^19.0.13",
     "@types/fs-extra": "^11.0.1",
