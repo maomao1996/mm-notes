@@ -374,7 +374,8 @@ sudo wechattweak-cli --uninstall
 
 通过设定快捷键，快速在应用之间切换
 
-[App Store](https://apps.apple.com/cn/app/thor-launcher/id1120999687)
+- [Thor | Github](https://github.com/gbammc/Thor)
+- [App Store](https://apps.apple.com/cn/app/thor-launcher/id1120999687)
 
 ## 快捷键提示 CheatSheet
 
@@ -419,3 +420,14 @@ sudo wechattweak-cli --uninstall
 :::
 
 [BetterDisplay | Github](https://github.com/waydabber/BetterDisplay)
+
+## 剪贴板管理器 Maccy
+
+1. 免费开源、支持中文
+2. 简单易用、支持复制图片和文件
+3. 快速唤起（`SHIFT (⇧) + COMMAND (⌘) + C`）
+4. 强大的历史记录管理（最多 999 条）
+5. 丰富的个性化配置（可以忽略指定应用）
+
+- [Maccy | Github](https://github.com/p0deje/Maccy)
+- [软件官网](https://maccy.app)
