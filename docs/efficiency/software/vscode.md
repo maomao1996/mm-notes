@@ -4,9 +4,35 @@ description: '茂茂的 Visual Studio Code 配置，记录扩展插件、使用�
 
 # Visual Studio Code 配置
 
+## 下载小技巧
+
+[**mac 可直接使用 brew 下载安装**](https://formulae.brew.sh/cask/visual-studio-code)
+
+```sh
+brew install --cask visual-studio-code
+```
+
+**官网下载安装**
+
+1. 打开 [Visual Studio Code](https://code.visualstudio.com/Download) 官网进行下载
+2. 打开下载管理，复制下载链接
+3. 将链接中的域名部分 `az764295.vo.msecnd.net` 替换为 `vscode.cdn.azure.cn`
+
+> 举个 🌰
+
+```sh
+https://az764295.vo.msecnd.net/stable/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/VSCode-darwin-universal.zip
+```
+
+> 替换结果如下
+
+```sh
+https://vscode.cdn.azure.cn/stable/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/VSCode-darwin-universal.zip
+```
+
 ## 扩展插件推荐
 
-> 在扩展商店搜索插件 ID 即可安装
+> 点击插件 ID 或在扩展商店搜索插件 ID 即可安装
 
 ### 主题相关
 
@@ -65,11 +91,11 @@ description: '茂茂的 Visual Studio Code 配置，记录扩展插件、使用�
 
 ### AI 代码提示和生成
 
-| 插件名                                                                                         | 插件 ID                  | 插件描述                 |
-| ---------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
-| [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)           | `GitHub.copilot`         | GitHub AI 代码提示和生成 |
-| [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) | `GitHub.copilot-chat`    | GitHub Copilot 聊天对话  |
-| [Tabnine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode)          | `TabNine.tabnine-vscode` | AI 代码提示和生成        |
+| 插件名                                                                                         | 插件 ID               | 插件描述                                       |
+| ---------------------------------------------------------------------------------------------- | --------------------- | ---------------------------------------------- |
+| [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)           | `GitHub.copilot`      | GitHub AI 代码提示和生成                       |
+| [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) | `GitHub.copilot-chat` | GitHub Copilot 聊天对话                        |
+| [CodeGeeX](https://marketplace.visualstudio.com/items?itemName=aminer.codegeex)                | `aminer.codegeex`     | 免费的 AI 代码提示和生成、代码翻译、智能问答等 |
 
 ### 开发体验提升
 
@@ -333,15 +359,25 @@ code [文件名]
     "craco",
     "execa",
     "shiki",
+    "initer",
+    "formily",
     /** 文件后缀 */
+    "npmrc",
     "wxml",
     "xmind",
     /** 品牌 */
+    "weixin",
     "chatgpt",
     "pixiv",
+    "jsdelivr",
     /** 常用简写 */
     "btns"
   ],
+  /** material icon 配置 */
+  "material-icon-theme.folders.associations": {
+    // https://github.com/PKief/vscode-material-icon-theme/blob/main/src/icons/folderIcons.ts
+    "sites": "public"
+  },
   /** emmet 配置 */
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
@@ -406,8 +442,12 @@ code [文件名]
   "markdownlint.config": {
     "MD001": false,
     "MD024": false,
+    "MD029": false,
     // 内联 HTML
     "MD033": false,
+    // 使用强调而不是标题
+    "MD036": false,
+    // 第一行应该是顶级标题（默认是 h1）
     "MD041": false
   },
   /** 微信小程序配置 */
@@ -443,16 +483,3 @@ code [文件名]
 
 - [VS Code 插件开发文档-中文版](https://github.com/Liiked/VS-Code-Extension-Doc-ZH)
 - [VSCode 插件开发全攻略配套 demo](https://github.com/sxei/vscode-plugin-demo)
-
-### 下载小技巧
-
-1. 打开 [Visual Studio Code](https://code.visualstudio.com/Download) 官网进行下载
-2. 打开下载管理，复制下载链接
-3. 将链接中的域名 `az764295.vo.msecnd.net` 替换为 `vscode.cdn.azure.cn`
-
-```sh
-# 示例
-https://az764295.vo.msecnd.net/stable/74b1f979648cc44d385a2286793c226e611f59e7/VSCode-darwin-universal.zip
-# 替换如下
-https://vscode.cdn.azure.cn/stable/74b1f979648cc44d385a2286793c226e611f59e7/VSCode-darwin-universal.zip
-```
