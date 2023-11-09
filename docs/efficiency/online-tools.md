@@ -4,7 +4,7 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 
 # 在线工具
 
-## 开发相关
+## 开发常用
 
 - [Can I use](https://caniuse.com) 兼容性查询
 - [carbon](https://carbon.now.sh) 代码图片生成
@@ -12,12 +12,12 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 - [Bundlephobia](https://bundlephobia.com/) 分析 npm package 的依赖、bundle 后的大小、下载速度预估
 - [Package Phobia](https://packagephobia.com/) 查询 npm package 的安装体积（磁盘大小）
 
-### 沙箱
+## 沙箱
 
 - [CodeSandbox](https://codesandbox.io)
 - [Codepen](https://codepen.io)
 
-### 正则
+## 正则
 
 - 正则可视化工具
   - [regulex](https://jex.im/regulex)
@@ -27,23 +27,23 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 - [regexgen](https://npm.runkit.com/regexgen) 生成与一组字符串匹配的正则表达式
 - [any-rule](https://any86.github.io/any-rule) 正则大全
 
-### 代码编译
+## 代码编译
 
 - [ast 生成器](https://astexplorer.net)
 - [rollup](http://rollupjs.org/repl)
 
-#### JS 相关
+### JS 相关
 
 - [Babel](https://www.babeljs.cn/repl)
 - [TypeScript](https://www.typescriptlang.org/play)
 
-#### Vue
+### Vue
 
 - [Vue Template Explorer](https://template-explorer.vuejs.org/)
 - [Vue 3 Template Explorer](https://vue-next-template-explorer.netlify.app/)
 - [Vue SFC Playground](https://sfc.vuejs.org/)
 
-#### CSS 预处理器
+### CSS 预处理器
 
 - [Sass Playground](https://www.sassmeister.com)
 - [Less-To-CSS Playground](https://lesscss.org/less-preview)
@@ -51,26 +51,32 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
   - [英文官网](https://stylus-lang.com/try.html)
   - [中文站点](https://www.stylus-lang.cn/try.html)
 
-### 代码生成
+## 代码生成
 
 - [webcode.tools](https://webcode.tools) Web 代码生成工具 (CSS、HTML、meta 信息、JSON 等)
 - [nginx 配置可视化生成](https://do.co/nginxconfig) [(github)](https://github.com/digitalocean/nginxconfig.io)
 
-#### CSS 相关
+### CSS 相关
 
+- [Animista](https://animista.net) 在线练习和生成 CSS 动画
 - [CSS Grid Generator](https://cssgrid-generator.netlify.app) grid 布局
-- [FANCY-BORDER-RADIUS](https://9elements.github.io/fancy-border-radius) border-radius 圆角
-- [CSS Shadows Generator](https://shadows.brumm.af) box-shadow 阴影
 - [Cubic-Bezier](https://cubic-bezier.com) 贝塞尔曲线
-- [Easing Gradients](https://larsenwork.com/easing-gradients) 渐变
-- [Clippy — CSS clip-path maker](https://bennettfeely.com/clippy) clip-path
-- [Neumorphism/Soft UI generator](https://neumorphism.io) `border-radius / background / box-shadow`
+- [WebGradients](https://webgradients.com) 渐变色配色
+- [CSS Gradient](https://cssgradient.io/) 线性和径向渐变生成
+- [Easing Gradients](https://larsenwork.com/easing-gradients) 线性渐变生成
+- [Clippy — CSS clip-path maker](https://bennettfeely.com/clippy) clip-path 裁剪路径生成
+- [FANCY-BORDER-RADIUS](https://9elements.github.io/fancy-border-radius) `border-radius` 圆角生成
+- [CSS Shadows Generator](https://shadows.brumm.af) `box-shadow` 阴影生成
+- [Neumorphism/Soft UI generator](https://neumorphism.io) `border-radius / background / box-shadow` 生成
 
-#### SVG 相关
+### SVG 相关
 
 - [Get Waves](https://getwaves.io) SVG 波浪生成器
+- [Shapedivider](https://www.shapedivider.app) SVG 波浪生成器
+- [Blobmaker](https://www.blobmaker.app) 随机生成不规则形状
+- [Haikei](https://app.haikei.app) 快速制作各种尺寸、样式的背景图
 
-### CDN
+## CDN
 
 - [jsDelivr](https://www.jsdelivr.com)
 - [esm.sh](https://esm.sh/)
@@ -84,19 +90,16 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 
 ### 图片压缩
 
+- [squoosh](https://squoosh.app) [Google 开源](https://github.com/GoogleChromeLabs/squoosh)的图片压缩工具
 - [TinyPNG](https://tinypng.com)
 - [docsmall](https://docsmall.com)
-- [squoosh](https://squoosh.app) [Google 开源](https://github.com/GoogleChromeLabs/squoosh)的图片压缩工具
 
 ### 图片生成
 
 - [Shields.io](https://shields.io/) 绘制小徽章
-
 - 生成 Github 仓库 Star 增长图
-
   - [Star Charts](https://starchart.cc/) 数据更详细
   - [Star history](https://star-history.t9t.io/) 手绘风格
-
 - [Notion 风格头像制作](https://notion-avatar.vercel.app/zh)
 
 ## 作图工具
@@ -113,4 +116,4 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 
 ## 休闲娱乐
 
-[yikm 小霸王在线游戏机](https://www.yikm.net/)
+- [yikm 小霸王在线游戏机](https://www.yikm.net/)
