@@ -17,6 +17,9 @@ echo "hello world"
 # 使用 -e 开启转义
 echo -e "这是第一行文本\n这是第二行文本"
 
+# 使用 -n 不换行输出
+echo -n "hello world"
+
 # 输出变量（查看当前窗口使用的 shell）
 echo $SHELL
 
