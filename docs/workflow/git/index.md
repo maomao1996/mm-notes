@@ -352,12 +352,38 @@ alias glogp="git log --pretty='%C(yellow)%h%C(reset) %ad %C(green)%s%C(reset) %C
 - `%C(颜色值)`: 修改输出颜色
 - `%H`: 完整的 `commit hash`
 - `%h`: 缩写的 `commit hash`
-- `%ad`: 提交时间(绝对时间 可以使用 `-date=` 定制格式)
-- `%ar`: 提交时间(相对时间 按多久之前显示)
+- `%ad`: 作者提交时间(绝对时间 可以使用 `-date=` 定制格式)
+- `%ar`: 作者提交时间(相对时间 按多久之前显示)
 - `%s`: `commit message`
 - `%d`: `branch tag` 信息
 - `%an`: 作者名称
 - `%ae`: 作者的邮箱地址
+
+### 获取文件的提交时间
+
+```sh
+# 获取文件最后一次修改的时间
+git log -1 --pretty="%ci" "./docs/index.md"
+
+# 获取文件第一次添加到仓库的时间
+git log -1 --diff-filter=A --follow --pretty="%ci" "./docs/index.md"
+```
+
+- `-1`: 只显示一条记录
+- `--diff-filter=A`: 只显示添加的记录
+- `--follow`: 显示文件的历史记录（包括移动和重命名）
+- `--pretty="%ci"`: 只显示提交时间
+
+::: tip `"%ad"` 和 `"%ci"` 的区别
+
+- **`%ad`**: 表示作者日期（Author Date）
+  - 指作者实际执行提交操作的日期和时间
+  - 可能会因为提交者的时区设置而有所不同
+- **`%ci`**: 表示提交日期和时间（Commit Date）
+  - 指提交被记录在版本库的日期和时间
+  - 不受提交者时区设置的影响，更具一致性
+
+:::
 
 ## 本地不同分支关联不同的远程仓库
 
