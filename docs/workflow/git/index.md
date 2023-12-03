@@ -435,3 +435,55 @@ git cherry-pick <commit hash>
 # 推送到远程仓库
 git push
 ```
+
+## 使用 `git-filter-repo` 重写 Git 历史
+
+[git-filter-repo](https://github.com/newren/git-filter-repo) 是一个用于重写 Git 历史的工具，相较于 `git filter-branch` 其执行速度更快且功能更为全面
+
+安装
+
+```sh
+# macOS
+brew install git-filter-repo
+```
+
+### 修正提交时间为作者提交时间
+
+在使用 `git rebase` 并将其推送到远程仓库后，GitHub 上显示的是提交时间而非作者提交时间，导致提交记录无法准确查看
+
+**在使用前，建议先备份仓库到本地，以防出现意外情况**
+
+1. 检查远程仓库关联
+
+> 确保在运行 `git filter-repo` 之后重新关联远程仓库。运行以下命令检查：
+
+```sh
+git remote -v
+```
+
+2. 执行修改
+
+```sh
+git filter-repo --env-filter '
+  GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
+' --force
+```
+
+- `--env-filter`: 用于修改环境变量
+- `--force`: 强制执行
+- `GIT_COMMITTER_DATE`: 提交时间
+- `GIT_AUTHOR_DATE`: 作者提交时间
+
+3. 重新关联远程仓库
+
+```sh
+git remote add origin <之前的远程仓库地址>
+```
+
+4. 推送到远程仓库
+
+> 以 `master` 分支为例，使用以下命令推送修改：
+
+```sh
+git push -u origin master --force
+```
