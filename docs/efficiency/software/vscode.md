@@ -168,12 +168,24 @@ code [文件名]
 
 ```json
 {
+  /********** 工作台相关配置 **********/
+  "workbench.colorTheme": "Bluloco Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.enableStickyScroll": true,
+  // 新开标签页查看文件而不是覆盖当前标签页
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.tree.indent": 14,
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.fontAliasing": "antialiased",
+
   /********** 编辑器相关配置 **********/
   "editor.fontSize": 13.5,
   "editor.fontFamily": "Input Mono, Fira Code, Cascadia Mono, monospace",
   "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
   "editor.tabSize": 2,
-  // 关闭快速预览
   "editor.minimap.enabled": true,
   "editor.wordWrap": "on",
   "editor.lineNumbers": "on",
@@ -192,25 +204,13 @@ code [文件名]
   // 保存格式化
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true
-    // "source.organizeImports": true,
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true
   },
-  /********** 工作台相关配置 **********/
-  "workbench.colorTheme": "Bluloco Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  // 新开标签页查看文件而不是覆盖当前标签页
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.closeOnFileDelete": true,
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.tree.indent": 14,
-  "workbench.list.smoothScrolling": true,
-  "workbench.activityBar.visible": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.fontAliasing": "antialiased",
+
   /** 终端配置 */
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
@@ -224,7 +224,7 @@ code [文件名]
   // p10k 主题字体
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "extensions.autoUpdate": "onlyEnabledExtensions",
+
   /********** 针对指定语言的编辑器配置 **********/
   // 如需要开发微信小程序，需要注释这段代码，不然会和 minapp-vscode 插件冲突
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -271,6 +271,7 @@ code [文件名]
   "[shell]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+
   /** 文件配置 */
   "files.eol": "\n",
   "files.associations": {
@@ -285,6 +286,7 @@ code [文件名]
   },
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
+
   /** 文件搜索配置 */
   "search.exclude": {
     // 配置文件
@@ -304,14 +306,20 @@ code [文件名]
     "**/.umi": true
   },
   "scm.defaultViewMode": "tree",
+
   /** git 相关 */
   "git.ignoreMissingGitWarning": true,
   "git.autofetch": true,
   "git.untrackedChanges": "separate",
+
   /** 资源管理器配置 */
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+
   /********** 第三方扩展配置 **********/
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": "onlySelectedExtensions",
+
   /** eslint 配置 */
   "eslint.format.enable": true,
   "eslint.options": {
@@ -407,6 +415,7 @@ code [文件名]
   "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
   "gitlens.keymap": "alternate",
   "tabnine.experimentalAutoImports": true,
+
   // 标签高亮
   "highlight-matching-tag.styles": {
     "opening": {
@@ -451,7 +460,25 @@ code [文件名]
     "MD041": false
   },
   /** 微信小程序配置 */
-  "minapp-vscode.disableAutoConfig": true
+  "minapp-vscode.disableAutoConfig": true,
+  /** Live Server 配置 */
+  "liveServer.settings.donotShowInfoMsg": true,
+  /** Todo Tree 配置 */
+  "todo-tree.highlights.defaultHighlight": {
+    "type": "whole-line",
+    "gutterIcon": false,
+    "background": "#8c959f40"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "iconColour": "#fe9600",
+      "foreground": "#fe9600"
+    },
+    "FIXME": {
+      "iconColour": "#c4202b",
+      "foreground": "#c4202b"
+    }
+  }
 }
 ```
 
