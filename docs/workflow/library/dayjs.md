@@ -136,3 +136,98 @@ const format = '[<span>]HH[</span>] 时 [<span>]mm[</span>] 分 [<span>]ss[</spa
 - 100 分 50 秒
 
 :::
+
+## 常用预设范围
+
+常用于 `antd` 的 [`RangePicker` 组件](https://ant.design/components/date-picker-cn#components-date-picker-demo-presetted-ranges)
+
+::: code-group
+
+```js [在 antd 5 使用]
+import dayjs from 'dayjs'
+
+// 获取当前的时间
+const now = dayjs()
+
+/* antd 5 为 presets 属性 */
+const presets = [
+  { label: '今天', value: [now.startOf('day'), now] },
+  {
+    label: '昨天',
+    value: [now.subtract(1, 'day').startOf('day'), now.subtract(1, 'day').endOf('day')],
+  },
+  {
+    label: '前天',
+    value: [now.subtract(2, 'day').startOf('day'), now.subtract(2, 'day').endOf('day')],
+  },
+
+  { label: '本周', value: [now.subtract(1, 'week').startOf('day'), now] },
+  {
+    label: '上周',
+    value: [now.subtract(1, 'week').startOf('week'), now.subtract(1, 'week').endOf('week')],
+  },
+
+  { label: '本月', value: [now.startOf('month'), now] },
+  {
+    label: '上个月',
+    value: [now.subtract(1, 'month').startOf('month'), now.subtract(1, 'month').endOf('month')],
+  },
+
+  { label: '今年', value: [now.startOf('year'), now] },
+  {
+    label: '去年',
+    value: [now.subtract(1, 'year').startOf('year'), now.subtract(1, 'year').endOf('year')],
+  },
+  {
+    label: '前年',
+    value: [now.subtract(2, 'year').startOf('year'), now.subtract(2, 'year').endOf('year')],
+  },
+
+  { label: '近7天', value: [now.subtract(7, 'day'), now] },
+  { label: '近15天', value: [now.subtract(15, 'day'), now] },
+  { label: '近30天', value: [now.subtract(30, 'day'), now] },
+  { label: '近90天', value: [now.subtract(90, 'day'), now] },
+  { label: '近180天', value: [now.subtract(180, 'day'), now] },
+  { label: '近一年', value: [now.subtract(1, 'year'), now] },
+]
+```
+
+```js [在 antd 4 使用]
+import dayjs from 'dayjs'
+
+// 获取当前的时间
+const now = dayjs()
+
+/* antd 4 为 ranges 属性 */
+const ranges = {
+  今天: [now.startOf('day'), now],
+  昨天: [now.subtract(1, 'day').startOf('day'), now.subtract(1, 'day').endOf('day')],
+  前天: [now.subtract(2, 'day').startOf('day'), now.subtract(2, 'day').endOf('day')],
+
+  本周: [now.subtract(1, 'week').startOf('day'), now],
+  上周: [now.subtract(1, 'week').startOf('week'), now.subtract(1, 'week').endOf('week')],
+
+  本月: [now.startOf('month'), now],
+  上个月: [now.subtract(1, 'month').startOf('month'), now.subtract(1, 'month').endOf('month')],
+
+  今年: [now.startOf('year'), now],
+  去年: [now.subtract(1, 'year').startOf('year'), now.subtract(1, 'year').endOf('year')],
+  前年: [now.subtract(2, 'year').startOf('year'), now.subtract(2, 'year').endOf('year')],
+
+  近7天: [now.subtract(7, 'day'), now],
+  近15天: [now.subtract(15, 'day'), now],
+  近30天: [now.subtract(30, 'day'), now],
+  近90天: [now.subtract(90, 'day'), now],
+  近180天: [now.subtract(180, 'day'), now],
+  近一年: [now.subtract(1, 'year'), now],
+}
+```
+
+:::
+
+::: tip 注意点
+
+- 相对范围的截止时间为当前时间
+- 绝对范围的截止时间为最后一天的 `23:59:00`
+
+:::
