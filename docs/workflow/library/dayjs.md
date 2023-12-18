@@ -1,31 +1,3 @@
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import dayjs from 'dayjs'
-import duration from 'dayjs/plugin/duration'
-
-dayjs.extend(duration)
-
-const timer = ref(null)
-const count = ref(dayjs.duration(0))
-
-// 计算倒计时的时间差
-const countdown = () => {
-  const now = dayjs()
-  const target = dayjs().endOf('D')
-  const diff = target.diff(now);
-
-  count.value = dayjs.duration(diff)
-}
-
-onMounted(() => {
-  timer.value = setInterval(countdown, 30)
-})
-
-onUnmounted(() => {
-  clearInterval(timer.value)
-})
-</script>
-
 # Day.js 使用技巧
 
 - [Day.js | GitHub](https://github.com/iamkun/dayjs)
@@ -62,25 +34,67 @@ setInterval(countdown, 1000)
 
 格式化（以 `Vue` 举 🌰）
 
-```vue
+```vue preview
 <script setup>
-const format = '[<span>]HH[</span>] 时 [<span>]mm[</span>] 分 [<span>]ss[</span>] 秒'
+import { ref, onMounted, onUnmounted } from 'vue'
+import dayjs from 'dayjs'
+import duration from 'dayjs/plugin/duration'
+
+dayjs.extend(duration)
+
+const timer = ref(null)
+const count = ref(dayjs.duration(0))
+
+// 计算倒计时的时间差
+const countdown = () => {
+  const now = dayjs()
+  const target = dayjs().endOf('D')
+  const diff = target.diff(now)
+
+  if (diff <= 0) {
+    cancelAnimationFrame(timer.value)
+    return
+  }
+
+  count.value = dayjs.duration(diff)
+  timer.value = requestAnimationFrame(countdown)
+}
+
+onMounted(() => {
+  timer.value = requestAnimationFrame(countdown)
+})
+
+onUnmounted(() => {
+  cancelAnimationFrame(timer.value)
+})
 </script>
 
 <template>
-  <div class="countdown" v-html="count.format(format)"></div>
-  {{ count.format('D 天 HH 时 mm 分 ss 秒') }}
-  {{ count.format('DD : HH : mm : ss') }}
-  {{ count.format('HH-mm-ss') }}
-  <div class="countdown">
-    使用取值方法：
-    <span>{{ count.hours() }}</span>
-    时
-    <span>{{ count.minutes() }}</span>
-    分
-    <span>{{ count.seconds() }}</span>
-    秒
-    <span>{{ count.milliseconds() }}</span>
+  <div class="flex m-1">
+    <div class="w-36">使用 format 方法：</div>
+    <div class="flex-1">
+      <div
+        class="countdown"
+        v-html="
+          count.format('[<span>]HH[</span>] 时 [<span>]mm[</span>] 分 [<span>]ss[</span>] 秒')
+        "
+      ></div>
+      <div class="mt-1">{{ count.format('D 天 HH 时 mm 分 ss 秒') }}</div>
+      <div class="mt-1">{{ count.format('DD : HH : mm : ss') }}</div>
+      <div class="mt-1">{{ count.format('HH-mm-ss') }}</div>
+    </div>
+  </div>
+  <div class="flex m-1">
+    <div class="w-36">使用取值方法：</div>
+    <div class="countdown">
+      <span>{{ count.hours() }}</span>
+      时
+      <span>{{ count.minutes() }}</span>
+      分
+      <span>{{ count.seconds() }}</span>
+      秒
+      <span>{{ count.milliseconds() }}</span>
+    </div>
   </div>
 </template>
 ```
@@ -97,25 +111,6 @@ const format = '[<span>]HH[</span>] 时 [<span>]mm[</span>] 分 [<span>]ss[</spa
   background: var(--vp-c-brand);
 }
 </style>
-
-<div class="countdown" v-html="count.format('[<span>]HH[</span>] 时 [<span>]mm[</span>] 分 [<span>]ss[</span>] 秒')"></div>
-
-{{count.format('D 天 HH 时 mm 分 ss 秒')}}
-
-{{count.format('DD : HH : mm : ss')}}
-
-{{count.format('HH-mm-ss')}}
-
-<div class="countdown">
-  使用取值方法：
-  <span>{{ count.hours() }}</span>
-  时
-  <span>{{ count.minutes() }}</span>
-  分
-  <span>{{ count.seconds() }}</span>
-  秒
-  <span>{{ count.milliseconds() }}</span>
-</div>
 
 ::: tip 优点
 
