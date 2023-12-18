@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 import { head, nav, sidebar, algolia } from './configs'
 
@@ -56,5 +57,9 @@ export default defineConfig({
   /* 生成站点地图 */
   sitemap: {
     hostname: 'https://notes.fe-mm.com/',
+  },
+
+  vite: {
+    plugins: [MarkdownPreview()],
   },
 })
