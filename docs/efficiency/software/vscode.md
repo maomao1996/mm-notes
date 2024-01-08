@@ -39,11 +39,13 @@ https://vscode.cdn.azure.cn/stable/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/VSCo
 | 插件名                                                                                               | 插件 ID                       | 插件描述                                       |
 | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------- |
 | [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) | `PKief.material-icon-theme`   | 图标美化                                       |
+| [Bluloco Dark](https://marketplace.visualstudio.com/items?itemName=uloco.theme-bluloco-dark)         | `uloco.theme-bluloco-dark`    | **暗黑风格主题（本人常用）**                   |
 | [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)      | `zhuangtongfa.Material-theme` | 暗黑风格主题                                   |
-| [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)  | `ahmadawais.shades-of-purple` | 紫色主题（来自彤姐的推荐：没有什么比骚更重要） |
 | [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)  | `dracula-theme.theme-dracula` | 暗黑风格主题                                   |
-| [Bluloco Dark](https://marketplace.visualstudio.com/items?itemName=uloco.theme-bluloco-dark)         | `uloco.theme-bluloco-dark`    | 暗黑风格主题                                   |
+| [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)  | `ahmadawais.shades-of-purple` | 紫色主题（来自彤姐的推荐：没有什么比骚更重要） |
 | [background](https://marketplace.visualstudio.com/items?itemName=shalldie.background)                | `shalldie.background`         | 自定义背景图                                   |
+
+[VS Code Themes 在线预览](https://vscodethemes.com)
 
 ### HTML 相关
 
@@ -106,6 +108,7 @@ https://vscode.cdn.azure.cn/stable/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/VSCo
 | [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)                                                                | `ritwickdey.LiveServer`                  | 启动具有实时重新加载功能的本地开发服务         |
 | [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)                                                            | `formulahendry.code-runner`              | 运行代码段或代码文件                           |
 | [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)                    | `dsznajder.es7-react-js-snippets`        | 提供 ES7 中的 JavaScript 和 React / Redux 片段 |
+| [Pretty Typescript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)                                                | `yoavbls.pretty-ts-errors`               | 使 TypeScript 错误更美观、更易于阅读           |
 | [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)                                                                  | `steoates.autoimport`                    | 自动查找，解析并提供所有可用导入的代码         |
 | [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)                                                               | `wix.vscode-import-cost`                 | 在编辑器中显示导入/需要包的大小                |
 | [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview)                                                | `kisstkondoros.vscode-gutter-preview`    | 在行号边上、悬停时显示图像预览                 |
@@ -120,7 +123,7 @@ https://vscode.cdn.azure.cn/stable/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/VSCo
 | 插件名                                                                                   | 插件 ID                    | 插件描述                                                           |
 | ---------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------ |
 | [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime) | `WakaTime.vscode-wakatime` | 统计代码编写时间 ([WakaTime 官网](https://wakatime.com/dashboard)) |
-| [韭菜盒子](https://marketplace.visualstudio.com/items?itemName=giscafer.leek-fund)       | giscafer.leek-fund         | 看股票、基金实时数据                                               |
+| [韭菜盒子](https://marketplace.visualstudio.com/items?itemName=giscafer.leek-fund)       | `giscafer.leek-fund`       | 看股票、基金实时数据                                               |
 
 ## 使用小技巧
 
