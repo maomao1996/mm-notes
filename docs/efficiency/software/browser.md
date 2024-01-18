@@ -8,7 +8,8 @@ description: '收录一些能提升使用体验的浏览器扩展、油猴脚本
 
 ## 扩展商店
 
-- [Chrome 网上应用店](https://chrome.google.com/webstore/category/extensions)
+- [Chrome 应用商店](https://chrome.google.com/webstore/category/extensions)
+- [Microsoft Edge 应用商店](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home)
 - [CrxDL - Chrome 浏览器扩展插件 CRX 下载网](https://crxdl.com/) 更新及时，可下载历史版本
 - [Chrome 插件扩展下载网 (免翻墙)](https://www.extfans.com/)
 
@@ -62,7 +63,8 @@ description: '收录一些能提升使用体验的浏览器扩展、油猴脚本
 
 ### 油猴脚本推荐
 
-- [access-link](https://greasyfork.org/zh-CN/scripts/395970)修复跳转链接为站外直链（移除重定向），免去拦截页面点击步骤可直达站外；拦截页面自动跳转
+- [跳转链接修复（移除重定向外链直达）](https://greasyfork.org/zh-CN/scripts/395970) 修复跳转链接为站外直链（移除重定向），免去拦截页面点击步骤可直达站外
+- [杀死水印（Kill Watermark）](https://greasyfork.org/zh-CN/scripts/459646) 移除烦人的水印，还你一个干净清爽的页面
 - [解除 B 站区域限制](https://greasyfork.org/zh-CN/scripts/25718) 实现解除 B 站区域限制，只对 `HTML5` 播放器生效
 - [imooc-tools](https://greasyfork.org/zh-CN/scripts/396378) 慕课网问答区快速查看问答详情、自动播放下一节视频
 - [115 转存助手 ui 优化版](https://gist.github.com/Nerver4Ever/953447c9ecd330ffc0861d4cbb839369) 115 网盘重要资源的备份复制转移
