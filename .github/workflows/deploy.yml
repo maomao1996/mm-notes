@@ -45,7 +45,9 @@ jobs:
 
       # 打包静态文件
       - name: Build
-        run: pnpm install && pnpm run build:github
+        env:
+          APP_BASE_PATH: /${{ github.repository }}
+        run: pnpm install && pnpm run build
 
       - name: Copy files
         run: cp README.md ./dist/
