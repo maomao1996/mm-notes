@@ -117,6 +117,12 @@ Mac 上最好用的终端
 3. 查看粘贴历史
 4. 自定义配置项
 
+> [brew 安装](https://formulae.brew.sh/cask/iterm2)
+
+```sh
+brew install --cask iterm2
+```
+
 ```sh
 # 查看所有的 shell
 cat /etc/shells
@@ -171,7 +177,7 @@ chsh -s /bin/zsh
 - 支持插件
 - 支持自定义补全规范
 
-安装
+> [brew 安装](https://formulae.brew.sh/cask/fig)
 
 ```sh
 brew install --cask fig
@@ -186,7 +192,7 @@ brew install --cask fig
 
 Mac App Store 命令行工具
 
-安装
+> [brew 安装](https://formulae.brew.sh/formula/mas)
 
 ```sh
 brew install mas
@@ -217,6 +223,8 @@ mas outdated
 
 设置默认应用程序的命令行工具
 
+> [brew 安装](https://formulae.brew.sh/formula/duti)
+
 ```sh
 brew install duti
 ```
@@ -243,6 +251,9 @@ duti -s com.microsoft.VSCode .js all
 duti -s com.microsoft.VSCode .json all
 duti -s com.microsoft.VSCode .wxml all
 duti -s com.microsoft.VSCode .wxss all
+
+# PDF 还是浏览器快，WPS 有点卡
+duti -s com.google.Chrome .pdf all
 ```
 
 [duti | Github](https://github.com/moretension/duti)
@@ -295,6 +306,12 @@ sudo wechattweak-cli --uninstall
 2. 功能强大，设置以播放体验为中心
 3. 支持鼠标和触控板手势
 4. 在线字幕、缩略图预览、画中画等
+
+> [brew 安装](https://formulae.brew.sh/cask/iina)
+
+```sh
+brew install --cask iina
+```
 
 - [IINA | Github](https://github.com/iina/iina)
 - [软件官网](https://iina.io/)
@@ -352,6 +369,12 @@ sudo wechattweak-cli --uninstall
 1. 简单易用、支持全局快捷键
 2. 免费开源、支持中文
 
+> [brew 安装](https://formulae.brew.sh/cask/hiddenbar)
+
+```sh
+brew install --cask hiddenbar
+```
+
 - [Hidden Bar | Github](https://github.com/dwarvesf/hidden)
 - [App Store](https://apps.apple.com/cn/app/hidden-bar/id1452453066)
 
@@ -366,6 +389,12 @@ sudo wechattweak-cli --uninstall
 ## 窗口管理神器 Rectangle
 
 比系统分屏更强大，支持快捷键分屏、支持三个及以上分屏
+
+> [brew 安装](https://formulae.brew.sh/cask/rectangle)
+
+```sh
+brew install --cask rectangle
+```
 
 - [Rectangle | Github](https://github.com/rxhanson/Rectangle)
 - [软件官网](https://rectangleapp.com/)
@@ -389,6 +418,12 @@ sudo wechattweak-cli --uninstall
 1. 控制外接显示器的亮度和音量
 2. 支持键盘控制亮度和音量
 
+> [brew 安装](https://formulae.brew.sh/cask/monitorcontrol)
+
+```sh
+brew install --cask monitorcontrol
+```
+
 [MonitorControl | Github](https://github.com/MonitorControl/MonitorControl)
 
 ## 显示器设置 BetterDisplay
@@ -400,6 +435,12 @@ sudo wechattweak-cli --uninstall
 3. 创建虚拟显示器
 4. 创建显示器的画中画窗口
 5. 控制显示器的亮度和音量
+
+> [brew 安装](https://formulae.brew.sh/cask/betterdisplay)
+
+```sh
+brew install --cask betterdisplay
+```
 
 ::: tip 操作方法 - 以 BetterDisplay v1.4.15 为例
 
@@ -428,6 +469,12 @@ sudo wechattweak-cli --uninstall
 3. 快速唤起（`SHIFT (⇧) + COMMAND (⌘) + C`）
 4. 强大的历史记录管理（最多 999 条）
 5. 丰富的个性化配置（可以忽略指定应用）
+
+> [brew 安装](https://formulae.brew.sh/cask/maccy)
+
+```sh
+brew install --cask maccy
+```
 
 - [Maccy | Github](https://github.com/p0deje/Maccy)
 - [软件官网](https://maccy.app)

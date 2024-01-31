@@ -23,6 +23,12 @@ description: '收录那些支持多个平台（Mac、Windows）的实用软件�
 4. 基于 Aria2
 5. 自动更新 Tracker 服务器列表
 
+> [brew 安装](https://formulae.brew.sh/cask/motrix)
+
+```sh
+brew install motrix
+```
+
 - [Motrix | Github](https://github.com/agalwood/Motrix)
 - [软件官网](https://motrix.app/zh-CN)
 
@@ -34,6 +40,12 @@ Hosts 管理工具
 2. 快速切换 Hosts
 3. 在线 Hosts 方案
 4. 系统托盘图标快速切换
+
+> [brew 安装](https://formulae.brew.sh/cask/switchhosts)
+
+```sh
+brew install --cask switchhosts
+```
 
 [SwitchHosts | Github](https://github.com/oldj/SwitchHosts)
 
@@ -74,5 +86,11 @@ Hosts 管理工具
 
 1. 打开 `设置 => Diff`
 2. 在 `忽略文件模式` 中添加 `package-lock.json, yarn.lock`
+
+> [brew 安装](https://formulae.brew.sh/cask/sourcetree)
+
+```sh
+brew install --cask sourcetree
+```
 
 [软件官网](https://www.sourcetreeapp.com/)
