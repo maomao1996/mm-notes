@@ -4,7 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 import Giscus from '@giscus/vue'
 
-import { useFormatPath } from '../composables'
+import { usePageId } from '../composables'
 
 import MNavVisitor from './MNavVisitor.vue'
 import MDocFooter from './MDocFooter.vue'
@@ -12,7 +12,7 @@ import MAsideSponsors from './MAsideSponsors.vue'
 
 const { Layout } = DefaultTheme
 const { isDark } = useData()
-const formatPath = useFormatPath()
+const pageId = usePageId()
 
 const enableTransitions = () =>
   'startViewTransition' in document &&
@@ -68,7 +68,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
           category="Announcements"
           categoryId="DIC_kwDOCWMTOM4CZ2rf"
           mapping="specific"
-          :term="formatPath"
+          :term="pageId"
           strict="1"
           reactionsEnabled="1"
           emitMetadata="0"
