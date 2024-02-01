@@ -6,7 +6,7 @@ import { useSidebar } from 'vitepress/theme'
 import { useFormatPath } from '../composables'
 
 const DEV = inject<Ref<boolean>>('DEV')
-const { theme } = useData()
+const { theme, frontmatter } = useData()
 
 const { hasSidebar } = useSidebar()
 const formatPath = useFormatPath()
@@ -15,15 +15,23 @@ const isDocFooterVisible = computed(() => {
   const { footer = {} } = theme.value
   return !DEV || footer.message || footer.copyright
 })
+
+const pageId = computed(() => {
+  const { pageVisitorId = formatPath.value } = frontmatter.value
+  if (pageVisitorId === false) {
+    return false
+  }
+  return `maomao1996.notes.${pageVisitorId}`
+})
 </script>
 
 <template>
   <div v-if="isDocFooterVisible" v-show="hasSidebar" class="m-doc-footer">
     <div class="m-doc-footer-message">
       <img
-        v-if="!DEV"
+        v-if="!DEV && pageId"
         class="visitor"
-        :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${formatPath}`"
+        :src="`https://visitor-badge.laobi.icu/badge?page_id=${pageId}`"
         title="当前页面累计访问数"
         onerror="this.style.display='none'"
       />
