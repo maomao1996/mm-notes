@@ -16,6 +16,10 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 
 - [CodeSandbox](https://codesandbox.io)
 - [Codepen](https://codepen.io)
+- [StackBlitz](https://stackblitz.com)
+- [JSFiddle](https://jsfiddle.net)
+- [Javascript Playground (Sandbox, Repl)](https://playcode.io)
+- [RunJS 前端专用的笔记工具](https://runjs.work/)
 
 ## 正则
 
@@ -59,14 +63,16 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 ### CSS 相关
 
 - [Animista](https://animista.net) 在线练习和生成 CSS 动画
-- [CSS Grid Generator](https://cssgrid-generator.netlify.app) grid 布局
+- [CSS Loaders](https://css-loaders.com) 600+ 的 CSS 加载动画
+- [CSS Grid Generator](https://cssgrid-generator.netlify.app) `grid` 布局
 - [Cubic-Bezier](https://cubic-bezier.com) 贝塞尔曲线
 - [WebGradients](https://webgradients.com) 渐变色配色
 - [CSS Gradient](https://cssgradient.io/) 线性和径向渐变生成
 - [Easing Gradients](https://larsenwork.com/easing-gradients) 线性渐变生成
-- [Clippy — CSS clip-path maker](https://bennettfeely.com/clippy) clip-path 裁剪路径生成
+- [Clippy — CSS clip-path maker](https://bennettfeely.com/clippy) `clip-path` 裁剪路径生成
 - [FANCY-BORDER-RADIUS](https://9elements.github.io/fancy-border-radius) `border-radius` 圆角生成
 - [CSS Shadows Generator](https://shadows.brumm.af) `box-shadow` 阴影生成
+- [Customize your CSS Border](https://kovart.github.io/dashed-border-generator/) `border` 生成
 - [Neumorphism/Soft UI generator](https://neumorphism.io) `border-radius / background / box-shadow` 生成
 
 ### SVG 相关
@@ -83,10 +89,19 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 
 ## 图片处理
 
-### 图片底色去除
+- [在线 PS | 稿定设计](https://ps.gaoding.com)
+- [Photo Editor: BeFunky](https://www.befunky.com/create/) 免费在线照片编辑器（支持中文）
+- [Edit•Photo](https://edit.photo) 免费在线照片编辑器
 
-- [remove.bg](https://www.remove.bg)
-- [BgRemover](https://www.aigei.com/bgremover)
+### 在线抠图
+
+- 图片去除背景
+  - [remove.bg](https://www.remove.bg/zh)
+  - [BgRemover](https://www.aigei.com/bgremover)
+  - [PhotoScissors](https://www.photoscissors.com)
+  - [Clipping Magic](https://clippingmagic.com)
+- [水印去除剂 - 删除照片中的任何水印](https://www.watermarkremover.io/zh) 图片去水印
+- [删除照片中的物体 | Magic Eraser by Magic Studio](https://magicstudio.com/zh/magiceraser)
 
 ### 图片压缩
 
@@ -113,6 +128,7 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 - 在线格式转换
   - [CloudConvert](https://cloudconvert.com/) 在线文件转换器，支持 200+ 种格式、支持自定义设置、图片可在线预览（英文界面）
   - [Convertio](https://convertio.co/zh/) 在线转换文件的简单工具，支持 300+ 种格式、支持自定义设置（最大 100M）
+- [PDF Editor Free](https://www.pdfescape.com) 在线编辑 PDF 文件
 
 ## 休闲娱乐
 
