@@ -21,7 +21,7 @@ description: '收录一些实用的在线工具，免去下载软件的烦恼'
 
 - 正则可视化工具
   - [cyrilex](https://extendsclass.com/regex-tester.html)
-  - [Pyrexp](https://pythonium.net/regex)
+  - [pyrexp](https://pythonium.net/regex)
   - [regulex](https://jex.im/regulex)
   - [regexper](https://regexper.com)
   - [正则可视化](https://wangwl.net/r/vr)
