@@ -325,7 +325,7 @@ const bar = (arg1: boolean, arg2: { a: 'A' }): void => {}
 const baz = (): void => {}
 
 type result1 = MyParameters<typeof foo>
-// 结果：[boolean, { a: 'A' }]
+// 结果：[string, number]
 
 type result2 = MyParameters<typeof bar>
 // 结果：[boolean, { a: 'A' }]
