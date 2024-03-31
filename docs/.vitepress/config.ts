@@ -4,7 +4,7 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 import { head, nav, sidebar, algolia } from './configs'
 
-const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
+const APP_BASE_PATH = basename(process.env.APP_BASE_PATH || '')
 
 export default defineConfig({
   outDir: '../dist',
