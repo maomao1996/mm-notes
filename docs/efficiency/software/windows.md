@@ -100,7 +100,7 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 
 [软件官网](https://wpd.app)
 
-## 防撤回补丁
+## 微信/QQ/TIM 防撤回补丁
 
 1. 支持微信/QQ/TIM 防撤回
 2. 支持微信多开
