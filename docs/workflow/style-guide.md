@@ -38,8 +38,11 @@ description: 茂茂的编程规范（命名规范与项目结构、Git 提交规
 #### `JavaScript` 命名规范
 
 - 常量使用大写命名法。🌰 `const MAX_COUNT = 1996`
+  - 正则常量命名使用后缀 `_RE`。🌰 `const PHONE_RE = /^1[3-9]\d{9}$/`
 - 变量使用小驼峰式命名法。🌰 `const maxCount = 1996`
-- 方法使用小驼峰式命名法。🌰 `function getUserInfo() {}`
+- `class` 类名使用大驼峰式命名法。🌰 `class User {}`
+- 构造函数使用大驼峰式命名法。🌰 `function User() {}`
+- 函数使用小驼峰式命名法。🌰 `function getUserInfo() {}`
 - 对象 `key` 使用小驼峰式命名法。🌰 `const user = { userName: 'maomao' }`
 - 路由 `path` 使用短横线命名法。🌰 `path: '/user-info'`
 
