@@ -21,6 +21,9 @@ export default defineConfig({
   /* markdown 配置 */
   markdown: {
     lineNumbers: true,
+    image: {
+      lazyLoading: true,
+    },
   },
 
   /* 主题配置 */
