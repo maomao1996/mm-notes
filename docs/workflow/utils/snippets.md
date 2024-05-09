@@ -99,6 +99,26 @@ isUrl('https://a.b.c') // true
 该技巧只适用于一些验证不严格的场景，[严格场景下可以使用这个 npm 包 —— is-url](https://github.com/segmentio/is-url)
 :::
 
+## 金额格式化（保留两位小数）
+
+```js
+function formatNumber(value) {
+  const num = parseFloat(value)
+
+  if (isNaN(num)) {
+    return 'Invalid number'
+  }
+
+  const [integer, decimal] = num.toFixed(2).split('.')
+  return `${integer.replace(/\B(?=(\d{3})+\b)/g, ',')}.${decimal}`
+}
+
+formatNumber(0) // '0.00'
+formatNumber(12) // '12.00'
+formatNumber(123.4) // '123.40'
+formatNumber(12345.6789) // '12,345.68'
+```
+
 ## 微信 `api promise` 化
 
 ```js
