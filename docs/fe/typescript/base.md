@@ -1303,7 +1303,7 @@ type Result = ReturnType<typeof add>
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [TypeScript 中文文档](https://www.typescriptlang.org/zh/docs/)
 - [TypeScript 演练场 —— 一个用于 TypeScript 和 JavaScript 的在线编辑器](https://www.typescriptlang.org/zh/play)

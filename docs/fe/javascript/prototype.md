@@ -190,7 +190,7 @@ Function.__proto__ === Function.prototype // true
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [深入理解 javascript 原型和闭包](https://www.cnblogs.com/wangfupeng1988/p/3977924.html)
 - [Javascript Object Hierarchy](http://www.mollypages.org/tutorials/js.mp)

@@ -1,6 +1,6 @@
 # Git
 
-::: tip 相关资料
+::: info 相关资料
 
 - [官网](https://git-scm.com/)
 - [Git 学习教程](https://learngitbranching.js.org/?locale=zh_CN)
@@ -316,7 +316,7 @@ jobs:
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [GitHub Actions 入门教程 | 阮一峰](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 - [GitHub Actions 中文文档](https://docs.github.com/cn/actions/reference)

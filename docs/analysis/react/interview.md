@@ -1,6 +1,6 @@
 # React 常见面试题
 
-::: tip 相关资料
+::: info 相关资料
 
 - [React 官方文档](https://zh-hans.reactjs.org/)
 - [旧版 React 官方文档](https://zh-hans.legacy.reactjs.org)
@@ -216,7 +216,7 @@ function Parent() {
 }
 ```
 
-::: tip `Context` 相关资料
+::: info `Context` 相关资料
 [使用 Context 深层传递参数 | React](https://zh-hans.react.dev/learn/passing-data-deeply-with-context)
 :::
 
@@ -259,7 +259,7 @@ function Parent() {
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [你可能不需要使用派生 state](https://zh-hans.legacy.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
 - [React lifecycle methods diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
@@ -307,7 +307,7 @@ function App() {
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/forms.html)
 - [非受控组件 | React](https://zh-hans.legacy.reactjs.org/docs/uncontrolled-components.html)
@@ -441,7 +441,7 @@ function HOC(WrappedComponent) {
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [「react 进阶」一文吃透 React 高阶组件(HOC)](https://github.com/GoodLuckAlien/blogs/blob/028fc6dce405027a7048985d92cb505134090949/react/react-hoc.md)
 - [React 高阶组件(HOC)的入门 📖 及实践 💻](https://juejin.cn/post/6844904050236850184)
@@ -482,7 +482,7 @@ function HOC(WrappedComponent) {
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [RFClarification: why is setState asynchronous?](https://github.com/facebook/react/issues/11527)
 - [使用 Concurrent 模式（实验性）](https://zh-hans.legacy.reactjs.org/docs/concurrent-mode-adoption.html)

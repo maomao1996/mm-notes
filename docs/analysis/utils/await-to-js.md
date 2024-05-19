@@ -49,7 +49,7 @@ err && console.log(err.message, err.title) // 'maomao' 'await-to-js'
 // 接收一个 Promise 和一个可选的 errorExt 参数
 export function to<T, U = Error>(
   promise: Promise<T>,
-  errorExt?: object // 可选参数：用于扩展错误对象
+  errorExt?: object, // 可选参数：用于扩展错误对象
 ): Promise<[U, undefined] | [null, T]> {
   return (
     promise
@@ -73,7 +73,7 @@ export function to<T, U = Error>(
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [How to write async await without try-catch blocks in Javascript](https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/)
 

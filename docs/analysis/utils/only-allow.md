@@ -36,7 +36,7 @@
 npm run prebuild && npm run build && npm run postbuild
 ```
 
-::: tip 相关资料
+::: info 相关资料
 [使用 npm 脚本钩子](https://github.com/maomao1996/daily-notes/issues/20)
 :::
 
@@ -75,7 +75,7 @@ if (argv.length === 0) {
 const wantedPM = argv[0]
 if (wantedPM !== 'npm' && wantedPM !== 'cnpm' && wantedPM !== 'pnpm' && wantedPM !== 'yarn') {
   console.log(
-    `"${wantedPM}" is not a valid package manager. Available package managers are: npm, cnpm, pnpm, or yarn.`
+    `"${wantedPM}" is not a valid package manager. Available package managers are: npm, cnpm, pnpm, or yarn.`,
   )
   process.exit(1)
 }
@@ -108,8 +108,8 @@ if (usedPM && usedPM.name !== wantedPM && !isInstalledAsDependency) {
           `Use "pnpm install" for installation in this project.
 If you don't have pnpm, install it via "npm i -g pnpm".
 For more details, go to https://pnpm.js.org/`,
-          boxenOpts
-        )
+          boxenOpts,
+        ),
       )
       break
     case 'yarn':
@@ -118,8 +118,8 @@ For more details, go to https://pnpm.js.org/`,
           `Use "yarn" for installation in this project.
 If you don't have Yarn, install it via "npm i -g yarn".
 For more details, go to https://yarnpkg.com/`,
-          boxenOpts
-        )
+          boxenOpts,
+        ),
       )
       break
   }
@@ -171,7 +171,7 @@ function pmFromUserAgent(userAgent) {
     // 对 cnpm 做兼容处理
     name: name === 'npminstall' ? 'cnpm' : name,
     // 提取 version
-    version: pmSpec.substring(separatorPos + 1)
+    version: pmSpec.substring(separatorPos + 1),
   }
 }
 

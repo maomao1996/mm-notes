@@ -259,6 +259,6 @@ git reflog
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 [常用 Git 命令清单 | 阮一峰](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 :::

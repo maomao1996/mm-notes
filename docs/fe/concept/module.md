@@ -106,7 +106,7 @@ util.log()
 define(['utils'], function () {
   function log() {}
   return {
-    log: log
+    log: log,
   }
 })
 
@@ -134,7 +134,7 @@ require(['./utils'], function (utils) {
 define(function (require, exports, module) {
   function log() {}
   return {
-    log: log
+    log: log,
   }
 })
 
@@ -186,14 +186,14 @@ seajs.use(['./utils.js'], function (utils) {
   //    暴露公共方法
   return {
     name,
-    log
+    log,
   }
 })
 ```
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 [深入 CommonJs 与 ES6 Module](https://segmentfault.com/a/1190000017878394)
 

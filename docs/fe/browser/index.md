@@ -161,7 +161,7 @@
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 :::
 
@@ -204,7 +204,7 @@ function jsonp(url, params) {
 
 jsonp('https://www.baidu.com/sugrec', {
   prod: 'pc',
-  wd: '跨域'
+  wd: '跨域',
 }).then((res) => {
   console.log(res)
 })
@@ -481,7 +481,7 @@ request.onupgradeneeded = function (event) {
   // 创建对象仓库并指定主键
   const objectStore = db.createObjectStore('userInfo', {
     keyPath: 'id',
-    autoIncrement: false
+    autoIncrement: false,
   })
   console.log('创建对象仓库成功')
 
@@ -492,7 +492,7 @@ request.onupgradeneeded = function (event) {
    * 第三个参数是可选配置参数，可以不传，常用参数之一就是 unique ，表示该字段是否唯一，不能重复
    */
   objectStore.createIndex('id', 'id', {
-    unique: true
+    unique: true,
   })
   objectStore.createIndex('name', 'name')
 }

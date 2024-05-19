@@ -178,7 +178,7 @@ function object(obj) {
 ```js
 const person = {
   name: 'person',
-  colors: ['red', 'blue', 'green']
+  colors: ['red', 'blue', 'green'],
 }
 const instance1 = object(person)
 instance1.name = 'maomao'
@@ -228,7 +228,7 @@ function createAnother(original) {
 
 const person = {
   name: 'person',
-  colors: ['red', 'blue', 'green']
+  colors: ['red', 'blue', 'green'],
 }
 
 const instance1 = createAnother(person)
@@ -387,7 +387,7 @@ var ColorPoint = /*#__PURE__*/ (function (_Point) {
 
 ---
 
-::: tip 相关资料
+::: info 相关资料
 
 - [JavaScript 常用八种继承方案](https://github.com/yygmind/blog/issues/7)
 - [JavaScript 深入之继承的多种方式和优缺点](https://github.com/mqyqingfeng/Blog/issues/16)
