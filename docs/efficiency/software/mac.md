@@ -169,7 +169,9 @@ chsh -s /bin/zsh
 - [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 - [iTerm2-Material-Design](https://github.com/MartinSeeler/iterm2-material-design)
 
-### Fig
+### Amazon Q（原 Fig）
+
+> Fig 已迁移到 Amazon Q
 
 终端自动补全命令提示工具
 
@@ -177,15 +179,31 @@ chsh -s /bin/zsh
 - 支持插件
 - 支持自定义补全规范
 
-> [brew 安装](https://formulae.brew.sh/cask/fig)
+> [brew 安装](https://formulae.brew.sh/cask/amazon-q)
 
 ```sh
-brew install --cask fig
+brew install amazon-q
+```
+
+常用命令
+
+```sh
+# 打开 Amazon Q GUI
+q
+
+# 检查 Amazon Q 是否正常运行
+q doctor
+
+# 打开 Amazon Q 设置
+q settings
+
+# 升级 Amazon Q
+q update
 ```
 
 在 `vscode` 中使用，需修改 `editor.accessibilitySupport` 为 `"off"`
 
-- [Fig | Github](https://github.com/withfig/autocomplete)
+- [autocomplete | Github](https://github.com/withfig/autocomplete)
 - [软件官网](https://fig.io/)
 
 ## mas-cli
@@ -383,6 +401,12 @@ brew install --cask hiddenbar
 1. 背景音乐管理
 2. 设置各个应用程序的音量
 3. 录制系统音频
+
+> [brew 安装](https://formulae.brew.sh/cask/background-music)
+
+```sh
+brew install --cask background-music
+```
 
 [BackgroundMusic | Github](https://github.com/kyleneideck/BackgroundMusic)
 
