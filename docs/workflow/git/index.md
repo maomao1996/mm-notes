@@ -239,11 +239,15 @@ npm run deploy
 
 2023.09.05：最新的 GitHub Actions 中 GitHub 会自动创建唯一的 GITHUB_TOKEN 机密以在工作流中使用（当需要操作其他仓库时，还是需要配置个人的 Secrets）
 
-> Action 需要有操作仓库的权限
+> Action 需要有操作仓库的权限（偷懒直接使用 Personal access tokens，官方更推荐 Fine-grained personal access tokens）
 
-GitHub 官方的帮助文档：[创建用于命令行的个人访问令牌](https://help.github.com/cn/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
-
-打开需要配置 Actions 的仓库，进入 `Settings/Secrets` 页面，配置 `ACCESS_TOKEN` 变量，储存内容为刚刚创建的个人访问令牌
+1. GitHub 官方的帮助文档：[创建 Personal access tokens](https://docs.github.com/zh/enterprise-server@3.9/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#%E5%88%9B%E5%BB%BA-personal-access-token)（**确保选中了 `workflows` 权限**）
+2. 将生成的 GitHub 个人访问令牌添加到源仓库的 Secrets 中：
+   1. 进入仓库页面
+   2. 点击 **Settings**
+   3. 在左侧菜单中点击 **Secrets and variables** > **Actions**
+   4. 点击 **New repository secret**
+   5. 将密钥名称设为 **ACCESS_TOKEN**，值设为生成的访问令牌，然后点击 **Add secret**
 
 ### 编写 `workflow` 文件
 
@@ -455,7 +459,7 @@ brew install git-filter-repo
 
 1. 检查远程仓库关联
 
-> 确保在运行 `git filter-repo` 之后重新关联远程仓库。运行以下命令检查：
+> 确保在运行 `git filter-branch` 之后重新关联远程仓库。运行以下命令检查：
 
 ```sh
 git remote -v
@@ -464,13 +468,10 @@ git remote -v
 2. 执行修改
 
 ```sh
-git filter-repo --env-filter '
-  GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
-' --force
+git filter-branch --env-filter 'export GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"'
 ```
 
 - `--env-filter`: 用于修改环境变量
-- `--force`: 强制执行
 - `GIT_COMMITTER_DATE`: 提交时间
 - `GIT_AUTHOR_DATE`: 作者提交时间
 
