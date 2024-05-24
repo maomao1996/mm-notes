@@ -3,6 +3,8 @@ name: GitHub Actions Build and Deploy
 # 触发条件: push 到 master 分支后
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [build-and-deploy]
   push:
     branches:
       - master
