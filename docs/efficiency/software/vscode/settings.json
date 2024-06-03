@@ -1,0 +1,313 @@
+{
+  /********** 工作台相关配置 **********/
+  "workbench.colorTheme": "Bluloco Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.enableStickyScroll": true,
+  // 新开标签页查看文件而不是覆盖当前标签页
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.tree.indent": 14,
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.fontAliasing": "antialiased",
+
+  /********** 编辑器相关配置 **********/
+  "editor.fontSize": 13.5,
+  "editor.fontFamily": "Input Mono, Fira Code, Cascadia Mono, monospace",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": true,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "on",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.detectIndentation": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderWhitespace": "boundary",
+  "editor.glyphMargin": true,
+  "editor.accessibilitySupport": "off",
+  "editor.stickyScroll.enabled": true,
+  // 保存格式化
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true
+  },
+
+  /** 终端配置 */
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.inheritEnv": false,
+  // p10k 主题字体
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+
+  /********** 针对指定语言的编辑器配置 **********/
+  // 如需要开发微信小程序，需要注释这段代码，不然会和 minapp-vscode 插件冲突
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // 有注释的 json
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[wxml]": {
+    "editor.defaultFormatter": "qiu8310.minapp-vscode"
+  },
+  "[shell]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  /** 文件配置 */
+  "files.eol": "\n",
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.vue": "vue",
+    "*.env.*": "env"
+  },
+  "files.exclude": {
+    "**/.idea": true
+  },
+  "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": true,
+
+  /** 文件搜索配置 */
+  "search.exclude": {
+    // 配置文件
+    "**/.vscode": true,
+    "**/.git": true,
+    "**/.github": true,
+    // 依赖文件
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/miniprogram_npm": true,
+    // lock 文件
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true,
+    // 打包文件
+    "**/dist": true,
+    "**/.umi": true
+  },
+  "scm.defaultViewMode": "tree",
+
+  /** git 相关 */
+  "git.ignoreMissingGitWarning": true,
+  "git.autofetch": true,
+  "git.untrackedChanges": "separate",
+
+  /** 资源管理器配置 */
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  /********** 第三方扩展配置 **********/
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": "onlySelectedExtensions",
+
+  /** eslint 配置 */
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+  /** prettier 配置 */
+  // 是否每行末尾添加分号
+  "prettier.semi": false,
+  // 是否使用单引号
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "none",
+  /** errorLens 配置 */
+  "errorLens.enabledDiagnosticLevels": ["warning", "error"],
+  "errorLens.excludeBySource": ["cSpell", "Grammarly", "eslint"],
+  /** Code Spell Checker 配置 */
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en,en-US",
+  "cSpell.ignoreWords": [
+    /** 个人 */
+    "mmplayer",
+    "femm",
+    /** 库相关 */
+    "yalc",
+    "vetur",
+    "vuex",
+    "vuepress",
+    "vitepress",
+    "antd",
+    "ahooks",
+    "weui",
+    "weapp",
+    "craco",
+    "execa",
+    "shiki",
+    "initer",
+    "formily",
+    /** 文件后缀 */
+    "npmrc",
+    "wxml",
+    "xmind",
+    /** 品牌 */
+    "weixin",
+    "chatgpt",
+    "pixiv",
+    "jsdelivr",
+    /** 常用简写 */
+    "btns"
+  ],
+  /** material icon 配置 */
+  "material-icon-theme.folders.associations": {
+    // https://github.com/PKief/vscode-material-icon-theme/blob/main/src/icons/folderIcons.ts
+    "sites": "public"
+  },
+  /** emmet 配置 */
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "wxml": "html"
+  },
+  /** vetur 配置 */
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "vetur.format.defaultFormatterOptions": {
+    "prettyhtml": {
+      "printWidth": 80, // No line exceeds 100 characters
+      "singleQuote": false // Prefer double quotes over single quotes
+    },
+    "prettier": {
+      // 是否添加分号
+      "semi": false,
+      // 是否使用单引号
+      "singleQuote": true,
+      "eslintIntegration": true,
+      "parser": "babylon"
+    }
+  },
+  /** tailwindCSS 配置 */
+  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+  "gitlens.keymap": "alternate",
+  "tabnine.experimentalAutoImports": true,
+
+  // 标签高亮
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "left": {
+        "custom": {
+          "borderWidth": "0 0 0 4px",
+          "borderStyle": "solid",
+          "borderColor": "LightSkyBlue",
+          "borderRadius": "5px"
+        }
+      },
+      "right": {
+        "custom": {
+          "borderWidth": "0 4px 0 0",
+          "borderStyle": "solid",
+          "borderColor": "LightSkyBlue",
+          "borderRadius": "5px"
+        }
+      }
+    }
+  },
+  /** markdown 配置 */
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+  "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "markdownlint.config": {
+    "MD001": false,
+    "MD024": false,
+    "MD029": false,
+    // 内联 HTML
+    "MD033": false,
+    // 使用强调而不是标题
+    "MD036": false,
+    // 第一行应该是顶级标题（默认是 h1）
+    "MD041": false
+  },
+  /** 微信小程序配置 */
+  "minapp-vscode.disableAutoConfig": true,
+  /** Live Server 配置 */
+  "liveServer.settings.donotShowInfoMsg": true,
+  /** Todo Tree 配置 */
+  "todo-tree.highlights.defaultHighlight": {
+    "type": "whole-line",
+    "gutterIcon": false,
+    "background": "#8c959f40"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "iconColour": "#fe9600",
+      "foreground": "#fe9600"
+    },
+    "FIXME": {
+      "iconColour": "#c4202b",
+      "foreground": "#c4202b"
+    }
+  }
+}
