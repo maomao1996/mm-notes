@@ -275,7 +275,7 @@ function SubType(name, age) {
   this.age = age
 }
 
-// 将父类原型指向子类
+// 使子类继承父类原型方法
 inheritPrototype(SubType, SuperType)
 
 // 新增子类原型属性
