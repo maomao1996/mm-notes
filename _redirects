@@ -47,3 +47,11 @@
 
 /efficiency/terminal/npm                    /workflow/node/npm        301
 /efficiency/terminal/:path                  /workflow/terminal/:path  301
+
+/analysis/react/18.2.0/process/scheduleUpdateOnFiber          /analysis/react/18.2.0/process/schedule-update-on-fiber         301
+/analysis/react/18.2.0/process/beginWork                      /analysis/react/18.2.0/process/begin-work                       301
+/analysis/react/18.2.0/process/completeWork                   /analysis/react/18.2.0/process/complete-work                    301
+/analysis/react/18.2.0/process/commitRoot                     /analysis/react/18.2.0/process/commit-root                      301
+/analysis/react/18.2.0/process/commitBeforeMutationEffects    /analysis/react/18.2.0/process/commit-before-mutation-effects   301
+/analysis/react/18.2.0/process/commitMutationEffects          /analysis/react/18.2.0/process/commit-mutation-effects          301
+/analysis/react/18.2.0/process/commitLayoutEffects            /analysis/react/18.2.0/process/commit-layout-effects            301
