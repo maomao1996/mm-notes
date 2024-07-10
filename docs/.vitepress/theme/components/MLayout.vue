@@ -11,8 +11,10 @@ import MDocFooter from './MDocFooter.vue'
 import MAsideSponsors from './MAsideSponsors.vue'
 
 const { Layout } = DefaultTheme
-const { isDark } = useData()
+const { isDark, theme, frontmatter } = useData()
 const pageId = usePageId()
+
+const { comment } = theme.value
 
 const enableTransitions = () =>
   'startViewTransition' in document &&
@@ -53,20 +55,17 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   <Layout v-bind="$attrs">
     <!--
       相关插槽
-      https://vitepress.dev/guide/extending-default-theme#layout-slots
+      https://vitepress.dev/zh/guide/extending-default-theme#layout-slots
       https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
     -->
     <template #nav-bar-title-after>
       <MNavVisitor />
     </template>
-    <template #doc-footer-before>
+
+    <template v-if="comment && frontmatter.comment !== false" #doc-footer-before>
       <div class="doc-comments">
         <Giscus
           id="comments"
-          repo="maomao1996/mm-notes"
-          repoId="MDEwOlJlcG9zaXRvcnkxNTc0ODc5Mjg="
-          category="Announcements"
-          categoryId="DIC_kwDOCWMTOM4CZ2rf"
           mapping="specific"
           :term="pageId"
           strict="1"
@@ -76,12 +75,15 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
           :theme="isDark ? 'dark' : 'light'"
           lang="zh-CN"
           loading="lazy"
+          v-bind="{ ...comment }"
         />
       </div>
     </template>
+
     <template #doc-after>
       <MDocFooter />
     </template>
+
     <template #aside-bottom>
       <MAsideSponsors />
     </template>

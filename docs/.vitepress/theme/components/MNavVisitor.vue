@@ -1,14 +1,17 @@
 <script setup lang="ts">
+import { useData } from 'vitepress'
 import { inject, Ref } from 'vue'
 
-const DEV = inject('DEV') as Ref<boolean>
+const DEV = inject<Ref<boolean>>('DEV')
+const { theme } = useData()
+const { visitor } = theme.value
 </script>
 
 <template>
   <img
     v-if="!DEV"
     class="visitor"
-    src="https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes"
+    :src="`https://visitor-badge.laobi.icu/badge?page_id=${visitor.badgeId}`"
     onerror="this.style.display='none'"
   />
 </template>

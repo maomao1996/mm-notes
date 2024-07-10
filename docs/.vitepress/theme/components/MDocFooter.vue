@@ -7,13 +7,13 @@ import { usePageId } from '../composables'
 
 const DEV = inject<Ref<boolean>>('DEV')
 const { theme } = useData()
+const { footer, visitor } = theme.value
 
 const { hasSidebar } = useSidebar()
 const pageId = usePageId()
 
 const isDocFooterVisible = computed(() => {
-  const { footer = {} } = theme.value
-  return !DEV || footer.message || footer.copyright
+  return !DEV || footer.message || footer.copyright || visitor.badgeId
 })
 </script>
 
@@ -23,7 +23,7 @@ const isDocFooterVisible = computed(() => {
       <img
         v-if="!DEV"
         class="visitor"
-        :src="`https://visitor-badge.laobi.icu/badge?page_id=maomao1996.notes.${pageId}`"
+        :src="`https://visitor-badge.laobi.icu/badge?page_id=${visitor.badgeId}.${pageId}`"
         title="当前页面累计访问数"
         onerror="this.style.display='none'"
       />

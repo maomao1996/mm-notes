@@ -69,6 +69,18 @@ export default defineConfig({
     darkModeSwitchLabel: '主题',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
+
+    /*** 自定义配置 ***/
+    visitor: {
+      badgeId: 'maomao1996.notes',
+    },
+
+    comment: {
+      repo: 'maomao1996/mm-note',
+      repoId: 'MDEwOlJlcG9zaXRvcnkxNTc0ODc5Mjg=',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOCWMTOM4CZ2rf',
+    },
   },
 
   /* 生成站点地图 */

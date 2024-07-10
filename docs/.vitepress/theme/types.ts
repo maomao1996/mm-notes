@@ -2,6 +2,7 @@ export interface NavLink {
   /** 站点图标 */
   noIcon?: boolean
   icon?: string | { svg: string }
+  /** 站点徽章 */
   badge?:
     | string
     | {
