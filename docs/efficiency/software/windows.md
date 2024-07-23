@@ -4,6 +4,31 @@ description: '收录 Windows 平台下的实用软件，提升使用体验'
 
 # Windows 平台
 
+## 激活工具
+
+### 激活神器 Microsoft-Activation-Scripts
+
+使用 HWID / Ohook / KMS38 / Online KMS 激活方法的 Windows 和 Office 激活器
+
+> 使用方法
+
+1. 右键单击 Windows 开始菜单，然后选择 PowerShell
+2. 复制并粘贴下面的代码，然后按 Enter
+
+```sh
+irm https://get.activated.win | iex
+```
+
+- [Microsoft-Activation-Scripts | GitHub](https://github.com/massgravel/Microsoft-Activation-Scripts)
+- [软件官网](https://massgrave.dev/)
+
+### Office Tool Plus
+
+一个用于部署、激活 Office、Visio、Project 的强大工具
+
+- [Office-Tool | GitHub](https://github.com/YerongAI/Office-Tool)
+- [软件官网](https://otp.landian.vip/zh-cn)
+
 ## 终端神器 Cmder
 
 1. 便携，解压即可用
