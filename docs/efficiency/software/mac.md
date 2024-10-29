@@ -57,8 +57,11 @@ Mac 的软件包管理工具，用于安装、卸载和管理各种软件，包�
 
 安装
 
+> 条件许可下优先使用官方源安装
+
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# 官方源安装
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # 国内源完整版安装
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
@@ -273,6 +276,29 @@ duti -s com.microsoft.VSCode .wxss all
 # PDF 还是浏览器快，WPS 有点卡
 duti -s com.google.Chrome .pdf all
 ```
+
+::: tip 获取应用程序的 ID
+
+> **使用命令行**
+
+```sh
+# 获取应用程序的 ID （用 Chrome 举 🌰）
+mdls -name kMDItemCFBundleIdentifier /Applications/Google\ Chrome.app
+# 输出 kMDItemCFBundleIdentifier = "com.google.Chrome"
+
+```
+
+> **使用访达**
+
+1. 打开 `访达`
+2. 点击 `应用程序`
+3. 右键 `应用程序`，如 `微信`
+4. 点击 `显示包内容`
+5. 打开 `Contents` 文件夹
+6. 打开 `Info.plist` 文件
+7. 找到 `CFBundleIdentifier` 字段对应的值
+
+:::
 
 [duti | Github](https://github.com/moretension/duti)
 
