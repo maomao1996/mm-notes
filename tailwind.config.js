@@ -3,5 +3,5 @@ import tailwindConfig from '@femm/tailwind-config'
 /** @type {import('tailwindcss').Config} */
 export default {
   presets: [tailwindConfig],
-  content: ['./docs/**/*.{js,ts,md,vue}'],
+  content: ['./docs/**/*.{js,ts,md,vue}', './docs/.vitepress/**/*.{js,ts,md,vue}'],
 }
