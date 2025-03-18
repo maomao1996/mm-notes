@@ -82,6 +82,9 @@ importers:
       vitepress:
         specifier: ^1.0.1
         version: 1.0.1(@algolia/client-search@4.22.1)(@types/node@20.11.28)(postcss@8.4.36)(sass@1.72.0)(search-insights@2.13.0)
+      vitepress-plugin-51la:
+        specifier: ^0.1.0
+        version: 0.1.0(vitepress@1.0.1(@algolia/client-search@4.22.1)(@types/node@20.11.28)(postcss@8.4.36)(sass@1.72.0)(search-insights@2.13.0))
       vue:
         specifier: ^3.4.21
         version: 3.4.21
@@ -1617,6 +1620,11 @@ packages:
       terser:
         optional: true
 
+  vitepress-plugin-51la@0.1.0:
+    resolution: {integrity: sha512-jV5w7sgqGFuum70wpIY9hggFio4H1C3+MayeeP/b55Cf+lRiFVNMrQQvWjw7UjT0bO1eiJYq4DiLsxzXt7r+QA==}
+    peerDependencies:
+      vitepress: ^1
+
   vitepress@1.0.1:
     resolution: {integrity: sha512-eNr5pOBppYUUjEhv8S0S2t9Tv95LQ6mMeHj6ivaGwfHxpov70Vduuwl/QQMDRznKDSaP0WKV7a82Pb4JVOaqEw==}
     hasBin: true
@@ -1831,6 +1839,7 @@ snapshots:
       '@algolia/autocomplete-preset-algolia': 1.9.3(@algolia/client-search@4.22.1)(algoliasearch@4.20.0)
       '@docsearch/css': 3.6.0
       algoliasearch: 4.20.0
+    optionalDependencies:
       search-insights: 2.13.0
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -2144,7 +2153,7 @@ snapshots:
 
   '@types/web-bluetooth@0.0.20': {}
 
-  '@vitejs/plugin-vue@5.0.4(vite@5.2.7)(vue@3.4.21)':
+  '@vitejs/plugin-vue@5.0.4(vite@5.2.7(@types/node@20.11.28)(sass@1.72.0))(vue@3.4.21)':
     dependencies:
       vite: 5.2.7(@types/node@20.11.28)(sass@1.72.0)
       vue: 3.4.21
@@ -2235,8 +2244,9 @@ snapshots:
     dependencies:
       '@vueuse/core': 10.9.0(vue@3.4.21)
       '@vueuse/shared': 10.9.0(vue@3.4.21)
-      focus-trap: 7.5.4
       vue-demi: 0.14.7(vue@3.4.21)
+    optionalDependencies:
+      focus-trap: 7.5.4
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -2964,8 +2974,9 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.36):
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.36
       yaml: 2.3.4
+    optionalDependencies:
+      postcss: 8.4.36
 
   postcss-nested@6.0.1(postcss@8.4.36):
     dependencies:
@@ -3242,13 +3253,17 @@ snapshots:
 
   vite@5.2.7(@types/node@20.11.28)(sass@1.72.0):
     dependencies:
-      '@types/node': 20.11.28
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.13.2
-      sass: 1.72.0
     optionalDependencies:
+      '@types/node': 20.11.28
       fsevents: 2.3.3
+      sass: 1.72.0
+
+  vitepress-plugin-51la@0.1.0(vitepress@1.0.1(@algolia/client-search@4.22.1)(@types/node@20.11.28)(postcss@8.4.36)(sass@1.72.0)(search-insights@2.13.0)):
+    dependencies:
+      vitepress: 1.0.1(@algolia/client-search@4.22.1)(@types/node@20.11.28)(postcss@8.4.36)(sass@1.72.0)(search-insights@2.13.0)
 
   vitepress@1.0.1(@algolia/client-search@4.22.1)(@types/node@20.11.28)(postcss@8.4.36)(sass@1.72.0)(search-insights@2.13.0):
     dependencies:
@@ -3257,17 +3272,18 @@ snapshots:
       '@shikijs/core': 1.2.2
       '@shikijs/transformers': 1.2.2
       '@types/markdown-it': 13.0.7
-      '@vitejs/plugin-vue': 5.0.4(vite@5.2.7)(vue@3.4.21)
+      '@vitejs/plugin-vue': 5.0.4(vite@5.2.7(@types/node@20.11.28)(sass@1.72.0))(vue@3.4.21)
       '@vue/devtools-api': 7.0.25(vue@3.4.21)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       '@vueuse/integrations': 10.9.0(focus-trap@7.5.4)(vue@3.4.21)
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 6.3.0
-      postcss: 8.4.36
       shiki: 1.2.2
       vite: 5.2.7(@types/node@20.11.28)(sass@1.72.0)
       vue: 3.4.21
+    optionalDependencies:
+      postcss: 8.4.36
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'
