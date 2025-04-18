@@ -543,3 +543,110 @@ pm2 monit
 ```
 
 [pm2 | Github](https://github.com/Unitech/pm2)
+
+## uv 现代化的 Python CLI 工具
+
+一个统一的 Python CLI 工具，涵盖环境管理、依赖管理、脚本运行、项目打包与发布等功能，通过单一命令行界面替代 `pip`、`pip-tools`、`pipx`、`poetry`、`pyenv`、`twine`、`virtualenv` 等多款工具，并提供 10–100× 的性能提升
+
+安装
+
+```sh
+# macOS and Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+### 更新与卸载
+
+```sh
+# 更新 uv 本身
+uv self update
+# 卸载 uv
+uv self uninstall
+```
+
+### 项目管理
+
+```sh
+# 初始化项目，生成 pyproject.toml .python-version main.py 文件
+uv init
+
+# 添加项目依赖
+uv add [pkg]
+uv add [pkg]@[version]
+
+# 移除项目依赖
+uv remove [pkg]
+
+# 生成或更新 uv.lock
+uv lock
+
+# 根据锁文件同步虚拟环境
+uv sync
+
+# 导出锁文件到其他格式
+uv export
+
+# 显示项目的依赖树
+uv tree
+```
+
+### 工具与脚本
+
+```sh
+# 在隔离环境中运行脚本或命令
+uv run <cmd or script>
+
+# 持久化安装 CLI 工具（类似 pipx）
+uv tool install <tool>
+
+# 列出已安装的工具
+uv tool list
+
+# uv tool run 的别名，在临时环境中运行
+uvx <tool>
+```
+
+### 依赖安装与导出（pip 接口）
+
+```sh
+# 使用 pip 接口管理包
+uv pip install <pkg>
+
+# 精确同步环境
+uv pip sync requirements.txt
+
+# 冻结当前环境依赖
+uv pip freeze > requirements.txt
+
+# 显示依赖树
+uv pip tree
+```
+
+### 虚拟环境与 Python 版本
+
+```sh
+# 在当前目录创建/激活 .venv
+uv venv
+# 指定 Python 版本
+uv venv --python 3.12
+
+# 列出可安装及已安装的 Python 版本
+uv python list
+# 安装并切换到该版本
+uv python install 3.12.2
+```
+
+### 构建与发布
+
+```sh
+# 构建项目
+uv build
+
+# 发布项目
+uv publish
+```
+
+[uv | Github](https://github.com/astral-sh/uv)
