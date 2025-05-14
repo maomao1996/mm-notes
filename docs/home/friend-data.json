@@ -82,5 +82,11 @@
     "desc": "Out of my mind",
     "link": "https://leetme.netlify.app",
     "icon": "https://leetme.netlify.app/logo.svg"
+  },
+  {
+    "title": "iFluxArt",
+    "desc": "斐启智境 · 流韵新生",
+    "link": "https://iflux.art",
+    "icon": "https://iflux.art/favicon.ico"
   }
 ]
