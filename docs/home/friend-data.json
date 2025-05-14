@@ -76,5 +76,11 @@
     "desc": "欲戴皇冠，必承其重",
     "link": "https://blog.w1ndys.top",
     "icon": "https://avatars.githubusercontent.com/u/109416673"
+  },
+  {
+    "title": "Leet",
+    "desc": "Out of my mind",
+    "link": "https://leetme.netlify.app",
+    "icon": "https://leetme.netlify.app/logo.svg"
   }
 ]
