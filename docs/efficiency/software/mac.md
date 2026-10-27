@@ -551,6 +551,21 @@ brew install --cask betterdisplay
 
 [BetterDisplay | Github](https://github.com/waydabber/BetterDisplay)
 
+## 外接显示器窗口与布局恢复 LayoutKeeper
+
+1. 免费开源（GPL-3.0）、原生支持中英文
+2. 拔插外接显示器或睡眠唤醒后，自动将窗口还原到原来的显示器、桌面空间（Space）与坐标尺寸
+3. Apple Silicon 机型支持按机身不同雷电/USB-C 接口独立记忆并自动切换显示器排列
+4. 内置显示器 DDC/CI 亮度音量调节与合盖防休眠开关
+
+> Homebrew 安装
+
+```sh
+brew install --cask tumingke0/tap/layoutkeeper
+```
+
+[LayoutKeeper | Github](https://github.com/tumingke0/LayoutKeeper)
+
 ## 剪贴板管理器 Maccy
 
 1. 免费开源、支持中文
